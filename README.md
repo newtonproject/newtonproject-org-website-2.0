@@ -5,6 +5,7 @@
 
     ```shell
     gatsby new newton-website-2.0
+    yarn
     ```
 
 2.  **Start**
