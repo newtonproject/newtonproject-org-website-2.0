@@ -1,6 +1,5 @@
 
-
-## 🚀 Quick start
+# newton-website-2.0
 
 1.  **Create a Gatsby site.**
 
@@ -14,6 +13,5 @@
     cd newton-website-2.0/
     yarn start
     ```
-
 
 
