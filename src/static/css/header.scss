@@ -1,0 +1,15 @@
+.header {
+    @apply mx-auto px-12 py-6;
+    .header-logo {
+        @apply flex flex-row;
+        >div {
+            @apply flex-1;
+        }
+    }
+    ul{
+        @apply flex leading-8 font-medium text-base;
+        li {
+            @apply px-8;
+        }
+    }
+}

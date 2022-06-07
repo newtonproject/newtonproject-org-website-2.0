@@ -1,0 +1,16 @@
+.global {
+    @apply px-32 pb-44;
+    h2 {
+        @apply text-3xl font-bold text-center;
+    }
+    ul {
+        @apply flex justify-center items-center;
+    }
+    li {
+        @apply flex justify-center items-center;
+        >div {
+            @apply w-36 h-36 bg-global-bg bg-no-repeat bg-contain bg-center;
+        }
+        
+    }
+}
