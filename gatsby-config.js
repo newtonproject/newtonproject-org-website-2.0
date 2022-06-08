@@ -1,4 +1,4 @@
-const path = require('path')
+// const path = require('path')
 
 module.exports = {
   siteMetadata: {
@@ -24,23 +24,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
         start_url: `/`,
-        background_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `${__dirname}/src/static/images`, // This path is relative to the root of the site.
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/static/images/logo.png`, 
+       // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-alias-imports`,
-    {
-      resolve: `gatsby-plugin-alias-imports`,
-      options: {
-        alias: {
-          '@': path.resolve(__dirname, 'src')
-        }
-    }
-  }
+  //   `gatsby-plugin-alias-imports`,
+  //   {
+  //     resolve: `gatsby-plugin-alias-imports`,
+  //     options: {
+  //       alias: {
+  //         '@': path.resolve(__dirname, 'src')
+  //       }
+  //   }
+  // }
     
   ],
 }
