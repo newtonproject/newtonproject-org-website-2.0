@@ -1,4 +1,4 @@
-// const path = require('path')
+const path = require('path')
 
 module.exports = {
   siteMetadata: {
@@ -30,10 +30,13 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
+        path: `${__dirname}/src/static/images`,
         icon: `src/static/images/logo.png`, 
        // This path is relative to the root of the site.
       },
+     
     },
+    
   //   `gatsby-plugin-alias-imports`,
   //   {
   //     resolve: `gatsby-plugin-alias-imports`,

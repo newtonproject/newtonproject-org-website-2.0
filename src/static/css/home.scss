@@ -28,15 +28,18 @@
 .centent-build {
     @apply px-4 md:px-32 mt-28;
     h2 {
-        @apply md:mb-6;
+        @apply md:mb-6 mt-20;
     }
     ul {
-        @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
+        @apply flex flex-col md:flex-row md:flex-wrap md:justify-between md:content-end;
     }
     li {
         @apply w-full md:w-w2/3;
         img {
-            @apply w-12 h-auto;
+            // @apply w-12 h-auto;
+        }
+        >p {
+            @apply leading-8;
         }
     }
     div {
@@ -109,8 +112,11 @@
         >div {
             @apply w-32 h-32 md:w-36 md:h-36 bg-global-bg bg-no-repeat bg-contain bg-center flex items-center justify-center;
             img {
-                @apply w-10 md:w-12 mt-2 ml-2;
+                @apply w-10 md:w-12;
             }
+        }
+        .global-img {
+            @apply mt-2 ml-2;
         }
         &:hover {
             >div {

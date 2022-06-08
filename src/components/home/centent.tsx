@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import GitHub from '../../static/images/home/github.png'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Centent = () => (
     <>
@@ -8,17 +8,17 @@ const Centent = () => (
             <h2>Newton's Community Economy</h2>
             <ul>
                 <li>
-                    <div><img src={GitHub} /></div>
+                    <div><StaticImage className={'community-img'} alt='img' src='../../static/images/home/index-icon1.png' /></div>
                     <h5><i></i>Users Own Their Own Data</h5>
                     <p>Users secure and control their personal data through cryptography, and manage their personal credit and share profits produced by their data in a pre-agreed manner.</p>
                 </li>
                 <li>
-                    <div><img src={GitHub} /></div>
+                    <div><StaticImage className={'community-img'} alt='img' src='../../static/images/home/index-icon2.png' /></div>
                     <h5><i></i>Better Incentive Mechanisms</h5>
                     <p>Replacing middlemen with technology reduces transaction costs and rewards anyone who contributes to the transaction, whether they're service providers, consumers or others connected by the value-based internet.</p>
                 </li>
                 <li>
-                    <div><img src={GitHub} /></div>
+                    <div><StaticImage className={'community-img'} alt='img' src='../../static/images/home/index-icon3.png' /></div>
                     <h5><i></i>New Organization &amp; Cooperation</h5>
                     <p>The community economy managed by non-profit foundations will replace the monopolies of middlemen managed by traditional for-profit organizations. Based on open, fair, and rational rules, every contributor will benefit from, and become part of this economy.</p>
                 </li>
@@ -36,14 +36,14 @@ const Centent = () => (
                     </div>
                 </li>
                 <li>
-                    <div><img src={GitHub} /></div>
+                    <div><StaticImage className={'stake-img'} alt='stake-img' src='../../static/images/home/build-img.png' /></div>
                 </li>
             </ul>
         </div>
         <div className={'centent-build'}>
             <ul>
                 <li>
-                    <div><img src={GitHub} /></div>
+                    <div> <StaticImage className={'stake-img'} alt='stake-img' src='../../static/images/home/stake-img.png' /></div>
                 </li>
                 <li>
                     <h2>Stake on Newton</h2>
