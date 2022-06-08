@@ -1,15 +1,109 @@
 .header {
-    @apply mx-auto px-12 py-6;
+    @apply hidden lg:block px-32 py-6;
     .header-logo {
         @apply flex flex-row;
-        >div {
-            @apply flex-1;
-        }
     }
     ul{
         @apply flex leading-8 font-medium text-base;
         li {
-            @apply px-8;
+            @apply lg:px-4 xl:px-8 relative;
+        }
+        a {
+            @apply hover:text-gray11;
+        }
+        span {
+            @apply w-3 h-3 bg-header-bot inline-block bg-cover ml-2 pt-1 bg-bottom;
+        }
+    }
+    .header-use {
+        &:hover {
+            .header-down {
+                @apply block;
+            }
+            >a {
+                @apply text-gray11;
+            }
+            span {
+                @apply bg-header-bot-hover;
+            }
+        }
+    }
+    .header-down {
+        @apply hidden absolute right-8 top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
+        a {
+            @apply block text-grag2c mt-2;
+        }
+    }
+    .header-search {
+        @apply flex ml-auto flex-row;
+        .search {
+            @apply w-6 h-6 bg-search inline-block bg-cover ml-2 bg-top;
+            a {
+                @apply inline-block;
+            }
+        }
+        .language {
+            @apply ml-9;
+            span {
+                @apply w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
+            }
+        }
+    }
+}
+
+.header-mobile-box {
+    @apply px-4 block lg:hidden py-4;
+    .search {
+        @apply w-5 h-5 bg-search inline-block bg-cover ml-2 bg-top;
+        a {
+            @apply inline-block;
+        }
+    }
+    .header-mobile {
+        @apply flex flex-wrap justify-between;
+    }
+    .logo {
+        @apply w-28;
+    }
+}
+.header-nav-menu {
+    @apply pl-4;
+    li {
+        @apply mb-6;
+        a {
+            @apply text-grag2c font-medium;
+        }
+    }
+    .header-down {
+        @apply pl-6 mt-6;
+        a {
+            @apply text-gray6a block mb-6 font-normal;
+        }
+    }
+    
+
+}
+.header-footer {
+    @apply flex flex-row py-8 mt-28;
+    background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
+    box-shadow: -9px -9px 20px 5px #FFFFFF;
+    .search {
+        
+        a {
+            @apply w-6 h-6 bg-search inline-block bg-cover bg-top;
+        }
+    }
+    .language {
+        span {
+            @apply w-6 h-6 bg-header-zh inline-block bg-cover cursor-pointer;
+        }
+    }
+    .search,
+    .language {
+        flex: 1;
+        @apply text-center;
+        p{
+            @apply text-gray6a;
         }
     }
 }

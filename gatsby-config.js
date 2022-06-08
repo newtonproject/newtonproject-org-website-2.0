@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -27,9 +29,18 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/static/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `${__dirname}/src/static/images`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-alias-imports`,
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@': path.resolve(__dirname, 'src')
+        }
+    }
+  }
     
   ],
 }

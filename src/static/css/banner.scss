@@ -1,0 +1,36 @@
+.banner {
+    @apply  py-6 px-32 mb-44;
+    .banner-news {
+        @apply text-xs text-blue74;
+        span {
+            @apply ml-4 text-blueb6;
+        }
+    }
+    .banner-title {
+        @apply mt-14 text-6xl text-grag2c font-bold md:font-bold leading-[4.8rem];
+    }
+    .banner-centent {
+        @apply flex flex-wrap justify-between;
+    }
+    .banner-img {
+        @apply w-8/12;
+        img {
+            @apply w-full;
+        }
+    }
+    .banner-link {
+        @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
+        a {
+            @apply bg-banner-a-bg bg-contain bg-no-repeat bg-center w-3/12 text-center;
+        }
+        span,i{
+            @apply block;
+        }
+        span {
+            @apply text-xl text-blue11 font-bold mb-0 mt-14;
+        }
+        i {
+            @apply text-sm text-blue74 pb-12;
+        }
+    }
+}

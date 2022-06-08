@@ -1,0 +1,17 @@
+.header-menu {
+    @apply cursor-pointer;
+}
+.modal {
+    @apply fixed pt-8 top-12 left-0 z-40 flex h-full w-full bg-grayf7 lg:hidden;
+    .close-btn {
+        top: -4rem;
+        @apply fixed bg-grayf7 left-4;
+        button {
+            @apply flex items-center justify-center bg-black bg-opacity-0 focus:outline-none dark:bg-opacity-0;
+        }
+    }
+    
+}
+.mobile-sidebar {
+    @apply w-full;
+}
