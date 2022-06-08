@@ -31,7 +31,7 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         path: `${__dirname}/src/static/images`,
-        icon: `src/static/images/logo.png`, 
+        icon: `src/static/images/favicon.png`, 
        // This path is relative to the root of the site.
       },
      
