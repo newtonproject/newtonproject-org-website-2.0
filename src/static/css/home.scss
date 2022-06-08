@@ -26,7 +26,7 @@
     }
 }
 .centent-build {
-    @apply px-4 md:px-32;
+    @apply px-4 md:px-32 mt-28;
     h2 {
         @apply md:mb-6;
     }
@@ -64,7 +64,7 @@
     }
 }
 .news {
-    @apply px-4 pb-10 md:px-32 md:pb-44;
+    @apply px-4 pb-10 md:px-32 md:pb-44 mt-10 md:mt-44;
     h2 {
         @apply mb-8;
     }
