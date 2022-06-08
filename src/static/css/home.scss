@@ -26,17 +26,18 @@
     }
 }
 .centent-build {
-    @apply px-4 md:px-32 mt-28;
+    @apply hidden md:block px-4 md:px-32 mt-28;
     h2 {
-        @apply md:mb-6 mt-20;
+        @apply md:mb-6;
     }
     ul {
-        @apply flex flex-col md:flex-row md:flex-wrap md:justify-between md:content-end;
+        // @apply flex flex-col md:flex-row md:flex-wrap md:justify-between md:content-end;
+        @apply flex flex-col md:flex-row md:justify-between md:items-end;
     }
     li {
         @apply w-full md:w-w2/3;
         img {
-            // @apply w-12 h-auto;
+            @apply w-full h-auto;
         }
         >p {
             @apply leading-8;
@@ -58,6 +59,30 @@
     }
 
 }
+.build-box {
+    @apply px-4 block md:hidden;
+    .stake-img {
+        @apply my-10;
+    }
+    p {
+        @apply text-grag2c text-base leading-8;
+    }
+    .build-item {
+        @apply mt-10;
+    }
+    .build-a {
+        @apply flex justify-between;
+        a {
+            @apply w-60 h-32 text-gray11 text-xl bg-build-bg bg-no-repeat bg-cover bg-center flex items-center justify-center;
+        }
+        p {
+            a {
+                @apply bg-build1-bg;
+            }
+        }
+    }
+}
+.build-box,
 .centent-community,
 .centent-build,
 .global,

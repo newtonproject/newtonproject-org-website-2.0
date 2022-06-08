@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import  HeaderModal from './headerModal'
-export default function Header() {
 
+export default function Header() {
   return (
     <>
     <div className={'header'}>
