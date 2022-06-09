@@ -41,7 +41,6 @@ export default function Footer() {
                 </div>
                 <div className={'footer-copyright'}>
                     <div>
-                       
                         <div>
                         <StaticImage alt='logo' src='../static/images/footer/footer.png' />
                             Paying tribute to Sir Isaac Newton — the great scientist who made a significant impact on our lives!</div>

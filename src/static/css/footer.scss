@@ -7,12 +7,15 @@
         @apply flex flex-wrap justify-between pt-[4.5rem];
     }
 }
-.footer-img {
-    @apply pt-8 md:pt-12 text-center md:text-left;
-    img {
-        @apply w-32;
-    }
-}  
+.footer {
+    .footer-img {
+        @apply pt-8 md:pt-12 text-center md:text-left;
+        img {
+            @apply w-32;
+        }
+    } 
+}
+ 
 .footer-content {
     @apply flex flex-wrap justify-between w-full md:w-2/3 px-4 md:px-0;
     dt {
