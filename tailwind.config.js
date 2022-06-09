@@ -28,6 +28,7 @@ module.exports = {
         grayf9: '#F9F9F9',
         grag2c: '#2C465E',
         grage5:'#E5F2FF',
+        grage5f:'#E5F5FF',
         grayf7:'#F7FBFF',
         gray6a:'#6A8298',
         grag96a: '#96A9BA',

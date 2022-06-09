@@ -1,11 +1,5 @@
 .banner-pc {
     @apply hidden lg:block  py-6 px-32 mb-44;
-    // .banner-news {
-    //     @apply text-xs text-blue74;
-    //     span {
-    //         @apply ml-4 text-blueb6;
-    //     }
-    // }
     .banner-title {
         @apply mt-14 text-6xl text-grag2c font-bold md:font-bold leading-[4.8rem];
     }
@@ -21,21 +15,12 @@
     .banner-news {
         @apply w-3/12;
     }
-    // .banner-link {
-    //     @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
-    //     a {
-    //         @apply bg-banner-a-bg bg-contain bg-no-repeat bg-center w-3/12 text-center;
-    //     }
-    //     span,i{
-    //         @apply block;
-    //     }
-    //     span {
-    //         @apply text-xl text-blue11 font-bold mb-0 mt-14;
-    //     }
-    //     i {
-    //         @apply text-sm text-blue74 pb-12;
-    //     }
-    // }
+    .banner-link {
+        a {
+            @apply  text-center lg:py-2 lg:px-2 xl:py-4 xl:px-8 mb-8 lg:mt-10 xl:mt-0;
+           
+        }
+    }
 }
 .banner-pc,
 .banner-mobile {
@@ -46,26 +31,47 @@
         }
     }
     .banner-link {
-        @apply flex flex-col content-start md:flex-row md:flex-wrap md:justify-between;
-        flex-flow: row wrap;
+        @apply flex flex-row flex-wrap justify-between;
         a {
-            @apply bg-banner-a-bg bg-contain bg-no-repeat bg-center w-1/2 md:w-3/12 text-center;
+            @apply  text-center;
+            background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
+            box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0);
+            &:hover {
+                box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+                @apply border-grage5f border-solid border-2;
+            }
         }
         span,i{
             @apply block;
         }
         span {
-            @apply text-xl text-blue11 font-bold mb-0 mt-14;
+            @apply text-xl text-blue11 font-bold;
         }
         i {
-            @apply text-xs md:text-sm text-blue74 pb-12;
+            @apply text-sm text-blue74;
         }
     }
 }
 
 .banner-mobile {
-    @apply block lg:hidden px-4;
+    @apply block lg:hidden px-4 overflow-hidden;
     .banner-title {
         @apply mt-10 mb-3 text-3xl text-grag2c font-bold;
+    }
+    .banner-link {
+        @apply mt-12 mb-10;
+        a {
+            width: 45%;
+            @apply mb-8 py-4;
+        }
+    }
+    .banner-img {
+        height: 50vh;
+        @apply w-screen relative;
+        img {
+            transform: translate(-50%, -50%);
+            @apply w-full h-full absolute top-1/2 left-1/2 object-cover;
+        }
     }
 }

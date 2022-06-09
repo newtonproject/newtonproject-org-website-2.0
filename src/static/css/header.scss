@@ -4,7 +4,7 @@
         @apply flex flex-row;
     }
     ul{
-        @apply flex leading-8 font-medium text-base;
+        @apply flex leading-8 font-medium text-base ml-14;
         li {
             @apply lg:px-4 xl:px-8 relative;
         }
@@ -52,7 +52,7 @@
 }
 
 .header-mobile-box {
-    @apply px-4 block lg:hidden py-4;
+    @apply relative px-4 block lg:hidden py-4;
     .search {
         @apply w-5 h-5 bg-search inline-block bg-cover ml-2 bg-top;
         a {
@@ -63,7 +63,8 @@
         @apply flex flex-wrap justify-between;
     }
     .logo {
-        @apply w-28;
+        @apply w-28 absolute top-6 left-1/2;
+        transform: translate(-50%, -50%);
     }
 }
 .header-nav-menu {
@@ -80,6 +81,7 @@
             @apply text-gray6a block mb-6 font-normal;
         }
     }
+    
     
 
 }

@@ -27,14 +27,14 @@ export default function Header() {
           <li><Link to='/community'>Community</Link></li>
           <li><Link to='/ecosystem'>Ecosystem</Link></li>
         </ul>
-        <div className={'header-search'}>
+        {/* <div className={'header-search'}>
           <div className={'search'}>
             <Link to='/'><span></span></Link>
           </div>
           <div className={'language'}>
             <span></span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
     {/* header mobile */}
@@ -44,9 +44,9 @@ export default function Header() {
       <div>
       <StaticImage className={'logo'} alt='logo' src='../static/images/logo.png' />
       </div>
-      <div className={'search'}>
+      {/* <div className={'search'}>
         <Link to='/'><span></span></Link>
-      </div>
+      </div> */}
       </div>
     </div>
     

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
 import banner from '../../static/images/banner.gif'
 let bannerlist = [
     {

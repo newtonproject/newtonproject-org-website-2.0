@@ -78,11 +78,11 @@ export default function HeaderModal() {
   )
 }
 
-const SiteNavMenu = () => { 
-  return(
+const SiteNavMenu = () => {
+  return (
     <>
-    <div className="header-nav-menu">
-      <ul>
+      <div className="header-nav-menu">
+        <ul>
           <li className={'header-use'}>
             <Link to=''>Use Newton</Link>
             <div className={'header-down'}>
@@ -98,17 +98,17 @@ const SiteNavMenu = () => {
           <li><Link to='/community'>Community</Link></li>
           <li><Link to='/ecosystem'>Ecosystem</Link></li>
         </ul>
-    </div>
-    <div className={'header-footer'}>
-          <div className={'search'}>
-            <Link to='/'><span></span></Link>
-            <p>Search</p>
-          </div>
-          <div className={'language'}>
-            <Link to='/'><span></span></Link>
-            <p>Languages</p>
-          </div>
+      </div>
+      {/* <div className={'header-footer'}>
+        <div className={'search'}>
+          <Link to='/'><span></span></Link>
+          <p>Search</p>
         </div>
+        <div className={'language'}>
+          <Link to='/'><span></span></Link>
+          <p>Languages</p>
+        </div>
+      </div> */}
     </>
   )
 }
