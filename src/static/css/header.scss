@@ -10,6 +10,7 @@
         }
         a {
             @apply hover:text-gray11;
+            font-family: "Ubuntu-Medium";
         }
         span {
             @apply w-3 h-3 bg-header-bot inline-block bg-cover ml-2 pt-1 bg-bottom;
@@ -73,6 +74,7 @@
         @apply mb-6;
         a {
             @apply text-grag2c font-medium;
+            font-family: "Ubuntu-Medium";
         }
     }
     .header-down {

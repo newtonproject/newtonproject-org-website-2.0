@@ -20,7 +20,7 @@
     @apply flex flex-wrap justify-between w-full md:w-2/3 px-4 md:px-0;
     dt {
         @apply text-grag2c font-bold mb-8 text-lg;
-
+        font-family: "Ubuntu";
     }
     dd {
         @apply text-grag96a mb-4 text-sm hover:text-gray20;

@@ -2,6 +2,7 @@
     @apply hidden lg:block  py-6 px-32 mb-44;
     .banner-title {
         @apply mt-14 text-6xl text-grag2c font-bold md:font-bold leading-[4.8rem];
+        font-family:  "Ubuntu-Bold";
     }
     .banner-centent {
         @apply flex flex-wrap justify-between;
@@ -47,6 +48,7 @@
         }
         span {
             @apply text-xl text-blue11 font-bold;
+            font-family:  "Ubuntu-Bold";
         }
         i {
             @apply text-sm text-blue74;
