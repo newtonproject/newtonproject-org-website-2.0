@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import banner from '../../static/images/banner.gif'
+import bannerMobileImg from '../../static/images/banner-h5.gif'
 let bannerlist = [
     {
         title: 'NewPay',
@@ -53,13 +54,16 @@ export default function () {
                     }
                 </div>
             </div>
+            <div className={'banner-mobile-box'}>
             <div className={'banner-mobile'}>
                 <div className={'banner-title'}>
                     Infrastructure<br />For The<br />Community Economy
                 </div>
-                <div className={'banner-img'}>
-                    <img src={banner} />
-                </div>
+            </div>
+            <div className={'banner-img'}>
+                <img src={bannerMobileImg} />
+            </div>
+            <div className={'banner-mobile banner-mobile-news'}>
                 <div className={'banner-news'}>
                     <p className='mb-2'>Newton Weekly<span>03/07/2022 - 03/13 • 03/4</span></p>
                     <p>Mining Instructions<span>14/04/2021</span></p>
@@ -77,6 +81,9 @@ export default function () {
                     }
                 </div>
             </div>
+
+            </div>
+            
         </>
     )
 }

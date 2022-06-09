@@ -19,7 +19,7 @@ const GlobalCommunity = () => (
             </li>
             <li>
                 <div>
-                    <StaticImage className={'global-img'} alt='twitter' src='../../static/images/home/twitter.png' />
+                    <StaticImage className={'global-img'} alt='twitter' src='../../static/images/home/facebook.png' />
                 </div>
                 <h5>Facebook</h5>
             </li>

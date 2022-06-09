@@ -10,6 +10,10 @@
     font-family: "Ubuntu-Medium";
     src: url("../fonts/Ubuntu-Medium.ttf");
 }
+@font-face {
+    font-family: "Ubuntu-R-hinting";
+    src: url("../fonts/Ubuntu-R-hinting.ttf");
+}
 
 body {
     @apply bg-body-bg bg-no-repeat md:bg-contain;
@@ -18,7 +22,7 @@ body {
     background-color:  #F7FBFF ;
 }
 i {
-    font-style:normal;
+    font-style: normal;
 }
 h2 {
     font-family:  "Ubuntu-Bold";

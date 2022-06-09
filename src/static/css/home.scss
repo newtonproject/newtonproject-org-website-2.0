@@ -29,7 +29,7 @@
         @apply md:mb-6;
     }
     ul {
-        @apply flex flex-col md:flex-row md:justify-between md:items-end;
+        @apply flex flex-col md:flex-row md:justify-between md:items-center;
     }
     li {
         @apply w-full md:w-w2/3;
@@ -47,13 +47,27 @@
             background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
             box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
             border: 2px solid rgba(255, 255, 255, 0);
-            width: 35%;
+            width: 50%;
             &:hover {
                 box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
                 @apply border-grage5f border-solid border-2;
             }
             &:nth-child(1) {
-                @apply mr-10;
+                @apply md:mr-2 lg:mr-10;
+            }
+        }
+    }
+    .building {
+        a {
+            &:nth-child(1) {
+                @apply md:text-xs md:leading-6 lg:text-base xl:text-xl;
+            }
+        }
+    }
+    .build-become {
+        a {
+            &:nth-child(2) {
+                @apply md:text-xs md:leading-6 lg:text-base xl:text-xl;
             }
         }
     }
@@ -87,6 +101,13 @@
             }
             &:nth-child(1) {
                 @apply mr-10;
+            }
+        }
+    }
+    .build-become {
+        a {
+            &:nth-child(2) {
+                @apply text-sm leading-6;
             }
         }
     }
@@ -147,7 +168,7 @@
 
 
 .global {
-    @apply px-4 pb-10 md:px-32 md:pb-44;
+    @apply px-4 pb-16 md:px-32 md:pb-44;
     ul {
         @apply flex flex-wrap md:mt-12;
     }

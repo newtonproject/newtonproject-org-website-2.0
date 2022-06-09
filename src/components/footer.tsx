@@ -57,7 +57,7 @@ const FooterMobile = () => {
     return (
         <div className={'footer-mobile'}>
             <div className={'footer-content'}>
-                <dl>
+                <dl className={'footer-item1'}>
                     <dt>COMMUNITY</dt>
                     <dd><Link to='/'>Newton Evolution Proposal</Link></dd>
                     <dd><Link to='/'>Announcements</Link></dd>

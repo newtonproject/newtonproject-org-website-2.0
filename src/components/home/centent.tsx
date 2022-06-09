@@ -31,7 +31,7 @@ export default function Centent() {
                     <li>
                         <h2>Start Building</h2>
                         <p>Newton's technology framework consists the basic technology layer, the hyper exchange protocol layer, and the application layer. All Newton’s products will be on NewChain-TestNet first for public testing before official launching. The Technical Documentation provides developers with a comprehensive development guide. </p>
-                        <div>
+                        <div className={'building'}>
                             <Link to='/'>Start Building</Link>
                             <Link to='/'>Listing</Link>
                         </div>
@@ -49,7 +49,7 @@ export default function Centent() {
                     <li>
                         <h2>Stake on Newton</h2>
                         <p>NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction.</p>
-                        <div>
+                        <div className={'build-become'}>
                             <Link to='/'>Stake</Link>
                             <Link to='/'>Become a validator</Link>
                         </div>
@@ -81,7 +81,7 @@ const CentenMobile = () => {
                     <div> <StaticImage className={'stake-img'} alt='img' src='../../static/images/home/stake-img.png' /></div>
                 </div>
                 <p>NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction.</p>
-                <div className={'build-a'}>
+                <div className={'build-a build-become'}>
                     <Link to='/'>Stake</Link>
                     <Link to='/'>Become a validator</Link>
                 </div>

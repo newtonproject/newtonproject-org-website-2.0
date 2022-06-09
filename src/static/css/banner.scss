@@ -18,7 +18,7 @@
     }
     .banner-link {
         a {
-            @apply  text-center lg:py-2 lg:px-2 xl:py-4 xl:px-8 mb-8 lg:mt-10 xl:mt-0;
+            @apply  text-center lg:py-2 lg:px-2 xl:py-4 xl:px-16 mb-8 lg:mt-10 xl:mt-0;
            
         }
     }
@@ -55,25 +55,36 @@
         }
     }
 }
-
+.banner-mobile-box {
+    @apply block lg:hidden;
+    .banner-img {
+        height: 80vh;
+        @apply w-screen relative;
+        img {
+            transform: translate(-50%, -50%);
+            top: 45%;
+            @apply w-full h-full absolute left-1/2 object-cover;
+        }
+    }
+}
+.banner-mobile-news {
+    @apply -mt-14;
+}
 .banner-mobile {
-    @apply block lg:hidden px-4 overflow-hidden;
+    @apply px-4 overflow-hidden;
     .banner-title {
-        @apply mt-10 mb-3 text-3xl text-grag2c font-bold;
+        @apply mt-10 mb-3 text-[2.2rem] text-grag2c font-bold;
     }
     .banner-link {
         @apply mt-12 mb-10;
         a {
-            width: 45%;
+            width: 48%;
             @apply mb-8 py-4;
         }
-    }
-    .banner-img {
-        height: 50vh;
-        @apply w-screen relative;
-        img {
-            transform: translate(-50%, -50%);
-            @apply w-full h-full absolute top-1/2 left-1/2 object-cover;
+        i {
+            @apply text-xs;
+            font-family: "Ubuntu-R-hinting";
         }
     }
+    
 }
