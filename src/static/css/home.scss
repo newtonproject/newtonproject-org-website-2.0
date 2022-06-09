@@ -2,7 +2,7 @@
 
 
 .centent-community {
-    @apply px-4 md:px-32 mb-16 md:mb-52;
+    @apply px-4 md:px-32 mb-4 md:mb-52;
     h2 {
         @apply mb-10 md:mb-12;
     }
@@ -73,7 +73,7 @@
         @apply text-grag2c text-base leading-8;
     }
     .build-item {
-        @apply mt-10;
+        @apply mt-16;
     }
     .build-a {
         @apply flex justify-between;
@@ -105,13 +105,13 @@
 .news {
     @apply px-4 pb-10 md:px-32 md:pb-44 mt-10 md:mt-44;
     h2 {
-        @apply mb-8;
+        @apply mb-10 md:mb-16;
     }
     ul {
         @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
     }
     li {
-        @apply bg-white w-full md:w-w1/3 mb-8 md:mb-0 cursor-pointer;
+        @apply bg-white w-full md:w-w1/3 mb-12 md:mb-0 cursor-pointer;
         background: linear-gradient(180deg, #FFFFFF 0%, #FCFEFF 100%);
         box-shadow: -4px -4px 20px 5px #FFFFFF, 2px 2px 20px 0px rgba(0, 64, 145, 0.12);
         .news-img {
