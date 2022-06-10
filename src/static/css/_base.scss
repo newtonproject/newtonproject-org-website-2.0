@@ -16,10 +16,12 @@
 }
 
 body {
-    @apply bg-body-bg bg-no-repeat md:bg-contain;
     font-family: "Ubuntu";
     color: #2C465E!important;
     background-color:  #F7FBFF ;
+}
+.new-index {
+    @apply bg-body-bg bg-no-repeat md:bg-contain;
 }
 i {
     font-style: normal;

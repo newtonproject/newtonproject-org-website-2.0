@@ -1,0 +1,84 @@
+#ecosystem {
+    .ecosystem-banner {
+        @apply w-full;
+        img {
+            @apply w-full h-auto;
+        }
+    }
+    .ecosystem-banner-pc {
+        @apply hidden md:block;
+    }
+    .ecosystem-banner-h5 {
+        @apply block md:hidden mt-8;
+    }
+    .ecosystem-content {
+        @apply w-full px-4 md:px-24 xl:px-64 flex flex-col md:flex-row md:flex-wrap md:justify-between;
+        dl {
+            @apply w-full md:w-1/2 mt-[4.5rem] md:mt-24;
+        }
+        dt {
+            @apply text-3xl text-gray333 font-bold;
+        }
+        dd {
+            @apply mt-8;
+        }
+        a {
+            @apply inline-block;
+        }
+        span {
+            @apply text-xs text-grag96a block mt-3;
+        }
+        img {
+            @apply h-auto;
+        }
+    }
+    .new-mall {
+        img {
+            @apply w-[8.5rem];
+        }
+    }
+    .new-asset {
+        img {
+            @apply w-[17.2rem];
+        }
+    }
+    .new-mask {
+        img {
+            @apply w-[9.8rem]
+        }
+    }
+    .new-swap {
+        img {
+            @apply w-[9.5rem];
+        }
+    }
+    .andverse {
+        img {
+            @apply w-[10.6rem];
+        }
+    }
+    .new-bridge {
+        img {
+            @apply w-[10.4rem];
+        }
+    }
+    .ecosystem-submit {
+        @apply px-0 md:px-32 bg-blue92 mt-[5.5rem] md:mt-36 mb-20 md:mb-0;
+        a {
+            @apply h-64 bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center flex justify-center items-center;
+        }
+        i {
+            @apply  text-white text-base py-4 px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
+        }
+        .submit {
+            @apply hidden md:block;
+        }
+        .add-content,
+        .add-community {
+            @apply block md:hidden;
+        }
+        .add-content {
+            @apply text-white text-lg;
+        }
+    }
+}

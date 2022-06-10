@@ -1,11 +1,14 @@
-import React from 'react'
-// import { Link } from 'gatsby'
-
+import React from "react"
+import Header from '../components/header'
+import  Footer from '../components/footer'
+import  EcosystemContent from '../components/ecosystemContent'
 
 const Ecosystem = () => (
-    <div className='container mx-auto px-12'>
-        我是Ecosystem页面的内容啊
-    </div>
+    <>
+      <Header />
+      <EcosystemContent />
+      <Footer />
+    </>
 )
 
 export default Ecosystem

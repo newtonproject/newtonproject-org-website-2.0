@@ -7,14 +7,14 @@ import  News from '../components/home/news'
 import  GlobalCommunity from '../components/home/globalCommunity'
 
 const IndexPage = () => (
-  <>
+  <div className={'new-index'}>
     <Header />
     <Banner />
     <Centent />
     <News />
     <GlobalCommunity />
     <Footer />
-  </>
+  </div>
 )
 
 export default IndexPage
