@@ -17,6 +17,7 @@
         }
     }
     .header-use {
+        @apply z-50;
         &:hover {
             .header-down {
                 @apply block;
