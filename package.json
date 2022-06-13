@@ -6,6 +6,7 @@
     "@headlessui/react": "^1.6.4",
     "@tailwindcss/typography": "^0.5.2",
     "antd": "^4.21.0",
+    "axios": "^0.27.2",
     "gatsby": "^4.12.1",
     "gatsby-alias-imports": "^1.0.6",
     "gatsby-image": "^3.11.0",
