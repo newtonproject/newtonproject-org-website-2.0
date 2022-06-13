@@ -5,6 +5,7 @@ import  Centent from '../components/home/centent'
 import  Footer from '../components/footer'
 import  News from '../components/home/news'
 import  GlobalCommunity from '../components/home/globalCommunity'
+import  ScrollTop from '../components/scrollTop'
 
 const IndexPage = () => (
   <div className={'new-index'}>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <News />
     <GlobalCommunity />
     <Footer />
+    <ScrollTop />
   </div>
 )
 

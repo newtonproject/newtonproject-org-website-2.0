@@ -14,7 +14,9 @@
     font-family: "Ubuntu-R-hinting";
     src: url("../fonts/Ubuntu-R-hinting.ttf");
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Ubuntu";
     color: #2C465E!important;
@@ -28,4 +30,17 @@ i {
 }
 h2 {
     font-family:  "Ubuntu-Bold";
+}
+
+.scroll-top {
+    @apply fixed bottom-32 right-10 cursor-pointer w-12 h-12  flex items-center justify-center;
+    background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
+    box-shadow:  -5px -5px 20px 5px #FFFFFF, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
+    border-radius: 50%;
+    img {
+        @apply w-6 h-auto;
+    }
+    &:hover {
+        @apply border-grage5f border-solid border-2;
+    }
 }
