@@ -42,10 +42,15 @@ module.exports = {
         gray96: '#96A9BA',
         gray11: '#119BFF',
         gray333: '#333333',
+        graydd: '#DDEBF7',
+        green07: '#07D600',
       },
       width: {
         'w1/3': '30%',
         'w2/3': '46%',
+      },
+      fontSize: {
+        font22: '1.4rem'
       },
       border: {
         imgcol: 'border-image: -webkit-linear-gradient(top left, #CFFFFA 0%, #B5EAFF 32%, #FEBCE6 69%, #FFAFB1 100%)100 100 100 100;'

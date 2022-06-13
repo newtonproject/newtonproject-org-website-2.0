@@ -86,7 +86,7 @@ const SiteNavMenu = () => {
           <li className={'header-use'}>
             <Link to=''>Use Newton</Link>
             <div className={'header-down'}>
-              <Link to='/'>Get New</Link>
+              <Link to='/getnew'>GetNew</Link>
               <Link to='/'>NewPay</Link>
               <Link to='/'>NewMask</Link>
               <Link to='/'>NewExplorer</Link>
