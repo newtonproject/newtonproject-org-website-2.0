@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export default function Centent() {
@@ -24,6 +23,7 @@ export default function Centent() {
                         <p>The community economy managed by non-profit foundations will replace the monopolies of middlemen managed by traditional for-profit organizations. Based on open, fair, and rational rules, every contributor will benefit from, and become part of this economy.</p>
                     </li>
                 </ul>
+                <div className={'news-more'}><a href='https://www.newtonproject.org/whitepaper/' target='_blank'>White Paper</a></div>
             </div>
 
             <div className={'centent-build'}>
@@ -32,8 +32,8 @@ export default function Centent() {
                         <h2>Start Building</h2>
                         <p>Newton's technology framework consists the basic technology layer, the hyper exchange protocol layer, and the application layer. All Newton’s products will be on NewChain-TestNet first for public testing before official launching. The Technical Documentation provides developers with a comprehensive development guide. </p>
                         <div className={'building'}>
-                            <Link to='/'>Start Building</Link>
-                            <Link to='/'>Listing</Link>
+                            <a href='https://developer.newtonproject.org/' target='_blank'>Start Building</a>
+                            <a href='https://github.com/newtonproject/newchain-sdk-example' target='_blank'>Listing</a>
                         </div>
                     </li>
                     <li>
@@ -50,8 +50,8 @@ export default function Centent() {
                         <h2>Stake on Newton</h2>
                         <p>NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction.</p>
                         <div className={'build-become'}>
-                            <Link to='/'>Stake</Link>
-                            <Link to='/'>Become a validator</Link>
+                            <a href='https://www.newtonproject.org/blog/2021/04/14/new-mining-cn/' target='_blank'>Stake</a>
+                            <a href='https://github.com/newtonproject/newchain-nodes' target='_blank'>Become a validator</a>
                         </div>
                     </li>
                 </ul>
@@ -70,8 +70,8 @@ const CentenMobile = () => {
                     <div><StaticImage className={'stake-img'} alt='img' src='../../static/images/home/build-img.png' /></div>
                     <p>Newton's technology framework consists the basic technology layer, the hyper exchange protocol layer, and the application layer. All Newton’s products will be on NewChain-TestNet first for public testing before official launching. The Technical Documentation provides developers with a comprehensive development guide. </p>
                     <div className={'build-a'}>
-                        <Link to='/'>Start Building</Link>
-                        <Link to='/'>Listing</Link>
+                        <a href='https://developer.newtonproject.org/' target='_blank'>Start Building</a>
+                        <a href='https://github.com/newtonproject/newchain-sdk-example' target='_blank'>Listing</a>
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@ const CentenMobile = () => {
                 </div>
                 <p>NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction.</p>
                 <div className={'build-a build-become'}>
-                    <Link to='/'>Stake</Link>
-                    <Link to='/'>Become a validator</Link>
+                    <a href='https://www.newtonproject.org/blog/2021/04/14/new-mining-cn/' target='_blank'>Stake</a>
+                    <a href='https://github.com/newtonproject/newchain-nodes' target='_blank'>Become a validator</a>
                 </div>
             </div>
         </div>

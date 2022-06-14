@@ -8,19 +8,15 @@ module.exports = {
     extend: {
       backgroundImage: {
         'body-bg': "url('../images/bg.png')",
+        'body-bg-h5': "url('../images/bg-h5.png')",
         'header-bot': "url('../images/header-bot.png')",
         'header-bot-hover': "url('../images/header-bot-hover.png')",
         'header-zh': "url('../images/language.png')",
         'search': "url('../images/search.png')",
-        // 'banner-a-bg': "url('../images/banner-a-bg.png')",
-        // 'footerbg1': "url('../images/footer/footerbg1.png')",
-        // 'build-bg': "url('../images/home/build-bg.png')",
-        // 'build1-bg': "url('../images/home/build1-bg.png')",
-        // 'news-bg': "url('../images/home/news-bg.png')",
-        // 'global-bg': "url('../images/home/global-bg.png')",
-        // 'global-bg-hover': "url('../images/home/global-bg-hover.png')",
         'ecosystem-submit': "url('../images/ecosystem/ecosystem-submit.png')",
         'ecosystem-submit-h5': "url('../images/ecosystem/ecosystem-submit-h5.png')",
+        'footer-bg': "url('../images/footer/footer-bg.png')",
+        'footer-bg-h5': "url('../images/footer/footer-bg-h5.png')",
        },
       colors: {
         blue74: '#74CBFF',
@@ -51,9 +47,6 @@ module.exports = {
       },
       fontSize: {
         font22: '1.4rem'
-      },
-      border: {
-        imgcol: 'border-image: -webkit-linear-gradient(top left, #CFFFFA 0%, #B5EAFF 32%, #FEBCE6 69%, #FFAFB1 100%)100 100 100 100;'
       },
     },
   },

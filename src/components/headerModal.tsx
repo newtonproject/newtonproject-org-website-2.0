@@ -84,9 +84,9 @@ const SiteNavMenu = () => {
       <div className="header-nav-menu">
         <ul>
           <li className={'header-use'}>
-            <Link to=''>Use Newton</Link>
+            <Link to='/'>Use Newton</Link>
             <div className={'header-down'}>
-              <Link to='/getnew'>GetNew</Link>
+              <Link to='/getnew' target='_blank'>GetNew</Link>
               <a href='https://www.newtonproject.org/newpay/' target='_blank'>NewPay</a>
               <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'>NewMask</a>
               <a href='https://explorer.newtonproject.org/' target='_blank'>NewExplorer</a>
@@ -95,8 +95,8 @@ const SiteNavMenu = () => {
             </div>
           </li>
           <li><a href='https://developer.newtonproject.org/' target='_blank'>Developers</a></li>
-          <li><Link to='/community'>Community</Link></li>
-          <li><Link to='/ecosystem'>Ecosystem</Link></li>
+          <li><Link to='/community' target='_blank'>Community</Link></li>
+          <li><Link to='/ecosystem' target='_blank'>Ecosystem</Link></li>
         </ul>
       </div>
       {/* <div className={'header-footer'}>

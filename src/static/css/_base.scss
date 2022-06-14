@@ -23,7 +23,7 @@ body {
     background-color:  #F7FBFF ;
 }
 .new-index {
-    @apply bg-body-bg bg-no-repeat md:bg-contain;
+    @apply bg-body-bg-h5 md:bg-body-bg bg-no-repeat md:bg-contain;
 }
 i {
     font-style: normal;
@@ -37,8 +37,10 @@ h2 {
     background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
     box-shadow:  -5px -5px 20px 5px #FFFFFF, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
     border-radius: 50%;
-    img {
-        @apply w-6 h-auto;
+    .img-box {
+        img {
+            @apply w-6 h-auto;
+        }
     }
     &:hover {
         @apply border-grage5f border-solid border-2;
