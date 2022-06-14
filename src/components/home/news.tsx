@@ -34,6 +34,7 @@ const News = () => (
                     </a>
                 </li>
             </ul>
+            <div className={'news-more'}><a href='https://www.newtonproject.org/press/' target='_blank'>More</a></div>
         </div>
     </>
 )

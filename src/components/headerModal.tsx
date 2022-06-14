@@ -87,14 +87,14 @@ const SiteNavMenu = () => {
             <Link to=''>Use Newton</Link>
             <div className={'header-down'}>
               <Link to='/getnew'>GetNew</Link>
-              <Link to='/'>NewPay</Link>
-              <Link to='/'>NewMask</Link>
-              <Link to='/'>NewExplorer</Link>
-              <Link to='/'>NewBridge</Link>
-              <Link to='/'>NFT Viewer</Link>
+              <a href='https://www.newtonproject.org/newpay/' target='_blank'>NewPay</a>
+              <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'>NewMask</a>
+              <a href='https://explorer.newtonproject.org/' target='_blank'>NewExplorer</a>
+              <a href='https://newbridge.network/' target='_blank'>NewBridge</a>
+              <a href='https://nft.newscan.io/' target='_blank'>NFT Viewer</a>
             </div>
           </li>
-          <li><Link to='/developers'>Developers</Link></li>
+          <li><a href='https://developer.newtonproject.org/' target='_blank'>Developers</a></li>
           <li><Link to='/community'>Community</Link></li>
           <li><Link to='/ecosystem'>Ecosystem</Link></li>
         </ul>

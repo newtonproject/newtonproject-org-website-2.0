@@ -1,3 +1,4 @@
+#community,
 #getnew,
 #ecosystem {
     .ecosystem-banner {
@@ -11,6 +12,16 @@
     }
     .ecosystem-banner-h5 {
         @apply block md:hidden mt-8;
+    }
+}
+#community,
+#getnew {
+    .getnew-banner {
+        @apply relative;
+        h2 {
+            @apply absolute md:top-1/2 top-[40%] left-1/2 text-6xl md:text-[6.6rem] w-full text-center;
+            transform: translate(-50%, -50%);
+        }
     }
 }
 // ecosystem
@@ -66,39 +77,31 @@
             @apply w-[10.4rem];
         }
     }
-    .ecosystem-submit {
-        @apply px-0 md:px-32 bg-blue92 mt-[5.5rem] md:mt-36 mb-20 md:mb-0;
-        a {
-            @apply block h-64 bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center md:flex justify-center items-center;
-        }
-        i {
-            @apply  text-white text-base py-4 px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
-        }
-        .submit {
-            @apply hidden md:block;
-        }
-        .add-content,
-        .add-community {
-            @apply block md:hidden;
-        }
-        .add-content {
-            @apply text-white text-lg pt-[4.7rem] mb-6;
-        }
-        .add-community {
-            @apply mx-5;
-        }
+}
+.ecosystem-submit {
+    @apply px-0 md:px-32 bg-blue92 mt-[5.5rem] md:mt-36 mb-20 md:mb-0;
+    a {
+        @apply block h-64 bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center md:flex justify-center items-center;
+    }
+    i {
+        @apply  text-white text-base py-4 px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
+    }
+    .submit {
+        @apply hidden md:block;
+    }
+    .add-content,
+    .add-community {
+        @apply block md:hidden;
+    }
+    .add-content {
+        @apply text-white text-lg pt-[4.7rem] mb-6;
+    }
+    .add-community {
+        @apply mx-5;
     }
 }
-
 // getNew
 #getnew {
-    .getnew-banner {
-        @apply relative;
-        h2 {
-            @apply absolute md:top-1/2 top-[40%] left-1/2 text-6xl md:text-[6.6rem] w-full text-center;
-            transform: translate(-50%, -50%);
-        }
-    }
     .getnew-content {
         @apply px-4 md:px-32;
     }
@@ -221,5 +224,15 @@
         span {
             @apply text-grag96a;
         }
+    }
+}
+
+// community
+#community {
+    .news {
+        @apply pb-0;
+    }
+    .global {
+        @apply mt-24 pb-0;
     }
 }

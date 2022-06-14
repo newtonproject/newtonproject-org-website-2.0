@@ -1,11 +1,16 @@
-import React from 'react'
-// import { Link } from 'gatsby'
-// import '../../static/css/style.css';
+import React from "react"
+import Header from '../components/header'
+import  Footer from '../components/footer'
+import  CommunityContent from '../components/communityContent'
+import  ScrollTop from '../components/scrollTop'
 
 const Community = () => (
-    <div className='container mx-auto px-12'>
-        我是Community页面的内容啊
-    </div>
+    <>
+      <Header />
+      <CommunityContent />
+      <Footer />
+      <ScrollTop />
+    </>
 )
 
 export default Community

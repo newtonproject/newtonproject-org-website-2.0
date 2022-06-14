@@ -164,6 +164,19 @@
     p {
         @apply pr-2 text-xs text-gray96 text-right mb-10; 
     }
+    .news-more {
+        @apply flex justify-center items-center mt-4 md:mt-20;
+        a {
+            @apply text-gray11 text-xl py-4 px-24;
+            background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
+            box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+            border: 2px solid rgba(255, 255, 255, 0);
+            &:hover {
+                box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+                @apply border-grage5f border-solid border-2;
+            }
+        }
+    }
 }
 
 
