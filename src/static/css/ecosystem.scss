@@ -234,5 +234,8 @@
     }
     .global {
         @apply mt-24 pb-0;
+        .global-youtube {
+            @apply hidden;
+        }
     }
 }

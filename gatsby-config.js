@@ -2,10 +2,10 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Newton`,
+    description: `Newton-Infrastructure for the community economy,providing governance,collaboration and incentive. We are committed to creating highly collaborative, lower cost, highly automated community economy, everyone contributes,everyone benefits.`,
+    author: `Newton`,
+    siteUrl: `https://www.newtonproject.org/`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -43,6 +43,7 @@ module.exports = {
       },
      
     },
+    `gatsby-plugin-react-helmet`,
     
   //   `gatsby-plugin-alias-imports`,
   //   {

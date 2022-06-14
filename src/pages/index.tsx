@@ -1,4 +1,5 @@
 import React from "react"
+import Seo from '../components/seo'
 import Header from '../components/header'
 import Banner from '../components/home/banner'
 import Centent from '../components/home/centent'
@@ -10,6 +11,8 @@ import ScrollTop from '../components/scrollTop'
 const IndexPage: React.FC = () => {
 
   return (
+    <>
+    <Seo title={'Home'} description={''} meta={[]} lang={''} />
     <div className={'new-index'}>
       <Header />
       <Banner />
@@ -19,6 +22,7 @@ const IndexPage: React.FC = () => {
       <Footer />
       <ScrollTop />
     </div>
+    </>
   )
 
 }

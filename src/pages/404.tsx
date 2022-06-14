@@ -4,7 +4,7 @@ import React from "react"
 
 const NotFoundPage = () => (
   <>
-    我是404页面啊
+    页面找不到啦～
   </>
 )
 

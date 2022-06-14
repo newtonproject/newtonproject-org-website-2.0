@@ -67,6 +67,14 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <h5>Github</h5>
                     </a>
                 </li>
+                <li className={'global-youtube'}>
+                    <a href='https://www.youtube.com/channel/UCO3hbqzT5abDbVKzK5EQigg' target='_blank'>
+                        <div className={'global-img'}>
+                            <StaticImage alt='github' src='../../static/images/home/youtube.png' />
+                        </div>
+                        <h5>YouTube</h5>
+                    </a>
+                </li>
             </ul>
         </div>
     )
