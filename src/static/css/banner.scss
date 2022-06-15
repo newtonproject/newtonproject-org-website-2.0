@@ -73,13 +73,13 @@
 .banner-mobile {
     @apply px-4 overflow-hidden;
     .banner-title {
-        @apply mt-10 mb-3 text-[2.2rem] text-grag2c font-bold;
+        @apply mt-10 mb-3 text-[2.2rem] text-grag2c font-bold leading-9;
     }
     .banner-link {
         @apply mt-12 mb-10;
         a {
             width: 48%;
-            @apply mb-8 py-4;
+            @apply mb-8 py-2;
         }
         i {
             @apply text-xs;

@@ -1,5 +1,5 @@
 .centent-community {
-    @apply px-4 md:px-32 mb-4 md:mb-52;
+    @apply px-4 md:px-32 mb-16 md:mb-52;
     h2 {
         @apply mb-10 md:mb-12;
     }
@@ -16,7 +16,7 @@
         }
     }
     h5 {
-        @apply text-left text-grag2c md:text-2xl font-bold mb-6 text-xl mt-4 md:mt-7;
+        @apply text-left text-grag2c md:text-2xl font-bold mb-4 text-xl mt-4 md:mt-7;
         font-family:  "Ubuntu-Bold";
         i {
             @apply w-1 h-5 inline-block bg-blue11 mr-3;
@@ -125,7 +125,7 @@
     }
 }
 .news {
-    @apply px-4 pb-10 md:px-32 md:pb-44 mt-10 md:mt-44;
+    @apply px-4 pb-16 md:px-32 md:pb-44 mt-16 md:mt-44;
     h2 {
         @apply mb-10 md:mb-16;
     }
@@ -172,7 +172,7 @@
 .centent-community,
 .news {
     .news-more {
-        @apply flex justify-center items-center mt-4 md:mt-20;
+        @apply flex justify-center items-center mt-0 md:mt-20;
         a {
             @apply text-gray11 text-xl py-4 px-24;
             background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
@@ -199,7 +199,7 @@
         @apply hidden;
     }
     a {
-        @apply flex items-center w-full mt-10 md:mt-6;
+        @apply flex items-center w-full mt-0 md:mt-6;
         >div {
             @apply w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center mr-2 md:mr-6;
             background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
