@@ -2,7 +2,7 @@
 .footer-box {
     background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
     box-shadow: -9px -9px 20px 5px #FFFFFF;
-    @apply hidden md:block px-32 bg-footer-bg bg-no-repeat bg-contain;
+    @apply hidden md:block px-32 bg-footer-bg bg-no-repeat bg-contain md:bg-cover;
     .footer {
         @apply flex flex-wrap justify-between pt-[4.5rem];
     }

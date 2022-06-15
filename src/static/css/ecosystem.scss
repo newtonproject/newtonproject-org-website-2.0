@@ -84,7 +84,7 @@
         @apply block h-64 bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center md:flex justify-center items-center;
     }
     i {
-        @apply  text-white text-base py-4 px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
+        @apply  text-white text-base py-4 md:px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
     }
     .submit {
         @apply hidden md:block;
@@ -103,7 +103,7 @@
 // getNew
 #getnew {
     .getnew-content {
-        @apply px-4 md:px-32;
+        @apply px-4 xl:px-32;
     }
     .newtax {
         @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-start xl:flex-nowrap;
