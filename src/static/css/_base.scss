@@ -46,3 +46,7 @@ h2 {
         @apply border-grage5f border-solid border-2;
     }
 }
+
+.not-found-page {
+    @apply text-center text-3xl md:text-5xl mt-20 md:mt-64;
+}

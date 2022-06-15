@@ -13,6 +13,7 @@ module.exports = {
         'header-bot-hover': "url('../images/header-bot-hover.png')",
         'header-zh': "url('../images/language.png')",
         'search': "url('../images/search.png')",
+        'community-bg-h5': "url('../images/ecosystem/community-bg-h5.png')",
         'ecosystem-submit': "url('../images/ecosystem/ecosystem-submit.png')",
         'ecosystem-submit-h5': "url('../images/ecosystem/ecosystem-submit-h5.png')",
         'footer-bg': "url('../images/footer/footer-bg.png')",

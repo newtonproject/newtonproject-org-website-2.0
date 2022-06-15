@@ -195,6 +195,9 @@
     li {
         @apply flex items-center w-1/2 md:w-1/4 cursor-pointer mt-10 md:mt-6;
     }
+    .global-youtube {
+        @apply hidden;
+    }
     a {
         @apply flex items-center w-full mt-10 md:mt-6;
         >div {

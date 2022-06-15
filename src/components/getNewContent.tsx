@@ -39,14 +39,14 @@ export default function GetNewContent() {
             <div className={'getnew-content'}>
                 <div className={'newtax'}>
                     <dl>
-                        <dt><i></i>NewTax 2020</dt>
+                        <dt><span><i></i>NewTax 2020</span></dt>
                         <dd>
                             <span><i>Address:</i><i>NEW182K9sX2KE3gw6o7WNNroW1K7FDuvhMfEtkF</i></span>
                             <span><i>Effective Time:</i><i>2020-01-01 17:48:57</i></span>
                         </dd>
                     </dl>
                     <dl className={'newtax-item'}>
-                        <dt><i></i>NewTax 2019</dt>
+                        <dt><span><i></i>NewTax 2019</span></dt>
                         <dd>
                             <span><i>Address:</i><i>NEW182K9sX2KE3gw6o7WNNroW1K7FDuvhMfEtkF</i></span>
                             <span><i>Effective Time:</i><i>2019-05-01 17:48:57 ~ 2020-01-01 17:48:57</i></span>
