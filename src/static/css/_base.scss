@@ -33,8 +33,12 @@ h2 {
     font-family:  "Ubuntu-Bold";
 }
 
+
+#scroll {
+    @apply hidden lg:block;
+}
 .scroll-top {
-    @apply fixed bottom-32 right-10 cursor-pointer w-12 h-12  flex items-center justify-center;
+    @apply  fixed bottom-32 right-10 cursor-pointer w-12 h-12  flex items-center justify-center;
     background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
     box-shadow:  -5px -5px 20px 5px #FFFFFF, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
     border-radius: 50%;
