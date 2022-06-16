@@ -1,30 +1,25 @@
 import React from "react"
-import Seo from '../components/seo'
-import Header from '../components/header'
 import Banner from '../components/home/banner'
 import Centent from '../components/home/centent'
-import Footer from '../components/footer'
 import News from '../components/home/news'
 import GlobalCommunity from '../components/home/globalCommunity'
-import ScrollTop from '../components/scrollTop'
+import NormalLayout from '../components/NormalLayout'
+import { PageModel } from '../hooks/PageModel'
 
-const IndexPage: React.FC = () => {
+export default IndexPage
 
+function IndexPage() {
+  let pageModel = new PageModel('Home')
+  return <div>{NormalLayout(Main(), pageModel)}</div>
+}
+
+function Main() {
   return (
-    <>
-    <Seo title={'Home'} description={''} meta={[]} lang={''} />
     <div className={'new-index'}>
-      <Header />
       <Banner />
       <Centent />
       <News />
       <GlobalCommunity title={'Global Community'} />
-      <Footer />
-      <ScrollTop />
     </div>
-    </>
   )
-
 }
-
-export default IndexPage

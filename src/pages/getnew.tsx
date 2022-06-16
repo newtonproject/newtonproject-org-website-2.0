@@ -1,18 +1,19 @@
 import React from "react"
-import Seo from '../components/seo'
-import Header from '../components/header'
-import  Footer from '../components/footer'
-import  GetNewContent from '../components/getNewContent'
-import  ScrollTop from '../components/scrollTop'
+import GetNewContent from '../components/getNewContent'
+import NormalLayout from '../components/NormalLayout'
+import { PageModel } from '../hooks/PageModel'
 
-const Ecosystem = () => (
+export default GetNew
+
+function GetNew() {
+  let pageModel = new PageModel('GetNew')
+  return <div>{NormalLayout(Main(), pageModel)}</div>
+}
+
+function Main() {
+  return (
     <>
-      <Seo title={'GetNew'} description={''} meta={[]} lang={''}  />
-      <Header />
       <GetNewContent />
-      <Footer />
-      <ScrollTop />
     </>
-)
-
-export default Ecosystem
+  )
+}

@@ -1,18 +1,19 @@
 import React from "react"
-import Seo from '../components/seo'
-import Header from '../components/header'
-import  Footer from '../components/footer'
-import  CommunityContent from '../components/communityContent'
-import  ScrollTop from '../components/scrollTop'
-
-const Community = () => (
-    <div className={'community-html'}>
-      <Seo title={'Community'} description={''} meta={[]} lang={''}  />
-      <Header />
-      <CommunityContent />
-      <Footer />
-      <ScrollTop />
-    </div>
-)
+import CommunityContent from '../components/communityContent'
+import NormalLayout from '../components/NormalLayout'
+import { PageModel } from '../hooks/PageModel'
 
 export default Community
+
+function Community() {
+  let pageModel = new PageModel('Community')
+  return <div>{NormalLayout(Main(), pageModel)}</div>
+}
+
+function Main() {
+  return (
+    <div className={'community-html'}>
+      <CommunityContent />
+    </div>
+  )
+}
