@@ -59,7 +59,7 @@ export default function GetNewContent() {
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew1.png' /></dt>
                         <dd>
                             <h3>NEW Total Amount</h3>
-                            <span>1000 亿</span>
+                            <span>100 Billion</span>
                         </dd>
                     </dl>
                     <dl className={'total-top top2'}>

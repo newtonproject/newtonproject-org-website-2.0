@@ -49,5 +49,10 @@ h2 {
 }
 
 .not-found-page {
-    @apply text-center text-3xl md:text-5xl mt-20 md:mt-64;
+    .not-img {
+        @apply mt-[5.5rem] mx-4 lg:mx-20 xl:mx-96;
+        img {
+            @apply w-full h-auto;
+        }
+    }
 }
