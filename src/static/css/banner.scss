@@ -30,6 +30,13 @@
         span {
             @apply ml-4 text-blueb6;
         }
+        p {
+            &:nth-child(1) {
+                span {
+                    @apply hidden;
+                }
+            }
+        }
     }
     .banner-link {
         @apply flex flex-row flex-wrap justify-between;

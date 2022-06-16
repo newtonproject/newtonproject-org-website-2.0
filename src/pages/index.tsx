@@ -18,7 +18,7 @@ function Main() {
     <div className={'new-index'}>
       <Banner />
       <Centent />
-      <News />
+      <News title={'News'} />
       <GlobalCommunity title={'Global Community'} />
     </div>
   )

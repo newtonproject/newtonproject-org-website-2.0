@@ -139,7 +139,7 @@
         .news-img {
             @apply w-full relative;
             padding-bottom: 76%;
-            >div {
+            >img {
                 @apply w-full h-full absolute top-1/2 left-1/2 object-cover;
                 transform: translate(-50%, -50%)!important;
             }
