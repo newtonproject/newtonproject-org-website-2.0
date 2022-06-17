@@ -5,6 +5,8 @@ import SubmitContent from './submitContent'
 import axios from "axios"
 import News from '../components/home/news'
 import { arrDate } from '../hooks/createTime'
+import bannerCommunity from '../static/images/ecosystem/community-banner.png'
+import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.png'
 
 export default function CommunityContent() {
 
@@ -12,7 +14,7 @@ export default function CommunityContent() {
     const [announcements, setAnnouncements] = useState([])
     const [blogsItem, setBlogsItem] = useState([])
     const [voices, setVoices] = useState([])
-    
+
     useEffect(() => {
         const fetchData = async () => {
             const res = await axios(
@@ -29,8 +31,8 @@ export default function CommunityContent() {
     return (
         <div id={'community'}>
             <div className={'getnew-banner'}>
-                <StaticImage className={'ecosystem-banner-pc'} alt='ecosystem-banner' src='../static/images/ecosystem/community-banner.png' />
-                <StaticImage className={'ecosystem-banner-h5'} alt='ecosystem-banner' src='../static/images/ecosystem/community-banner-h5.png' />
+                <img className={'ecosystem-banner-pc'} src={bannerCommunity} alt='img' />
+                <img className={'ecosystem-banner-h5'} src={bannerCommunityH5} alt='img' />
                 <h2>C O M M U N I T Y</h2>
             </div>
             <div className={'community-news'}>

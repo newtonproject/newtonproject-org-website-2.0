@@ -64,7 +64,7 @@ export default function Banner() {
                         </div>
                     </div>
                     <div className={'banner-img'}>
-                        <img src={bannerMobileImg} />
+                        <img src={bannerMobileImg} alt='img' />
                     </div>
                 </div>
                 <div className={'banner-link'}>
@@ -87,7 +87,7 @@ export default function Banner() {
                 </div>
                 </div>
                 <div className={'banner-img'}>
-                    <img src={bannerMobileImg} />
+                    <img src={bannerMobileImg} alt='img' />
                 </div>
                 <div className={'banner-mobile banner-mobile-news'}>
                     <div className={'banner-news'}>

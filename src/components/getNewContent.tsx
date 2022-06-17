@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
+import bannerGetnew from '../static/images/getnew/getnew-banner.png'
+import bannerGetnewH5 from '../static/images/getnew/getnew-banner-h5.png'
 import axios from "axios"
 
 export default function GetNewContent() {
@@ -28,8 +30,8 @@ export default function GetNewContent() {
     return (
         <div id={'getnew'}>
             <div className={'ecosystem-banner getnew-banner'}>
-                <StaticImage className={'ecosystem-banner-pc'} alt='ecosystem-banner' src='../static/images/getnew/getnew-banner.png' />
-                <StaticImage className={'ecosystem-banner-h5'} alt='ecosystem-banner' src='../static/images/getnew/getnew-banner-h5.png' />
+                <img className={'ecosystem-banner-pc'} src={bannerGetnew} alt='img' />
+                <img className={'ecosystem-banner-h5'} src={bannerGetnewH5} alt='img' />
                 <h2>G E T&nbsp;&nbsp;N E W</h2>
             </div>
             <div className={'getnew-content'}>

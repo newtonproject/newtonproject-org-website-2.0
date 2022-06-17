@@ -1,11 +1,13 @@
 import React from "react"
 import { StaticImage } from 'gatsby-plugin-image'
+import bannerEcosystem from '../static/images/ecosystem/ecosystem-banner.png'
+import bannerEcosystemH5 from '../static/images/ecosystem/ecosystem-banner-h5.png'
 
 const EcosystemContent = () => (
     <div id={'ecosystem'}>
         <div className={'ecosystem-banner'}>
-            <StaticImage className={'ecosystem-banner-pc'} alt='ecosystem-banner' src='../static/images/ecosystem/ecosystem-banner.png' />
-            <StaticImage className={'ecosystem-banner-h5'} alt='ecosystem-banner' src='../static/images/ecosystem/ecosystem-banner-h5.png' />
+            <img className={'ecosystem-banner-pc'} src={bannerEcosystem} alt='img' />
+            <img className={'ecosystem-banner-h5'} src={bannerEcosystemH5} alt='img' />
         </div>
         <div className={'ecosystem-content'}>
             <dl>
