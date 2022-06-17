@@ -9,13 +9,13 @@ import { PageModel } from '../hooks/PageModel'
 export default IndexPage
 
 function IndexPage() {
-  let pageModel = new PageModel('Home')
+  let pageModel = new PageModel('Home','new-index')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 
 function Main() {
   return (
-    <div className={'new-index'}>
+    <div>
       <Banner />
       <Centent />
       <News title={'News'} />

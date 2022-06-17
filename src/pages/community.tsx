@@ -6,13 +6,13 @@ import { PageModel } from '../hooks/PageModel'
 export default Community
 
 function Community() {
-  let pageModel = new PageModel('Community')
+  let pageModel = new PageModel('Community', 'community-html',)
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 
 function Main() {
   return (
-    <div className={'community-html'}>
+    <div>
       <CommunityContent />
     </div>
   )

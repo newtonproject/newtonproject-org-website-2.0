@@ -6,7 +6,7 @@ import { PageModel } from '../hooks/PageModel'
 export default GetNew
 
 function GetNew() {
-  let pageModel = new PageModel('GetNew')
+  let pageModel = new PageModel('GetNew','getNew-html')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 

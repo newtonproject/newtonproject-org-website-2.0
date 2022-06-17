@@ -6,13 +6,13 @@ import { PageModel } from '../hooks/PageModel'
 export default Ecosystem
 
 function Ecosystem() {
-  let pageModel = new PageModel('Ecosystem')
+  let pageModel = new PageModel('Ecosystem','ecosystem-html')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 
 function Main() {
   return (
-    <div className={'ecosystem-html'}>
+    <div>
       <EcosystemContent />
     </div>
   )

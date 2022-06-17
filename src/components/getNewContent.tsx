@@ -1,26 +1,22 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import axios from "axios"
 
 export default function GetNewContent() {
-    const [balance, setBalance] = React.useState<string>()
-    const [circulating, setCirculating] = React.useState<string>()
-    const [lockedAmount, setLockedAmount] = React.useState<string>()
     const [priceDay, setPriceDay] = React.useState<number>()
-    const [incentiveRelease, setIncentiveRelease] = React.useState<string>()
+    const [data, setData]: any = useState([]);
+    const [balance, setBalance]: any = useState([]);
 
     useEffect(() => {
-        axios.get(
-            'https://legacy-explorer.newtonproject.org/api/v1/brief'
-        ).then((res) => {
+        const fetchData = async () => {
+            const res = await axios(
+                "https://legacy-explorer.newtonproject.org/api/v1/brief"
+            );
             let price = res.data.newton_price_cny / res.data.newton_price_usd;
-            setCirculating(res.data.circulating_supply);
-            setLockedAmount(res.data.locked_amount);
             setPriceDay(price);
-            setIncentiveRelease(res.data.incentive_release);
-        }).catch((err) => {
-            console.log(err)
-        })
+            setData(res.data);
+        };
+        fetchData();
         axios.get(
             'https://legacy-explorer.newtonproject.org/api/v1/addr/NEW182E111111111111111111111111114FhDeS/'
         ).then((res) => {
@@ -28,7 +24,7 @@ export default function GetNewContent() {
         }).catch((err) => {
             console.log(err)
         })
-    },[])
+    }, []);
     return (
         <div id={'getnew'}>
             <div className={'ecosystem-banner getnew-banner'}>
@@ -73,7 +69,7 @@ export default function GetNewContent() {
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew3.png' /></dt>
                         <dd>
                             <h3>Circulating Supply</h3>
-                            <span>{circulating}</span>
+                            <span>{data.circulating_supply}</span>
                         </dd>
                     </dl>
                     <dl className={'total-bottom bottom1'}>
@@ -87,14 +83,14 @@ export default function GetNewContent() {
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew5.png' /></dt>
                         <dd>
                             <h3>Stake Total Amount</h3>
-                            <span>{lockedAmount}</span>
+                            <span>{data.locked_amount}</span>
                         </dd>
                     </dl>
                     <dl className={'total-bottom bottom3'}>
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew6.png' /></dt>
                         <dd>
                             <h3>Released on the Day</h3>
-                            <span>{incentiveRelease}</span>
+                            <span>{data.incentive_release}</span>
                         </dd>
                     </dl>
                 </div>

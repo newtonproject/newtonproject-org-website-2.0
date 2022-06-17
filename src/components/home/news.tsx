@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import arrDate from '../../hooks/createTime'
+import { arrDate } from '../../hooks/createTime'
+import { NewschildProps } from '../../hooks/PageModel'
 
-interface childProps {
-    title: string
-}
-const News: React.FC<childProps> = (props) =>  {
+const News: React.FC<NewschildProps> = (props) =>  {
     const { title } = props;
-    const [newsItem, setNewsItem] = useState([])
+    const [data, setData] = useState([]);
+
     useEffect(() => {
-        axios.get(
-            'https://www.newtonproject.org/api/v1/press/latest/'
-        ).then((res) => {
-            setNewsItem(res.data.result);
-        }).catch((err) => {
-            console.log(err)
-        })
-    },[])
+      const fetchData = async () => {
+        const res = await axios(
+          "https://www.newtonproject.org/api/v1/press/latest/"
+        );
+        setData(res.data.result);
+      };
+      fetchData();
+    }, []);
+
     return (
         <>
             <div className={'news'}>
                 <h2>{title}</h2>
                 <ul>
                     {
-                        newsItem.map((item: any, index) => {
+                        data.map((item: any, index) => {
                             return (
                                 <li key={index}>
                                     <a href={item.url} target='_blank' key={index}>

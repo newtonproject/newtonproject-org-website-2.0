@@ -1,4 +1,4 @@
-export default function arrDate(dateTime:string) {
+export function arrDate(dateTime:string) {
     let dateArr = dateTime.split("-")
     let timeArr = dateArr[2].split(' ')
     let month = dateArr[1]
@@ -30,3 +30,17 @@ export default function arrDate(dateTime:string) {
     }
     return mm + ' ' + timeArr[0] + ',' + dateArr[0]
 }
+
+export function arrDateBanner(dateTime: string) {
+  let dateArr = dateTime.split(" ")
+  let timeArr = dateArr[0].split("-")
+  return timeArr[2] + '/' + timeArr[1] + '/' + timeArr[0]
+}
+export function Weekly(WeeklyItem: string) {
+  let dateItem = WeeklyItem.split(" | ")
+  let dateArrItem = dateItem[1].split("-")
+  let dateItemArr0 = dateArrItem[0].split(".")
+  let dateItemArr1 = dateArrItem[1].split(".")
+  return dateItem[0] + ' ' + dateItemArr0[2] + '/' + dateItemArr0[1] + '/' + dateItemArr0[0] + '-' + dateItemArr1[2] + '/' + dateItemArr1[1] + '/' + dateItemArr1[0]
+}
+

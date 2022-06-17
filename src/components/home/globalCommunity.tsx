@@ -1,9 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-
-interface childProps {
-    title: string
-}
+import { childProps } from '../../hooks/PageModel'
 
 const GlobalCommunity: React.FC<childProps> = (props) => {
     const { title } = props;

@@ -169,6 +169,13 @@
     }
     
 }
+.announcements {
+    li {
+        .news-img {
+            @apply pb-0;
+        }
+    }
+}
 .centent-community,
 .news {
     .news-more {
