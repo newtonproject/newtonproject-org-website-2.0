@@ -1,5 +1,5 @@
 .banner-pc {
-    @apply hidden lg:block  py-6 px-32 mb-44;
+    @apply hidden lg:block  py-6 px-32 mb-32;
     .banner-title {
         @apply mt-14 text-6xl text-grag2c font-bold md:font-bold leading-[4.8rem];
         font-family:  "Ubuntu-Bold";
@@ -17,8 +17,9 @@
         @apply w-3/12;
     }
     .banner-link {
+        @apply xl:-mt-12;
         a {
-            @apply  text-center lg:py-2 lg:px-2 xl:py-4 xl:px-16 mb-8 lg:mt-10 xl:mt-0;
+            @apply text-center lg:py-2 lg:px-2 xl:py-4 xl:px-16 mb-8 lg:mt-10 xl:mt-0;
            
         }
     }

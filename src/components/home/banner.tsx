@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import banner from '../../static/images/banner.gif'
 import bannerMobileImg from '../../static/images/banner-h5.gif'
 import { arrDateBanner, Weekly } from '../../hooks/createTime'
 
@@ -65,7 +64,7 @@ export default function Banner() {
                         </div>
                     </div>
                     <div className={'banner-img'}>
-                        <img src={banner} />
+                        <img src={bannerMobileImg} />
                     </div>
                 </div>
                 <div className={'banner-link'}>
