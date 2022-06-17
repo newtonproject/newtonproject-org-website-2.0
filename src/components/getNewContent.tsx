@@ -3,9 +3,10 @@ import { StaticImage } from 'gatsby-plugin-image'
 import bannerGetnew from '../static/images/getnew/getnew-banner.png'
 import bannerGetnewH5 from '../static/images/getnew/getnew-banner-h5.png'
 import axios from "axios"
+import { numFormat } from '../hooks/createTime'
 
 export default function GetNewContent() {
-    const [priceDay, setPriceDay] = React.useState<number>()
+
     const [data, setData]: any = useState([]);
     const [balance, setBalance]: any = useState([]);
 
@@ -14,8 +15,6 @@ export default function GetNewContent() {
             const res = await axios(
                 "https://legacy-explorer.newtonproject.org/api/v1/brief"
             );
-            let price = res.data.newton_price_cny / res.data.newton_price_usd;
-            setPriceDay(price);
             setData(res.data);
         };
         fetchData();
@@ -57,67 +56,67 @@ export default function GetNewContent() {
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew1.png' /></dt>
                         <dd>
                             <h3>NEW Total Amount</h3>
-                            <span>100 Billion</span>
+                            <span>100 Billion NEW</span>
                         </dd>
                     </dl>
                     <dl className={'total-top top2'}>
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew2.png' /></dt>
                         <dd>
                             <h3>Destroyed</h3>
-                            <span>{balance}</span>
+                            <span>{numFormat(balance)} NEW</span>
                         </dd>
                     </dl>
                     <dl className={'total-top top3'}>
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew3.png' /></dt>
                         <dd>
                             <h3>Circulating Supply</h3>
-                            <span>{data.circulating_supply}</span>
+                            <span>{numFormat(data.circulating_supply)} NEW</span>
                         </dd>
                     </dl>
                     <dl className={'total-bottom bottom1'}>
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew4.png' /></dt>
                         <dd>
                             <h3>Price of the Day</h3>
-                            <span>{priceDay}</span>
+                            <span>{data.newton_price_usd} USD</span>
                         </dd>
                     </dl>
                     <dl className={'total-bottom bottom2'}>
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew5.png' /></dt>
                         <dd>
                             <h3>Stake Total Amount</h3>
-                            <span>{data.locked_amount}</span>
+                            <span>{numFormat(data.locked_amount)} NEW</span>
                         </dd>
                     </dl>
                     <dl className={'total-bottom bottom3'}>
                         <dt><StaticImage alt='img' src='../static/images/getnew/getnew6.png' /></dt>
                         <dd>
                             <h3>Released on the Day</h3>
-                            <span>{data.incentive_release}</span>
+                            <span>{numFormat(data.incentive_release)} NEW</span>
                         </dd>
                     </dl>
                 </div>
                 <div className={'exchange'}>
                     <h2>Listed Exchange</h2>
                     <div className={'top-img'}>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed1.png' /></a>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed2.png' /></a>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed3.png' /></a>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed4.png' /></a>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed5.png' /></a>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed6.png' /></a>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed7.png' /></a>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed8.png' /></a>
+                        <a href='https://www.huobi.com' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed1.png' /></a>
+                        <a href='https://www.hb.co.kr/en-us/' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed2.png' /></a>
+                        <a href='https://www.biup.com/' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed3.png' /></a>
+                        <a href='https://www.mxc.com/' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed4.png' /></a>
+                        <a href='https://www.binance.org/' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed5.png' /></a>
+                        <a href='https://www.biki.com/' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed6.png' /></a>
+                        <a href='https://www.hkex.me/' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed7.png' /></a>
+                        <a href='https://www.bibull.co/' target='_blank'><StaticImage alt='img' src='../static/images/getnew/listed8.png' /></a>
                     </div>
                 </div>
                 <div className={'dex'}>
                     <h2>DEX</h2>
-                    <a href='' target='_blank'><StaticImage alt='img' src='../static/images/ecosystem/new-swap.png' /></a>
+                    <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'><StaticImage alt='img' src='../static/images/ecosystem/new-swap.png' /></a>
                 </div>
                 <div className={'dex'}>
                     <h2>Wallet</h2>
                     <div>
-                        <a href='' target='_blank'><StaticImage alt='img' src='../static/images/ecosystem/new-pay.png' /></a>
-                        <a href='' target='_blank' className={'new-mask'}><StaticImage alt='img' src='../static/images/ecosystem/new-mask.png' /></a>
+                        <a href='https://www.newtonproject.org/newpay/' target='_blank'><StaticImage alt='img' src='../static/images/ecosystem/new-pay.png' /></a>
+                        <a href='https://newmall.io/' target='_blank' className={'new-mask'}><StaticImage alt='img' src='../static/images/ecosystem/new-mask.png' /></a>
                     </div>
                     <p><span>Announcement: </span>&lt;NewChain NEW and Binance NEW-09E SWAP instructions&gt;</p>
                 </div>

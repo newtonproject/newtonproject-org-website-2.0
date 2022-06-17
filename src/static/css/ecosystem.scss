@@ -113,7 +113,7 @@
         @apply px-4 xl:px-32;
     }
     .newtax {
-        @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-start xl:flex-nowrap;
+        @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-between xl:flex-nowrap;
         dl {
             @apply flex flex-wrap flex-col justify-center w-full lg:w-w2/3 md:flex-nowrap xl:flex-row xl:w-w2/3 xl:justify-between;
             &:nth-child(2) {
