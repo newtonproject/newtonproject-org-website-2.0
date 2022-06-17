@@ -36,7 +36,7 @@ module.exports = {
         gragd1: '#D1E5F9',
         gray20: '#207CD1',
         gray96: '#96A9BA',
-        gray11: '#207CD1',
+        gray11: '#119BFF ',
         gray333: '#333333',
         graydd: '#DDEBF7',
         green07: '#07D600',

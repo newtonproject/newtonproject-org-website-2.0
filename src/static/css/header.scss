@@ -9,7 +9,7 @@
             @apply lg:px-4 xl:px-8 relative;
         }
         a {
-            @apply hover:text-gray11;
+            @apply hover:text-gray20;
             font-family: "Ubuntu-Medium";
         }
         span {
@@ -23,7 +23,7 @@
                 @apply block;
             }
             >a {
-                @apply text-gray11;
+                @apply text-gray20;
             }
             span {
                 @apply bg-header-bot-hover;
