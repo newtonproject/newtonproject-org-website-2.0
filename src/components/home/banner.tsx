@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import bannerMobileImg from '../../static/images/banner-h5.gif'
+import bannerMobileImg from '../../static/images/banner.png'
 import { arrDateBanner, Weekly } from '../../hooks/createTime'
 
 let bannerlist = [

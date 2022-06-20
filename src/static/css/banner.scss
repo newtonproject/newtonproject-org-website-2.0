@@ -8,13 +8,13 @@
         @apply flex flex-wrap justify-between;
     }
     .banner-img {
-        @apply w-8/12 mt-12 xl:mt-0;
+        @apply lg:w-1/2 xl:w-8/12 mt-12 lg:mt-32 xl:mt-0;
         img {
-            @apply w-full;
+            @apply xl:w-4/5 w-full -mt-24;
         }
     }
     .banner-news {
-        @apply w-3/12;
+        @apply lg:w-[28%] xl:w-3/12;
     }
     .banner-link {
         @apply xl:-mt-12;
@@ -66,17 +66,15 @@
 .banner-mobile-box {
     @apply block lg:hidden;
     .banner-img {
-        height: 80vh;
-        @apply w-screen relative;
+        @apply w-screen h-[80vh] md:h-[92vh] relative;
         img {
             transform: translate(-50%, -50%);
-            top: 45%;
-            @apply w-full h-full absolute left-1/2 object-cover;
+            @apply w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover;
         }
     }
 }
 .banner-mobile-news {
-    @apply -mt-14;
+    @apply -mt-40 md:mt-0;
 }
 .banner-mobile {
     @apply px-4 overflow-hidden;
@@ -86,8 +84,7 @@
     .banner-link {
         @apply mt-12 mb-10;
         a {
-            width: 48%;
-            @apply mb-8 py-2;
+            @apply w-[48%] mb-8 py-2;
         }
         i {
             @apply text-xs;
