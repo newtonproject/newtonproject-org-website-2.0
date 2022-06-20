@@ -1,5 +1,5 @@
 .banner-pc {
-    @apply hidden lg:block  py-6 px-32 mb-32;
+    @apply hidden lg:block  py-6 mb-32;
     .banner-title {
         @apply mt-14 text-6xl text-grag2c font-bold md:font-bold leading-[4.8rem];
         font-family:  "Ubuntu-Bold";
@@ -10,16 +10,16 @@
     .banner-img {
         @apply lg:w-1/2 xl:w-8/12 mt-12 lg:mt-32 xl:mt-0;
         img {
-            @apply xl:w-4/5 w-full -mt-24;
+            @apply xl:w-[90%] w-full -mt-24 mx-auto;
         }
     }
     .banner-news {
-        @apply lg:w-[28%] xl:w-3/12;
+        @apply lg:w-[28%] xl:w-[30%];
     }
     .banner-link {
-        @apply xl:-mt-12;
+        @apply lg:-mt-16;
         a {
-            @apply text-center lg:py-2 lg:px-2 xl:py-4 xl:px-16 mb-8 lg:mt-10 xl:mt-0;
+            @apply text-center lg:py-2 lg:px-8 xl:py-4 xl:px-12 mb-8 lg:mt-10 xl:mt-0;
            
         }
     }

@@ -1,5 +1,5 @@
 .centent-community {
-    @apply px-4 md:px-32 mb-16 md:mb-52;
+    @apply mb-16 md:mb-52;
     h2 {
         @apply mb-10 md:mb-12;
     }
@@ -27,7 +27,7 @@
     }
 }
 .centent-build {
-    @apply hidden md:block px-4 md:px-32 mt-28;
+    @apply hidden md:block mt-28;
     h2 {
         @apply text-3xl font-bold md:mb-6 text-left;
     }
@@ -124,7 +124,7 @@
     }
 }
 .news {
-    @apply px-4 pb-16 md:px-32 md:pb-44 mt-16 md:mt-44;
+    @apply pb-16 md:pb-44 mt-16 md:mt-44;
     h2 {
         @apply mb-10 md:mb-16;
     }
@@ -168,7 +168,7 @@
     }
     .news-more {
         a {
-            @apply md:px-36 px-32;
+            @apply md:px-32 px-32;
         }
     }
     
@@ -206,7 +206,7 @@
 
 
 .global {
-    @apply px-4 pb-16 md:px-32 md:pb-44;
+    @apply pb-16 md:pb-44;
     ul {
         @apply flex flex-wrap md:mt-12;
     }

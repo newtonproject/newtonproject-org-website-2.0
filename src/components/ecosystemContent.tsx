@@ -5,11 +5,12 @@ import bannerEcosystemH5 from '../static/images/ecosystem/ecosystem-banner-h5.pn
 
 const EcosystemContent = () => (
     <div id={'ecosystem'}>
-        <div className={'ecosystem-banner'}>
+        <div className={'getnew-banner container'}>
             <img className={'ecosystem-banner-pc'} src={bannerEcosystem} alt='img' />
             <img className={'ecosystem-banner-h5'} src={bannerEcosystemH5} alt='img' />
+            <h2>ECOSYSTEM</h2>
         </div>
-        <div className={'ecosystem-content'}>
+        <div className={'ecosystem-content ecosystem-container'}>
             <dl>
                 <dt><i></i>NFT</dt>
                 <dd className={'new-mall'}>

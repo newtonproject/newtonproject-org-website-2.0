@@ -17,7 +17,7 @@ export default function Header() {
           <li className={'header-use'}>
             <Link to='/'>Use Newton<span></span></Link>
             <div className={'header-down'}>
-              <Link to='/getnew' target='_blank'>GetNew</Link>
+              <Link to='/getnew' target='_blank'>Get New</Link>
               <a href='https://www.newtonproject.org/newpay/' target='_blank'>NewPay</a>
               <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'>NewMask</a>
               <a href='https://explorer.newtonproject.org/' target='_blank'>NewExplorer</a>

@@ -30,112 +30,114 @@ export default function CommunityContent() {
 
     return (
         <div id={'community'}>
-            <div className={'getnew-banner'}>
+            <div className={'getnew-banner container'}>
                 <img className={'ecosystem-banner-pc'} src={bannerCommunity} alt='img' />
                 <img className={'ecosystem-banner-h5'} src={bannerCommunityH5} alt='img' />
                 <h2>C O M M U N I T Y</h2>
             </div>
             <div className={'community-news'}>
-                <div className={'news'}>
-                    <h2>Activity</h2>
-                    <ul>
-                        {
-                            activities.map((item: any, index) => {
-                                return (
-                                    <li key={index}>
-                                        <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
-                                            <div className={'news-img'} >
-                                                <img src={item.image} alt='img' />
-                                            </div>
-                                            <div className={'news-title'}>
-                                                <h3>{item.title}</h3>
-                                                <p>{arrDate(item.created_at)}</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                    <div className={'news-more'}><a href='https://www.newtonproject.org/announcements/0/' target='_blank'>More</a></div>
+                <div className={'container'}>
+                    <div className={'news'}>
+                        <h2>Activity</h2>
+                        <ul>
+                            {
+                                activities.map((item: any, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
+                                                <div className={'news-img'} >
+                                                    <img src={item.image} alt='img' />
+                                                </div>
+                                                <div className={'news-title'}>
+                                                    <h3>{item.title}</h3>
+                                                    <p>{arrDate(item.created_at)}</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        <div className={'news-more'}><a href='https://www.newtonproject.org/announcements/0/' target='_blank'>More</a></div>
+                    </div>
+                    <div className={'news announcements'}>
+                        <h2>Announcements</h2>
+                        <ul>
+                            {
+                                announcements.map((item: any, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
+                                                <div className={'news-img'} >
+                                                    {
+                                                        item.image == ' ' ?
+                                                            <img src={item.image} alt='img' /> :
+                                                            <StaticImage alt='new-mall' src='../static/images/ecosystem/announcements.png' />
+                                                    }
+                                                </div>
+                                                <div className={'news-title'}>
+                                                    <h3>{item.title}</h3>
+                                                    <p>{arrDate(item.created_at)}</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        <div className={'news-more'}><a href='https://www.newtonproject.org/announcements/1/' target='_blank'>More</a></div>
+                    </div>
+                    <News title={'Press'} />
+                    <div className={'news'}>
+                        <h2>Blog</h2>
+                        <ul>
+                            {
+                                blogsItem.map((item: any, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
+                                                <div className={'news-img'} >
+                                                    <img src={item.image} alt='img' />
+                                                </div>
+                                                <div className={'news-title'}>
+                                                    <h3>{item.title}</h3>
+                                                    <p>{arrDate(item.created_at)}</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        <div className={'news-more'}><a href='https://www.newtonproject.org/blog/' target='_blank'>More</a></div>
+                    </div>
+                    <div className={'news'}>
+                        <h2>Community Voice</h2>
+                        <ul>
+                            {
+                                voices.map((item: any, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
+                                                <div className={'news-img'} >
+                                                    <img src={item.image} alt='img' />
+                                                </div>
+                                                <div className={'news-title'}>
+                                                    <h3>{item.title}</h3>
+                                                    <p>{arrDate(item.created_at)}</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
+                        <div className={'news-more'}><a href='https://www.newtonproject.org/community-voice/' target='_blank'>More</a></div>
+                    </div>
+                    <GlobalCommunity title={'Social Network'} />
                 </div>
-                <div className={'news announcements'}>
-                    <h2>Announcements</h2>
-                    <ul>
-                        {
-                            announcements.map((item: any, index) => {
-                                return (
-                                    <li key={index}>
-                                        <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
-                                            <div className={'news-img'} >
-                                                {
-                                                    item.image == ' ' ?
-                                                        <img src={item.image} alt='img' /> :
-                                                        <StaticImage alt='new-mall' src='../static/images/ecosystem/announcements.png' />
-                                                }
-                                            </div>
-                                            <div className={'news-title'}>
-                                                <h3>{item.title}</h3>
-                                                <p>{arrDate(item.created_at)}</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                    <div className={'news-more'}><a href='https://www.newtonproject.org/announcements/1/' target='_blank'>More</a></div>
-                </div>
-                <News title={'Press'} />
-                <div className={'news'}>
-                    <h2>Blog</h2>
-                    <ul>
-                        {
-                            blogsItem.map((item: any, index) => {
-                                return (
-                                    <li key={index}>
-                                        <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
-                                            <div className={'news-img'} >
-                                                <img src={item.image} alt='img' />
-                                            </div>
-                                            <div className={'news-title'}>
-                                                <h3>{item.title}</h3>
-                                                <p>{arrDate(item.created_at)}</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                    <div className={'news-more'}><a href='https://www.newtonproject.org/blog/' target='_blank'>More</a></div>
-                </div>
-                <div className={'news'}>
-                    <h2>Community Voice</h2>
-                    <ul>
-                        {
-                            voices.map((item: any, index) => {
-                                return (
-                                    <li key={index}>
-                                        <a href={'https://www.newtonproject.org/' + item.url} target='_blank' key={index}>
-                                            <div className={'news-img'} >
-                                                <img src={item.image} alt='img' />
-                                            </div>
-                                            <div className={'news-title'}>
-                                                <h3>{item.title}</h3>
-                                                <p>{arrDate(item.created_at)}</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                )
-                            })
-                        }
-                    </ul>
-                    <div className={'news-more'}><a href='https://www.newtonproject.org/community-voice/' target='_blank'>More</a></div>
-                </div>
-                <GlobalCommunity title={'Social Network'} />
-                <SubmitContent />
             </div>
+            <SubmitContent />
         </div>
     )
 }

@@ -27,7 +27,7 @@ export default function GetNewContent() {
         })
     }, []);
     return (
-        <div id={'getnew'}>
+        <div id={'getnew'} className={'container'}>
             <div className={'ecosystem-banner getnew-banner'}>
                 <img className={'ecosystem-banner-pc'} src={bannerGetnew} alt='img' />
                 <img className={'ecosystem-banner-h5'} src={bannerGetnewH5} alt='img' />

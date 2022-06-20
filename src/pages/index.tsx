@@ -15,7 +15,7 @@ function IndexPage() {
 
 function Main() {
   return (
-    <div>
+    <div className={'container'}>
       <Banner />
       <Centent />
       <News title={'News'} />

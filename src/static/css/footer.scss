@@ -14,6 +14,8 @@
     }
 }
 .footer {
+    max-width: 1200px;
+    @apply mx-auto;
     .footer-img {
         @apply pt-8 md:pt-12 text-center md:text-left;
         img {
@@ -33,7 +35,8 @@
     }
 }
 .footer-copyright {
-    @apply block md:flex md:flex-wrap md:justify-between pt-6 pb-12 md:pt-16 md:pb-4;
+    max-width: 1200px;
+    @apply mx-auto block md:flex md:flex-wrap md:justify-between pt-6 pb-12 md:pt-16 md:pb-4;
     >div {
         @apply flex justify-center md:justify-start;
         img {

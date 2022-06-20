@@ -33,7 +33,25 @@ h2 {
     font-family:  "Ubuntu-Bold";
 }
 
-
+.container {
+    max-width: 1200px;
+    @apply mx-auto;
+}
+@media (min-width: 320px) and (max-width: 1190px) {
+    .container,
+    .header {
+        @apply px-4;
+    }
+}
+.ecosystem-container {
+    max-width: 930px;
+    @apply mx-auto;
+}
+@media (min-width: 320px) and (max-width: 929px) {
+    .ecosystem-container {
+        @apply px-4;
+    }
+}
 #scroll {
     @apply hidden lg:block;
 }

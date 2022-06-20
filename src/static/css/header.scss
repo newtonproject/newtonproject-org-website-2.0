@@ -1,5 +1,6 @@
 .header {
-    @apply hidden lg:block px-32 py-6;
+    max-width: 1200px;
+    @apply mx-auto hidden lg:block py-6;
     .header-logo {
         @apply flex flex-row;
     }
@@ -33,7 +34,8 @@
     .header-down {
         @apply hidden absolute right-8 top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
         a {
-            @apply block text-grag2c mt-2;
+            @apply block text-grag2c mt-2 font-normal;
+            font-family: "Ubuntu-R-hinting";
         }
     }
     .header-search {
