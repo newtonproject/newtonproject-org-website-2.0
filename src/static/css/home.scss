@@ -16,7 +16,7 @@
         }
     }
     h5 {
-        @apply text-left text-grag2c md:text-2xl font-bold mb-4 text-xl mt-4 md:mt-7;
+        @apply text-left text-grag2c md:text-font22 font-bold mb-4 text-xl mt-4 md:mt-7;
         font-family:  "Ubuntu-Bold";
         i {
             @apply w-1 h-5 inline-block bg-blue11 mr-3;
@@ -123,8 +123,13 @@
         @apply text-3xl font-bold text-center;
     }
 }
+.community-news {
+    .news-activity {
+        @apply mt-16 md:mt-24;
+    }
+}
 .news {
-    @apply pb-16 md:pb-44 mt-16 md:mt-44;
+    @apply pb-16 md:pb-44 mt-24 md:mt-24;
     h2 {
         @apply mb-10 md:mb-16;
     }

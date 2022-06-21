@@ -38,22 +38,36 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         path: `${__dirname}/src/static/images`,
-        icon: `src/static/images/favicon.png`, 
-       // This path is relative to the root of the site.
+        icon: `src/static/images/favicon.png`,
+        // This path is relative to the root of the site.
       },
-     
+
     },
     `gatsby-plugin-react-helmet`,
-    
-  //   `gatsby-plugin-alias-imports`,
-  //   {
-  //     resolve: `gatsby-plugin-alias-imports`,
-  //     options: {
-  //       alias: {
-  //         '@': path.resolve(__dirname, 'src')
-  //       }
-  //   }
-  // }
-    
+
+    //   `gatsby-plugin-alias-imports`,
+    //   {
+    //     resolve: `gatsby-plugin-alias-imports`,
+    //     options: {
+    //       alias: {
+    //         '@': path.resolve(__dirname, 'src')
+    //       }
+    //   }
+    // }
+    // i18n support
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/static/intl`,
+        // supported language
+        languages: [`en`,`ko`],
+        // language file path
+        defaultLanguage: `en`,
+        // redirect to `/${lang}/` when connecting to `/`
+        // based on user's browser language preference
+        redirect: true,
+      },
+    },
   ],
 }

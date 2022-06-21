@@ -42,7 +42,7 @@ module.exports = {
         green07: '#07D600',
       },
       width: {
-        'w1/3': '30%',
+        'w1/3': '31%',
         'w2/3': '46%',
       },
       fontSize: {

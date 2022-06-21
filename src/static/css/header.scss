@@ -1,16 +1,16 @@
 .header {
     max-width: 1200px;
-    @apply mx-auto hidden lg:block py-6;
+    @apply mx-auto hidden lg:block py-6 z-50;
     .header-logo {
         @apply flex flex-row;
     }
     ul{
-        @apply flex leading-8 font-medium text-base ml-14;
+        @apply flex leading-8 font-medium ml-14 z-20;
         li {
             @apply lg:px-4 xl:px-8 relative;
         }
         a {
-            @apply hover:text-gray20;
+            @apply text-base hover:text-gray20;
             font-family: "Ubuntu-Medium";
         }
         span {
@@ -34,33 +34,63 @@
     .header-down {
         @apply hidden absolute right-8 top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
         a {
-            @apply block text-grag2c mt-2 font-normal;
+            @apply block text-grag2c mt-2 font-normal text-sm leading-7;
             font-family: "Ubuntu-R-hinting";
         }
     }
     .header-search {
-        @apply flex ml-auto flex-row;
+        @apply flex ml-auto flex-row z-30;
         .search {
-            @apply w-6 h-6 bg-search inline-block bg-cover ml-2 bg-top;
-            a {
-                @apply inline-block;
+            @apply relative mr-8;
+           a {
+            @apply absolute top-1/2 -mt-3 left-0 w-6 h-6 bg-search inline-block bg-cover ml-2 bg-top cursor-pointer;
+           }
+            input {
+                @apply h-10 leading-10 border-grage5 border-[1px] border-solid pl-9 pr-2;
             }
         }
-        .language {
-            @apply ml-9;
-            span {
-                @apply w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
-            }
+    }
+}
+.language {
+    @apply ml-9 relative w-9;
+    .language-img {
+        @apply absolute top-4 lg:top-1 right-1/2 lg:right-0 w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
+    }
+    .language-content {
+        @apply hidden;
+    }
+    &:hover {
+        .language-content {
+            @apply block;
         }
+    }
+    p{
+        @apply block lg:hidden text-gray6a mt-7;
+    }
+}
+.language-box {
+    @apply w-48 pt-4 flex flex-wrap justify-between items-center absolute right-[27%] lg:-right-32 -top-14 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
+    span {
+        @apply cursor-pointer w-1/2 mb-3;
+        &:hover {
+            @apply text-gray20;
+        }
+    }
+    .current {
+        @apply text-gray20;
     }
 }
 
 .header-mobile-box {
     @apply relative px-4 block lg:hidden py-4;
     .search {
-        @apply w-5 h-5 bg-search inline-block bg-cover ml-2 bg-top;
         a {
-            @apply inline-block;
+            @apply w-5 h-5 bg-search inline-block bg-cover ml-2 bg-top;
+        }
+    }
+    .header-menu {
+        svg {
+            @apply text-font22;
         }
     }
     .header-mobile {
@@ -86,29 +116,25 @@
             @apply text-gray6a block mb-6 font-normal;
         }
     }
-    
-    
-
 }
 .header-footer {
-    @apply flex flex-row py-8 mt-28;
+    @apply flex flex-row py-8;
     background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
     box-shadow: -9px -9px 20px 5px #FFFFFF;
     .search {
-        
         a {
             @apply w-6 h-6 bg-search inline-block bg-cover bg-top;
         }
     }
     .language {
         span {
-            @apply w-6 h-6 bg-header-zh inline-block bg-cover cursor-pointer;
+            // @apply w-6 h-6 bg-header-zh inline-block bg-cover cursor-pointer;
         }
     }
     .search,
     .language {
         flex: 1;
-        @apply text-center;
+        @apply text-center pt-4;
         p{
             @apply text-gray6a;
         }

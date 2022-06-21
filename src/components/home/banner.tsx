@@ -42,7 +42,7 @@ export default function Banner() {
 
     return (
         <>
-            <div className={'banner-pc'}>
+            <div className={'banner-pc container'}>
                 <div className={'banner-centent'}>
                     <div className={'banner-news'}>
                         {
@@ -81,7 +81,7 @@ export default function Banner() {
                 </div>
             </div>
             <div className={'banner-mobile-box'}>
-                <div className={'banner-mobile'}>
+                <div className={'banner-mobile container'}>
                     <div className={'banner-title'}>
                         Infrastructure<br />For The<br />Community Economy
                 </div>
@@ -89,7 +89,7 @@ export default function Banner() {
                 <div className={'banner-img'}>
                     <img src={bannerMobileImg} alt='img' />
                 </div>
-                <div className={'banner-mobile banner-mobile-news'}>
+                <div className={'banner-mobile banner-mobile-news container'}>
                     <div className={'banner-news'}>
                         {
                             data.map((item: any, index) => {

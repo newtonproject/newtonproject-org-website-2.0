@@ -30,14 +30,14 @@ export default function CommunityContent() {
 
     return (
         <div id={'community'}>
-            <div className={'getnew-banner container'}>
+            <div className={'getnew-banner'}>
                 <img className={'ecosystem-banner-pc'} src={bannerCommunity} alt='img' />
                 <img className={'ecosystem-banner-h5'} src={bannerCommunityH5} alt='img' />
-                <h2>C O M M U N I T Y</h2>
+                <h2>COMMUNITY</h2>
             </div>
             <div className={'community-news'}>
                 <div className={'container'}>
-                    <div className={'news'}>
+                    <div className={'news news-activity'}>
                         <h2>Activity</h2>
                         <ul>
                             {

@@ -21,6 +21,7 @@
         @apply block md:hidden mt-8;
     }
 }
+
 #ecosystem,
 #community,
 #getnew {
@@ -36,7 +37,7 @@
 #ecosystem {
     .getnew-banner {
         h2 {
-            @apply top-[38%] text-[2.75rem];
+            @apply top-[38%] text-[2.75rem] md:text-[6.6rem];
         }
     }
     .ecosystem-content {
@@ -46,6 +47,7 @@
         }
         dt {
             @apply text-3xl text-gray333 font-bold;
+            font-family:  "Ubuntu-Bold";
             i {
                 @apply w-2 h-[22px] mr-2 inline-block;
                 background: linear-gradient(180deg, #0070FF 0%, #87C6FF 100%);
@@ -126,15 +128,15 @@
         @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-between xl:flex-nowrap;
         dl {
             @apply flex flex-wrap flex-col justify-center w-full lg:w-w2/3 md:flex-nowrap xl:flex-row xl:w-w2/3 xl:justify-between;
-            &:nth-child(2) {
-                @apply xl:ml-3;
-            }
+            // &:nth-child(2) {
+            //     @apply xl:ml-3;
+            // }
         }
         .newtax-item {
             @apply mt-20 md:mt-5 lg:mt-0;
         }
         dt {
-            @apply text-grag2c text-font22 leading-9 font-bold  text-center md:text-left xl:w-56;
+            @apply text-grag2c text-font22 leading-9 font-bold  text-center md:text-left xl:w-56 whitespace-nowrap;
             span {
                 @apply relative  pl-3; 
             }
@@ -143,7 +145,7 @@
             }
         }
         dd {
-            @apply md:flex md:flex-wrap md:flex-col text-sm md:w-full;
+            @apply md:flex md:flex-wrap md:flex-col text-sm md:w-full md:ml-5;
             span {
                 @apply flex flex-col md:flex-row text-center;
                 &:nth-child(1) {
@@ -159,10 +161,10 @@
         }
     }
     .newtax-content {
-        @apply text-center text-sm;
+        @apply text-center text-sm leading-6;
     }
     .newtax-total {
-        @apply flex flex-wrap flex-col md:flex-row w-full px-8 mt-20 mb-24 pt-8 pb-10;
+        @apply flex flex-wrap flex-col md:flex-row w-full px-8 mt-20 mb-24 pt-8 pb-8;
         background: linear-gradient(167deg, rgba(178, 217, 255, 0.04) 0%, rgba(219, 237, 255, 0.16) 6%, rgba(255, 255, 255, 0.21) 42%, rgba(221, 241, 255, 0.16) 100%);
         box-shadow: -4px -4px 20px 5px #FFFFFF, 2px 2px 20px 0px rgba(0, 64, 145, 0.12);
         dl {
@@ -221,7 +223,7 @@
             }
         }
         a {
-            @apply inline-block mt-8 w-[45%] md:w-2/6 xl:w-1/5;
+            @apply inline-block mt-10 w-[45%] md:w-2/6 xl:w-1/5;
             img {
                 @apply w-[9.4rem] h-auto;
             }
@@ -248,9 +250,26 @@
             @apply text-grag96a;
         }
     }
+    .Wallet {
+        a {
+            @apply w-[8.4rem];
+        }
+        .new-mask {
+            @apply ml-8 sm:ml-11 md:ml-40;
+        }
+    }
 }
 
 // community
+#getnew,
+#community {
+    .getnew-banner {
+        h2 {
+            @apply text-5xl md:text-[6.6rem];
+        }
+    }
+    
+}
 #community {
     .news {
         @apply pb-0;

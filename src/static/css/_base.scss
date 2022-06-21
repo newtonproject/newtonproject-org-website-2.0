@@ -22,6 +22,9 @@ body {
     color: #2C465E!important;
     background-color:  #F7FBFF ;
 }
+input:focus {
+    outline:none;
+}
 .new-index {
     background-size: 100% 100%;
     @apply bg-body-bg-h5 md:bg-body-bg bg-no-repeat md:bg-contain;
@@ -33,6 +36,7 @@ h2 {
     font-family:  "Ubuntu-Bold";
 }
 
+.getnew-banner,
 .container {
     max-width: 1200px;
     @apply mx-auto;

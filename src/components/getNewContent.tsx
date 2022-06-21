@@ -27,13 +27,13 @@ export default function GetNewContent() {
         })
     }, []);
     return (
-        <div id={'getnew'} className={'container'}>
+        <div id={'getnew'}>
             <div className={'ecosystem-banner getnew-banner'}>
                 <img className={'ecosystem-banner-pc'} src={bannerGetnew} alt='img' />
                 <img className={'ecosystem-banner-h5'} src={bannerGetnewH5} alt='img' />
                 <h2>G E T&nbsp;&nbsp;N E W</h2>
             </div>
-            <div className={'getnew-content'}>
+            <div className={'getnew-content container'}>
                 <div className={'newtax'}>
                     <dl>
                         <dt><span><i></i>NewTax 2020</span></dt>
@@ -112,7 +112,7 @@ export default function GetNewContent() {
                     <h2>DEX</h2>
                     <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'><StaticImage alt='img' src='../static/images/ecosystem/new-swap.png' /></a>
                 </div>
-                <div className={'dex'}>
+                <div className={'dex Wallet'}>
                     <h2>Wallet</h2>
                     <div>
                         <a href='https://www.newtonproject.org/newpay/' target='_blank'><StaticImage alt='img' src='../static/images/ecosystem/new-pay.png' /></a>
