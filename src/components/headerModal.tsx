@@ -72,7 +72,7 @@ export default function HeaderModal() {
                   </div>
                 </Transition.Child>
                 <nav>
-                  <div onClick={() => setMobileSidebarOpen(false)}>
+                  <div>
                     <SiteNavMenu />
                   </div>
                 </nav>
