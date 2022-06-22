@@ -7,9 +7,11 @@ import News from '../components/home/news'
 import { arrDate } from '../hooks/createTime'
 import bannerCommunity from '../static/images/ecosystem/community-banner.png'
 import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.png'
+import { useIntl } from "gatsby-plugin-intl"
 
 export default function CommunityContent() {
 
+    const intl = useIntl();
     const [activities, setactivities] = useState([])
     const [announcements, setAnnouncements] = useState([])
     const [blogsItem, setBlogsItem] = useState([])
@@ -33,12 +35,12 @@ export default function CommunityContent() {
             <div className={'getnew-banner'}>
                 <img className={'ecosystem-banner-pc'} src={bannerCommunity} alt='img' />
                 <img className={'ecosystem-banner-h5'} src={bannerCommunityH5} alt='img' />
-                <h2>COMMUNITY</h2>
+                <h2>{intl.formatMessage({ id: "COMMUNITY" })}</h2>
             </div>
             <div className={'community-news'}>
                 <div className={'container'}>
                     <div className={'news news-activity'}>
-                        <h2>Activity</h2>
+                        <h2>{intl.formatMessage({ id: "Activity" })}</h2>
                         <ul>
                             {
                                 activities.map((item: any, index) => {
@@ -58,10 +60,10 @@ export default function CommunityContent() {
                                 })
                             }
                         </ul>
-                        <div className={'news-more'}><a href='https://www.newtonproject.org/announcements/0/' target='_blank'>More</a></div>
+                        <div className={'news-more'}><a href='https://www.newtonproject.org/announcements/0/' target='_blank'>{intl.formatMessage({ id: "More" })}</a></div>
                     </div>
                     <div className={'news announcements'}>
-                        <h2>Announcements</h2>
+                        <h2>{intl.formatMessage({ id: "Announcements" })}</h2>
                         <ul>
                             {
                                 announcements.map((item: any, index) => {
@@ -89,7 +91,7 @@ export default function CommunityContent() {
                     </div>
                     <News title={'Press'} />
                     <div className={'news'}>
-                        <h2>Blog</h2>
+                        <h2>{intl.formatMessage({ id: "Blog" })}</h2>
                         <ul>
                             {
                                 blogsItem.map((item: any, index) => {
@@ -112,7 +114,7 @@ export default function CommunityContent() {
                         <div className={'news-more'}><a href='https://www.newtonproject.org/blog/' target='_blank'>More</a></div>
                     </div>
                     <div className={'news'}>
-                        <h2>Community Voice</h2>
+                        <h2>{intl.formatMessage({ id: "Community Voice" })}</h2>
                         <ul>
                             {
                                 voices.map((item: any, index) => {
@@ -132,9 +134,9 @@ export default function CommunityContent() {
                                 })
                             }
                         </ul>
-                        <div className={'news-more'}><a href='https://www.newtonproject.org/community-voice/' target='_blank'>More</a></div>
+                        <div className={'news-more'}><a href='https://www.newtonproject.org/community-voice/' target='_blank'>{intl.formatMessage({ id: "More" })}</a></div>
                     </div>
-                    <GlobalCommunity title={'Social Network'} />
+                    <GlobalCommunity title={intl.formatMessage({ id: "Social Network" })} />
                 </div>
             </div>
             <SubmitContent />

@@ -69,7 +69,7 @@
     }
 }
 .language-box {
-    @apply w-48 pt-4 flex flex-wrap justify-between items-center absolute right-[27%] lg:-right-32 -top-14 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
+    @apply max-w-[12rem] pt-4 flex flex-wrap justify-between items-center absolute right-[36%] lg:-right-12 -top-14 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
     span {
         @apply cursor-pointer w-1/2 mb-3;
         &:hover {

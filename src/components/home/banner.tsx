@@ -2,32 +2,11 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import bannerMobileImg from '../../static/images/banner.png'
 import { arrDateBanner, Weekly } from '../../hooks/createTime'
+import { useIntl } from "gatsby-plugin-intl"
 
-let bannerlist = [
-    {
-        title: 'NewPay',
-        centent: 'Decentralized digital wallet',
-        url: 'https://www.newtonproject.org/newpay/'
-    },
-    {
-        title: 'Get New',
-        centent: 'Earned from the Ecosystem',
-        url: '/getnew'
-    },
-    {
-        title: 'NewExplorer',
-        centent: 'Explorer & Analytics platform',
-        url: 'https://explorer.newtonproject.org/'
-    },
-    {
-        title: 'NewBridge',
-        centent: 'Realize asset exchange',
-        url: 'https://newbridge.network/'
-    }
-];
 
 export default function Banner() {
-
+    const intl = useIntl();
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -40,6 +19,28 @@ export default function Banner() {
         fetchData();
     }, []);
 
+    let bannerlist = [
+        {
+            title: intl.formatMessage({ id: "NewPay" }),
+            centent: intl.formatMessage({ id: "Decentralized digital wallet" }),
+            url: 'https://www.newtonproject.org/newpay/'
+        },
+        {
+            title: intl.formatMessage({ id: "Get New" }),
+            centent: intl.formatMessage({ id: "Earned from the Ecosystem" }),
+            url: '/getnew'
+        },
+        {
+            title: intl.formatMessage({ id: "NewExplorer" }),
+            centent: intl.formatMessage({ id: "Explorer & Analytics platform" }),
+            url: 'https://explorer.newtonproject.org/'
+        },
+        {
+            title: intl.formatMessage({ id: "NewBridge" }),
+            centent: intl.formatMessage({ id: "Realize asset exchange" }),
+            url: 'https://newbridge.network/'
+        }
+    ];
     return (
         <>
             <div className={'banner-pc container'}>
@@ -60,7 +61,10 @@ export default function Banner() {
                             })
                         }
                         <div className={'banner-title'}>
-                            Infrastructure<br />For The<br />Community<br />Economy
+                            {intl.formatMessage({ id: "Infrastructure" })}<br />
+                            {intl.formatMessage({ id: "For The" })}<br />
+                            {intl.formatMessage({ id: "Community" })}<br />
+                            {intl.formatMessage({ id: "Economy" })}
                         </div>
                     </div>
                     <div className={'banner-img'}>
@@ -83,8 +87,10 @@ export default function Banner() {
             <div className={'banner-mobile-box'}>
                 <div className={'banner-mobile container'}>
                     <div className={'banner-title'}>
-                        Infrastructure<br />For The<br />Community Economy
-                </div>
+                        {intl.formatMessage({ id: "Infrastructure" })}<br />
+                        {intl.formatMessage({ id: "For The" })}<br />
+                        {intl.formatMessage({ id: "Community" })} {intl.formatMessage({ id: "Economy" })}
+                    </div>
                 </div>
                 <div className={'banner-img'}>
                     <img src={bannerMobileImg} alt='img' />

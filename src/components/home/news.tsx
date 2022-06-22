@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { arrDate } from '../../hooks/createTime'
 import { NewschildProps } from '../../hooks/PageModel'
+import { useIntl } from "gatsby-plugin-intl"
 
 const News: React.FC<NewschildProps> = (props) =>  {
+    const intl = useIntl();
     const { title } = props;
     const [data, setData] = useState([]);
 
@@ -40,7 +42,7 @@ const News: React.FC<NewschildProps> = (props) =>  {
                         })
                     }
                 </ul>
-                <div className={'news-more'}><a href='https://www.newtonproject.org/press/' target='_blank'>More</a></div>
+                <div className={'news-more'}><a href='https://www.newtonproject.org/press/' target='_blank'>{ intl.formatMessage({ id: "More" })}</a></div>
             </div>
         </>
     )

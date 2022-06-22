@@ -5,24 +5,23 @@ import News from '../components/home/news'
 import GlobalCommunity from '../components/home/globalCommunity'
 import NormalLayout from '../components/NormalLayout'
 import { PageModel } from '../hooks/PageModel'
-// import { useIntl,injectIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
 const IndexPage = () => {
-  // const intl = useIntl();
   let pageModel = new PageModel('Home', 'new-index')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 export default IndexPage
 
 function Main() {
-  // const intl = useIntl();
+  const intl = useIntl();
   return (
     <>
       <Banner />
       <div className={'container'}>
         <Centent />
-        <News title={'News'} />
-        <GlobalCommunity title={'Global Community'} />
+        <News title={intl.formatMessage({ id: "News" })} />  
+        <GlobalCommunity title={intl.formatMessage({ id: "Global Community" })} />
       </div>
     </>
   )

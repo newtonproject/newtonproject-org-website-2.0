@@ -4,6 +4,8 @@ import { Link } from 'gatsby'
 import { Dialog, Transition } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Languages from './languages'
+import { useIntl } from "gatsby-plugin-intl"
+
 export default function HeaderModal() {
 
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
@@ -96,36 +98,33 @@ export default function HeaderModal() {
 }
 
 const SiteNavMenu = () => {
+  const intl = useIntl();
   return (
     <>
       <div className="header-nav-menu">
         <ul>
           <li className={'header-use'}>
-            <Link to='/'>Use Newton</Link>
+            <Link to='/'>{intl.formatMessage({ id: "Use Newton" })}<span></span></Link>
             <div className={'header-down'}>
-              <Link to='/getnew' target='_blank'>Get New</Link>
-              <a href='https://www.newtonproject.org/newpay/' target='_blank'>NewPay</a>
+              <Link to='/getnew' target='_blank'>{intl.formatMessage({ id: "Get New" })}</Link>
+              <a href='https://www.newtonproject.org/newpay/' target='_blank'>{intl.formatMessage({ id: "NewPay" })}</a>
               <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'>NewMask</a>
-              <a href='https://explorer.newtonproject.org/' target='_blank'>NewExplorer</a>
-              <a href='https://newbridge.network/' target='_blank'>NewBridge</a>
-              <a href='https://nft.newscan.io/' target='_blank'>NFT Viewer</a>
+              <a href='https://explorer.newtonproject.org/' target='_blank'>{intl.formatMessage({ id: "NewExplorer" })}</a>
+              <a href='https://newbridge.network/' target='_blank'>{intl.formatMessage({ id: "NewBridge" })}</a>
+              <a href='https://nft.newscan.io/' target='_blank'>{intl.formatMessage({ id: "NFT Viewer" })}</a>
             </div>
           </li>
-          <li><a href='https://developer.newtonproject.org/' target='_blank'>Developers</a></li>
-          <li><Link to='/community' target='_blank'>Community</Link></li>
-          <li><Link to='/ecosystem' target='_blank'>Ecosystem</Link></li>
+          <li><a href='https://developer.newtonproject.org/' target='_blank'>{intl.formatMessage({ id: "Developers" })}</a></li>
+          <li><Link to='/community' target='_blank'>{intl.formatMessage({ id: "Community" })}</Link></li>
+          <li><Link to='/ecosystem' target='_blank'>{intl.formatMessage({ id: "Ecosystem" })}</Link></li>
         </ul>
       </div>
       <div className={'header-footer'}>
         <div className={'search'}>
           <a href="https://www.newtonproject.org/search/?q=" target='_blank'></a>
-          <p>Search</p>
+          <p>{intl.formatMessage({ id: "Search" })}</p>
         </div>
         <Languages />
-        {/* <div className={'language'}>
-          <Link to='/'><span></span></Link>
-          <p>Languages</p>
-        </div> */}
       </div>
     </>
   )

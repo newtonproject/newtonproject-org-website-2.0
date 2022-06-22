@@ -1,9 +1,12 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { childProps } from '../../hooks/PageModel'
+import { useIntl } from "gatsby-plugin-intl"
 
 const GlobalCommunity: React.FC<childProps> = (props) => {
+    const intl = useIntl();
     const { title } = props;
+
     return (
         <div className={'global'}>
             <h2>{title}</h2>
@@ -13,7 +16,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div className={'global-img'}>
                             <StaticImage alt='telegram' src='../../static/images/home/telegram.png' />
                         </div>
-                        <h5>Telegram</h5>
+                        <h5>{intl.formatMessage({ id: "Telegram" })}</h5>
                     </a>
                 </li>
                 <li>
@@ -21,7 +24,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div className={'global-img'}>
                             <StaticImage alt='twitter' src='../../static/images/home/twitter.png' />
                         </div>
-                        <h5>Twitter</h5>
+                        <h5>{intl.formatMessage({ id: "Twitter" })}</h5>
                     </a>
                 </li>
                 <li>
@@ -29,7 +32,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div className={'global-img'}>
                             <StaticImage alt='twitter' src='../../static/images/home/facebook.png' />
                         </div>
-                        <h5>Facebook</h5>
+                        <h5>{intl.formatMessage({ id: "Facebook" })}</h5>
                     </a>
                 </li>
                 <li>
@@ -37,7 +40,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div>
                             <StaticImage className={'global-img'} alt='medium' src='../../static/images/home/medium.png' />
                         </div>
-                        <h5>Medium</h5>
+                        <h5>{intl.formatMessage({ id: "Medium" })}</h5>
                     </a>
                 </li>
                 <li>
@@ -45,7 +48,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div className={'global-img'}>
                             <StaticImage alt='group' src='../../static/images/home/group.png' />
                         </div>
-                        <h5>Google Group</h5>
+                        <h5>{intl.formatMessage({ id: "Google Group" })}</h5>
                     </a>
                 </li>
                 <li>
@@ -53,7 +56,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div className={'global-img'}>
                             <StaticImage alt='reddit' src='../../static/images/home/reddit.png' />
                         </div>
-                        <h5>Reddit</h5>
+                        <h5>{intl.formatMessage({ id: "Reddit" })}</h5>
                     </a>
                 </li>
                 <li>
@@ -61,7 +64,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div className={'global-img'}>
                             <StaticImage alt='github' src='../../static/images/home/github.png' />
                         </div>
-                        <h5>Github</h5>
+                        <h5>{intl.formatMessage({ id: "Github" })}</h5>
                     </a>
                 </li>
                 <li className={'global-youtube'}>
@@ -69,7 +72,7 @@ const GlobalCommunity: React.FC<childProps> = (props) => {
                         <div className={'global-img'}>
                             <StaticImage alt='github' src='../../static/images/home/youtube.png' />
                         </div>
-                        <h5>YouTube</h5>
+                        <h5>{intl.formatMessage({ id: "YouTube" })}</h5>
                     </a>
                 </li>
             </ul>

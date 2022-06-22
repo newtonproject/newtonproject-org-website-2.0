@@ -1,12 +1,13 @@
 import React from 'react'
-import { IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
+import { useIntl, IntlContextConsumer, changeLocale } from "gatsby-plugin-intl"
 
 const languageName: any = {
     en: "English",
-    ko: "한국어",
 }
 
 export default function Language() {
+    const intl = useIntl();
+
     return (
         <>
             <div className={'language'}>
@@ -28,7 +29,7 @@ export default function Language() {
                         </IntlContextConsumer>
                     </div>
                 </div>
-                <p>Languages</p>
+                <p>{intl.formatMessage({ id: "Languages" })}</p>
             </div>
         </>
     )
