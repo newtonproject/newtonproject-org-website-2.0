@@ -52,9 +52,9 @@
     }
 }
 .language {
-    @apply ml-9 relative w-9;
+    @apply lg:ml-9 relative w-9;
     .language-img {
-        @apply absolute top-4 lg:top-1 right-1/2 lg:right-0 w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
+        @apply absolute top-5 lg:top-1 right-1/2 -mr-[0.625rem] lg:mr-0 lg:right-0 w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
     }
     .language-content {
         @apply hidden;
@@ -69,7 +69,7 @@
     }
 }
 .language-box {
-    @apply max-w-[12rem] pt-4 flex flex-wrap justify-between items-center absolute right-[36%] lg:-right-12 -top-14 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
+    @apply max-w-[12rem] pt-4 flex flex-wrap justify-between items-center absolute right-[28%] lg:-right-12 -top-14 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
     span {
         @apply cursor-pointer w-1/2 mb-3;
         &:hover {
@@ -118,7 +118,7 @@
     }
 }
 .header-footer {
-    @apply flex flex-row py-8;
+    @apply flex flex-row;
     background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
     box-shadow: -9px -9px 20px 5px #FFFFFF;
     .search {
@@ -134,7 +134,7 @@
     .search,
     .language {
         flex: 1;
-        @apply text-center pt-4;
+        @apply text-center pt-5;
         p{
             @apply text-gray6a;
         }

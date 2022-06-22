@@ -37,7 +37,7 @@
 #ecosystem {
     .getnew-banner {
         h2 {
-            @apply top-[38%] text-[2.75rem] md:text-[6.6rem];
+            @apply top-[23%] text-[2.75rem] md:text-[6.6rem];
         }
     }
     .ecosystem-content {
@@ -128,20 +128,17 @@
         @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-between xl:flex-nowrap;
         dl {
             @apply flex flex-wrap flex-col justify-center w-full lg:w-w2/3 md:flex-nowrap xl:flex-row xl:w-w2/3 xl:justify-between;
-            // &:nth-child(2) {
-            //     @apply xl:ml-3;
-            // }
         }
         .newtax-item {
             @apply mt-20 md:mt-5 lg:mt-0;
         }
         dt {
-            @apply text-grag2c text-font22 leading-9 font-bold  text-center md:text-left xl:w-56 whitespace-nowrap;
+            @apply text-grag2c text-3xl lg:text-font22 leading-9 font-bold  text-center md:text-left xl:w-56 whitespace-nowrap;
             span {
                 @apply relative  pl-3; 
             }
             i {
-                @apply absolute top-1 left-0 md:left-0 inline-block w-1 h-5 bg-green07;
+                @apply absolute top-2 lg:top-1 left-0 md:left-0 inline-block w-1 h-5 bg-green07;
             }
         }
         dd {
@@ -271,6 +268,11 @@
     
 }
 #community {
+    .getnew-banner {
+        h2 {
+            @apply md:top-[45%] top-[47%];
+        }
+    }
     .news {
         @apply pb-0;
     }

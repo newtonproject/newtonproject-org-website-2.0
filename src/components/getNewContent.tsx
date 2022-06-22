@@ -32,7 +32,7 @@ export default function GetNewContent() {
             <div className={'ecosystem-banner getnew-banner'}>
                 <img className={'ecosystem-banner-pc'} src={bannerGetnew} alt='img' />
                 <img className={'ecosystem-banner-h5'} src={bannerGetnewH5} alt='img' />
-                <h2>{intl.formatMessage({ id: "G E T  N E W" })}</h2>
+                <h2>{intl.formatMessage({ id: "G E T" })}&nbsp;&nbsp;{intl.formatMessage({ id: "N E W" })}</h2>
             </div>
             <div className={'getnew-content container'}>
                 <div className={'newtax'}>

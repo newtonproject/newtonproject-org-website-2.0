@@ -1,5 +1,5 @@
 .centent-community {
-    @apply mb-16 md:mb-52;
+    @apply mb-[6.5rem] md:mb-52;
     h2 {
         @apply mb-10 md:mb-12;
     }
@@ -88,7 +88,7 @@
         @apply text-grag2c text-base leading-8;
     }
     .build-item {
-        @apply mt-16;
+        @apply mt-[6.5rem];
     }
     .build-a {
         @apply flex justify-between;
@@ -103,7 +103,7 @@
                 @apply border-grage5f border-solid border-2;
             }
             &:nth-child(1) {
-                @apply mr-10;
+                @apply mr-10 text-base sm:text-xl;
             }
         }
     }
@@ -129,7 +129,7 @@
     }
 }
 .news {
-    @apply pb-16 md:pb-44 mt-24 md:mt-24;
+    @apply pb-16 md:pb-44 mt-[6.5rem] md:mt-24;
     h2 {
         @apply mb-10 md:mb-16;
     }
