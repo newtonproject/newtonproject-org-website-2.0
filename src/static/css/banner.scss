@@ -66,10 +66,10 @@
 .banner-mobile-box {
     @apply block lg:hidden overflow-hidden;
     .banner-img {
-        @apply w-screen h-[80vh] md:h-[92vh] relative;
+        @apply w-screen h-[80vh] md:h-[92vh] relative -ml-2;
         img {
             transform: translate(-50%, -50%);
-            @apply w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover;
+            @apply ml-2 w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover z-0;
         }
     }
 }
@@ -84,7 +84,7 @@
     .banner-link {
         @apply mt-12 mb-10;
         a {
-            @apply w-[48%] mb-8 py-2;
+            @apply w-[48%] mb-8 py-2 z-50;
         }
         i {
             @apply text-xs;

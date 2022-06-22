@@ -80,7 +80,7 @@
 
 }
 .build-box {
-    @apply px-4 block md:hidden;
+    @apply block md:hidden;
     .stake-img {
         @apply my-10;
     }
@@ -93,17 +93,16 @@
     .build-a {
         @apply flex justify-between;
         a {
-            @apply text-center text-gray11 text-xl py-4 mt-10;
+            @apply w-[48%] text-center text-gray11 text-xl py-4 mt-10;
             background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
             box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
             border: 2px solid rgba(255, 255, 255, 0);
-            width: 45%;
             &:hover {
                 box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
                 @apply border-grage5f border-solid border-2;
             }
             &:nth-child(1) {
-                @apply mr-10 text-base sm:text-xl;
+                @apply md:mr-10;
             }
         }
     }

@@ -50,7 +50,7 @@ export default function Centent() {
                     </li>
                     <li>
                         <h2>{intl.formatMessage({ id: "Stake on Newton" })}</h2>
-                        <p>{intl.formatMessage({ id: "NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction." })}</p>
+                        <p>{intl.formatMessage({ id: "NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChain Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction." })}</p>
                         <div className={'build-become'}>
                             <a href='https://www.newtonproject.org/blog/2021/04/14/new-mining-cn/' target='_blank'>{intl.formatMessage({ id: "Stake" })}</a>
                             <a href='https://github.com/newtonproject/newchain-nodes' target='_blank'>{intl.formatMessage({ id: "Become a validator" })}</a>
@@ -83,7 +83,7 @@ const CentenMobile = () => {
                     <h2>{intl.formatMessage({ id: "Stake on Newton" })}</h2>
                     <div> <StaticImage placeholder="blurred" className={'stake-img'} alt='img' src='../../static/images/home/stake-img.png' /></div>
                 </div>
-                <p>{intl.formatMessage({ id: "NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction." })}</p>
+                <p>{intl.formatMessage({ id: "NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChain Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction." })}</p>
                 <div className={'build-a build-become'}>
                     <a href='https://www.newtonproject.org/blog/2021/04/14/new-mining-cn/' target='_blank'>{intl.formatMessage({ id: "Stake" })}</a>
                     <a href='https://github.com/newtonproject/newchain-nodes' target='_blank'>{intl.formatMessage({ id: "Become a validator" })}</a>

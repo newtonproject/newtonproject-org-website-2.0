@@ -94,10 +94,13 @@
         }
     }
     .header-mobile {
-        @apply flex flex-wrap justify-between;
+        @apply flex flex-wrap justify-between items-center;
+    }
+    a {
+        @apply w-28 inline-block;
     }
     .logo {
-        @apply w-28 absolute top-6 left-1/2;
+        @apply w-28 absolute top-[1.9rem] left-1/2;
         transform: translate(-50%, -50%);
     }
 }
