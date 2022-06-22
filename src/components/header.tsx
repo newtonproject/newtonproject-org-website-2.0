@@ -6,7 +6,7 @@ import Language from './languages'
 import { useIntl } from "gatsby-plugin-intl"
 
 export default function Header() {
-  
+
   const intl = useIntl();
 
   return (
@@ -15,14 +15,18 @@ export default function Header() {
         <div className={'header-logo'}>
           <div>
             <Link to='/'>
-              <StaticImage className='w-32' alt='logo' src='../static/images/logo.png' />
+              <StaticImage
+                className='w-32'
+                alt='logo'
+                placeholder="blurred"
+                src='../static/images/logo.png' />
             </Link>
           </div>
           <ul>
             <li className={'header-use'}>
-              <Link to='/'>{ intl.formatMessage({ id: "Use Newton" })}<span></span></Link>
+              <Link to='/'>{intl.formatMessage({ id: "Use Newton" })}<span></span></Link>
               <div className={'header-down'}>
-                <Link to='/getnew' target='_blank'>{ intl.formatMessage({ id: "Get New" })}</Link>
+                <Link to='/getnew' target='_blank'>{intl.formatMessage({ id: "Get New" })}</Link>
                 <a href='https://www.newtonproject.org/newpay/' target='_blank'>{intl.formatMessage({ id: "NewPay" })}</a>
                 <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'>NewMask</a>
                 <a href='https://explorer.newtonproject.org/' target='_blank'>{intl.formatMessage({ id: "NewExplorer" })}</a>

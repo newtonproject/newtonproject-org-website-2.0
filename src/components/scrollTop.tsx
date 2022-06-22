@@ -20,7 +20,7 @@ export default function ScrollTop() {
   return show ? (
     <div id={'scroll'}>
       <div onClick={() => window.scrollTo(0, 0)} className={'scroll-top'}>
-        <StaticImage className={'img-box'} alt='scroll-top' src='../static/images/scroll.png' />
+        <StaticImage placeholder="blurred" className={'img-box'} alt='scroll-top' src='../static/images/scroll.png' />
       </div>
     </div>
   ) : null

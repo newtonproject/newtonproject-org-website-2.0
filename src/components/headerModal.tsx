@@ -83,7 +83,7 @@ export default function HeaderModal() {
         </Transition.Root>
         <div>
           <Link to='/'>
-            <StaticImage className={'logo'} alt='logo' src='../static/images/logo.png' />
+            <StaticImage placeholder="blurred" className={'logo'} alt='logo' src='../static/images/logo.png' />
           </Link>
         </div>
         {

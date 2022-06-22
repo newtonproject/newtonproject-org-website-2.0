@@ -11,7 +11,6 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,8 +25,16 @@ module.exports = {
         path: `${__dirname}/src/static/fonts`,
       },
     },
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        formats: [`auto`, `webp`],
+        backgroundColor: `transparent`,
+        blurredOptions: 10,
+      }
+    },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -41,10 +48,8 @@ module.exports = {
         icon: `src/static/images/favicon.png`,
         // This path is relative to the root of the site.
       },
-
     },
     `gatsby-plugin-react-helmet`,
-
     //   `gatsby-plugin-alias-imports`,
     //   {
     //     resolve: `gatsby-plugin-alias-imports`,

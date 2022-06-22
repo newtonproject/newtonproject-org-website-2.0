@@ -74,7 +74,7 @@ export default function CommunityContent() {
                                                     {
                                                         item.image == ' ' ?
                                                             <img src={item.image} alt='img' /> :
-                                                            <StaticImage alt='new-mall' src='../static/images/ecosystem/announcements.png' />
+                                                            <StaticImage placeholder="blurred" alt='new-mall' src='../static/images/ecosystem/announcements.png' />
                                                     }
                                                 </div>
                                                 <div className={'news-title'}>

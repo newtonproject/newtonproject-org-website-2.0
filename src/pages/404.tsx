@@ -9,7 +9,7 @@ const NotFoundPage = () => (
     <div className={'not-found-page'}>
       <Header />
       <div className={'not-img'}>
-        <StaticImage alt='telegram' src='../static/images/404.png' />
+        <StaticImage placeholder="blurred" alt='telegram' src='../static/images/404.png' />
       </div>
     </div>
   </>

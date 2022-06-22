@@ -12,7 +12,7 @@ export default function Footer() {
                 <div className={'footer'}>
                     <div className={'footer-img'}>
                         <Link to='/'>
-                            <StaticImage alt='logo' src='../static/images/logo.png' />
+                            <StaticImage placeholder="blurred" alt='logo' src='../static/images/logo.png' />
                         </Link>
                     </div>
                     <div className={'footer-content'}>
@@ -46,7 +46,7 @@ export default function Footer() {
                 <div className={'footer-copyright'}>
                     <div>
                         <div>
-                            <StaticImage alt='logo' src='../static/images/footer/footer.png' />
+                            <StaticImage placeholder="blurred" alt='logo' src='../static/images/footer/footer.png' />
                             {intl.formatMessage({ id: "Paying tribute to Sir Isaac Newton — the great scientist who made a significant impact on our lives!" })}</div>
                     </div>
                     <p>{intl.formatMessage({ id: "Copyright © 2022 Newton Foundation. All Rights Reserved." })}</p>
@@ -91,13 +91,13 @@ const FooterMobile = () => {
             <div className={'footer'}>
                 <div className={'footer-img'}>
                     <Link to='/'>
-                        <StaticImage alt='logo' src='../static/images/logo.png' />
+                        <StaticImage placeholder="blurred" alt='logo' src='../static/images/logo.png' />
                     </Link>
                 </div>
                 <div className={'footer-copyright'}>
                     <div>
                         <div>
-                            <StaticImage alt='logo' src='../static/images/footer/footer.png' />
+                            <StaticImage placeholder="blurred" alt='logo' src='../static/images/footer/footer.png' />
                             {intl.formatMessage({ id: "Paying tribute to Sir Isaac Newton" })}<br />
                             {intl.formatMessage({ id: "the great scientist who made a significant impact on our lives!" })}</div>
                     </div>
