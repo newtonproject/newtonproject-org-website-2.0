@@ -28,7 +28,7 @@
     .getnew-banner {
         @apply relative;
         h2 {
-            @apply absolute md:top-1/2 top-[40%] left-1/2 text-6xl md:text-[6.6rem] w-full text-center;
+            @apply absolute md:top-1/2 top-[40%] left-1/2 text-5xl md:text-[6.6rem] w-full text-center whitespace-nowrap;
             transform: translate(-50%, -50%);
         }
     }
@@ -37,7 +37,7 @@
 #ecosystem {
     .getnew-banner {
         h2 {
-            @apply top-[23%] text-[2.75rem] md:text-[6.6rem];
+            @apply top-[23%];
         }
     }
     .ecosystem-content {
@@ -121,9 +121,6 @@
 }
 // getNew
 #getnew {
-    .getnew-content {
-        // @apply px-4 xl:px-32;
-    }
     .newtax {
         @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-between xl:flex-nowrap;
         dl {
@@ -261,15 +258,6 @@
 }
 
 // community
-#getnew,
-#community {
-    .getnew-banner {
-        h2 {
-            @apply text-5xl md:text-[6.6rem];
-        }
-    }
-    
-}
 #community {
     .getnew-banner {
         h2 {
