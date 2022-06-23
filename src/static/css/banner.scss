@@ -87,7 +87,7 @@
             @apply w-[48%] mb-8 py-2 z-50;
         }
         i {
-            @apply text-xs;
+            @apply text-xs whitespace-nowrap;
             font-family: "Ubuntu-R-hinting";
         }
     }
