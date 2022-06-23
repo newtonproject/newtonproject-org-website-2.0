@@ -69,15 +69,24 @@
     }
 }
 .language-box {
-    @apply max-w-[12rem] pt-4 flex flex-wrap justify-between items-center absolute right-[28%] lg:-right-12 -top-14 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
-    span {
-        @apply cursor-pointer w-1/2 mb-3;
-        &:hover {
+    @apply w-[10.5rem] p-4 absolute right-[18%] lg:-right-20 -top-24 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg;
+    .language-item {
+        @apply flex flex-wrap justify-between items-center;
+        span {
+            @apply text-base cursor-pointer w-1/2 mb-4 text-left;
+            &:hover {
+                @apply text-gray20;
+            }
+        }
+        .current {
             @apply text-gray20;
         }
     }
-    .current {
-        @apply text-gray20;
+    .language-github {
+        @apply relative text-xs text-grag96a block text-left;
+        svg {
+            @apply absolute top-2 -right-2 text-xl font-bold;
+        }
     }
 }
 

@@ -66,10 +66,10 @@
 .banner-mobile-box {
     @apply block lg:hidden overflow-hidden;
     .banner-img {
-        @apply w-screen h-[80vh] md:h-[92vh] relative -ml-2;
+        @apply w-screen h-[80vh] md:h-[92vh] relative;
         img {
             transform: translate(-50%, -50%);
-            @apply ml-2 w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover z-0;
+            @apply w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover z-0;
         }
     }
 }
