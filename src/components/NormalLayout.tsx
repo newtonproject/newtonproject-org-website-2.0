@@ -1,10 +1,10 @@
 
 import React from 'react'
-import Header from '../components/header'
-import Footer from '../components/footer'
-import ScrollTop from '../components/scrollTop'
-import Seo from '../components/seo'
-import { PageModel } from '../hooks/PageModel'
+import Header from './header'
+import Footer from './footer'
+import ScrollTop from './scrollTop'
+import Seo from './seo'
+import { PageModel } from '../hooks/pageModel'
 
 export default function NormalLayout(children: React.ReactNode, pageModel: PageModel): JSX.Element {
     return (

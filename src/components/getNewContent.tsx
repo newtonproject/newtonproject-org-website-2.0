@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import bannerGetnew from '../static/images/getnew/getnew-banner.png'
 import bannerGetnewH5 from '../static/images/getnew/getnew-banner-h5.png'
-import axios from "axios"
 import { numFormat } from '../hooks/createTime'
 import { useIntl } from "gatsby-plugin-intl"
+import { getRequest } from "../hooks/axiosData"
+import { getNewUrl } from "../hooks/url"
 
 export default function GetNewContent() {
     const intl = useIntl();
@@ -12,20 +13,18 @@ export default function GetNewContent() {
     const [balance, setBalance]: any = useState([]);
 
     useEffect(() => {
+        const totalUrl = getNewUrl + '/api/v1/brief'
+        const balanceUrl = getNewUrl + '/api/v1/addr/NEW182E111111111111111111111111114FhDeS/'
         const fetchData = async () => {
-            const res = await axios(
-                "https://legacy-explorer.newtonproject.org/api/v1/brief"
-            );
+            const res = await getRequest(totalUrl);
             setData(res.data);
         };
-        fetchData();
-        axios.get(
-            'https://legacy-explorer.newtonproject.org/api/v1/addr/NEW182E111111111111111111111111114FhDeS/'
-        ).then((res) => {
+        fetchData()
+        const balanceData = async () => {
+            const res = await getRequest(balanceUrl);
             setBalance(res.data.balance);
-        }).catch((err) => {
-            console.log(err)
-        })
+        };
+        balanceData()
     }, []);
     return (
         <div id={'getnew'}>

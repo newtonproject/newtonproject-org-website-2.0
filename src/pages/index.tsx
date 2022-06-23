@@ -3,8 +3,8 @@ import Banner from '../components/home/banner'
 import Centent from '../components/home/centent'
 import News from '../components/home/news'
 import GlobalCommunity from '../components/home/globalCommunity'
-import NormalLayout from '../components/NormalLayout'
-import { PageModel } from '../hooks/PageModel'
+import NormalLayout from '../components/normalLayout'
+import { PageModel } from '../hooks/pageModel'
 import { useIntl } from "gatsby-plugin-intl"
 
 const IndexPage = () => {

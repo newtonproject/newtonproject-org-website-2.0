@@ -1,22 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import axios from "axios"
 import { arrDate } from '../../hooks/createTime'
-import { NewschildProps } from '../../hooks/PageModel'
+import { NewschildProps } from '../../hooks/pageModel'
 import { useIntl } from "gatsby-plugin-intl"
+import { getRequest } from "../../hooks/axiosData"
+import { newsUrl } from "../../hooks/url"
 
-const News: React.FC<NewschildProps> = (props) =>  {
+const News: React.FC<NewschildProps> = (props) => {
     const intl = useIntl();
     const { title } = props;
     const [data, setData] = useState([]);
 
     useEffect(() => {
-      const fetchData = async () => {
-        const res = await axios(
-          "https://www.newtonproject.org/api/v1/press/latest/"
-        );
-        setData(res.data.result);
-      };
-      fetchData();
+        const newlUrl = newsUrl + '/api/v1/press/latest/'
+        const fetchData = async () => {
+            const res = await getRequest(newlUrl);
+            setData(res.data.result);
+        };
+        fetchData();
     }, []);
 
     return (
@@ -30,7 +30,7 @@ const News: React.FC<NewschildProps> = (props) =>  {
                                 <li key={index}>
                                     <a href={item.url} target='_blank' key={index}>
                                         <div className={'news-img'} >
-                                            <img src={'https://www.newtonproject.org/filestorage/' + item.image}  alt='img' />
+                                            <img src={'https://www.newtonproject.org/filestorage/' + item.image} alt='img' />
                                         </div>
                                         <div className={'news-title'}>
                                             <h3>{item.title}</h3>
@@ -42,7 +42,7 @@ const News: React.FC<NewschildProps> = (props) =>  {
                         })
                     }
                 </ul>
-                <div className={'news-more'}><a href='https://www.newtonproject.org/press/' target='_blank'>{ intl.formatMessage({ id: "More" })}</a></div>
+                <div className={'news-more'}><a href='https://www.newtonproject.org/press/' target='_blank'>{intl.formatMessage({ id: "More" })}</a></div>
             </div>
         </>
     )

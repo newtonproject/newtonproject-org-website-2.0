@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import GlobalCommunity from '../components/home/globalCommunity'
 import SubmitContent from './submitContent'
-import axios from "axios"
 import News from '../components/home/news'
 import { arrDate } from '../hooks/createTime'
 import bannerCommunity from '../static/images/ecosystem/community-banner.png'
 import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.png'
 import { useIntl } from "gatsby-plugin-intl"
+import { getRequest } from "../hooks/axiosData"
+import { newsUrl } from "../hooks/url"
 
 export default function CommunityContent() {
 
@@ -18,10 +19,9 @@ export default function CommunityContent() {
     const [voices, setVoices] = useState([])
 
     useEffect(() => {
+        const newsItemlUrl = newsUrl + '/api/v1/community/info/'
         const fetchData = async () => {
-            const res = await axios(
-                "https://www.newtonproject.org/api/v1/community/info/"
-            );
+            const res = await getRequest(newsItemlUrl);
             setactivities(res.data.result.activities)
             setAnnouncements(res.data.result.announcements)
             setBlogsItem(res.data.result.blogs);
