@@ -22,6 +22,9 @@ body {
     color: #2C465E!important;
     background-color:  #F7FBFF ;
 }
+* {
+    -webkit-tap-highlight-color:transparent;
+}
 input:focus {
     outline:none;
 }
@@ -54,6 +57,15 @@ h2 {
 @media (min-width: 320px) and (max-width: 929px) {
     .ecosystem-container {
         @apply px-4;
+    }
+}
+@media (min-width: 320px) and (max-width: 420px) {
+    .banner-mobile {
+        .banner-link {
+            a {
+                width: 49%!important;
+            }
+        }
     }
 }
 #scroll {
