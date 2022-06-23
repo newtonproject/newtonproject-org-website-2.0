@@ -1,46 +1,46 @@
 
 # newton-website-2.0
 
-1. **Main technology stack**
+## 1.Main technology stack
     ```shell
     Gatsby.js + React + Typescript + Tailwind CSS.
     Other tools included: Autoprefixer, Sass, PostCSS, ESLint, Prettier.
     ```
 
-2.  **Create a Gatsby site.**
+## 2.Create a Gatsby site
     ```shell
     gatsby new newton-website-2.0
     yarn
     ```
 
-3.  **Start**
+## 3.Start
     ```shell
     cd newton-website-2.0/
     yarn start
     ```
 
-4. **Push**
+## 4.Push
     ```shell
     yarn build
     git push
     ```
 
-5. **Participate in building internationalization**
+## 5.Participate in building internationalization
 
-## a.International Translation Technology
+**a.International Translation Technology**
     ```shell
     gatsby-plugin-intl
     npm Address: https://www.npmjs.com/package/gatsby-plugin-intl
     ```
-## b.Directory of documents placed in the translated language
+**b.Directory of documents placed in the translated language**
 - src => static => intl
 - Create a new json file for the language type in the intl folder, paying particular attention to the fact that the value of the key must not be changed, but must be consistent with the key in the en.json folder.
 
-## c.Html Translation of the formed catalogue
+**c.Html Translation of the formed catalogue**
 - src => components => language
 - Append the key value of the translated language type to the language file.
 
-## d.Configuration files
+**d.Configuration files**
     ```shell
     gatsby-config.js
     ```
