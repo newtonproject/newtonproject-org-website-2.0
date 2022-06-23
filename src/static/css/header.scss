@@ -93,13 +93,14 @@
 .header-mobile-box {
     @apply relative px-4 block lg:hidden py-4;
     .search {
+        @apply relative w-6;
         a {
-            @apply w-5 h-5 bg-search inline-block bg-cover ml-2 bg-top;
+            @apply absolute top-1/2 -mt-3 ring-0 w-6 h-6 bg-search inline-block bg-cover bg-top;
         }
     }
     .header-menu {
         svg {
-            @apply text-font22;
+            @apply text-2xl;
         }
     }
     .header-mobile {
@@ -109,7 +110,7 @@
         @apply w-28 inline-block;
     }
     .logo {
-        @apply w-28 absolute top-[1.9rem] left-1/2;
+        @apply w-28 absolute top-[1.8rem] left-1/2;
         transform: translate(-50%, -50%);
     }
 }
