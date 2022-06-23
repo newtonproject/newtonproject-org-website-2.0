@@ -19,13 +19,13 @@ export default function EcosystemContent() {
                 <dl>
                     <dt><i></i>{intl.formatMessage({ id: "NFT" })}</dt>
                     <dd className={'new-mall'}>
-                        <a href=''>
+                        <a href='https://newmall.io/' target='_blank'>
                             <StaticImage placeholder="blurred" alt='new-mall' src='../static/images/ecosystem/new-mall.png' />
                             <span>{intl.formatMessage({ id: "Leading NFT Market." })}</span>
                         </a>
                     </dd>
                     <dd className={'new-asset'}>
-                        <a href=''>
+                        <a href='https://www.newtonproject.org/newasset-generator/' target='_blank'>
                             <StaticImage placeholder="blurred" alt='new-asset' src='../static/images/ecosystem/new-asset.png' />
                             <span>{intl.formatMessage({ id: "Token Generator Tool on NewChain." })}</span>
                         </a>
@@ -34,13 +34,13 @@ export default function EcosystemContent() {
                 <dl>
                     <dt><i></i>{intl.formatMessage({ id: "Wallet" })}</dt>
                     <dd className={'new-mall'}>
-                        <a href=''>
+                        <a href='https://www.newtonproject.org/newpay/' target='_blank'>
                             <StaticImage placeholder="blurred" alt='new-pay' src='../static/images/ecosystem/new-pay.png' />
                             <span>{intl.formatMessage({ id: "Decentralized Digital Wallet Of Newton Community Economy." })}</span>
                         </a>
                     </dd>
                     <dd className={'new-mask'}>
-                        <a href=''>
+                        <a href='https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search' target='_blank'>
                             <StaticImage placeholder="blurred" alt='new-mask' src='../static/images/ecosystem/new-mask.png' />
                             <span>{intl.formatMessage({ id: "An extension for accessing NewChain enabled distributed applications." })}</span>
                         </a>
@@ -49,7 +49,7 @@ export default function EcosystemContent() {
                 <dl>
                     <dt><i></i>{intl.formatMessage({ id: "DEX" })}</dt>
                     <dd className={'new-swap'}>
-                        <a href=''>
+                        <a href='https://newswap.org/' target='_blank'>
                             <StaticImage placeholder="blurred" alt='new-swap' src='../static/images/ecosystem/new-swap.png' />
                             <span>{intl.formatMessage({ id: "Decentralized Exchange Protocol on NewChain." })}</span>
                         </a>
@@ -58,7 +58,7 @@ export default function EcosystemContent() {
                 <dl>
                     <dt><i></i>{intl.formatMessage({ id: "Metaverse" })}</dt>
                     <dd className={'andverse'}>
-                        <a href=''>
+                        <a href='https://www.andverse.org/' target='_blank'>
                             <StaticImage placeholder="blurred" alt='andverse' src='../static/images/ecosystem/andverse.png' />
                             <span>{intl.formatMessage({ id: "A decentralized multigalactic metaverse." })}</span>
                         </a>
@@ -67,7 +67,7 @@ export default function EcosystemContent() {
                 <dl>
                     <dt><i></i>{intl.formatMessage({ id: "Cross-chain" })}</dt>
                     <dd className={'new-bridge'}>
-                        <a href=''>
+                        <a href='https://newbridge.network/' target='_blank'>
                             <StaticImage placeholder="blurred" alt='new-bridge' src='../static/images/ecosystem/new-bridge.png' />
                             <span>{intl.formatMessage({ id: "Supports Inter-Chain token transfer between NewChain and others." })}</span>
                         </a>
