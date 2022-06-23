@@ -3,31 +3,31 @@
 
 ## 1.Main technology stack
 
-    ```shell
-    Gatsby.js + React + Typescript + Tailwind CSS.
-    Other tools included: Autoprefixer, Sass, PostCSS, ESLint, Prettier.
-    ```
+```
+Gatsby.js + React + Typescript + Tailwind CSS.
+Other tools included: Autoprefixer, Sass, PostCSS, ESLint, Prettier.
+```
 
 ## 2.Create a Gatsby site
 
-    ```shell
-    gatsby new newton-website-2.0
-    yarn
-    ```
+```
+gatsby new newton-website-2.0
+yarn
+```
 
 ## 3.Start
 
-    ```shell
-    cd newton-website-2.0/
-    yarn start
-    ```
+```
+cd newton-website-2.0/
+yarn start
+```
 
 ## 4.Push
 
-    ```shell
-    yarn build
-    git push
-    ```
+```
+yarn build
+git push
+```
 
 ## 5.Participate in building internationalization
 
