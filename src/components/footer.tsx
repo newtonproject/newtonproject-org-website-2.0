@@ -81,7 +81,7 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/joinus/'} target="_blank">
+                <a href={newsEnvUrl + '/roadmap/'} target="_blank">
                   {intl.formatMessage({ id: 'Roadmap' })}
                 </a>
               </dd>
@@ -189,6 +189,11 @@ const FooterMobile = () => {
           <dd>
             <a href={newsEnvUrl + '/mediakit/'} target="_blank">
               {intl.formatMessage({ id: 'Media Kit' })}
+            </a>
+          </dd>
+          <dd>
+            <a href={newsEnvUrl + '/roadmap/'} target="_blank">
+              {intl.formatMessage({ id: 'Roadmap' })}
             </a>
           </dd>
         </dl>
