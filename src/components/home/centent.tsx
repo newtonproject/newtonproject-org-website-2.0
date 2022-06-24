@@ -152,7 +152,7 @@ const CentenMobile = () => {
               placeholder="blurred"
               className={'stake-img'}
               alt="img"
-              src="../../static/images/home/build-img.png"
+              src="../../static/images/home/build.png"
             />
           </div>
           <p>
