@@ -27,12 +27,9 @@
 .banner-mobile {
   .banner-news {
     @apply text-xs text-blue74;
-    span {
-      @apply ml-4 text-blueb6;
-    }
     p {
-      .banner-time {
-        @apply hidden;
+      a {
+        @apply z-50;
       }
     }
   }

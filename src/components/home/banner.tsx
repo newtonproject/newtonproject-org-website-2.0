@@ -52,12 +52,12 @@ export default function Banner() {
                       {data.length == 1 ? (
                         <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
                           {item.title}
-                          <span>{arrDateBanner(item.created_at)}</span>
+                          {arrDateBanner(item.created_at)}
                         </a>
                       ) : (
                         <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
-                          {index == 0 ? Weekly(item.title) : item.title}
-                          <span className={index == 0 ? 'banner-time' : ''}>{arrDateBanner(item.created_at)}</span>
+                          {item.title}
+                          {index !== 0 ? arrDateBanner(item.created_at) : null}
                         </a>
                       )}
                     </p>
@@ -111,12 +111,12 @@ export default function Banner() {
                       {data.length == 1 ? (
                         <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
                           {item.title}
-                          <span>{arrDateBanner(item.created_at)}</span>
+                          {arrDateBanner(item.created_at)}
                         </a>
                       ) : (
                         <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
-                          {index == 0 ? Weekly(item.title) : item.title}
-                          <span className={index == 0 ? 'banner-time' : ''}>{arrDateBanner(item.created_at)}</span>
+                          {item.title}
+                          {index !== 0 ? arrDateBanner(item.created_at) : null}
                         </a>
                       )}
                     </p>

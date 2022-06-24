@@ -34,7 +34,7 @@ export function arrDate(dateTime: string) {
 export function arrDateBanner(dateTime: string) {
   let dateArr = dateTime.split(' ')
   let timeArr = dateArr[0].split('-')
-  return timeArr[2] + '/' + timeArr[1] + '/' + timeArr[0]
+  return ' ' + '|' + ' ' + timeArr[0] + '.' + timeArr[1] + '.' + timeArr[2]
 }
 
 export function Weekly(WeeklyItem: string) {
