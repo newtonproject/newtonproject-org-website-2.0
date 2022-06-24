@@ -4,11 +4,11 @@ import Centent from '../components/home/centent'
 import News from '../components/home/news'
 import GlobalCommunity from '../components/home/globalCommunity'
 import NormalLayout from '../components/normalLayout'
-import { PageModel } from '../hooks/pageModel'
+import { PageModelTitle } from '../hooks/pageModel'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const IndexPage = () => {
-  let pageModel = new PageModel('Home', 'new-index')
+  let pageModel = new PageModelTitle('Home', 'new-index')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 export default IndexPage

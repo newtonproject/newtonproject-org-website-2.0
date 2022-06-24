@@ -1,12 +1,12 @@
 import React from 'react'
 import CommunityContent from '../components/communityContent'
 import NormalLayout from '../components/normalLayout'
-import { PageModel } from '../hooks/pageModel'
+import { PageModelTitle } from '../hooks/pageModel'
 
 export default Community
 
 function Community() {
-  let pageModel = new PageModel('Community', 'community-html')
+  let pageModel = new PageModelTitle('Community', 'community-html')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 

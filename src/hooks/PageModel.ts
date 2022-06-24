@@ -1,4 +1,4 @@
-export class PageModel {
+export class PageModelTitle {
   name: string
   title: string
   constructor(title: string, name: string) {
