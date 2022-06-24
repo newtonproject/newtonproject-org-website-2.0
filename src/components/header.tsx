@@ -4,6 +4,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import HeaderModal from './headerModal'
 import Language from './languages'
 import { useIntl } from 'gatsby-plugin-intl'
+import { newsEnvUrl } from '../hooks/url'
 
 export default function Header() {
   const intl = useIntl()
@@ -27,7 +28,7 @@ export default function Header() {
                 <Link to="/getnew" target="_blank">
                   {intl.formatMessage({ id: 'Get New' })}
                 </Link>
-                <a href="https://www.newtonproject.org/newpay/" target="_blank">
+                <a href={newsEnvUrl + '/newpay/'} target="_blank">
                   {intl.formatMessage({ id: 'NewPay' })}
                 </a>
                 <a
@@ -65,7 +66,7 @@ export default function Header() {
           </ul>
           <div className={'header-search'}>
             <div className={'search'}>
-              <a href="https://www.newtonproject.org/search/?q=" target="_blank"></a>
+              <a href={newsEnvUrl + '/search/?q='} target="_blank"></a>
               {/* <input type="text" placeholder="Search"></input> */}
             </div>
             <Language />

@@ -3,6 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import bannerEcosystem from '../static/images/ecosystem/ecosystem-banner.png'
 import bannerEcosystemH5 from '../static/images/ecosystem/ecosystem-banner-h5.png'
 import { useIntl } from 'gatsby-plugin-intl'
+import { newsEnvUrl } from '../hooks/url'
 
 export default function EcosystemContent() {
   const intl = useIntl()
@@ -27,7 +28,7 @@ export default function EcosystemContent() {
             </a>
           </dd>
           <dd className={'new-asset'}>
-            <a href="https://www.newtonproject.org/newasset-generator/" target="_blank">
+            <a href={newsEnvUrl + '/newasset-generator/'} target="_blank">
               <StaticImage placeholder="blurred" alt="new-asset" src="../static/images/ecosystem/new-asset.png" />
               <span>{intl.formatMessage({ id: 'Token Generator Tool on NewChain.' })}</span>
             </a>
@@ -39,7 +40,7 @@ export default function EcosystemContent() {
             {intl.formatMessage({ id: 'Wallet' })}
           </dt>
           <dd className={'new-mall'}>
-            <a href="https://www.newtonproject.org/newpay/" target="_blank">
+            <a href={newsEnvUrl + '/newpay/'} target="_blank">
               <StaticImage placeholder="blurred" alt="new-pay" src="../static/images/ecosystem/new-pay.png" />
               <span>{intl.formatMessage({ id: 'Decentralized Digital Wallet Of Newton Community Economy.' })}</span>
             </a>

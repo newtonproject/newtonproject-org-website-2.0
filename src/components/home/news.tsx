@@ -30,7 +30,7 @@ const News: React.FC<NewschildProps> = props => {
                 <li key={index}>
                   <a href={item.url} target="_blank" key={index}>
                     <div className={'news-img'}>
-                      <img src={'https://www.newtonproject.org/filestorage/' + item.image} alt="img" />
+                      <img src={newsEnvUrl + '/filestorage/' + item.image} alt="img" />
                     </div>
                     <div className={'news-title'}>
                       <h3>{item.title}</h3>
@@ -45,7 +45,7 @@ const News: React.FC<NewschildProps> = props => {
           )}
         </ul>
         <div className={'news-more'}>
-          <a href="https://www.newtonproject.org/press/" target="_blank">
+          <a href={newsEnvUrl + '/press/'} target="_blank">
             {intl.formatMessage({ id: 'More' })}
           </a>
         </div>

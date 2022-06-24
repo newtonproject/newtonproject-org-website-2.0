@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import bannerMobileImg from '../../static/images/banner.png'
-import { arrDateBanner, Weekly } from '../../hooks/createTime'
+import { arrDateBanner } from '../../hooks/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../../hooks/axiosData'
 import { newsEnvUrl } from '../../hooks/url'
@@ -22,7 +22,7 @@ export default function Banner() {
     {
       title: intl.formatMessage({ id: 'NewPay' }),
       centent: intl.formatMessage({ id: 'Decentralized digital wallet' }),
-      url: 'https://www.newtonproject.org/newpay/'
+      url: newsEnvUrl + '/newpay/'
     },
     {
       title: intl.formatMessage({ id: 'Get New' }),
@@ -50,12 +50,12 @@ export default function Banner() {
                   return (
                     <p className="mb-2" key={index}>
                       {data.length == 1 ? (
-                        <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
+                        <a href={newsEnvUrl + item.url} target="_blank">
                           {item.title}
                           {arrDateBanner(item.created_at)}
                         </a>
                       ) : (
-                        <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
+                        <a href={newsEnvUrl + item.url} target="_blank">
                           {item.title}
                           {index !== 0 ? arrDateBanner(item.created_at) : null}
                         </a>
@@ -109,12 +109,12 @@ export default function Banner() {
                   return (
                     <p className="mb-2" key={index}>
                       {data.length == 1 ? (
-                        <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
+                        <a href={newsEnvUrl + item.url} target="_blank">
                           {item.title}
                           {arrDateBanner(item.created_at)}
                         </a>
                       ) : (
-                        <a href={'https://www.newtonproject.org/' + item.url} target="_blank">
+                        <a href={newsEnvUrl + item.url} target="_blank">
                           {item.title}
                           {index !== 0 ? arrDateBanner(item.created_at) : null}
                         </a>

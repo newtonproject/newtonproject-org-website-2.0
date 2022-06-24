@@ -178,7 +178,7 @@ export default function GetNewContent() {
         <div className={'dex Wallet'}>
           <h2>{intl.formatMessage({ id: 'Wallet' })}</h2>
           <div>
-            <a href="https://www.newtonproject.org/newpay/" target="_blank">
+            <a href={getNewUrl + '/newpay/'} target="_blank">
               <StaticImage placeholder="blurred" alt="img" src="../static/images/ecosystem/new-pay.png" />
             </a>
             <a href="https://newmall.io/" target="_blank" className={'new-mask'}>

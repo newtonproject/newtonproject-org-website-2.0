@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useIntl } from 'gatsby-plugin-intl'
+import { newsEnvUrl } from '../hooks/url'
 
 export default function Footer() {
   const intl = useIntl()
@@ -24,12 +25,12 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/announcement/" target="_blank">
+                <a href={newsEnvUrl + '/announcement/'} target="_blank">
                   {intl.formatMessage({ id: 'Announcements' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/blog/" target="_blank">
+                <a href={newsEnvUrl + '/blog/'} target="_blank">
                   {intl.formatMessage({ id: 'Blog' })}
                 </a>
               </dd>
@@ -39,12 +40,12 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/newstatus/" target="_blank">
+                <a href={newsEnvUrl + '/newstatus/'} target="_blank">
                   {intl.formatMessage({ id: 'NewStatus' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/faq/" target="_blank">
+                <a href={newsEnvUrl + '/faq/'} target="_blank">
                   {intl.formatMessage({ id: 'FAQ' })}
                 </a>
               </dd>
@@ -55,32 +56,32 @@ export default function Footer() {
                 <Link to="/getnew">{intl.formatMessage({ id: 'Economy' })}</Link>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/technology/" target="_blank">
+                <a href={newsEnvUrl + '/technology/'} target="_blank">
                   {intl.formatMessage({ id: 'Technology' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/solutions/" target="_blank">
+                <a href={newsEnvUrl + '/solutions/'} target="_blank">
                   {intl.formatMessage({ id: 'Industry' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/joinus/" target="_blank">
+                <a href={newsEnvUrl + '/joinus/'} target="_blank">
                   {intl.formatMessage({ id: 'Join Us' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/contact/" target="_blank">
+                <a href={newsEnvUrl + '/contact/'} target="_blank">
                   {intl.formatMessage({ id: 'Contact Us' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/mediakit/" target="_blank">
+                <a href={newsEnvUrl + '/mediakit/'} target="_blank">
                   {intl.formatMessage({ id: 'Media Kit' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/roadmap/" target="_blank">
+                <a href={newsEnvUrl + '/joinus/'} target="_blank">
                   {intl.formatMessage({ id: 'Roadmap' })}
                 </a>
               </dd>
@@ -88,17 +89,17 @@ export default function Footer() {
             <dl>
               <dt>{intl.formatMessage({ id: 'SERVICE TERMS' })}</dt>
               <dd>
-                <a href="https://www.newtonproject.org/copyright/" target="_blank">
+                <a href={newsEnvUrl + '/copyright/'} target="_blank">
                   {intl.formatMessage({ id: 'Copyright' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/terms-of-use/" target="_blank">
+                <a href={newsEnvUrl + '/terms-of-use/'} target="_blank">
                   {intl.formatMessage({ id: 'Terms of Use' })}
                 </a>
               </dd>
               <dd>
-                <a href="https://www.newtonproject.org/privacy/" target="_blank">
+                <a href={newsEnvUrl + '/privacy/'} target="_blank">
                   {intl.formatMessage({ id: 'Privacy Policy' })}
                 </a>
               </dd>
@@ -135,12 +136,12 @@ const FooterMobile = () => {
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/announcement/" target="_blank">
+            <a href={newsEnvUrl + '/announcement/'} target="_blank">
               {intl.formatMessage({ id: 'Announcements' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/blog/" target="_blank">
+            <a href={newsEnvUrl + '/blog/'} target="_blank">
               {intl.formatMessage({ id: 'Blog' })}
             </a>
           </dd>
@@ -150,12 +151,12 @@ const FooterMobile = () => {
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/newstatus/" target="_blank">
+            <a href={newsEnvUrl + '/newstatus/'} target="_blank">
               {intl.formatMessage({ id: 'NewStatus' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/faq/" target="_blank">
+            <a href={newsEnvUrl + '/faq/'} target="_blank">
               {intl.formatMessage({ id: 'FAQ' })}
             </a>
           </dd>
@@ -166,50 +167,45 @@ const FooterMobile = () => {
             <Link to="/getnew">{intl.formatMessage({ id: 'Economy' })}</Link>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/technology/" target="_blank">
+            <a href={newsEnvUrl + '/technology/'} target="_blank">
               {intl.formatMessage({ id: 'Technology' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/solutions/" target="_blank">
+            <a href={newsEnvUrl + '/solutions/'} target="_blank">
               {intl.formatMessage({ id: 'Industry' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/joinus/" target="_blank">
+            <a href={newsEnvUrl + '/joinus/'} target="_blank">
               {intl.formatMessage({ id: 'Join Us' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/contact/" target="_blank">
+            <a href={newsEnvUrl + '/contact/'} target="_blank">
               {intl.formatMessage({ id: 'Contact Us' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/mediakit/" target="_blank">
+            <a href={newsEnvUrl + '/mediakit/'} target="_blank">
               {intl.formatMessage({ id: 'Media Kit' })}
-            </a>
-          </dd>
-          <dd>
-            <a href="https://www.newtonproject.org/roadmap/" target="_blank">
-              {intl.formatMessage({ id: 'Roadmap' })}
             </a>
           </dd>
         </dl>
         <dl className={'footer-item3'}>
           <dt>{intl.formatMessage({ id: 'SERVICE TERMS' })}</dt>
           <dd>
-            <a href="https://www.newtonproject.org/copyright/" target="_blank">
+            <a href={newsEnvUrl + '/copyright/'} target="_blank">
               {intl.formatMessage({ id: 'Copyright' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/terms-of-use/" target="_blank">
+            <a href={newsEnvUrl + '/terms-of-use/'} target="_blank">
               {intl.formatMessage({ id: 'Terms of Use' })}
             </a>
           </dd>
           <dd>
-            <a href="https://www.newtonproject.org/privacy/" target="_blank">
+            <a href={newsEnvUrl + '/privacy/'} target="_blank">
               {intl.formatMessage({ id: 'Privacy Policy' })}
             </a>
           </dd>

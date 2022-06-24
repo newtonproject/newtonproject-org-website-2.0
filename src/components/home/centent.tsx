@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useIntl } from 'gatsby-plugin-intl'
+import { newsEnvUrl } from '../../hooks/url'
 
 export default function Centent() {
   const intl = useIntl()
@@ -68,7 +69,7 @@ export default function Centent() {
           </li>
         </ul>
         <div className={'news-more'}>
-          <a href="https://www.newtonproject.org/whitepaper/" target="_blank">
+          <a href={newsEnvUrl + '/whitepaper/'} target="_blank">
             {intl.formatMessage({ id: 'White Paper' })}
           </a>
         </div>
@@ -125,7 +126,7 @@ export default function Centent() {
               })}
             </p>
             <div className={'build-become'}>
-              <a href="https://www.newtonproject.org/blog/2021/04/14/new-mining-cn/" target="_blank">
+              <a href={newsEnvUrl + '/blog/2021/04/14/new-mining-cn/'} target="_blank">
                 {intl.formatMessage({ id: 'Stake' })}
               </a>
               <a href="https://github.com/newtonproject/newchain-nodes" target="_blank">
@@ -189,7 +190,7 @@ const CentenMobile = () => {
           })}
         </p>
         <div className={'build-a build-become'}>
-          <a href="https://www.newtonproject.org/blog/2021/04/14/new-mining-cn/" target="_blank">
+          <a href={newsEnvUrl + '/blog/2021/04/14/new-mining-cn/'} target="_blank">
             {intl.formatMessage({ id: 'Stake' })}
           </a>
           <a href="https://github.com/newtonproject/newchain-nodes" target="_blank">

@@ -45,7 +45,7 @@ export default function CommunityContent() {
                 activities.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={'https://www.newtonproject.org/' + item.url} target="_blank" key={index}>
+                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -62,7 +62,7 @@ export default function CommunityContent() {
               )}
             </ul>
             <div className={'news-more'}>
-              <a href="https://www.newtonproject.org/announcements/0/" target="_blank">
+              <a href={newsEnvUrl + '/announcements/0/'} target="_blank">
                 {intl.formatMessage({ id: 'More' })}
               </a>
             </div>
@@ -74,7 +74,7 @@ export default function CommunityContent() {
                 announcements.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={'https://www.newtonproject.org/' + item.url} target="_blank" key={index}>
+                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
                         <div className={'news-img'}>
                           {item.image == ' ' ? (
                             <img src={item.image} alt="img" />
@@ -99,7 +99,7 @@ export default function CommunityContent() {
               )}
             </ul>
             <div className={'news-more'}>
-              <a href="https://www.newtonproject.org/announcements/1/" target="_blank">
+              <a href={newsEnvUrl + '/announcements/1/'} target="_blank">
                 More
               </a>
             </div>
@@ -112,7 +112,7 @@ export default function CommunityContent() {
                 blogsItem.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={'https://www.newtonproject.org/' + item.url} target="_blank" key={index}>
+                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -129,7 +129,7 @@ export default function CommunityContent() {
               )}
             </ul>
             <div className={'news-more'}>
-              <a href="https://www.newtonproject.org/blog/" target="_blank">
+              <a href={newsEnvUrl + '/blog/'} target="_blank">
                 More
               </a>
             </div>
@@ -141,7 +141,7 @@ export default function CommunityContent() {
                 voices.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={'https://www.newtonproject.org/' + item.url} target="_blank" key={index}>
+                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -158,7 +158,7 @@ export default function CommunityContent() {
               )}
             </ul>
             <div className={'news-more'}>
-              <a href="https://www.newtonproject.org/community-voice/" target="_blank">
+              <a href={newsEnvUrl + '/community-voice/'} target="_blank">
                 {intl.formatMessage({ id: 'More' })}
               </a>
             </div>

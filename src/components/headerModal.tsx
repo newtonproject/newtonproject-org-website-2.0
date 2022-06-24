@@ -5,6 +5,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Languages from './languages'
 import { useIntl } from 'gatsby-plugin-intl'
+import { newsEnvUrl } from '../hooks/url'
 
 export default function HeaderModal() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
@@ -79,7 +80,7 @@ export default function HeaderModal() {
         </div>
         {mobileSidebarOpen == false ? (
           <div className={'search'}>
-            <a href="https://www.newtonproject.org/search/?q=" target="_blank"></a>
+            <a href={newsEnvUrl + '/search/?q='} target="_blank"></a>
           </div>
         ) : null}
       </div>
@@ -102,7 +103,7 @@ const SiteNavMenu = () => {
               <Link to="/getnew" target="_blank">
                 {intl.formatMessage({ id: 'Get New' })}
               </Link>
-              <a href="https://www.newtonproject.org/newpay/" target="_blank">
+              <a href={newsEnvUrl + '/newpay/'} target="_blank">
                 {intl.formatMessage({ id: 'NewPay' })}
               </a>
               <a
@@ -141,7 +142,7 @@ const SiteNavMenu = () => {
       </div>
       <div className={'header-footer'}>
         <div className={'search'}>
-          <a href="https://www.newtonproject.org/search/?q=" target="_blank"></a>
+          <a href={newsEnvUrl + '/search/?q='} target="_blank"></a>
           <p>{intl.formatMessage({ id: 'Search' })}</p>
         </div>
         <Languages />
