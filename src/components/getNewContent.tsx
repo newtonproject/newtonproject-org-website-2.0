@@ -5,7 +5,7 @@ import bannerGetnewH5 from '../static/images/getnew/getnew-banner-h5.png'
 import { numFormat } from '../hooks/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../hooks/axiosData'
-import { getNewUrl } from '../hooks/url'
+import { getNewUrl,newsEnvUrl } from '../hooks/url'
 
 export default function GetNewContent() {
   const intl = useIntl()
@@ -178,7 +178,7 @@ export default function GetNewContent() {
         <div className={'dex Wallet'}>
           <h2>{intl.formatMessage({ id: 'Wallet' })}</h2>
           <div>
-            <a href={getNewUrl + '/newpay/'} target="_blank">
+            <a href={newsEnvUrl + '/newpay/'} target="_blank">
               <StaticImage placeholder="blurred" alt="img" src="../static/images/ecosystem/new-pay.png" />
             </a>
             <a href="https://newmall.io/" target="_blank" className={'new-mask'}>
