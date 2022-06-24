@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { childProps } from '../../hooks/pageModel'
+import { childProps } from '../../hooks/PageModel'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const GlobalCommunity: React.FC<childProps> = props => {

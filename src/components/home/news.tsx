@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { arrDate } from '../../hooks/createTime'
-import { NewschildProps } from '../../hooks/pageModel'
+import { NewschildProps } from '../../hooks/PageModel'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../../hooks/axiosData'
 import { newsEnvUrl } from '../../hooks/url'

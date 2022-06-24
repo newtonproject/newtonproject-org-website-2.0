@@ -1,7 +1,7 @@
 import React from 'react'
 import GetNewContent from '../components/getNewContent'
-import NormalLayout from '../components/normalLayout'
-import { PageModelTitle } from '../hooks/pageModel'
+import NormalLayout from '../components/NormalLayout'
+import { PageModelTitle } from '../hooks/PageModel'
 
 export default GetNew
 
