@@ -37,7 +37,7 @@
 #ecosystem {
   .getnew-banner {
     h2 {
-      @apply top-[23%];
+      @apply top-[23%] md:top-[39%];
     }
   }
   .ecosystem-content {
