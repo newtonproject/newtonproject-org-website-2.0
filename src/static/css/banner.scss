@@ -1,95 +1,92 @@
 .banner-pc {
-    @apply hidden lg:block  py-6 mb-32;
-    .banner-title {
-        @apply mt-14 text-6xl text-grag2c font-bold md:font-bold leading-[4.8rem];
-        font-family:  "Ubuntu-Bold";
+  @apply hidden lg:block  py-6 mb-32;
+  .banner-title {
+    @apply mt-14 text-6xl text-grag2c font-bold md:font-bold leading-[4.8rem];
+    font-family: 'Ubuntu-Bold';
+  }
+  .banner-centent {
+    @apply flex flex-wrap justify-between;
+  }
+  .banner-img {
+    @apply lg:w-1/2 xl:w-8/12 mt-12 lg:mt-32 xl:mt-0 z-0;
+    img {
+      @apply xl:w-[90%] w-full -mt-24 mx-auto;
     }
-    .banner-centent {
-        @apply flex flex-wrap justify-between;
+  }
+  .banner-news {
+    @apply lg:w-[28%] xl:w-[30%];
+  }
+  .banner-link {
+    @apply lg:-mt-16;
+    a {
+      @apply text-center lg:py-2 lg:px-8 xl:py-4 xl:px-12 mb-8 lg:mt-10 xl:mt-0 z-50;
     }
-    .banner-img {
-        @apply lg:w-1/2 xl:w-8/12 mt-12 lg:mt-32 xl:mt-0 z-0;
-        img {
-            @apply xl:w-[90%] w-full -mt-24 mx-auto;
-        }
-    }
-    .banner-news {
-        @apply lg:w-[28%] xl:w-[30%];
-    }
-    .banner-link {
-        @apply lg:-mt-16;
-        a {
-            @apply text-center lg:py-2 lg:px-8 xl:py-4 xl:px-12 mb-8 lg:mt-10 xl:mt-0 z-50;
-           
-        }
-    }
+  }
 }
 .banner-pc,
 .banner-mobile {
-    .banner-news {
-        @apply text-xs text-blue74;
-        span {
-            @apply ml-4 text-blueb6;
-        }
-        p {
-            &:nth-child(1) {
-                span {
-                    @apply hidden;
-                }
-            }
-        }
+  .banner-news {
+    @apply text-xs text-blue74;
+    span {
+      @apply ml-4 text-blueb6;
     }
-    .banner-link {
-        @apply flex flex-row flex-wrap justify-between;
-        a {
-            @apply  text-center;
-            background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
-            box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
-            border: 2px solid rgba(255, 255, 255, 0);
-            &:hover {
-                box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
-                @apply border-grage5f border-solid border-2;
-            }
-        }
-        span,i{
-            @apply block;
-        }
-        span {
-            @apply text-xl text-blue11 font-bold;
-            font-family:  "Ubuntu-Bold";
-        }
-        i {
-            @apply text-sm text-blue74;
-        }
+    p {
+      .banner-time {
+        @apply hidden;
+      }
     }
+  }
+  .banner-link {
+    @apply flex flex-row flex-wrap justify-between;
+    a {
+      @apply text-center;
+      background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+      box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+      border: 2px solid rgba(255, 255, 255, 0);
+      &:hover {
+        box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+        @apply border-grage5f border-solid border-2;
+      }
+    }
+    span,
+    i {
+      @apply block;
+    }
+    span {
+      @apply text-xl text-blue11 font-bold;
+      font-family: 'Ubuntu-Bold';
+    }
+    i {
+      @apply text-sm text-blue74;
+    }
+  }
 }
 .banner-mobile-box {
-    @apply block lg:hidden overflow-hidden;
-    .banner-img {
-        @apply w-screen h-[80vh] md:h-[92vh] relative;
-        img {
-            transform: translate(-50%, -50%);
-            @apply w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover z-0;
-        }
+  @apply block lg:hidden overflow-hidden;
+  .banner-img {
+    @apply w-screen h-[80vh] md:h-[92vh] relative;
+    img {
+      transform: translate(-50%, -50%);
+      @apply w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover z-0;
     }
+  }
 }
 .banner-mobile-news {
-    @apply -mt-40 md:mt-0;
+  @apply -mt-40 md:mt-0;
 }
 .banner-mobile {
-    @apply overflow-hidden;
-    .banner-title {
-        @apply mt-10 mb-3 text-[2.1rem] text-grag2c font-bold leading-9 whitespace-nowrap;
+  @apply overflow-hidden;
+  .banner-title {
+    @apply mt-10 mb-3 text-[2.1rem] text-grag2c font-bold leading-9 whitespace-nowrap;
+  }
+  .banner-link {
+    @apply mt-12 mb-10;
+    a {
+      @apply w-[48%] mb-8 py-2 z-50;
     }
-    .banner-link {
-        @apply mt-12 mb-10;
-        a {
-            @apply w-[48%] mb-8 py-2 z-50;
-        }
-        i {
-            @apply text-xs whitespace-nowrap;
-            font-family: "Ubuntu-R-hinting";
-        }
+    i {
+      @apply text-xs whitespace-nowrap;
+      font-family: 'Ubuntu-R-hinting';
     }
-    
+  }
 }

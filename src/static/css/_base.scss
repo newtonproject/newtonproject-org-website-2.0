@@ -1,96 +1,96 @@
 @font-face {
-    font-family: "Ubuntu";
-    src: url("../fonts/Ubuntu-Regular.ttf");
+  font-family: 'Ubuntu';
+  src: url('../fonts/Ubuntu-Regular.ttf');
 }
 @font-face {
-    font-family: "Ubuntu-Bold";
-    src: url("../fonts/Ubuntu-Bold.ttf");
+  font-family: 'Ubuntu-Bold';
+  src: url('../fonts/Ubuntu-Bold.ttf');
 }
 @font-face {
-    font-family: "Ubuntu-Medium";
-    src: url("../fonts/Ubuntu-Medium.ttf");
+  font-family: 'Ubuntu-Medium';
+  src: url('../fonts/Ubuntu-Medium.ttf');
 }
 @font-face {
-    font-family: "Ubuntu-R-hinting";
-    src: url("../fonts/Ubuntu-R-hinting.ttf");
+  font-family: 'Ubuntu-R-hinting';
+  src: url('../fonts/Ubuntu-R-hinting.ttf');
 }
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 body {
-    font-family: "Ubuntu";
-    color: #2C465E!important;
-    background-color:  #F7FBFF ;
+  font-family: 'Ubuntu';
+  color: #2c465e !important;
+  background-color: #f7fbff;
 }
 * {
-    -webkit-tap-highlight-color:transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 input:focus {
-    outline:none;
+  outline: none;
 }
 .new-index {
-    background-size: 100% 100%;
-    @apply bg-body-bg-h5 md:bg-body-bg bg-no-repeat md:bg-contain;
+  background-size: 100% 100%;
+  @apply bg-body-bg-h5 md:bg-body-bg bg-no-repeat md:bg-contain;
 }
 i {
-    font-style: normal;
+  font-style: normal;
 }
 h2 {
-    font-family:  "Ubuntu-Bold";
+  font-family: 'Ubuntu-Bold';
 }
 
 .getnew-banner,
 .container {
-    max-width: 1200px;
-    @apply mx-auto;
+  max-width: 1200px;
+  @apply mx-auto;
 }
 @media (min-width: 320px) and (max-width: 1190px) {
-    .container,
-    .header {
-        @apply px-4;
-    }
+  .container,
+  .header {
+    @apply px-4;
+  }
 }
 .ecosystem-container {
-    max-width: 930px;
-    @apply mx-auto;
+  max-width: 930px;
+  @apply mx-auto;
 }
 @media (min-width: 320px) and (max-width: 929px) {
-    .ecosystem-container {
-        @apply px-4;
-    }
+  .ecosystem-container {
+    @apply px-4;
+  }
 }
 @media (min-width: 320px) and (max-width: 420px) {
-    .banner-mobile {
-        .banner-link {
-            a {
-                width: 49%!important;
-            }
-        }
+  .banner-mobile {
+    .banner-link {
+      a {
+        width: 49% !important;
+      }
     }
+  }
 }
 #scroll {
-    @apply hidden lg:block;
+  @apply hidden lg:block;
 }
 .scroll-top {
-    @apply  fixed bottom-32 right-10 cursor-pointer w-12 h-12  flex items-center justify-center;
-    background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
-    box-shadow:  -5px -5px 20px 5px #FFFFFF, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
-    border-radius: 50%;
-    .img-box {
-        img {
-            @apply w-6 h-auto;
-        }
+  @apply fixed bottom-32 right-10 cursor-pointer w-12 h-12  flex items-center justify-center;
+  background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+  box-shadow: -5px -5px 20px 5px #ffffff, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
+  border-radius: 50%;
+  .img-box {
+    img {
+      @apply w-6 h-auto;
     }
-    &:hover {
-        @apply border-grage5f border-solid border-2;
-    }
+  }
+  &:hover {
+    @apply border-grage5f border-solid border-2;
+  }
 }
 
 .not-found-page {
-    .not-img {
-        @apply mt-[5.5rem] mx-4 lg:mx-20 xl:mx-96;
-        img {
-            @apply w-full h-auto;
-        }
+  .not-img {
+    @apply mt-[5.5rem] mx-4 lg:mx-20 xl:mx-96;
+    img {
+      @apply w-full h-auto;
     }
+  }
 }

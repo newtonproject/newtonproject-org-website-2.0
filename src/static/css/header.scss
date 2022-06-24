@@ -1,155 +1,155 @@
 .header {
-    max-width: 1200px;
-    @apply mx-auto hidden lg:block py-6 z-50;
-    .header-logo {
-        @apply flex flex-row;
+  max-width: 1200px;
+  @apply mx-auto hidden lg:block py-6 z-50;
+  .header-logo {
+    @apply flex flex-row;
+  }
+  ul {
+    @apply flex leading-8 font-medium ml-14 z-20;
+    li {
+      @apply lg:px-4 xl:px-8 relative;
     }
-    ul{
-        @apply flex leading-8 font-medium ml-14 z-20;
-        li {
-            @apply lg:px-4 xl:px-8 relative;
-        }
-        a {
-            @apply text-base hover:text-gray20;
-            font-family: "Ubuntu-Medium";
-        }
-        span {
-            @apply w-3 h-3 bg-header-bot inline-block bg-cover ml-2 pt-1 bg-bottom;
-        }
+    a {
+      @apply text-base hover:text-gray20;
+      font-family: 'Ubuntu-Medium';
     }
-    .header-use {
-        @apply z-50;
-        &:hover {
-            .header-down {
-                @apply block;
-            }
-            >a {
-                @apply text-gray20;
-            }
-            span {
-                @apply bg-header-bot-hover;
-            }
-        }
+    span {
+      @apply w-3 h-3 bg-header-bot inline-block bg-cover ml-2 pt-1 bg-bottom;
     }
-    .header-down {
-        @apply hidden absolute right-8 top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
-        a {
-            @apply block text-grag2c mt-2 font-normal text-sm leading-7;
-            font-family: "Ubuntu-R-hinting";
-        }
+  }
+  .header-use {
+    @apply z-50;
+    &:hover {
+      .header-down {
+        @apply block;
+      }
+      > a {
+        @apply text-gray20;
+      }
+      span {
+        @apply bg-header-bot-hover;
+      }
     }
-    .header-search {
-        @apply flex ml-auto flex-row z-30;
-        .search {
-            @apply relative mr-8;
-           a {
-            @apply absolute top-1/2 -mt-3 left-0 w-6 h-6 bg-search inline-block bg-cover ml-2 bg-top cursor-pointer;
-           }
-            input {
-                @apply h-10 leading-10 border-grage5 border-[1px] border-solid pl-9 pr-2;
-            }
-        }
+  }
+  .header-down {
+    @apply hidden absolute right-8 top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg pl-4 pb-2 pr-7;
+    a {
+      @apply block text-grag2c mt-2 font-normal text-sm leading-7;
+      font-family: 'Ubuntu-R-hinting';
     }
+  }
+  .header-search {
+    @apply flex ml-auto flex-row z-30;
+    .search {
+      @apply relative mr-8;
+      a {
+        @apply absolute top-1/2 -mt-3 left-0 w-6 h-6 bg-search inline-block bg-cover ml-2 bg-top cursor-pointer;
+      }
+      input {
+        @apply h-10 leading-10 border-grage5 border-[1px] border-solid pl-9 pr-2;
+      }
+    }
+  }
 }
 .language {
-    @apply lg:ml-9 relative w-9;
-    .language-img {
-        @apply absolute top-5 lg:top-1 right-1/2 -mr-[0.625rem] lg:mr-0 lg:right-0 w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
-    }
+  @apply lg:ml-9 relative w-9;
+  .language-img {
+    @apply absolute top-5 lg:top-1 right-1/2 -mr-[0.625rem] lg:mr-0 lg:right-0 w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
+  }
+  .language-content {
+    @apply hidden;
+  }
+  &:hover {
     .language-content {
-        @apply hidden;
+      @apply block;
     }
-    &:hover {
-        .language-content {
-            @apply block;
-        }
-    }
-    p{
-        @apply block lg:hidden text-gray6a mt-7;
-    }
+  }
+  p {
+    @apply block lg:hidden text-gray6a mt-7;
+  }
 }
 .language-box {
-    @apply w-[10.5rem] p-4 absolute right-[18%] lg:-right-20 -top-24 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg;
-    .language-item {
-        @apply flex flex-wrap justify-between items-center;
-        span {
-            @apply text-base cursor-pointer w-1/2 mb-4 text-left;
-            &:hover {
-                @apply text-gray20;
-            }
-        }
-        .current {
-            @apply text-gray20;
-        }
+  @apply w-[10.5rem] p-4 absolute right-[18%] lg:-right-20 -top-24 lg:top-8 bg-white border-grage5 border-[1px] border-solid rounded-lg;
+  .language-item {
+    @apply flex flex-wrap justify-between items-center;
+    span {
+      @apply text-base cursor-pointer w-1/2 mb-4 text-left;
+      &:hover {
+        @apply text-gray20;
+      }
     }
-    .language-github {
-        @apply relative text-xs text-grag96a block text-left;
-        svg {
-            @apply absolute top-2 -right-2 text-xl font-bold;
-        }
+    .current {
+      @apply text-gray20;
     }
+  }
+  .language-github {
+    @apply relative text-xs text-grag96a block text-left;
+    svg {
+      @apply absolute top-2 -right-2 text-xl font-bold;
+    }
+  }
 }
 
 .header-mobile-box {
-    @apply relative px-4 block lg:hidden py-4;
-    .search {
-        @apply relative w-6;
-        a {
-            @apply absolute top-1/2 -mt-3 ring-0 w-6 h-6 bg-search inline-block bg-cover bg-top;
-        }
-    }
-    .header-menu {
-        svg {
-            @apply text-2xl;
-        }
-    }
-    .header-mobile {
-        @apply flex flex-wrap justify-between items-center;
-    }
+  @apply relative px-4 block lg:hidden py-4;
+  .search {
+    @apply relative w-6;
     a {
-        @apply w-28 inline-block;
+      @apply absolute top-1/2 -mt-3 ring-0 w-6 h-6 bg-search inline-block bg-cover bg-top;
     }
-    .logo {
-        @apply w-28 absolute top-[1.8rem] left-1/2;
-        transform: translate(-50%, -50%);
+  }
+  .header-menu {
+    svg {
+      @apply text-2xl;
     }
+  }
+  .header-mobile {
+    @apply flex flex-wrap justify-between items-center;
+  }
+  a {
+    @apply w-28 inline-block;
+  }
+  .logo {
+    @apply w-28 absolute top-[1.8rem] left-1/2;
+    transform: translate(-50%, -50%);
+  }
 }
 .header-nav-menu {
-    @apply pl-8;
-    li {
-        @apply mb-6;
-        a {
-            @apply text-grag2c font-medium;
-            font-family: "Ubuntu-Medium";
-        }
+  @apply pl-8;
+  li {
+    @apply mb-6;
+    a {
+      @apply text-grag2c font-medium;
+      font-family: 'Ubuntu-Medium';
     }
-    .header-down {
-        @apply pl-6 mt-6;
-        a {
-            @apply text-gray6a block mb-6 font-normal;
-        }
+  }
+  .header-down {
+    @apply pl-6 mt-6;
+    a {
+      @apply text-gray6a block mb-6 font-normal;
     }
+  }
 }
 .header-footer {
-    @apply flex flex-row;
-    background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
-    box-shadow: -9px -9px 20px 5px #FFFFFF;
-    .search {
-        a {
-            @apply w-6 h-6 bg-search inline-block bg-cover bg-top;
-        }
+  @apply flex flex-row;
+  background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+  box-shadow: -9px -9px 20px 5px #ffffff;
+  .search {
+    a {
+      @apply w-6 h-6 bg-search inline-block bg-cover bg-top;
     }
-    .language {
-        span {
-            // @apply w-6 h-6 bg-header-zh inline-block bg-cover cursor-pointer;
-        }
+  }
+  .language {
+    span {
+      // @apply w-6 h-6 bg-header-zh inline-block bg-cover cursor-pointer;
     }
-    .search,
-    .language {
-        flex: 1;
-        @apply text-center pt-5;
-        p{
-            @apply text-gray6a;
-        }
+  }
+  .search,
+  .language {
+    flex: 1;
+    @apply text-center pt-5;
+    p {
+      @apply text-gray6a;
     }
+  }
 }

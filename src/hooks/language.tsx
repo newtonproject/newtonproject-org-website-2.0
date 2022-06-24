@@ -1,3 +1,3 @@
-export const languageName:any = {
-    en: "English",
+export const languageName: any = {
+  en: 'English'
 }

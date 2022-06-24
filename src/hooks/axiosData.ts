@@ -1,6 +1,5 @@
-import axios from "axios"
+import axios from 'axios'
 
-export function getRequest(url:string) {
-	return axios.get(url)
+export function getRequest(url: string) {
+  return axios.get(url)
 }
-

@@ -1,282 +1,289 @@
 .community-html {
-    background-size: 100% 100%;
-    @apply bg-community-bg-h5 bg-no-repeat md:bg-none;
+  background-size: 100% 100%;
+  @apply bg-community-bg-h5 bg-no-repeat md:bg-none;
 }
 .community-news {
-    @apply md:bg-body-bg bg-no-repeat bg-cover;
+  @apply md:bg-body-bg bg-no-repeat bg-cover;
 }
 #community,
 #getnew,
 #ecosystem {
-    .ecosystem-banner {
-        @apply w-full;
-        img {
-            @apply w-full h-auto;
-        }
+  .ecosystem-banner {
+    @apply w-full;
+    img {
+      @apply w-full h-auto;
     }
-    .ecosystem-banner-pc {
-        @apply hidden md:block;
-    }
-    .ecosystem-banner-h5 {
-        @apply block md:hidden mt-8;
-    }
+  }
+  .ecosystem-banner-pc {
+    @apply hidden md:block;
+  }
+  .ecosystem-banner-h5 {
+    @apply block md:hidden mt-8;
+  }
 }
 
 #ecosystem,
 #community,
 #getnew {
-    .getnew-banner {
-        @apply relative;
-        h2 {
-            @apply absolute md:top-1/2 top-[40%] left-1/2 text-5xl md:text-[6.6rem] w-full text-center whitespace-nowrap;
-            transform: translate(-50%, -50%);
-        }
+  .getnew-banner {
+    @apply relative;
+    h2 {
+      @apply absolute md:top-1/2 top-[40%] left-1/2 text-5xl md:text-[6.6rem] w-full text-center whitespace-nowrap;
+      transform: translate(-50%, -50%);
     }
+  }
 }
 // ecosystem
 #ecosystem {
-    .getnew-banner {
-        h2 {
-            @apply top-[23%];
-        }
+  .getnew-banner {
+    h2 {
+      @apply top-[23%];
     }
-    .ecosystem-content {
-        @apply w-full flex flex-col md:flex-row md:flex-wrap md:justify-between;
-        dl {
-            @apply w-full md:w-1/2 mt-[4.5rem] md:mt-24;
-        }
-        dt {
-            @apply text-3xl text-gray333 font-bold;
-            font-family:  "Ubuntu-Bold";
-            i {
-                @apply w-2 h-[22px] mr-2 inline-block;
-                background: linear-gradient(180deg, #0070FF 0%, #87C6FF 100%);
-            }
-        }
-        dd {
-            @apply mt-8;
-        }
-        a {
-            @apply inline-block;
-        }
-        span {
-            @apply text-xs text-grag96a block mt-3;
-        }
-        img {
-            @apply h-auto;
-        }
+  }
+  .ecosystem-content {
+    @apply w-full flex flex-col md:flex-row md:flex-wrap md:justify-between;
+    dl {
+      @apply w-full md:w-1/2 mt-[4.5rem] md:mt-24;
     }
-    .new-mall {
-        img {
-            @apply w-[8.5rem];
-        }
+    dt {
+      @apply text-3xl text-gray333 font-bold;
+      font-family: 'Ubuntu-Bold';
+      i {
+        @apply w-2 h-[22px] mr-2 inline-block;
+        background: linear-gradient(180deg, #0070ff 0%, #87c6ff 100%);
+      }
     }
-    .new-asset {
-        img {
-            @apply w-[17.2rem];
-        }
+    dd {
+      @apply mt-8;
     }
-    .new-mask {
-        img {
-            @apply w-[9.8rem]
-        }
+    a {
+      @apply inline-block;
     }
-    .new-swap {
-        img {
-            @apply w-[9.5rem];
-        }
+    span {
+      @apply text-xs text-grag96a block mt-3;
     }
-    .andverse {
-        img {
-            @apply w-[10.6rem];
-        }
+    img {
+      @apply h-auto;
     }
-    .new-bridge {
-        img {
-            @apply w-[10.4rem];
-        }
+  }
+  .new-mall {
+    img {
+      @apply w-[8.5rem];
     }
+  }
+  .new-asset {
+    img {
+      @apply w-[17.2rem];
+    }
+  }
+  .new-mask {
+    img {
+      @apply w-[9.8rem];
+    }
+  }
+  .new-swap {
+    img {
+      @apply w-[9.5rem];
+    }
+  }
+  .andverse {
+    img {
+      @apply w-[10.6rem];
+    }
+  }
+  .new-bridge {
+    img {
+      @apply w-[10.4rem];
+    }
+  }
 }
 .ecosystem-submit {
-    @apply px-0 md:px-32 bg-blue92 mt-[5.5rem] md:mt-36 mb-20 md:mb-0;
-    a {
-        @apply block h-64 bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center md:flex justify-center items-center;
-    }
-    i {
-        @apply  text-white text-base py-4 md:px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
-    }
-    .submit {
-        @apply hidden md:block;
-    }
-    .add-content,
-    .add-community {
-        @apply block md:hidden;
-    }
-    .add-content {
-        @apply text-white text-lg pt-[4.7rem] mb-6;
-    }
-    .add-community {
-        @apply mx-5;
-    }
+  @apply px-0 md:px-32 bg-blue92 mt-[5.5rem] md:mt-36 mb-20 md:mb-0;
+  a {
+    @apply block h-64 bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center md:flex justify-center items-center;
+  }
+  i {
+    @apply text-white text-base py-4 md:px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
+  }
+  .submit {
+    @apply hidden md:block;
+  }
+  .add-content,
+  .add-community {
+    @apply block md:hidden;
+  }
+  .add-content {
+    @apply text-white text-lg pt-[4.7rem] mb-6;
+  }
+  .add-community {
+    @apply mx-5;
+  }
 }
 // getNew
 #getnew {
-    .getnew-banner {
-        h2 {
-            @apply text-[3.25rem] md:text-[6.6rem];
-        }
+  .getnew-banner {
+    h2 {
+      @apply text-[3.25rem] md:text-[6.6rem];
     }
-    .newtax {
-        @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-between xl:flex-nowrap;
-        dl {
-            @apply flex flex-wrap flex-col justify-center w-full lg:w-w2/3 md:flex-nowrap xl:flex-row xl:w-w2/3 xl:justify-between;
-        }
-        .newtax-item {
-            @apply mt-20 md:mt-5 lg:mt-0;
-        }
-        dt {
-            @apply  leading-9 text-center md:text-left xl:w-56 whitespace-nowrap;
-            span {
-                @apply relative text-grag2c text-[1.75rem] lg:text-font22 font-bold pl-3; 
-                font-family: "Ubuntu-Bold";
-            }
-            i {
-                @apply absolute top-[0.4rem] lg:top-1 left-0 md:left-0 inline-block w-1 h-5 bg-green07;
-            }
-        }
-        dd {
-            @apply md:flex md:flex-wrap md:flex-col text-sm md:w-full md:ml-5;
-            span {
-                @apply flex flex-col md:flex-row text-center;
-                &:nth-child(1) {
-                    @apply md:mb-5;
-                }
-                i {
-                    &:nth-child(1){
-                        @apply text-xl md:text-sm mt-8 mb-4 md:my-0;
-                        font-family: "Ubuntu-Bold";
-                    }
-                }
-            }
-        }
+  }
+  .newtax {
+    @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-between xl:flex-nowrap;
+    dl {
+      @apply flex flex-wrap flex-col justify-center w-full lg:w-w2/3 md:flex-nowrap xl:flex-row xl:w-w2/3 xl:justify-between;
     }
-    .newtax-content {
-        @apply text-center text-sm leading-6;
+    .newtax-item {
+      @apply mt-20 md:mt-5 lg:mt-0;
     }
-    .newtax-total {
-        @apply flex flex-wrap flex-col md:flex-row w-full px-4 md:px-8 mt-20 mb-24 pt-8 pb-8;
-        background: linear-gradient(167deg, rgba(178, 217, 255, 0.04) 0%, rgba(219, 237, 255, 0.16) 6%, rgba(255, 255, 255, 0.21) 42%, rgba(221, 241, 255, 0.16) 100%);
-        box-shadow: -4px -4px 20px 5px #FFFFFF, 2px 2px 20px 0px rgba(0, 64, 145, 0.12);
-        dl {
-            @apply flex w-full md:w-4/12 md:pl-7 pl-0;
-        }
-        .top1,
-        .top2,
-        .bottom1,
-        .bottom2 {
-            @apply md:border-solid md:border-r-[1px] md:border-graydd;
-        }
-        .total-top {
-            @apply border-solid border-b-[1px] border-graydd pb-8;
-        }
-        .total-bottom {
-            @apply pt-6 border-solid border-b-[1px] border-graydd pb-8 md:border-b-0;
-        }
-        .bottom3 {
-            @apply border-b-0;
-        }
-        .top1,
-        .bottom1 {
-            @apply pl-0;
-        }
-        .top2,
-        .top3 {
-            @apply mt-8 md:mt-0;
-        }
-        dt {
-            @apply w-[3.5rem] md:w-[3.8rem] mr-3 sm:mr-6;
-            img {
-                @apply w-full;
-            }
-        }
-        h3,span {
-            @apply text-grag2c;
-        }
-        span {
-            @apply text-xl md:text-font22;
-        }
-        h3 {
-            @apply font-bold text-font22;
-            font-family: "Ubuntu-Bold";
-        }
+    dt {
+      @apply leading-9 text-center md:text-left xl:w-56 whitespace-nowrap;
+      span {
+        @apply relative text-grag2c text-[1.75rem] lg:text-font22 font-bold pl-3;
+        font-family: 'Ubuntu-Bold';
+      }
+      i {
+        @apply absolute top-[0.4rem] lg:top-1 left-0 md:left-0 inline-block w-1 h-5 bg-green07;
+      }
     }
-    .exchange {
-        h2 {
-            @apply text-3xl text-center pb-5;
+    dd {
+      @apply md:flex md:flex-wrap md:flex-col text-sm md:w-full md:ml-5;
+      span {
+        @apply flex flex-col md:flex-row text-center;
+        &:nth-child(1) {
+          @apply md:mb-5;
         }
-        .top-img {
-            @apply flex flex-wrap justify-between md:justify-center;
+        i {
+          &:nth-child(1) {
+            @apply text-xl md:text-sm mt-8 mb-4 md:my-0;
+            font-family: 'Ubuntu-Bold';
+          }
         }
-        .bottom-img {
-            @apply flex justify-center items-center;
-            a {
-                &:nth-child(2) {
-                    @apply mx-40;
-                }
-            }
-        }
-        a {
-            @apply inline-block mt-10 w-[45%] md:w-2/6 xl:w-1/5;
-            img {
-                @apply w-[9.4rem] h-auto;
-            }
-        }
+      }
     }
-    .dex {
-        @apply text-center;
-        h2 {
-            @apply text-3xl mt-20 mb-14;
-        }
-        a {
-            @apply inline-block w-[9.4rem];
-        }
-        img {
-            @apply w-full h-auto;
-        }
-        .new-mask {
-            @apply ml-4 sm:ml-11 md:ml-40;
-        }
-        p {
-          @apply text-sm mt-14 mb-28;  
-        }
-        span {
-            @apply text-grag96a;
-        }
+  }
+  .newtax-content {
+    @apply text-center text-sm leading-6;
+  }
+  .newtax-total {
+    @apply flex flex-wrap flex-col md:flex-row w-full px-4 md:px-8 mt-20 mb-24 pt-8 pb-8;
+    background: linear-gradient(
+      167deg,
+      rgba(178, 217, 255, 0.04) 0%,
+      rgba(219, 237, 255, 0.16) 6%,
+      rgba(255, 255, 255, 0.21) 42%,
+      rgba(221, 241, 255, 0.16) 100%
+    );
+    box-shadow: -4px -4px 20px 5px #ffffff, 2px 2px 20px 0px rgba(0, 64, 145, 0.12);
+    dl {
+      @apply flex w-full md:w-4/12 md:pl-7 pl-0;
     }
-    .Wallet {
-        a {
-            @apply w-[8.4rem];
-        }
-        .new-mask {
-            @apply ml-8 sm:ml-11 md:ml-40;
-        }
+    .top1,
+    .top2,
+    .bottom1,
+    .bottom2 {
+      @apply md:border-solid md:border-r-[1px] md:border-graydd;
     }
+    .total-top {
+      @apply border-solid border-b-[1px] border-graydd pb-8;
+    }
+    .total-bottom {
+      @apply pt-6 border-solid border-b-[1px] border-graydd pb-8 md:border-b-0;
+    }
+    .bottom3 {
+      @apply border-b-0;
+    }
+    .top1,
+    .bottom1 {
+      @apply pl-0;
+    }
+    .top2,
+    .top3 {
+      @apply mt-8 md:mt-0;
+    }
+    dt {
+      @apply w-[3.5rem] md:w-[3.8rem] mr-3 sm:mr-6;
+      img {
+        @apply w-full;
+      }
+    }
+    h3,
+    span {
+      @apply text-grag2c;
+    }
+    span {
+      @apply text-xl md:text-font22;
+    }
+    h3 {
+      @apply font-bold text-font22;
+      font-family: 'Ubuntu-Bold';
+    }
+  }
+  .exchange {
+    h2 {
+      @apply text-3xl text-center pb-5;
+    }
+    .top-img {
+      @apply flex flex-wrap justify-between md:justify-center;
+    }
+    .bottom-img {
+      @apply flex justify-center items-center;
+      a {
+        &:nth-child(2) {
+          @apply mx-40;
+        }
+      }
+    }
+    a {
+      @apply inline-block mt-10 w-[45%] md:w-2/6 xl:w-1/5;
+      img {
+        @apply w-[9.4rem] h-auto;
+      }
+    }
+  }
+  .dex {
+    @apply text-center;
+    h2 {
+      @apply text-3xl mt-20 mb-14;
+    }
+    a {
+      @apply inline-block w-[9.4rem];
+    }
+    img {
+      @apply w-full h-auto;
+    }
+    .new-mask {
+      @apply ml-4 sm:ml-11 md:ml-40;
+    }
+    p {
+      @apply text-sm mt-14 mb-28;
+    }
+    span {
+      @apply text-grag96a;
+    }
+  }
+  .Wallet {
+    a {
+      @apply w-[8.4rem];
+    }
+    .new-mask {
+      @apply ml-8 sm:ml-11 md:ml-40;
+    }
+  }
 }
 
 // community
 #community {
-    .getnew-banner {
-        h2 {
-            @apply md:top-[45%] top-[47%];
-        }
+  .getnew-banner {
+    h2 {
+      @apply md:top-[45%] top-[47%];
     }
-    .news {
-        @apply pb-0;
+  }
+  .news {
+    @apply pb-0;
+  }
+  .global {
+    @apply md:pt-44 pt-[6.5rem] pb-0;
+    .global-youtube {
+      @apply block;
     }
-    .global {
-        @apply md:pt-44 pt-[6.5rem] pb-0;
-        .global-youtube {
-            @apply block;
-        }
-    }
+  }
 }

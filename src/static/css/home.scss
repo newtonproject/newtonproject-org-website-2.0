@@ -1,247 +1,244 @@
 .centent-community {
-    @apply mb-[6.5rem] md:mb-52;
-    h2 {
-        @apply mb-10 md:mb-12;
+  @apply mb-[6.5rem] md:mb-52;
+  h2 {
+    @apply mb-10 md:mb-12;
+  }
+  ul {
+    @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
+  }
+  li {
+    @apply w-full md:w-w1/3 mb-12 md:mb-0;
+    .community-img {
+      @apply h-12;
     }
-    ul {
-        @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
+    img {
+      @apply w-12 h-auto;
     }
-    li {
-        @apply w-full md:w-w1/3 mb-12 md:mb-0;
-        .community-img {
-            @apply h-12;
-        }
-        img {
-            @apply w-12 h-auto;
-        }
+  }
+  h5 {
+    @apply text-left text-grag2c md:text-font22 font-bold mb-4 text-xl mt-4 md:mt-7;
+    font-family: 'Ubuntu-Bold';
+    i {
+      @apply w-1 h-5 inline-block bg-blue11 mr-3;
     }
-    h5 {
-        @apply text-left text-grag2c md:text-font22 font-bold mb-4 text-xl mt-4 md:mt-7;
-        font-family:  "Ubuntu-Bold";
-        i {
-            @apply w-1 h-5 inline-block bg-blue11 mr-3;
-        }
-    }
-    p{
-        @apply text-left text-grag2c text-sm tracking-wide leading-6;
-    }
+  }
+  p {
+    @apply text-left text-grag2c text-sm tracking-wide leading-6;
+  }
 }
 .centent-build {
-    @apply hidden md:block mt-28;
-    h2 {
-        @apply text-3xl font-bold md:mb-6 text-left;
+  @apply hidden md:block mt-28;
+  h2 {
+    @apply text-3xl font-bold md:mb-6 text-left;
+  }
+  ul {
+    @apply flex flex-col md:flex-row md:justify-between md:items-center;
+  }
+  li {
+    @apply w-full md:w-w2/3;
+    img {
+      @apply w-full h-auto;
     }
-    ul {
-        @apply flex flex-col md:flex-row md:justify-between md:items-center;
+    > p {
+      @apply leading-8 mb-16;
     }
-    li {
-        @apply w-full md:w-w2/3;
-        img {
-            @apply w-full h-auto;
-        }
-        >p {
-            @apply leading-8 mb-16;
-        }
+  }
+  div {
+    @apply flex;
+    a {
+      @apply w-1/2 text-center text-gray11 text-xl py-4 md:mt-6;
+      background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+      box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+      border: 2px solid rgba(255, 255, 255, 0);
+      &:hover {
+        box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+        @apply border-grage5f border-solid border-2;
+      }
+      &:nth-child(1) {
+        @apply md:mr-2 lg:mr-10;
+      }
     }
-    div {
-        @apply flex;
-        a {
-            @apply w-1/2 text-center text-gray11 text-xl py-4 md:mt-6;
-            background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
-            box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
-            border: 2px solid rgba(255, 255, 255, 0);
-            &:hover {
-                box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
-                @apply border-grage5f border-solid border-2;
-            }
-            &:nth-child(1) {
-                @apply md:mr-2 lg:mr-10;
-            }
-        }
+  }
+  .building {
+    a {
+      &:nth-child(1) {
+        @apply md:leading-6 text-xl;
+      }
     }
-    .building {
-        a {
-            &:nth-child(1) {
-                @apply md:leading-6 text-xl;
-            }
-        }
+  }
+  .build-become {
+    a {
+      &:nth-child(2) {
+        @apply md:leading-6 text-xl;
+      }
     }
-    .build-become {
-        a {
-            &:nth-child(2) {
-                @apply md:leading-6 text-xl;
-            }
-        }
-    }
-    p{
-        @apply text-left text-grag2c text-base;
-    }
-
+  }
+  p {
+    @apply text-left text-grag2c text-base;
+  }
 }
 .build-box {
-    @apply block md:hidden;
-    .stake-img {
-        @apply my-10;
+  @apply block md:hidden;
+  .stake-img {
+    @apply my-10;
+  }
+  p {
+    @apply text-grag2c text-base leading-8;
+  }
+  .build-item {
+    @apply mt-[6.5rem];
+  }
+  .build-a {
+    @apply flex justify-between;
+    a {
+      @apply w-[48%] text-center text-gray11 text-xl py-4 mt-10;
+      background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+      box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+      border: 2px solid rgba(255, 255, 255, 0);
+      &:hover {
+        box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+        @apply border-grage5f border-solid border-2;
+      }
+      &:nth-child(1) {
+        @apply md:mr-10;
+      }
     }
-    p {
-        @apply text-grag2c text-base leading-8;
+  }
+  .build-become {
+    a {
+      &:nth-child(2) {
+        @apply text-base sm:text-xl leading-6;
+      }
     }
-    .build-item {
-        @apply mt-[6.5rem];
-    }
-    .build-a {
-        @apply flex justify-between;
-        a {
-            @apply w-[48%] text-center text-gray11 text-xl py-4 mt-10;
-            background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
-            box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
-            border: 2px solid rgba(255, 255, 255, 0);
-            &:hover {
-                box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
-                @apply border-grage5f border-solid border-2;
-            }
-            &:nth-child(1) {
-                @apply md:mr-10;
-            }
-        }
-    }
-    .build-become {
-        a {
-            &:nth-child(2) {
-                @apply text-base sm:text-xl leading-6;
-            }
-        }
-    }
+  }
 }
 .build-box,
 .centent-community,
 .global,
 .news {
-    h2 {
-        @apply text-3xl font-bold text-center;
-    }
+  h2 {
+    @apply text-3xl font-bold text-center;
+  }
 }
 .community-news {
-    .news-activity {
-        @apply mt-16 md:mt-24;
-    }
+  .news-activity {
+    @apply mt-16 md:mt-24;
+  }
 }
 .new-index {
-    .news {
-        @apply pb-[6.5rem] md:pb-44; 
-    }
+  .news {
+    @apply pb-[6.5rem] md:pb-44;
+  }
 }
 .news {
-    @apply pb-16 md:pb-44 mt-[6.5rem] md:mt-24;
-    h2 {
-        @apply mb-10 md:mb-16;
+  @apply pb-16 md:pb-44 mt-[6.5rem] md:mt-24;
+  h2 {
+    @apply mb-10 md:mb-16;
+  }
+  ul {
+    @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
+  }
+  li {
+    @apply bg-white w-full md:w-w1/3 mb-12 md:mb-0 cursor-pointer;
+    background: linear-gradient(180deg, #ffffff 0%, #fcfeff 100%);
+    box-shadow: -4px -4px 20px 5px #ffffff, 2px 2px 20px 0px rgba(0, 64, 145, 0.12);
+    .news-img {
+      @apply w-full relative;
+      padding-bottom: 76%;
+      > img {
+        @apply w-full h-full absolute top-1/2 left-1/2 object-cover;
+        transform: translate(-50%, -50%) !important;
+      }
     }
-    ul {
-        @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
+    .news-title {
+      border: 2px solid rgba(255, 255, 255, 0);
     }
-    li {
-        @apply bg-white w-full md:w-w1/3 mb-12 md:mb-0 cursor-pointer;
-        background: linear-gradient(180deg, #FFFFFF 0%, #FCFEFF 100%);
-        box-shadow: -4px -4px 20px 5px #FFFFFF, 2px 2px 20px 0px rgba(0, 64, 145, 0.12);
-        .news-img {
-            @apply w-full relative;
-            padding-bottom: 76%;
-            >img {
-                @apply w-full h-full absolute top-1/2 left-1/2 object-cover;
-                transform: translate(-50%, -50%)!important;
-            }
-        }
-        .news-title {
-            border: 2px solid rgba(255, 255, 255, 0);
-        }
-        &:hover {
-            .news-title {
-                @apply border-grage5f border-solid border-2;
-                border-top: 2px solid rgba(255, 255, 255, 0);
-            }
-        }
+    &:hover {
+      .news-title {
+        @apply border-grage5f border-solid border-2;
+        border-top: 2px solid rgba(255, 255, 255, 0);
+      }
     }
-    h3 {
-        @apply h-12  mx-2 mt-4 mb-6 text-gray11 text-base font-medium;
-        text-overflow: -o-ellipsis-lastline;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
-        -webkit-box-orient: vertical;
+  }
+  h3 {
+    @apply h-12  mx-2 mt-4 mb-6 text-gray11 text-base font-medium;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  p {
+    @apply pr-2 text-xs text-gray96 text-right mb-10;
+  }
+  .news-more {
+    a {
+      @apply md:px-32 px-32;
     }
-    p {
-        @apply pr-2 text-xs text-gray96 text-right mb-10; 
-    }
-    .news-more {
-        a {
-            @apply md:px-32 px-32;
-        }
-    }
-    
+  }
 }
 .announcements {
-    li {
-        .news-img {
-            @apply pb-0;
-        }
+  li {
+    .news-img {
+      @apply pb-0;
     }
+  }
 }
 .centent-community,
 .news {
-    .news-more {
-        @apply flex justify-center items-center mt-0 md:mt-14;
-        a {
-            @apply text-gray11 text-xl py-4;
-            background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
-            box-shadow: -9px -9px 20px 5px #FFFFFF,4px 4px 20px 0px rgba(0, 64, 145, 0.12);
-            border: 2px solid rgba(255, 255, 255, 0);
-            &:hover {
-                box-shadow: -4px -4px 20px 5px #FFFFFF, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
-                @apply border-grage5f border-solid border-2;
-            }
-        }
+  .news-more {
+    @apply flex justify-center items-center mt-0 md:mt-14;
+    a {
+      @apply text-gray11 text-xl py-4;
+      background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+      box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+      border: 2px solid rgba(255, 255, 255, 0);
+      &:hover {
+        box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+        @apply border-grage5f border-solid border-2;
+      }
     }
+  }
 }
 .centent-community {
-    .news-more {
-        a {
-            @apply px-24;
-        }
+  .news-more {
+    a {
+      @apply px-24;
     }
+  }
 }
 
-
 .global {
-    @apply pb-16 md:pb-44;
-    ul {
-        @apply flex flex-wrap md:mt-12;
+  @apply pb-16 md:pb-44;
+  ul {
+    @apply flex flex-wrap md:mt-12;
+  }
+  li {
+    @apply flex items-center w-1/2 md:w-1/4 cursor-pointer mt-10 md:mt-6;
+  }
+  .global-youtube {
+    @apply hidden;
+  }
+  a {
+    @apply flex items-center w-full mt-0 md:mt-6;
+    > div {
+      @apply w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center mr-2 md:mr-6;
+      background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+      box-shadow: -5px -5px 20px 5px #ffffff, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
+      border-radius: 50%;
+      img {
+        @apply w-10 md:w-12;
+      }
     }
-    li {
-        @apply flex items-center w-1/2 md:w-1/4 cursor-pointer mt-10 md:mt-6;
+    &:hover {
+      > div {
+        @apply border-grage5f border-solid border-2;
+      }
     }
-    .global-youtube {
-        @apply hidden;
-    }
-    a {
-        @apply flex items-center w-full mt-0 md:mt-6;
-        >div {
-            @apply w-16 h-16 lg:w-20 lg:h-20 flex items-center justify-center mr-2 md:mr-6;
-            background: linear-gradient(180deg, #F2F7FC 0%, #FCFEFF 100%);
-            box-shadow:  -5px -5px 20px 5px #FFFFFF, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
-            border-radius: 50%;
-            img {
-                @apply w-10 md:w-12;
-            }
-        }
-        &:hover {
-            >div {
-                @apply border-grage5f border-solid border-2;
-            }
-        }
-    }
-    h5 {
-        @apply text-sm md:text-base text-grag2c;
-    } 
+  }
+  h5 {
+    @apply text-sm md:text-base text-grag2c;
+  }
 }

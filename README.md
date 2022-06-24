@@ -25,25 +25,29 @@ yarn start
 ## 4.Push
 
 ```
+yarn ff
 yarn build
 git push
 ```
 
 ## 5. Participate in building internationalization
 
-**a.International Translation Technology**
+**a.Project address**
+- https://www.newtonproject.org/
+
+**b.International Translation Technology**
 - gatsby-plugin-intl
 - npm Address: https://www.npmjs.com/package/gatsby-plugin-intl
 
-**b.Directory of documents placed in the translated language**
+**c.Directory of documents placed in the translated language**
 - `src/static/intl`
 - Create a new json file for the language type in the intl folder, paying particular attention to the fact that the value of the key must not be changed, but must be consistent with the key in the en.json folder.
 
-**c.Html Translation of the formed catalogue**
+**d.Html Translation of the formed catalogue**
 - `src/components/language`
 - Append the key value of the translated language type to the language file.
 
-**d.Configuration files gatsby-config.js**
+**e.Configuration files gatsby-config.js**
 - gatsby-config.js
 ```
 {

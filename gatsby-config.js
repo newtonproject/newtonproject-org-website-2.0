@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   siteMetadata: {
     title: `Newton`,
@@ -50,15 +48,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
-    //   `gatsby-plugin-alias-imports`,
-    //   {
-    //     resolve: `gatsby-plugin-alias-imports`,
-    //     options: {
-    //       alias: {
-    //         '@': path.resolve(__dirname, 'src')
-    //       }
-    //   }
-    // }
     // i18n support
     {
       resolve: `gatsby-plugin-intl`,
@@ -72,6 +61,13 @@ module.exports = {
         // redirect to `/${lang}/` when connecting to `/`
         // based on user's browser language preference
         redirect: true,
+      },
+    },
+    // env
+    {
+      resolve: `gatsby-plugin-env-variables`,
+      options: {
+        allowList: ["GATSBY_API_URL","GATSBY_INTL_GITHUB"]
       },
     },
   ],

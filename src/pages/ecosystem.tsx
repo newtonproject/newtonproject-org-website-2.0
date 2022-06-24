@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 import EcosystemContent from '../components/ecosystemContent'
 import NormalLayout from '../components/normalLayout'
 import { PageModel } from '../hooks/pageModel'
@@ -6,7 +6,7 @@ import { PageModel } from '../hooks/pageModel'
 export default Ecosystem
 
 function Ecosystem() {
-  let pageModel = new PageModel('Ecosystem','ecosystem-html')
+  let pageModel = new PageModel('Ecosystem', 'ecosystem-html')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 
