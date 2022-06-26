@@ -5,7 +5,7 @@ import bannerGetnewH5 from '../static/images/getnew/getnew-banner-h5.png'
 import { numFormat } from '../hooks/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../hooks/axiosData'
-import { getNewUrl,newsEnvUrl } from '../hooks/url'
+import { getNewUrl, newsEnvUrl } from '../hooks/url'
 
 export default function GetNewContent() {
   const intl = useIntl()
@@ -133,7 +133,7 @@ export default function GetNewContent() {
             </dt>
             <dd>
               <h3>{intl.formatMessage({ id: 'Released on the Day' })}</h3>
-              <span>{data.incentive_release !== '' ? numFormat(data.incentive_release) : null} NEW</span>
+              <span>{data.incentive_release !== '' ? numFormat(data.incentive_release * 2) : null} NEW</span>
             </dd>
           </dl>
         </div>
