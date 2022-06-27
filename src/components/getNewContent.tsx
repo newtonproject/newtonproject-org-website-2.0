@@ -65,11 +65,11 @@ export default function GetNewContent() {
             <dd>
               <span>
                 <i>{intl.formatMessage({ id: 'Address' })}:</i>
-                <i>NEW182K9sX2KE3gw6o7WNNroW1K7FDuvhMfEtkF</i>
+                <i>NEW182GJfscSmL2TjVdqbcVm3uZKGgUSitCjxt4</i>
               </span>
               <span>
                 <i>{intl.formatMessage({ id: 'Effective Time' })}:</i>
-                <i>2019-05-01 17:48:57 ~ 2020-01-01 17:48:57</i>
+                <i>2019-05-24 09:32:51 ~ 2020-01-01 17:48:56</i>
               </span>
             </dd>
           </dl>
