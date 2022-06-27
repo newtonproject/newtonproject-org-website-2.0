@@ -5,7 +5,7 @@ WORKDIR /app
 # Copy all files from current directory to working dir in image
 COPY . .
 # install node modules and build assets
-RUN yarn install && yarn build
+RUN cp .env.example .env.production && yarn install && yarn build
 
 # nginx state for serving content
 FROM nginx:alpine
