@@ -70,3 +70,8 @@ git push
 - The default language of the project is en in `defaultLanguage`, which is `en`.
 
 
+## 6 Deploy
+```
+ docker build -t newton-website .
+ docker run -dp 8081:80 newton-website
+```
