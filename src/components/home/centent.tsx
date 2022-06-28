@@ -52,7 +52,7 @@ export default function Centent() {
             <div>
               <StaticImage
                 placeholder="blurred"
-                className={'community-img'}
+                className={'community-img icon3'}
                 alt="img"
                 src="../../static/images/home/index-icon3.png"
               />

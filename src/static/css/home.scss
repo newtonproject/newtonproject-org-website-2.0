@@ -7,19 +7,24 @@
     @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
   }
   li {
-    @apply w-full md:w-[32.5%] mb-12 md:mb-0 pl-3;
+    @apply w-full md:w-[30.5%] mb-12 md:mb-0 pl-3;
     .community-img {
       @apply h-12;
     }
     img {
       @apply w-12 h-auto;
     }
+    .icon3 {
+      img {
+        @apply w-11 h-auto;
+      }
+    }
   }
   h5 {
-    @apply relative text-left text-grag2c md:text-font22 font-bold mb-4 text-xl mt-4 md:mt-7;
+    @apply relative text-left text-grag2c md:text-xl font-bold mb-4 text-xl mt-4 md:mt-7;
     font-family: 'Ubuntu-Bold';
     i {
-      @apply absolute top-1 -left-3 w-1 h-5 inline-block bg-blue11 mr-3;
+      @apply absolute top-[6px] -left-3 w-1 h-4 inline-block bg-blue11 mr-3;
     }
   }
   p {
