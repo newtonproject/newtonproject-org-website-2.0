@@ -141,7 +141,7 @@
     dt {
       @apply leading-9 text-center md:text-left xl:w-56 whitespace-nowrap;
       span {
-        @apply relative text-grag2c text-[1.75rem] lg:text-font22 font-bold pl-3;
+        @apply relative text-grag2c text-[1.75rem] lg:text-xl font-bold pl-3;
         font-family: 'Ubuntu-Bold';
       }
       i {
@@ -214,7 +214,7 @@
       @apply text-grag2c;
     }
     span {
-      @apply text-xl md:text-font22;
+      @apply text-xl md:text-xl;
     }
     h3 {
       @apply font-bold text-font22;
