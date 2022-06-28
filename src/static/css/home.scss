@@ -7,7 +7,7 @@
     @apply flex flex-col md:flex-row md:flex-wrap md:justify-between;
   }
   li {
-    @apply w-full md:w-w1/3 mb-12 md:mb-0;
+    @apply w-full md:w-[31.5%] mb-12 md:mb-0;
     .community-img {
       @apply h-12;
     }

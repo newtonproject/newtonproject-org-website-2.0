@@ -1,6 +1,10 @@
 .community-html {
   background-size: 100% 100%;
-  @apply bg-community-bg-h5 bg-no-repeat md:bg-none;
+  @apply bg-community-bg-h5 bg-no-repeat bg-grayf7 md:bg-none;
+}
+.getNew-html,
+.ecosystem-html {
+  @apply bg-grayf7;
 }
 .community-news {
   @apply md:bg-body-bg bg-no-repeat bg-cover;

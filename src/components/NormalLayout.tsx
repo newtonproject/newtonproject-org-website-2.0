@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
-import ScrollTop from './scrollTop'
+// import ScrollTop from './scrollTop'
 import Seo from './seo'
 import { PageModelTitle } from '../hooks/PageModel'
 
@@ -12,7 +12,7 @@ export default function NormalLayout(children: React.ReactNode, pageModel: PageM
       <Header />
       {children}
       <Footer />
-      <ScrollTop />
+      {/* <ScrollTop /> */}
     </div>
   )
 }
