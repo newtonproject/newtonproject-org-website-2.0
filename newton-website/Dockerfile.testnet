@@ -9,7 +9,7 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn build
+RUN cp .env.testnet.example .env.production && yarn build
 
 # nginx state for serving content
 FROM nginx:alpine
