@@ -61,9 +61,7 @@
 .banner-mobile-box {
   @apply block lg:hidden overflow-hidden;
   .banner-img {
-    span {
-      @apply w-screen h-[80vh] md:h-[92vh] relative;
-    }
+    @apply w-screen h-[80vh] md:h-[92vh] relative;
     img {
       transform: translate(-50%, -50%);
       @apply w-full h-full top-[32%] sm:top-[38%] md:top-[45%] absolute left-1/2 object-cover z-0;

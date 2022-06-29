@@ -9,7 +9,6 @@ import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.pn
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../hooks/axiosData'
 import { newsEnvUrl } from '../hooks/url'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function CommunityContent() {
   const intl = useIntl()
@@ -33,20 +32,9 @@ export default function CommunityContent() {
   return (
     <div id={'community'}>
       <div className={'getnew-banner'}>
-        {/* <img className={'ecosystem-banner-pc'} src={bannerCommunity} alt="img" /> */}
-        <LazyLoadImage
-          className={'ecosystem-banner-pc'}
-          alt={'img'}
-          placeholderSrc={bannerCommunity}
-          src={bannerCommunity}
-        />
-        <LazyLoadImage
-          className={'ecosystem-banner-h5'}
-          alt={'img'}
-          placeholderSrc={bannerCommunityH5}
-          src={bannerCommunityH5}
-        />
-        {/* <img className={'ecosystem-banner-h5'} src={bannerCommunityH5} alt="img" /> */}
+        <img className={'ecosystem-banner-pc'} src={bannerCommunity} alt="img" />
+        <img className={'ecosystem-banner-h5'} src={bannerCommunityH5} alt="img" />
+
         <h2>{intl.formatMessage({ id: 'COMMUNITY' })}</h2>
       </div>
       <div className={'community-news'}>
