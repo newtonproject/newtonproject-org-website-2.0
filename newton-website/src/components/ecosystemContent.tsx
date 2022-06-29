@@ -12,8 +12,18 @@ export default function EcosystemContent() {
   return (
     <div id={'ecosystem'}>
       <div className={'getnew-banner'}>
-        <LazyLoadImage className={'ecosystem-banner-pc'} alt={'img'} effect="blur" src={bannerEcosystem} />
-        <LazyLoadImage className={'ecosystem-banner-h5'} alt={'img'} effect="blur" src={bannerEcosystemH5} />
+        <LazyLoadImage
+          className={'ecosystem-banner-pc'}
+          alt={'img'}
+          placeholderSrc={bannerEcosystem}
+          src={bannerEcosystem}
+        />
+        <LazyLoadImage
+          className={'ecosystem-banner-h5'}
+          alt={'img'}
+          placeholderSrc={bannerEcosystemH5}
+          src={bannerEcosystemH5}
+        />
         <h2>ECOSYSTEM</h2>
       </div>
       <div className={'ecosystem-content ecosystem-container container'}>

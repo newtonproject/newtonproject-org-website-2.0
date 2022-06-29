@@ -34,8 +34,18 @@ export default function CommunityContent() {
     <div id={'community'}>
       <div className={'getnew-banner'}>
         {/* <img className={'ecosystem-banner-pc'} src={bannerCommunity} alt="img" /> */}
-        <LazyLoadImage className={'ecosystem-banner-pc'} alt={'img'} effect="blur" src={bannerCommunity} />
-        <LazyLoadImage className={'ecosystem-banner-h5'} alt={'img'} effect="blur" src={bannerCommunityH5} />
+        <LazyLoadImage
+          className={'ecosystem-banner-pc'}
+          alt={'img'}
+          placeholderSrc={bannerCommunity}
+          src={bannerCommunity}
+        />
+        <LazyLoadImage
+          className={'ecosystem-banner-h5'}
+          alt={'img'}
+          placeholderSrc={bannerCommunityH5}
+          src={bannerCommunityH5}
+        />
         {/* <img className={'ecosystem-banner-h5'} src={bannerCommunityH5} alt="img" /> */}
         <h2>{intl.formatMessage({ id: 'COMMUNITY' })}</h2>
       </div>

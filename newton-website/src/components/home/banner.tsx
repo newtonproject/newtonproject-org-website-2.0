@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import bannerMobileImg from '../../static/images/banner.png'
+import bannerMobileImgDev from '../../static/images/banner-dev.png'
 import { arrDateBanner } from '../../hooks/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../../hooks/axiosData'
@@ -76,7 +77,7 @@ export default function Banner() {
             </div>
           </div>
           <div className={'banner-img'}>
-            <LazyLoadImage alt={'banner'} effect="blur" src={bannerMobileImg} />
+            <LazyLoadImage alt={'banner'} placeholderSrc={bannerMobileImgDev} src={bannerMobileImg} />
           </div>
         </div>
         <div className={'banner-link'}>
@@ -101,7 +102,7 @@ export default function Banner() {
           </div>
         </div>
         <div className={'banner-img'}>
-          <LazyLoadImage alt={'banner'} effect="blur" src={bannerMobileImg} />
+          <LazyLoadImage alt={'banner'} placeholderSrc={bannerMobileImgDev} src={bannerMobileImg} />
         </div>
         <div className={'banner-mobile banner-mobile-news container'}>
           <div className={'banner-news'}>

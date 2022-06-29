@@ -30,8 +30,13 @@ export default function GetNewContent() {
   return (
     <div id={'getnew'}>
       <div className={'ecosystem-banner getnew-banner'}>
-        <LazyLoadImage className={'ecosystem-banner-pc'} alt={'img'} effect="blur" src={bannerGetnew} />
-        <LazyLoadImage className={'ecosystem-banner-h5'} alt={'img'} effect="blur" src={bannerGetnewH5} />
+        <LazyLoadImage className={'ecosystem-banner-pc'} alt={'img'} placeholderSrc={bannerGetnew} src={bannerGetnew} />
+        <LazyLoadImage
+          className={'ecosystem-banner-h5'}
+          alt={'img'}
+          placeholderSrc={bannerGetnewH5}
+          src={bannerGetnewH5}
+        />
         <h2>
           {intl.formatMessage({ id: 'G E T' })}&nbsp;&nbsp;{intl.formatMessage({ id: 'N E W' })}
         </h2>
