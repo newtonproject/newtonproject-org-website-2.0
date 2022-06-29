@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import bannerMobileImg from '../../static/images/banner-gif.gif'
 import { arrDateBanner } from '../../hooks/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../../hooks/axiosData'
 import { newsEnvUrl } from '../../hooks/url'
-
+import BannerImg from './bannerImg'
 export default function Banner() {
   const intl = useIntl()
   const [data, setData] = useState([])
@@ -75,7 +74,7 @@ export default function Banner() {
             </div>
           </div>
           <div className={'banner-img'}>
-            <img src={bannerMobileImg} alt="img" />
+            <BannerImg />
           </div>
         </div>
         <div className={'banner-link'}>
@@ -100,7 +99,7 @@ export default function Banner() {
           </div>
         </div>
         <div className={'banner-img'}>
-          <img src={bannerMobileImg} alt="img" />
+          <BannerImg />
         </div>
         <div className={'banner-mobile banner-mobile-news container'}>
           <div className={'banner-news'}>
