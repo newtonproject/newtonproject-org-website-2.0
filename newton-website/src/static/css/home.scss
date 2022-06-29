@@ -221,7 +221,7 @@
     @apply flex flex-wrap md:mt-12;
   }
   li {
-    @apply flex items-center w-1/2 md:w-1/4 cursor-pointer mt-10 md:mt-6;
+    @apply flex items-center w-1/2 md:w-1/4 cursor-pointer mt-10 md:mt-6 lg:pl-16;
   }
   .global-youtube {
     @apply hidden;
