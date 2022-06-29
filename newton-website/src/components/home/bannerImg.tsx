@@ -10,7 +10,7 @@ export default function BannerImg() {
 
   return (
     <>
-      {loaded == false ? <img onLoad={onLoad} src={bannerMobileImgDev} /> : null}
+      {loaded == false ? <img src={bannerMobileImgDev} /> : null}
       <img onLoad={onLoad} src={bannerMobileImg} />
     </>
   )
