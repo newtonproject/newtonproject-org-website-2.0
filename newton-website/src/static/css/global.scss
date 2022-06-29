@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-// @import 'antd/dist/antd.css';
+@import 'react-lazy-load-image-component/src/effects/blur.css';
 @import 'base';
 @import 'header';
 @import 'modal';
 @import 'footer';
 @import 'banner';
 @import 'home';
-
 @import 'ecosystem';

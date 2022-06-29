@@ -4,6 +4,7 @@ import bannerEcosystem from '../static/images/ecosystem/ecosystem-banner.png'
 import bannerEcosystemH5 from '../static/images/ecosystem/ecosystem-banner-h5.png'
 import { useIntl } from 'gatsby-plugin-intl'
 import { newsEnvUrl } from '../hooks/url'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function EcosystemContent() {
   const intl = useIntl()
@@ -11,8 +12,8 @@ export default function EcosystemContent() {
   return (
     <div id={'ecosystem'}>
       <div className={'getnew-banner'}>
-        <img className={'ecosystem-banner-pc'} src={bannerEcosystem} alt="img" />
-        <img className={'ecosystem-banner-h5'} src={bannerEcosystemH5} alt="img" />
+        <LazyLoadImage className={'ecosystem-banner-pc'} alt={'img'} effect="blur" src={bannerEcosystem} />
+        <LazyLoadImage className={'ecosystem-banner-h5'} alt={'img'} effect="blur" src={bannerEcosystemH5} />
         <h2>ECOSYSTEM</h2>
       </div>
       <div className={'ecosystem-content ecosystem-container container'}>

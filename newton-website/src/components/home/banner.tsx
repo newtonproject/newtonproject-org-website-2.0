@@ -4,6 +4,7 @@ import { arrDateBanner } from '../../hooks/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../../hooks/axiosData'
 import { newsEnvUrl } from '../../hooks/url'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function Banner() {
   const intl = useIntl()
@@ -75,7 +76,7 @@ export default function Banner() {
             </div>
           </div>
           <div className={'banner-img'}>
-            <img src={bannerMobileImg} alt="img" />
+            <LazyLoadImage alt={'banner'} effect="blur" src={bannerMobileImg} />
           </div>
         </div>
         <div className={'banner-link'}>
@@ -100,7 +101,7 @@ export default function Banner() {
           </div>
         </div>
         <div className={'banner-img'}>
-          <img src={bannerMobileImg} alt="img" />
+          <LazyLoadImage alt={'banner'} effect="blur" src={bannerMobileImg} />
         </div>
         <div className={'banner-mobile banner-mobile-news container'}>
           <div className={'banner-news'}>

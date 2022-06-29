@@ -6,6 +6,7 @@ import { numFormat } from '../hooks/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../hooks/axiosData'
 import { getNewUrl, newsEnvUrl } from '../hooks/url'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export default function GetNewContent() {
   const intl = useIntl()
@@ -29,8 +30,8 @@ export default function GetNewContent() {
   return (
     <div id={'getnew'}>
       <div className={'ecosystem-banner getnew-banner'}>
-        <img className={'ecosystem-banner-pc'} src={bannerGetnew} alt="img" />
-        <img className={'ecosystem-banner-h5'} src={bannerGetnewH5} alt="img" />
+        <LazyLoadImage className={'ecosystem-banner-pc'} alt={'img'} effect="blur" src={bannerGetnew} />
+        <LazyLoadImage className={'ecosystem-banner-h5'} alt={'img'} effect="blur" src={bannerGetnewH5} />
         <h2>
           {intl.formatMessage({ id: 'G E T' })}&nbsp;&nbsp;{intl.formatMessage({ id: 'N E W' })}
         </h2>
