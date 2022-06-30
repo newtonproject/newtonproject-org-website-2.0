@@ -40,6 +40,10 @@
 // ecosystem
 #ecosystem {
   .getnew-banner {
+    @apply relative pt-[98%] sm:pt-[94%] md:pt-[36%] xl:pt-[28%];
+    img {
+      @apply absolute top-0 left-0;
+    }
     h2 {
       @apply top-[23%] md:top-[39%];
     }
