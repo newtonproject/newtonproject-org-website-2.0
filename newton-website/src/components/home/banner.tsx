@@ -74,7 +74,9 @@ export default function Banner() {
             </div>
           </div>
           <div className={'banner-img'}>
-            <BannerImg />
+            <div className={'banner-box'}>
+              <BannerImg />
+            </div>
           </div>
         </div>
         <div className={'banner-link'}>

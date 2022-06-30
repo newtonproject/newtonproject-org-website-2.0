@@ -12,10 +12,11 @@
 #community,
 #getnew,
 #ecosystem {
-  .ecosystem-banner {
-    @apply w-full;
+  .ecosystem-banner,
+  .getnew-banner {
+    @apply relative w-full;
     img {
-      @apply w-full h-auto;
+      @apply absolute top-0 left-0 w-full h-auto;
     }
   }
   .ecosystem-banner-pc {
@@ -40,10 +41,8 @@
 // ecosystem
 #ecosystem {
   .getnew-banner {
-    @apply relative pt-[98%] sm:pt-[94%] md:pt-[36%] xl:pt-[28%];
-    img {
-      @apply absolute top-0 left-0;
-    }
+    @apply pt-[98%] sm:pt-[94%] md:pt-[36%];
+
     h2 {
       @apply top-[23%] md:top-[39%];
     }
@@ -130,6 +129,7 @@
 // getNew
 #getnew {
   .getnew-banner {
+    @apply pt-[127%] sm:pt-[122%] md:pt-[41%];
     h2 {
       @apply text-[3.25rem] md:text-[6.6rem];
     }
@@ -281,8 +281,9 @@
 // community
 #community {
   .getnew-banner {
+    @apply pt-[96%] sm:pt-[92%] md:pt-[39%];
     h2 {
-      @apply md:top-[45%] top-[47%];
+      @apply md:top-[45%] top-[50%];
     }
   }
   .news {
@@ -292,6 +293,23 @@
     @apply md:pt-44 pt-[6.5rem] pb-0;
     .global-youtube {
       @apply block;
+    }
+  }
+}
+@media (min-width: 1200px) and (max-width: 1920px) {
+  #ecosystem {
+    .getnew-banner {
+      padding-top: 447px !important;
+    }
+  }
+  #community {
+    .getnew-banner {
+      padding-top: 479px !important;
+    }
+  }
+  #getnew {
+    .getnew-banner {
+      padding-top: 491px !important;
     }
   }
 }
