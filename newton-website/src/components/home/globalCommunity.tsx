@@ -48,14 +48,14 @@ const GlobalCommunity: React.FC<childProps> = props => {
             <h5>{intl.formatMessage({ id: 'Medium' })}</h5>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a href="https://groups.google.com/forum/#!aboutgroup/newton-universe" target="_blank">
             <div className={'global-img'}>
               <StaticImage placeholder="blurred" alt="group" src="../../static/images/home/group.png" />
             </div>
             <h5>{intl.formatMessage({ id: 'Google Group' })}</h5>
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="https://www.reddit.com/user/newtonproject" target="_blank">
             <div className={'global-img'}>

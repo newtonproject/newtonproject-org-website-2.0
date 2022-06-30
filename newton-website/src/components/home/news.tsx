@@ -41,7 +41,7 @@ const News: React.FC<NewschildProps> = props => {
               )
             })
           ) : (
-            <>暂无数据</>
+            <>{intl.formatMessage({ id: 'Loading' })}</>
           )}
         </ul>
         <div className={'news-more'}>

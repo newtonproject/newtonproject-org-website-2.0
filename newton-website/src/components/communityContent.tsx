@@ -59,7 +59,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>暂无数据</>
+                <>{intl.formatMessage({ id: 'Loading' })}</>
               )}
             </ul>
             <div className={'news-more'}>
@@ -96,7 +96,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>暂无数据</>
+                <>{intl.formatMessage({ id: 'Loading' })}</>
               )}
             </ul>
             <div className={'news-more'}>
@@ -126,7 +126,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>暂无数据</>
+                <>{intl.formatMessage({ id: 'Loading' })}</>
               )}
             </ul>
             <div className={'news-more'}>
@@ -155,7 +155,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>暂无数据</>
+                <>{intl.formatMessage({ id: 'Loading' })}</>
               )}
             </ul>
             <div className={'news-more'}>
