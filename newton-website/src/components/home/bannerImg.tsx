@@ -11,8 +11,7 @@ export default function BannerImg() {
 
   return (
     <>
-      <img onLoad={onLoad} src={bannerImg} />
-      {/* {!loaded && <img src={bannerMobileImgDev + '?' + time} />} */}
+      <img onLoad={onLoad} src={bannerImg + '?' + time} />
     </>
   )
 }
