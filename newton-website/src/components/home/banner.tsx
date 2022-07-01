@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { arrDateBanner } from '../../hooks/createTime'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl'
 import { getRequest } from '../../hooks/axiosData'
 import { newsEnvUrl } from '../../hooks/url'
 import BannerImg from './bannerImg'
@@ -21,22 +21,26 @@ export default function Banner() {
     {
       title: intl.formatMessage({ id: 'NewPay' }),
       centent: intl.formatMessage({ id: 'Decentralized digital wallet' }),
-      url: newsEnvUrl + '/newpay/'
+      url: newsEnvUrl + '/newpay/',
+      aLink: false
     },
     {
       title: intl.formatMessage({ id: 'Get New' }),
       centent: intl.formatMessage({ id: 'Earned from the Ecosystem' }),
-      url: '/getnew'
+      url: '/getnew',
+      aLink: true
     },
     {
       title: intl.formatMessage({ id: 'NewExplorer' }),
       centent: intl.formatMessage({ id: 'Explorer & Analytics platform' }),
-      url: 'https://explorer.newtonproject.org/'
+      url: 'https://explorer.newtonproject.org/',
+      aLink: false
     },
     {
       title: intl.formatMessage({ id: 'NewBridge' }),
       centent: intl.formatMessage({ id: 'Realize asset exchange' }),
-      url: 'https://newbridge.network/'
+      url: 'https://newbridge.network/',
+      aLink: false
     }
   ]
   return (
@@ -82,10 +86,19 @@ export default function Banner() {
         <div className={'banner-link'}>
           {bannerlist.map((item, index) => {
             return (
-              <a href={item.url} key={index} target="_blank">
-                <span>{item.title}</span>
-                <i>{item.centent}</i>
-              </a>
+              <div key={index}>
+                {item.aLink == true ? (
+                  <Link to={item.url}>
+                    <span>{item.title}</span>
+                    <i>{item.centent}</i>
+                  </Link>
+                ) : (
+                  <a href={item.url} target="_blank">
+                    <span>{item.title}</span>
+                    <i>{item.centent}</i>
+                  </a>
+                )}
+              </div>
             )
           })}
         </div>
@@ -128,10 +141,19 @@ export default function Banner() {
           <div className={'banner-link'}>
             {bannerlist.map((item, index) => {
               return (
-                <a href={item.url} key={index}>
-                  <span>{item.title}</span>
-                  <i>{item.centent}</i>
-                </a>
+                <div key={index}>
+                  {item.aLink == true ? (
+                    <Link to={item.url}>
+                      <span>{item.title}</span>
+                      <i>{item.centent}</i>
+                    </Link>
+                  ) : (
+                    <a href={item.url} target="_blank">
+                      <span>{item.title}</span>
+                      <i>{item.centent}</i>
+                    </a>
+                  )}
+                </div>
               )
             })}
           </div>
