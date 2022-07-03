@@ -20,27 +20,27 @@ export default function Banner() {
   let bannerlist = [
     {
       title: intl.formatMessage({ id: 'NewPay' }),
-      centent: intl.formatMessage({ id: 'Decentralized digital wallet' }),
+      content: intl.formatMessage({ id: 'Decentralized digital wallet' }),
       url: newsEnvUrl + '/newpay/',
-      aLink: false
+      isLink: false
     },
     {
       title: intl.formatMessage({ id: 'Get New' }),
-      centent: intl.formatMessage({ id: 'Earned from the Ecosystem' }),
+      content: intl.formatMessage({ id: 'Earned from the Ecosystem' }),
       url: '/getnew',
-      aLink: true
+      isLink: true
     },
     {
       title: intl.formatMessage({ id: 'NewExplorer' }),
-      centent: intl.formatMessage({ id: 'Explorer & Analytics platform' }),
+      content: intl.formatMessage({ id: 'Explorer & Analytics platform' }),
       url: 'https://explorer.newtonproject.org/',
-      aLink: false
+      isLink: false
     },
     {
       title: intl.formatMessage({ id: 'NewBridge' }),
-      centent: intl.formatMessage({ id: 'Realize asset exchange' }),
+      content: intl.formatMessage({ id: 'Realize asset exchange' }),
       url: 'https://newbridge.network/',
-      aLink: false
+      isLink: false
     }
   ]
   return (
@@ -87,15 +87,15 @@ export default function Banner() {
           {bannerlist.map((item, index) => {
             return (
               <div key={index}>
-                {item.aLink == true ? (
+                {item.isLink == true ? (
                   <Link to={item.url}>
                     <span>{item.title}</span>
-                    <i>{item.centent}</i>
+                    <i>{item.content}</i>
                   </Link>
                 ) : (
                   <a href={item.url} target="_blank">
                     <span>{item.title}</span>
-                    <i>{item.centent}</i>
+                    <i>{item.content}</i>
                   </a>
                 )}
               </div>
@@ -142,15 +142,15 @@ export default function Banner() {
             {bannerlist.map((item, index) => {
               return (
                 <div key={index}>
-                  {item.aLink == true ? (
+                  {item.isLink == true ? (
                     <Link to={item.url}>
                       <span>{item.title}</span>
-                      <i>{item.centent}</i>
+                      <i>{item.content}</i>
                     </Link>
                   ) : (
                     <a href={item.url} target="_blank">
                       <span>{item.title}</span>
-                      <i>{item.centent}</i>
+                      <i>{item.content}</i>
                     </a>
                   )}
                 </div>
