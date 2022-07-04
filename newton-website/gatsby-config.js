@@ -32,7 +32,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-image`,
+    // `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -60,7 +60,7 @@ module.exports = {
         defaultLanguage: `en`,
         // redirect to `/${lang}/` when connecting to `/`
         // based on user's browser language preference
-        redirect: false,
+        redirect: true,
         redirectComponent: require.resolve(`./src/components/redirect.js`),
       },
     },
