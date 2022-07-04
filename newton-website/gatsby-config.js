@@ -60,7 +60,7 @@ module.exports = {
         defaultLanguage: `en`,
         // redirect to `/${lang}/` when connecting to `/`
         // based on user's browser language preference
-        redirect: true,
+        redirect: false,
         redirectComponent: require.resolve(`./src/components/redirect.js`),
       },
     },
