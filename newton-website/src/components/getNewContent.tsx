@@ -188,7 +188,13 @@ export default function GetNewContent() {
           </div>
           <p>
             <span>{intl.formatMessage({ id: 'Announcement' })}: </span>&lt;
-            {intl.formatMessage({ id: 'NewChain NEW and Binance NEW-09E SWAP instructions' })}&gt;
+            <a
+              className={'wallet-a'}
+              href={newsEnvUrl + '/announcement/2019/07/17/newchain-new-and-binance-new-09e-swap-instructions/'}
+              target="_blank"
+            >
+              {intl.formatMessage({ id: 'NewChain NEW and Binance NEW-09E SWAP instructions' })}&gt;
+            </a>
           </p>
         </div>
       </div>
