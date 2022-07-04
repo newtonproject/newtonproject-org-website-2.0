@@ -32,7 +32,7 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    // `gatsby-plugin-image`,
+    `gatsby-plugin-image`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
