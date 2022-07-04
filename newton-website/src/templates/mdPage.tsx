@@ -1,7 +1,7 @@
 import React from "react"
 import NormalLayout from '../components/NormalLayout'
 import { PageModelTitle } from '../hooks/PageModel'
-import MdContent  from './mdContent'
+import MdContent  from './docs'
 
 // export default ({ pageContext: { dog } }:any) => (
 //   <section>

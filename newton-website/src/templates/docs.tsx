@@ -1,7 +1,7 @@
 import React from "react"
-export default ({ pageContext: { dog } }:any) => (
+export default ({ pageContext: { redirects } }:any) => (
   <section>
-    {dog.name} - {dog.breed}
+    {redirects.name} - {redirects.breed}
   </section>
 )
 

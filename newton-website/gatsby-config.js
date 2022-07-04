@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        allowList: ["GATSBY_API_URL","GATSBY_INTL_GITHUB"]
+        allowList: ["GATSBY_API_URL", "GATSBY_INTL_GITHUB"]
       },
     },
     // md
@@ -85,6 +85,48 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
       },
+      // Workaround to fix `backgroundColor` bug:
+      // https://github.com/gatsbyjs/gatsby/issues/25272
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            backgroundColor: `transparent`,
+            maxWidth: 1200,
+          },
+        },
+      ],
+      // Note: in order for MDX to work with gatsby-remark-plugins
+      // The plugin must be listed top-level & in gatsbyRemarkPlugins
+      // See: https://www.gatsbyjs.org/docs/mdx/plugins/
+      gatsbyRemarkPlugins: [
+        {
+          // Local plugin to adjust the images urls of the translated md files
+          resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
+        },
+        {
+          resolve: `gatsby-remark-autolink-headers`,
+          options: {
+            enableCustomId: true,
+            elements: [`h1`, `h2`, `h3`, `h4`],
+            className: `header-anchor`,
+          },
+        },
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            backgroundColor: `transparent`,
+            maxWidth: 1200,
+          },
+        },
+        {
+          resolve: `gatsby-remark-copy-linked-files`,
+          options: {
+            maxWidth: 1200,
+          },
+        },
+      ],
+      remarkPlugins: [],
     },
     {
       resolve: `gatsby-source-filesystem`,
