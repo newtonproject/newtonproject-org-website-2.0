@@ -19,6 +19,9 @@
   }
   .header-use {
     @apply z-50;
+    .use {
+      @apply cursor-pointer;
+    }
     &:hover {
       .header-down {
         @apply block;

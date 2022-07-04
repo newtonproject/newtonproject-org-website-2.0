@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { arrDateBanner } from '../../hooks/createTime'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl'
 import { getRequest } from '../../hooks/axiosData'
 import { newsEnvUrl } from '../../hooks/url'
 import BannerImg from './bannerImg'
@@ -20,23 +20,27 @@ export default function Banner() {
   let bannerlist = [
     {
       title: intl.formatMessage({ id: 'NewPay' }),
-      centent: intl.formatMessage({ id: 'Decentralized digital wallet' }),
-      url: newsEnvUrl + '/newpay/'
+      content: intl.formatMessage({ id: 'Decentralized digital wallet' }),
+      url: newsEnvUrl + '/newpay/',
+      isLink: false
     },
     {
       title: intl.formatMessage({ id: 'Get New' }),
-      centent: intl.formatMessage({ id: 'Earned from the Ecosystem' }),
-      url: '/getnew'
+      content: intl.formatMessage({ id: 'Earned from the Ecosystem' }),
+      url: '/getnew',
+      isLink: true
     },
     {
       title: intl.formatMessage({ id: 'NewExplorer' }),
-      centent: intl.formatMessage({ id: 'Explorer & Analytics platform' }),
-      url: 'https://explorer.newtonproject.org/'
+      content: intl.formatMessage({ id: 'Explorer & Analytics platform' }),
+      url: 'https://explorer.newtonproject.org/',
+      isLink: false
     },
     {
       title: intl.formatMessage({ id: 'NewBridge' }),
-      centent: intl.formatMessage({ id: 'Realize asset exchange' }),
-      url: 'https://newbridge.network/'
+      content: intl.formatMessage({ id: 'Realize asset exchange' }),
+      url: 'https://newbridge.network/',
+      isLink: false
     }
   ]
   return (
@@ -82,10 +86,19 @@ export default function Banner() {
         <div className={'banner-link'}>
           {bannerlist.map((item, index) => {
             return (
-              <a href={item.url} key={index} target="_blank">
-                <span>{item.title}</span>
-                <i>{item.centent}</i>
-              </a>
+              <div key={index}>
+                {item.isLink == true ? (
+                  <Link to={item.url}>
+                    <span>{item.title}</span>
+                    <i>{item.content}</i>
+                  </Link>
+                ) : (
+                  <a href={item.url} target="_blank">
+                    <span>{item.title}</span>
+                    <i>{item.content}</i>
+                  </a>
+                )}
+              </div>
             )
           })}
         </div>
@@ -128,10 +141,19 @@ export default function Banner() {
           <div className={'banner-link'}>
             {bannerlist.map((item, index) => {
               return (
-                <a href={item.url} key={index}>
-                  <span>{item.title}</span>
-                  <i>{item.centent}</i>
-                </a>
+                <div key={index}>
+                  {item.isLink == true ? (
+                    <Link to={item.url}>
+                      <span>{item.title}</span>
+                      <i>{item.content}</i>
+                    </Link>
+                  ) : (
+                    <a href={item.url} target="_blank">
+                      <span>{item.title}</span>
+                      <i>{item.content}</i>
+                    </a>
+                  )}
+                </div>
               )
             })}
           </div>
