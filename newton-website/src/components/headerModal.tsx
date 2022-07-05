@@ -99,7 +99,7 @@ const SiteNavMenu = () => {
               <span></span>
             </div>
             <div className={'header-down'}>
-              <Link to="/getnew">{intl.formatMessage({ id: 'Get New' })}</Link>
+              <Link to="/getnew/">{intl.formatMessage({ id: 'Get New' })}</Link>
               <a href={newsEnvUrl + '/newpay/'} target="_blank">
                 {intl.formatMessage({ id: 'NewPay' })}
               </a>
@@ -126,10 +126,10 @@ const SiteNavMenu = () => {
             </a>
           </li>
           <li>
-            <Link to="/community">{intl.formatMessage({ id: 'Community' })}</Link>
+            <Link to="/community/">{intl.formatMessage({ id: 'Community' })}</Link>
           </li>
           <li>
-            <Link to="/ecosystem">{intl.formatMessage({ id: 'Ecosystem' })}</Link>
+            <Link to="/ecosystem/">{intl.formatMessage({ id: 'Ecosystem' })}</Link>
           </li>
         </ul>
       </div>

@@ -27,7 +27,7 @@ export default function Banner() {
     {
       title: intl.formatMessage({ id: 'Get New' }),
       content: intl.formatMessage({ id: 'Earned from the Ecosystem' }),
-      url: '/getnew',
+      url: '/getnew/',
       isLink: true
     },
     {

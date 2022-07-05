@@ -52,7 +52,7 @@ export default function Footer() {
             <dl>
               <dt>{intl.formatMessage({ id: 'ABOUT' })}</dt>
               <dd>
-                <Link to="/getnew">{intl.formatMessage({ id: 'Economy' })}</Link>
+                <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
               </dd>
               <dd>
                 <a href={newsEnvUrl + '/technology/'} target="_blank">
@@ -163,7 +163,7 @@ const FooterMobile = () => {
         <dl className={'footer-item2'}>
           <dt>{intl.formatMessage({ id: 'ABOUT' })}</dt>
           <dd>
-            <Link to="/getnew">{intl.formatMessage({ id: 'Economy' })}</Link>
+            <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
           </dd>
           <dd>
             <a href={newsEnvUrl + '/technology/'} target="_blank">
