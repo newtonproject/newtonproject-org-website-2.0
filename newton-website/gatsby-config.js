@@ -1,5 +1,4 @@
 module.exports = {
-  trailingSlash: "never",
   siteMetadata: {
     title: `Newton`,
     description: `Newton-Infrastructure for the community economy,providing governance,collaboration and incentive. We are committed to creating highly collaborative, lower cost, highly automated community economy, everyone contributes,everyone benefits.`,
