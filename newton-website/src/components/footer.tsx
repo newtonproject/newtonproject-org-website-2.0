@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl'
 import { newsEnvUrl } from '../hooks/url'
 
 export default function Footer() {
@@ -53,7 +52,7 @@ export default function Footer() {
             <dl>
               <dt>{intl.formatMessage({ id: 'ABOUT' })}</dt>
               <dd>
-                <Link to="/getnew">{intl.formatMessage({ id: 'Economy' })}</Link>
+                <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
               </dd>
               <dd>
                 <a href={newsEnvUrl + '/technology/'} target="_blank">
@@ -164,7 +163,7 @@ const FooterMobile = () => {
         <dl className={'footer-item2'}>
           <dt>{intl.formatMessage({ id: 'ABOUT' })}</dt>
           <dd>
-            <Link to="/getnew">{intl.formatMessage({ id: 'Economy' })}</Link>
+            <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
           </dd>
           <dd>
             <a href={newsEnvUrl + '/technology/'} target="_blank">

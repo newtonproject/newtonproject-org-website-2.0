@@ -1,3 +1,4 @@
 export const languageName: any = {
-  en: 'English'
+  en: 'English',
+  zh: '简体中文',
 }

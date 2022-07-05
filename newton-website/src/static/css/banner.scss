@@ -21,7 +21,7 @@
   }
   .banner-link {
     @apply lg:-mt-16;
-    a {
+    > div {
       @apply text-center lg:py-2 lg:px-8 xl:py-4 xl:px-12 mb-8 lg:mt-10 xl:mt-0 z-50;
     }
   }
@@ -38,7 +38,7 @@
   }
   .banner-link {
     @apply flex flex-row flex-wrap justify-between;
-    a {
+    > div {
       @apply text-center;
       background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
       box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
@@ -81,7 +81,7 @@
   }
   .banner-link {
     @apply mt-12 mb-10;
-    a {
+    > div {
       @apply w-[48%] mb-8 py-2 z-50;
     }
     i {

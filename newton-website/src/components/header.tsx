@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import HeaderModal from './headerModal'
 import Language from './languages'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl'
 import { newsEnvUrl } from '../hooks/url'
 
 export default function Header() {
@@ -20,14 +19,12 @@ export default function Header() {
           </div>
           <ul>
             <li className={'header-use'}>
-              <Link to="/">
+              <div className={'use'}>
                 {intl.formatMessage({ id: 'Use Newton' })}
                 <span></span>
-              </Link>
+              </div>
               <div className={'header-down'}>
-                <Link to="/getnew" target="_blank">
-                  {intl.formatMessage({ id: 'Get New' })}
-                </Link>
+                <Link to="/getnew/">{intl.formatMessage({ id: 'Get New' })}</Link>
                 <a href={newsEnvUrl + '/newpay/'} target="_blank">
                   {intl.formatMessage({ id: 'NewPay' })}
                 </a>
@@ -35,7 +32,7 @@ export default function Header() {
                   href="https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
                   target="_blank"
                 >
-                  NewMask
+                  {intl.formatMessage({ id: 'NewMask' })}
                 </a>
                 <a href="https://explorer.newtonproject.org/" target="_blank">
                   {intl.formatMessage({ id: 'NewExplorer' })}
@@ -54,14 +51,10 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <Link to="/community" target="_blank">
-                {intl.formatMessage({ id: 'Community' })}
-              </Link>
+              <Link to="/community/">{intl.formatMessage({ id: 'Community' })}</Link>
             </li>
             <li>
-              <Link to="/ecosystem" target="_blank">
-                {intl.formatMessage({ id: 'Ecosystem' })}
-              </Link>
+              <Link to="/ecosystem/">{intl.formatMessage({ id: 'Ecosystem' })}</Link>
             </li>
           </ul>
           <div className={'header-search'}>
