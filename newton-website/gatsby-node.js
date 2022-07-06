@@ -14,7 +14,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions,reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
@@ -32,12 +32,10 @@ exports.createPages = async ({ graphql, actions }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  // Create blog post pages.
-  const posts = result.data.allMdx.edges
-  posts.forEach(({ node }) => {
+  result.data.allMdx.edges.forEach(({ node }) => {
     console.log("start create page for:" + node.slug);
     createPage({
-      path: node.slug,
+      path: `${node.slug}`,
       component: path.resolve(`./src/templates/docs.tsx`),
       context: {
         // Data passed to context is available
@@ -46,6 +44,6 @@ exports.createPages = async ({ graphql, actions }) => {
         id: node.id
       }
     })
-    console.log("start create page success:" + node.slug);
+    console.log("start create page success====" + node.slug);
   })
 }

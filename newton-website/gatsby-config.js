@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Newton`,
+        short_name: `Newton`,
         start_url: `/`,
         background_color: `#f7fbff`,
         theme_color: `#f7fbff`,
@@ -112,19 +112,19 @@ module.exports = {
             className: `header-anchor`,
           },
         },
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            backgroundColor: `transparent`,
-            maxWidth: 1200,
-          },
-        },
-        {
-          resolve: `gatsby-remark-copy-linked-files`,
-          options: {
-            maxWidth: 1200,
-          },
-        },
+        // {
+        //   resolve: `gatsby-remark-images`,
+        //   options: {
+        //     backgroundColor: `transparent`,
+        //     maxWidth: 1200,
+        //   },
+        // },
+        // {
+        //   resolve: `gatsby-remark-copy-linked-files`,
+        //   options: {
+        //     maxWidth: 1200,
+        //   },
+        // },
       ],
       remarkPlugins: [],
     },

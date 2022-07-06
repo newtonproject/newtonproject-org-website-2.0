@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react'
 import NormalLayout from '../components/NormalLayout'
 import { PageModelTitle } from '../hooks/PageModel'
-import MdContent  from './docs'
+import MdContent from './docs'
 
 // export default ({ pageContext: { dog } }:any) => (
 //   <section>
@@ -19,9 +19,7 @@ function MdpageBox() {
 function Main() {
   return (
     <>
-    <MdContent />
+      <MdContent />
     </>
-    
   )
 }
-
