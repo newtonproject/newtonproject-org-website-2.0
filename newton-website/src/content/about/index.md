@@ -11,4 +11,4 @@ ethereum.org is a public, open-source resource for the Ethereum community that a
 
 ## Our vision {#our-vision}
 
-<p>roadmap 路线图</p>
+<p>about</p>

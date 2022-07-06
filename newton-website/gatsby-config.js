@@ -60,7 +60,7 @@ module.exports = {
         defaultLanguage: `en`,
         // redirect to `/${lang}/` when connecting to `/`
         // based on user's browser language preference
-        redirect: true,
+        redirect: false,
         redirectComponent: require.resolve(`./src/components/redirect.js`),
       },
     },
@@ -102,7 +102,7 @@ module.exports = {
       gatsbyRemarkPlugins: [
         {
           // Local plugin to adjust the images urls of the translated md files
-          resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
+          //resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
         },
         {
           resolve: `gatsby-remark-autolink-headers`,
@@ -131,8 +131,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/content`,
+        name: 'content',
       },
     }
     // `gatsby-transformer-remark`,
