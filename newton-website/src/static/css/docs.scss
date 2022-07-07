@@ -1,6 +1,122 @@
 .docs {
   .title {
-    @apply text-[3.4rem] font-bold text-grag2c;
+    @apply text-[3.4rem] font-bold text-grag2c mb-9;
     font-family: 'Ubuntu-Bold';
+  }
+  h2 {
+    @apply text-[2rem] mt-[5.5rem] mb-9;
+  }
+  h3 {
+    @apply text-[1.63rem] mb-8 relative pl-3;
+    &::after {
+      content: '';
+      @apply absolute top-[9px] left-0 w-1 h-5 bg-gray11;
+    }
+  }
+  h4 {
+    @apply text-xl mt-10 mb-6;
+  }
+  h5 {
+    @apply text-[1.63rem] mb-8 relative pl-9;
+    &::after {
+      content: '';
+      @apply absolute top-[9px] left-0 w-[24px] h-[24px] bg-contain bg-docs-tit bg-no-repeat;
+    }
+  }
+  p {
+    @apply mb-8;
+  }
+  a {
+    @apply text-gray20 ml-1 mr-6 relative;
+    &::after {
+      content: '';
+      @apply absolute top-[1px] right-[-19px] w-4 h-4 bg-contain bg-docs-a bg-no-repeat;
+    }
+  }
+  .articles-a {
+    @apply mr-1;
+    &::after {
+      @apply hidden;
+    }
+  }
+  table {
+    @apply cursor-pointer w-full;
+    background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+    box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0);
+    &:hover {
+      box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+      @apply border-grage5f border-solid border-2;
+    }
+    th,
+    td {
+      @apply text-center py-4;
+    }
+    th {
+      @apply text-lg;
+    }
+    td {
+      border: 1px solid #e3eef6;
+    }
+  }
+  thead {
+    @apply bg-graydd py-4;
+    tr {
+      @apply py-4;
+    }
+  }
+  .emoji {
+    p {
+      @apply mb-4 relative pl-9;
+      &::after {
+        @apply w-[24px] h-[24px] absolute top-0 left-0 bg-contain;
+        content: '';
+      }
+    }
+    .data {
+      &::after {
+        @apply bg-docs-data;
+      }
+    }
+    .money {
+      &::after {
+        @apply bg-docs-money;
+      }
+    }
+    .price {
+      &::after {
+        @apply bg-docs-price;
+      }
+    }
+  }
+}
+
+.expandable-card {
+  @apply cursor-pointer my-10 relative;
+  background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+  box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0);
+  &:hover {
+    box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+    @apply border-grage5f border-solid border-2;
+  }
+  h2 {
+    @apply text-xl text-grag2c mt-0 mb-4;
+    font-family: 'Ubuntu-Medium';
+  }
+  p {
+    @apply text-sm text-grag96a;
+  }
+  .card-title {
+    @apply pt-8 pb-0 px-4 w-full text-left;
+  }
+  .card {
+    @apply py-0 mx-4  border-t border-solid border-graye3 mt-0;
+    p {
+      @apply text-grag2c mt-7;
+    }
+  }
+  .card-img {
+    @apply w-[1.4rem] h-auto absolute top-[2.13rem] right-5;
   }
 }

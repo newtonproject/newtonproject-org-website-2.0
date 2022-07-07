@@ -33,3 +33,21 @@ export class SeochildProps {
     this.lang = lang
   }
 }
+
+export class DocsProps {
+  title: string
+  contentPreview: string
+  contentList: string
+  constructor(title: string, contentPreview: string, contentList: string) {
+    this.title = title
+    this.contentPreview = contentPreview
+    this.contentList = contentList
+  }
+}
+
+export class EmojiProps {
+  src: string
+  constructor(src: string) {
+    this.src = src
+  }
+}

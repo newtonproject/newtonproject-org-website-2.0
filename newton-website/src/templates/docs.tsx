@@ -4,7 +4,8 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-const components = { Link } // Provide common components here
+import ExpandableCard from '../components/docs/expandableCard'
+const components = { Link, ExpandableCard } // Provide common components here
 
 // const Page = styled.div`
 //   display: flex;
