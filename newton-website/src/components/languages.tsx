@@ -1,8 +1,8 @@
 import React from 'react'
 import { useIntl, IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl'
 import { BsArrowRightShort } from 'react-icons/bs'
-import { languageName } from '../hooks/language'
-import { intlUrl } from '../hooks/url'
+import { languageName } from '../utils/language'
+import { intlUrl } from '../utils/url'
 
 export default function Language() {
   const intl = useIntl()

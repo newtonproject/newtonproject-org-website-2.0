@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Languages from './languages'
 import { useIntl, Link } from 'gatsby-plugin-intl'
-import { newsEnvUrl } from '../hooks/url'
+import { newsEnvUrl } from '../utils/url'
 
 export default function HeaderModal() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)

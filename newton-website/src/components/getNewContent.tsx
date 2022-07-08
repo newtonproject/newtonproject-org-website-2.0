@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import bannerGetnew from '../static/images/getnew/getnew-banner.png'
 import bannerGetnewH5 from '../static/images/getnew/getnew-banner-h5.png'
-import { numFormat } from '../hooks/createTime'
+import { numFormat } from '../utils/createTime'
 import { useIntl } from 'gatsby-plugin-intl'
-import { getRequest } from '../hooks/axiosData'
-import { getNewUrl, newsEnvUrl } from '../hooks/url'
+import { getRequest } from '../utils/axiosData'
+import { getNewUrl, newsEnvUrl } from '../utils/url'
 
 export default function GetNewContent() {
   const intl = useIntl()

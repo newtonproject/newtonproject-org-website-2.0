@@ -3,7 +3,7 @@ import Header from './header'
 import Footer from './footer'
 // import ScrollTop from './scrollTop'
 import Seo from './seo'
-import { PageModelTitle } from '../hooks/PageModel'
+import { PageModelTitle } from '../model/PageModel'
 
 export default function NormalLayout(children: React.ReactNode, pageModel: PageModelTitle): JSX.Element {
   return (

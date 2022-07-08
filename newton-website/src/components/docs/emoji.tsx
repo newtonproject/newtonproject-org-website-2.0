@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { EmojiProps } from '../../hooks/PageModel'
+import { EmojiProps } from '../../model/PageModel'
 
 const Emoji: React.FC<EmojiProps> = props => {
   const { src } = props

@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import HeaderModal from './headerModal'
 import Language from './languages'
 import { useIntl, Link } from 'gatsby-plugin-intl'
-import { newsEnvUrl } from '../hooks/url'
+import { newsEnvUrl } from '../utils/url'
 
 export default function Header() {
   const intl = useIntl()

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { createThrottle } from '../hooks/createThrottle'
+import { createThrottle } from '../utils/createThrottle'
 
 export default function ScrollTop() {
   const [show, switchShow] = useState(false)

@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { DocsProps } from '../../hooks/PageModel'
+import { DocsProps } from '../../model/PageModel'
 import { Disclosure } from '@headlessui/react'
 
 const ExpandableCard: React.FC<DocsProps> = ({ children, title, contentPreview }: any) => {

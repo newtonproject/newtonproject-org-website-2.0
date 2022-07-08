@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { Helmet } from 'react-helmet'
-import { SeochildProps } from '../hooks/PageModel'
+import { SeochildProps } from '../model/PageModel'
 
 const Seo: React.FC<SeochildProps> = props => {
   const { title, description, meta, lang } = props
