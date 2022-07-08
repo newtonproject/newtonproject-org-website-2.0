@@ -1,31 +1,159 @@
-import React from 'react'
+import React, { useState, Fragment } from 'react'
+import { Dialog, Transition } from '@headlessui/react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+import { StaticImage } from 'gatsby-plugin-image'
 import ExpandableCard from '../components/docs/expandableCard'
-const components = { Link, ExpandableCard } // Provide common components here
+import Header from '../components/header'
+import Footer from '../components/footer'
+import Seo from '../components/seo'
+import H2 from '../customMdx/h2'
+import H3 from '../customMdx/h3'
+import H4 from '../customMdx/h4'
+import H5 from '../customMdx/h5'
+import H6 from '../customMdx/h6'
 
-// const Page = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-// `
-// const components = {
-//   a: Link,
-// }
+const components = {
+  Link,
+  ExpandableCard,
+  h2: H2,
+  h3: H3,
+  h4: H4,
+  h5: H5,
+  h6: H6
+} // Provide common components here
+
 const DocsPage = ({ data: { allMdx } }: any) => {
   const content = allMdx.edges[0].node
-  // console.log('======',content)
+  const tableOfContents = content.tableOfContents.items
+  console.log('======', tableOfContents)
+  const [isOpen, setIsOpen] = useState(false)
+
+  function closeModal() {
+    setIsOpen(false)
+  }
+
+  function openModal() {
+    setIsOpen(true)
+  }
+
   return (
-    <div className={'container docs'}>
-      <h1 className={'title'}>{content.frontmatter.title}</h1>
-      <MDXProvider components={components}>
-        <MDXRenderer>{content.body}</MDXRenderer>
-      </MDXProvider>
-    </div>
+    <>
+      <Seo title={content.frontmatter.title} description={''} meta={[]} lang={''} />
+      <Header />
+      <div className={'container docs'}>
+        <div className={'docs-content'}>
+          <h1 className={'title'}>{content.frontmatter.title}</h1>
+          <MDXProvider components={components}>
+            <MDXRenderer>{content.body}</MDXRenderer>
+          </MDXProvider>
+        </div>
+
+        <div className={'docs-content-title-pc'}>
+          <div className={'docs-content-title'}>
+            {tableOfContents && tableOfContents.length > 0
+              ? tableOfContents.map((item: any, index: number) => {
+                  return (
+                    <ul key={index}>
+                      <li>
+                        <Link to={item.url} className={'title-a'}>
+                          {item.title}
+                        </Link>
+                        {item.items && item.items.length > 0
+                          ? item.items.map((data: any, index: number) => {
+                              return (
+                                <div key={index} className={'title-a-content'}>
+                                  {<Link to={data.url}>{data.title}</Link>}
+                                </div>
+                              )
+                            })
+                          : null}
+                      </li>
+                    </ul>
+                  )
+                })
+              : null}
+          </div>
+        </div>
+
+        <div className={'docs-content-title-modal'}>
+          <div className={'docs-button-box'}>
+            <button className={'docs-button'} type="button" onClick={openModal}>
+              <StaticImage placeholder="blurred" alt="docs-button" src="../static/images/docs/docs-header.png" />
+            </button>
+          </div>
+
+          <Transition appear show={isOpen} as={Fragment}>
+            <Dialog as="div" className="docs-modal relative z-10" onClose={closeModal}>
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-300"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+              >
+                <div className="fixed inset-0 bg-black bg-opacity-25" />
+              </Transition.Child>
+
+              <div className="fixed inset-0 overflow-y-auto">
+                <div className="flex min-h-full items-center justify-center text-center">
+                  <Transition.Child
+                    as={Fragment}
+                    enter="ease-out duration-300"
+                    enterFrom="opacity-0 scale-95"
+                    enterTo="opacity-100 scale-100"
+                    leave="ease-in duration-200"
+                    leaveFrom="opacity-100 scale-100"
+                    leaveTo="opacity-0 scale-95"
+                  >
+                    <Dialog.Panel className="modal-box">
+                      <Dialog.Title as="h3" className={'title'}>
+                        Payment successful
+                      </Dialog.Title>
+                      <div className={'docs-content-title'}>
+                        {tableOfContents && tableOfContents.length > 0
+                          ? tableOfContents.map((item: any, index: number) => {
+                              return (
+                                <ul key={index}>
+                                  <li>
+                                    <Link to={item.url} className={'title-a'}>
+                                      {item.title}
+                                    </Link>
+                                    {item.items && item.items.length > 0
+                                      ? item.items.map((data: any, index: number) => {
+                                          return (
+                                            <div key={index} className={'title-a-content'}>
+                                              {<Link to={data.url}>{data.title}</Link>}
+                                            </div>
+                                          )
+                                        })
+                                      : null}
+                                  </li>
+                                </ul>
+                              )
+                            })
+                          : null}
+                      </div>
+
+                      <div className={'close-box'}>
+                        <button type="button" className={'close'} onClick={closeModal}>
+                          Close
+                        </button>
+                      </div>
+                    </Dialog.Panel>
+                  </Transition.Child>
+                </div>
+              </div>
+            </Dialog>
+          </Transition>
+        </div>
+      </div>
+      <Footer />
+    </>
   )
 }
 
@@ -40,6 +168,7 @@ export const query = graphql`
           frontmatter {
             title
           }
+          tableOfContents(maxDepth: 2)
         }
       }
     }

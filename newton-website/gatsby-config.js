@@ -80,6 +80,15 @@ module.exports = {
       },
       __key: "md",
     },
+  // Ability to set custom IDs for headings (for translations)
+    // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
+    `gatsby-remark-autolink-headers`,
+    // Image support in markdown
+    `gatsby-remark-images`,
+    `gatsby-remark-copy-linked-files`,
+    // READING time
+    "gatsby-remark-reading-time",
+    // MDX support
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -112,19 +121,19 @@ module.exports = {
             className: `header-anchor`,
           },
         },
-        // {
-        //   resolve: `gatsby-remark-images`,
-        //   options: {
-        //     backgroundColor: `transparent`,
-        //     maxWidth: 1200,
-        //   },
-        // },
-        // {
-        //   resolve: `gatsby-remark-copy-linked-files`,
-        //   options: {
-        //     maxWidth: 1200,
-        //   },
-        // },
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            backgroundColor: `transparent`,
+            maxWidth: 1200,
+          },
+        },
+        {
+          resolve: `gatsby-remark-copy-linked-files`,
+          options: {
+            maxWidth: 1200,
+          },
+        },
       ],
       remarkPlugins: [],
     },

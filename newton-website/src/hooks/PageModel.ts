@@ -37,11 +37,9 @@ export class SeochildProps {
 export class DocsProps {
   title: string
   contentPreview: string
-  contentList: string
-  constructor(title: string, contentPreview: string, contentList: string) {
+  constructor(title: string, contentPreview: string) {
     this.title = title
     this.contentPreview = contentPreview
-    this.contentList = contentList
   }
 }
 

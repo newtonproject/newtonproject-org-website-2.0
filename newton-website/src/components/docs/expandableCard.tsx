@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { DocsProps } from '../../hooks/PageModel'
 import { Disclosure } from '@headlessui/react'
-// import { ChevronUpIcon } from '@heroicons/react/solid'
 
-const ExpandableCard: React.FC<DocsProps> = props => {
-  const { title, contentPreview, contentList } = props
+const ExpandableCard: React.FC<DocsProps> = ({ children, title, contentPreview }: any) => {
   return (
     <div className={'expandable-card'}>
       <div>
@@ -33,9 +31,7 @@ const ExpandableCard: React.FC<DocsProps> = props => {
                   )}
                 </div>
               </Disclosure.Button>
-              <Disclosure.Panel className={'card'}>
-                <p>{contentList}</p>
-              </Disclosure.Panel>
+              <Disclosure.Panel className={'card'}>{children}</Disclosure.Panel>
             </>
           )}
         </Disclosure>
@@ -43,14 +39,5 @@ const ExpandableCard: React.FC<DocsProps> = props => {
     </div>
   )
 }
-export default ExpandableCard
 
-{
-  /* <div className={'expandable-card'}>
-<h2>{title}</h2>
-<p>{contentPreview}</p>
-<div className={'card'}>
-   <p>{contentList}</p> 
-</div>
-</div> */
-}
+export default ExpandableCard

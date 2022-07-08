@@ -1,4 +1,8 @@
 .docs {
+  @apply flex flex-row flex-wrap justify-between pt-[4.5rem] mb-32;
+  .docs-content {
+    @apply w-full md:w-[60%];
+  }
   .title {
     @apply text-[3.4rem] font-bold text-grag2c mb-9;
     font-family: 'Ubuntu-Bold';
@@ -118,5 +122,63 @@
   }
   .card-img {
     @apply w-[1.4rem] h-auto absolute top-[2.13rem] right-5;
+  }
+}
+
+.docs-content-title-pc {
+  @apply hidden md:block;
+}
+.docs-content-title {
+  @apply w-full h-auto border-l border-solid border-graybc pl-4;
+  a {
+    @apply text-gray6a;
+    &::after {
+      @apply hidden;
+    }
+  }
+  .title-a {
+    @apply inline-block text-grag2c text-lg mb-4;
+    font-family: 'Ubuntu-Medium';
+  }
+  .title-a-content {
+    @apply my-4;
+  }
+}
+.docs-button-box {
+  @apply block md:hidden;
+}
+.docs-button {
+  @apply w-10 h-10 cursor-pointer fixed bottom-[28%] right-4 text-center;
+  background: #f6fbff;
+  box-shadow: 2px 4px 20px 1px rgba(0, 64, 145, 0.12);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0);
+  img {
+    @apply w-[22px] h-auto mt-[7px];
+  }
+  &:hover {
+    @apply border-grage5f border-solid border-2;
+  }
+}
+
+.docs-modal {
+  .title {
+    @apply bg-grayed text-base text-center py-4 font-bold text-gray3d3d;
+    font-family: 'Ubuntu-Bold';
+  }
+  .close-box {
+    @apply w-full bg-grayed text-center absolute bottom-0 left-0;
+  }
+  .close {
+    @apply w-full h-full text-grag2c pt-2 pb-8;
+  }
+  .modal-box {
+    @apply fixed bottom-0 left-0  w-full transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all;
+    height: 87vh;
+  }
+  .docs-content-title {
+    @apply w-full pt-10;
+    max-height: 69vh;
+    overflow-y: auto;
   }
 }
