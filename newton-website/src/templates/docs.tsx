@@ -52,6 +52,14 @@ const DocsPage = ({ data: { allMdx } }: any) => {
         </div>
 
         <div className={'docs-content-title-pc'}>
+          <div className={'docs-title-github'}>
+            <a href="" className={'githtb-a'}>
+              <div className={'github-img'}>
+                <StaticImage placeholder="blurred" alt="github" src="../static/images/docs/docs-github.png" />
+              </div>
+              <span>Edit Page</span>
+            </a>
+          </div>
           <div className={'docs-content-title'}>
             {tableOfContents && tableOfContents.length > 0
               ? tableOfContents.map((item: any, index: number) => {
@@ -156,7 +164,7 @@ const DocsPage = ({ data: { allMdx } }: any) => {
     </>
   )
 }
-
+// tableOfContents(maxDepth: 2)
 export const query = graphql`
   query ($slug: String!) {
     allMdx(filter: { slug: { eq: $slug } }) {
@@ -168,7 +176,7 @@ export const query = graphql`
           frontmatter {
             title
           }
-          tableOfContents(maxDepth: 2)
+          tableOfContents
         }
       }
     }

@@ -128,6 +128,29 @@
 .docs-content-title-pc {
   @apply hidden md:block;
 }
+.docs-title-github {
+  @apply mb-[26px] md:mt-28;
+  .githtb-a {
+    @apply flex items-center w-full text-base text-grag2c;
+    > div {
+      @apply w-10 h-10 flex items-center justify-center mr-2;
+      background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+      box-shadow: -5px -5px 20px 5px #ffffff, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
+      border-radius: 50%;
+    }
+    &:hover {
+      > div {
+        @apply border-grage5f border-solid border-2;
+      }
+    }
+    &::after {
+      @apply hidden;
+    }
+    img {
+      @apply w-[24px] h-[24px];
+    }
+  }
+}
 .docs-content-title {
   @apply w-full h-auto border-l border-solid border-graybc pl-4;
   a {
@@ -142,6 +165,20 @@
   }
   .title-a-content {
     @apply my-4;
+    a {
+      @apply relative pl-4;
+      &::before {
+        @apply w-1 h-1 absolute top-[7px] left-0 bg-grag96a;
+        content: '';
+        border-radius: 50%;
+      }
+      &:hover {
+        @apply text-gray20;
+        &::before {
+          @apply bg-gray20;
+        }
+      }
+    }
   }
 }
 .docs-button-box {
