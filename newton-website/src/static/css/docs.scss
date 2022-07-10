@@ -57,7 +57,16 @@
       @apply text-center py-4;
     }
     th {
-      @apply text-lg;
+      @apply text-lg relative;
+      &::after {
+        content: '';
+        @apply absolute top-1/2 mt-[-14px] right-0 w-[2px] h-7 bg-white;
+      }
+      &:last-child {
+        &::after {
+          @apply hidden;
+        }
+      }
     }
     td {
       border: 1px solid #e3eef6;

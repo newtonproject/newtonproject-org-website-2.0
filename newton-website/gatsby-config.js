@@ -68,7 +68,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        allowList: ["GATSBY_API_URL", "GATSBY_INTL_GITHUB"]
+        allowList: ["GATSBY_API_URL", "GATSBY_INTL_GITHUB","GATSBY_MD_GITHUB"]
       },
     },
     // md

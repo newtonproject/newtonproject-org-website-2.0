@@ -5,6 +5,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
+import { mdGithub } from '../utils/url'
 import ExpandableCard from '../components/docs/expandableCard'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -28,7 +29,8 @@ const components = {
 const DocsPage = ({ data: { allMdx } }: any) => {
   const content = allMdx.edges[0].node
   const tableOfContents = content.tableOfContents.items
-  console.log('======', tableOfContents)
+  const slug = allMdx.edges[0].node.slug
+  console.log('======', slug)
   const [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
@@ -53,7 +55,7 @@ const DocsPage = ({ data: { allMdx } }: any) => {
 
         <div className={'docs-content-title-pc'}>
           <div className={'docs-title-github'}>
-            <a href="" className={'githtb-a'}>
+            <a href={mdGithub + slug + 'index.md'} className={'githtb-a'}>
               <div className={'github-img'}>
                 <StaticImage placeholder="blurred" alt="github" src="../static/images/docs/docs-github.png" />
               </div>
