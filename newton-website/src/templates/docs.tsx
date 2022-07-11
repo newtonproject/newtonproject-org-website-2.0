@@ -6,6 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { mdGithub } from '../utils/url'
+// import { Link } from 'gatsby-plugin-intl'
 import ExpandableCard from '../components/docs/expandableCard'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -27,10 +28,12 @@ const components = {
 } // Provide common components here
 
 const DocsPage = ({ data: { allMdx } }: any) => {
+  // console.log(JSON.stringify(allMdx))
+
   const content = allMdx.edges[0].node
   const tableOfContents = content.tableOfContents.items
   const slug = allMdx.edges[0].node.slug
-  console.log('======', slug)
+  // console.log('======', slug)
   const [isOpen, setIsOpen] = useState(false)
 
   function closeModal() {
@@ -124,7 +127,7 @@ const DocsPage = ({ data: { allMdx } }: any) => {
                       <Dialog.Title as="h3" className={'title'}>
                         Payment successful
                       </Dialog.Title>
-                      <div className={'docs-content-title'}>
+                      <div className={'docs-content-title'} onClick={closeModal}>
                         {tableOfContents && tableOfContents.length > 0
                           ? tableOfContents.map((item: any, index: number) => {
                               return (

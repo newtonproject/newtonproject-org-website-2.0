@@ -1,11 +1,11 @@
 ---
 title: Newton 2.0 LitePaper
 description: About the team, community and mission of ethereum.org
-lang: en
+lang: zh
 sidebar: true
 ---
 
-Draft v0.2
+这是路线图 v0.2
 
 The content will be changed frequently, please follow the latest version.
 

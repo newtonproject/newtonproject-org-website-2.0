@@ -1,83 +1,135 @@
 ---
-title: The Roadmap of Newton
+title: Newton 2.0 LitePaper
 description: About the team, community and mission of ethereum.org
 lang: en
 sidebar: true
 ---
 
-A timeline of all the major milestones, forks, and updates to the Ethereum blockchain.
+Draft v0.2
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades." contentList="eeeeeeeeee">
+[xiawu@newtonproject.org](xiawu@newtonproject.org)
 
-Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](/eips/) and change the "rules" of the protocol.
+The content will be changed frequently, please follow the latest version.
 
-When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
+Newton 2.0 is the next generation blockchain network designed for Web3 and Metaverse, conceived in response to the shortcomings of existing platforms and designed to enable a new era of large-scale decentralized applications.
 
-These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
+## 1. Motivation
 
-</ExpandableCard>
+<ExpandableCard title="With the rapid growth of Web3 and Metaverse, we are facing the new chanllegs." contentPreview="While platforms such as Ethereum allow any kind of application to be implemented in theory by smart contracts, in practice they have many limitations: low throughputs, high fees, bad user experience, frustrating developer experience.">
 
-Looking for future protocol upgrades? Learn about upcoming upgrades to Ethereum.
+In order to solve these problems, we designed a new technical architecture for large-scale decentralized applications based on Newton 1.x.
 
-## 2021
+The contributions of newton 2.0 is as follows:
 
-### NewAsset Generator released
+NewConsensus
+By randomly selecting the validator sets and fastly confirmation algorithm, we significantly increase the number of validator nodes to provide a secure, high-performance, low-latency user experience.
 
-<div class="emoji">
-<p class="data">Estimated: Jun-29-2022</p>
-<p class="money">Block number: <a href="https://etherscan.io/block/13773000">13,773,000</a></p>
-<p class="price">ETH price: to be determined</p>
-</div>
+Multiple Virtual Machine Architecture
+The execution environment requirements for large-scale decentralized applications are diverse. We designed an innovative multiple virtual machine architecture for this purpose, and this version is planned to implement NewVM and NewEVM virtual machines. More virtual machine types will be supported in future releases, including WebAssemblyVM, PrivacyVM, and more.
 
-#### Summary
+Fee Delegation
+A lot of Web3 and Metaverse users don't own cryptocurrencies, so we designed the fee delegation of transaction. Users can use the Newton blockchain with no transaction fees.
 
-The Gray Glacier network upgrade pushes<a class='articles-a' href="https://etherscan.io/block/13773000">back the difficulty bomb</a>by three months. This is the only change introduced in this upgrade, and is similar in nature to the Arrow Glacier and Muir Glacier upgrades. Similar changes have been performed on the Byzantium, Constantinople and London network upgrades.
-
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades." contentList="eeeeeeeeee">
-
-Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](/eips/) and change the "rules" of the protocol.
-
-When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
-
-These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
+Development Kit
+We designed development kits for Web3, Metaverse and other industries to greatly improve the efficiency of application development.
 
 </ExpandableCard>
 
-##### NewAsset Generator released11
+## 2. Technology
 
-Be sure to upgrade your client software to the latest version before June 27, 2022 to account for variable block times. This will help avoid having your client sync to a pre-fork chain, resulting in the inability to send funds or properly verify transactions.
+### 2.1 NewConsensus
 
-### Muir Glacier EIPs
+Newton 2.0 uses the Proof of Stake (PoS) class consensus - NewConsensus.
 
-| Number |     Date |                    Description |  State  |
-| :----- | -------: | -----------------------------: | :-----: |
-| 1      | 2022.7.7 |   Properly verify transactions | confirm |
-| 2      | 2022.7.7 |   Properly verify transactions | confirm |
-| 3      | 2022.7.7 |   Properly verify transactions | confirm |
-| 4      | 2022.7.7 |   Properly verify transactions | confirm |
-| 5      | 2022.7.7 | Properly verify transactions34 | confirm |
+NewConsensus is similar to Ethereum 2.0's Casper FFG, except that NewConsensus randomly selects the block producers and a collection of verifiers within each epoch. This feature can achieve high performance and fast validation even when the number of participating validation nodes is very large.
 
-## 2020
+### 2.2 Virtual Machine
 
-### NewAsset Generator released22
+Newton 2.0 will implement a multiple virtual machine architecture. Multiple virtual machine support can be achieved by separating the consensus layer from the execution layer. Supported VMs are NewVM and NewEVM.
 
-<div class="emoji">
-<p class="data">Estimated: Jun-29-2022</p>
-<p class="money">Block number: <a href="https://etherscan.io/block/13773000">13,773,000</a></p>
-<p class="price">ETH price: to be determined</p>
-</div>
+NewVM is a virtual machine optimized for IoT devices.
 
-#### Summary
+NewEVM is a fully Ethereum compliant virtual machine.
 
-The Gray Glacier network upgrade pushes<a class='articles-a' href="https://etherscan.io/block/13773000">back the difficulty bomb</a>by three months. This is the only change introduced in this upgrade, and is similar in nature to the Arrow Glacier and Muir Glacier upgrades. Similar changes have been performed on the Byzantium, Constantinople and London network upgrades.
+### 2.3 Dynamic Transaction Types
 
-<ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades." contentList="eeeeeeeeee">
+Newton 2.0 supports extensible transaction types, with built-in types including:
 
-Forks are when major technical upgrades or changes need to be made to the network – they typically stem from [Ethereum Improvement Proposals (EIPs)](/eips/) and change the "rules" of the protocol.
+- data storage
+- atomic swap between different virutal machines
+- multiple signatures
+- all kinds of tokens such as NFT, EVT
 
-When upgrades are needed in traditional, centrally-controlled software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership. [Ethereum clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consensus-mechanisms/)
+In addition to the built-in types, Newton 2.0 also supports custom extended transaction types.
 
-These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the [DAO fork](#dao-fork).
+### 2.4 Fee Delegation
 
-</ExpandableCard>
-- [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – _delays the difficulty bomb until June 2022_
+Fee Delegation is a built-in account type, supporting the delegated deduction fee, multi-party management, transaction fee setting, whitelist and other functions.
+
+### 2.5 NewBridge 2.0
+
+NewBridge 2.0 is based on Intel SGX and multi-party computing technology and links to multiple blockchains such as Bitcoin, Ethereum, BSC, Solana, etc.
+
+Supports the following features:
+
+- Support NFT, EVT cross-chain
+- Supports atom exchange between chains
+- Support for inter-chain messaging and contract invocation
+
+## 3. Roadmap
+
+Newton 2.0 is planned to be completed in 18 months and is divided into three phases:
+
+<p class="title-small">Phase <a  class="articles-a" href="https://gitlab.weinvent.org/newton/core/newton-papers/-/issues/1)">#1</a> Singularity</p>
+
+<p  class="title-small">Main objectives:</p>
+
+- Transaction fee burned
+- Upgrade PoA to NewConsensus
+- Support the fee delegation
+- Launch the NewBridge 2.0
+
+<p  class="title-small">Phase #2 Inflationary</p>
+
+<p  class="title-small">Main objectives:</p>
+
+- Launch multiple virtual machine architecture
+- Launch NewEVM
+- Support the dynamic transaction types
+
+<p  class="title-small">Phase #3 Flourishing</p>
+
+<p  class="title-small">Main objectives:</p>
+
+- Launch Web3 Development Kit
+- Launch Metaverse Development Kit
+
+## 2022 Q3
+
+Launch the feature of transaction fee burned that make $NEW deflation.
+
+Launch EVT SDK 1.0.
+
+## 2022 Q4
+
+Upgrade PoA to NewConsensus.
+
+## 2023 Q1
+
+Launch NewBridge 2.0.
+
+## 2023 Q2
+
+Launch the multiple virtual machine architecture and NewEVM.
+
+## 2023 Q3
+
+Launch the Web3 Development Kit.
+
+## 2023 Q4
+
+Launch the Metaverse Development Kit.
+
+## Reference
+
+- [Introduction of EVT](https://github.com/newtonproject/evt-standard/blob/master/introduction.md)

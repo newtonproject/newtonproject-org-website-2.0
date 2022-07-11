@@ -1,7 +1,17 @@
 .docs {
-  @apply flex flex-row flex-wrap justify-between pt-[4.5rem] mb-32;
+  @apply flex flex-row justify-between pt-[4.5rem] mb-32;
   .docs-content {
-    @apply w-full md:w-[60%];
+    @apply w-full md:w-[60%] mr-[16%];
+    ul {
+      li {
+        @apply relative pl-3 leading-8;
+        &::before {
+          @apply absolute top-[15px] left-0 w-1 h-1 bg-grag2c;
+          content: '';
+          border-radius: 50%;
+        }
+      }
+    }
   }
   .title {
     @apply text-[3.4rem] font-bold text-grag2c mb-9;
@@ -28,7 +38,10 @@
     }
   }
   p {
-    @apply mb-8;
+    @apply my-8;
+  }
+  .title-small {
+    @apply text-xl font-bold;
   }
   a {
     @apply text-gray20 ml-1 mr-6 relative;
@@ -126,7 +139,12 @@
   .card {
     @apply py-0 mx-4  border-t border-solid border-graye3 mt-0;
     p {
-      @apply text-grag2c mt-7;
+      @apply text-grag2c mt-7 relative pl-3;
+      &::after {
+        @apply absolute top-2 left-0 w-1 h-1 bg-grag2c;
+        content: '';
+        border-radius: 50%;
+      }
     }
   }
   .card-img {
@@ -172,6 +190,7 @@
     @apply inline-block text-grag2c text-lg mb-4;
     font-family: 'Ubuntu-Medium';
   }
+
   .title-a-content {
     @apply my-4;
     a {
@@ -200,7 +219,7 @@
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0);
   img {
-    @apply w-[22px] h-auto mt-[7px];
+    @apply w-[22px] h-auto mt-[2px];
   }
   &:hover {
     @apply border-grage5f border-solid border-2;
