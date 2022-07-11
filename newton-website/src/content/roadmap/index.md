@@ -67,6 +67,3 @@ sidebar: true
 
 - Newton project officially launched.
 
-## Reference
-
-- [Introduction of EVT](https://github.com/newtonproject/evt-standard/blob/master/introduction.md)
