@@ -19,14 +19,14 @@ const ExpandableCard: React.FC<DocsProps> = ({ children, title, contentPreview }
                       placeholder="blurred"
                       className={'card-img'}
                       alt="card-top"
-                      src="../../static/images/docs/docs-bottom.png"
+                      src="../../static/images/docs/docs-top.png"
                     />
                   ) : (
                     <StaticImage
                       placeholder="blurred"
                       className={'card-img'}
                       alt="card-top"
-                      src="../../static/images/docs/docs-top.png"
+                      src="../../static/images/docs/docs-bottom.png"
                     />
                   )}
                 </div>

@@ -21,6 +21,7 @@
     @apply z-50;
     .use {
       @apply cursor-pointer;
+      font-family: 'Ubuntu-Medium';
     }
     &:hover {
       .header-down {
@@ -36,7 +37,7 @@
   }
   .header-learn {
     .header-down {
-      @apply w-[11.5rem] right-8;
+      // @apply w-[11.5rem] right-8;
     }
   }
   .header-down {

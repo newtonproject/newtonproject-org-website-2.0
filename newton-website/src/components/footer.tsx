@@ -81,7 +81,7 @@ export default function Footer() {
               </dd>
               <dd>
                 <Link to={'/roadmap/'} target="_blank">
-                  {intl.formatMessage({ id: 'Roadmap of Newton' })}
+                  {intl.formatMessage({ id: 'Roadmap' })}
                 </Link>
               </dd>
             </dl>
@@ -192,7 +192,7 @@ const FooterMobile = () => {
           </dd>
           <dd>
             <Link to={'/roadmap/'} target="_blank">
-              {intl.formatMessage({ id: 'Roadmap of Newton' })}
+              {intl.formatMessage({ id: 'Roadmap' })}
             </Link>
           </dd>
         </dl>
