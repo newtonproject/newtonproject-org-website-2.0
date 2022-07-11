@@ -45,6 +45,17 @@ export default function Header() {
                 </a>
               </div>
             </li>
+            <li className={'header-use header-learn'}>
+              <div className={'use'}>
+                {intl.formatMessage({ id: 'Learn' })}
+                <span></span>
+              </div>
+              <div className={'header-down'}>
+                <Link to="/newton/">{intl.formatMessage({ id: 'What is Newton' })}?</Link>
+                <Link to="/etv/">{intl.formatMessage({ id: 'What is EVT' })}?</Link>
+                <Link to="/roadmap/">{intl.formatMessage({ id: 'Roadmap of Newton' })}</Link>
+              </div>
+            </li>
             <li>
               <a href="https://developer.newtonproject.org/" target="_blank">
                 {intl.formatMessage({ id: 'Developers' })}

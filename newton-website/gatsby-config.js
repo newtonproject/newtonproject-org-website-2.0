@@ -4,7 +4,7 @@ module.exports = {
     description: `Newton-Infrastructure for the community economy,providing governance,collaboration and incentive. We are committed to creating highly collaborative, lower cost, highly automated community economy, everyone contributes,everyone benefits.`,
     author: `Newton`,
     siteUrl: `https://www.newtonproject.org/`,
-    supportedLanguages: [`en`, `zh`]
+    supportedLanguages: [`en`]
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -56,7 +56,7 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/static/intl`,
         // supported language
-        languages: [`en`, `zh`],
+        languages: [`en`],
         // language file path
         defaultLanguage: `en`,
         // redirect to `/${lang}/` when connecting to `/`
