@@ -66,4 +66,3 @@ sidebar: true
 ## 2017
 
 - Newton project officially launched.
-
