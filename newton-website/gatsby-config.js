@@ -4,6 +4,7 @@ module.exports = {
     description: `Newton-Infrastructure for the community economy,providing governance,collaboration and incentive. We are committed to creating highly collaborative, lower cost, highly automated community economy, everyone contributes,everyone benefits.`,
     author: `Newton`,
     siteUrl: `https://www.newtonproject.org/`,
+    supportedLanguages: [`en`]
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -36,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Newton`,
+        short_name: `Newton`,
         start_url: `/`,
         background_color: `#f7fbff`,
         theme_color: `#f7fbff`,
@@ -68,8 +69,89 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        allowList: ["GATSBY_API_URL","GATSBY_INTL_GITHUB"]
+        allowList: ["GATSBY_API_URL", "GATSBY_INTL_GITHUB","GATSBY_MD_GITHUB"]
       },
     },
+    // md
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+      __key: "md",
+    },
+  // Ability to set custom IDs for headings (for translations)
+    // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
+    `gatsby-remark-autolink-headers`,
+    // Image support in markdown
+    `gatsby-remark-images`,
+    `gatsby-remark-copy-linked-files`,
+    // READING time
+    "gatsby-remark-reading-time",
+    // MDX support
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+      // Workaround to fix `backgroundColor` bug:
+      // https://github.com/gatsbyjs/gatsby/issues/25272
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            backgroundColor: `transparent`,
+            maxWidth: 1200,
+          },
+        },
+      ],
+      // Note: in order for MDX to work with gatsby-remark-plugins
+      // The plugin must be listed top-level & in gatsbyRemarkPlugins
+      // See: https://www.gatsbyjs.org/docs/mdx/plugins/
+      gatsbyRemarkPlugins: [
+        {
+          // Local plugin to adjust the images urls of the translated md files
+          //resolve: require.resolve(`./plugins/gatsby-remark-image-urls`),
+        },
+        {
+          resolve: `gatsby-remark-autolink-headers`,
+          options: {
+            enableCustomId: true,
+            elements: [`h1`, `h2`, `h3`, `h4`],
+            className: `header-anchor`,
+          },
+        },
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            backgroundColor: `transparent`,
+            maxWidth: 1200,
+          },
+        },
+        {
+          resolve: `gatsby-remark-copy-linked-files`,
+          options: {
+            maxWidth: 1200,
+          },
+        },
+      ],
+      remarkPlugins: [],
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content`,
+        name: 'content',
+      },
+    }
+    // `gatsby-transformer-remark`,
+    // `gatsby-plugin-emotion`,
+    // {
+    //   resolve: `gatsby-plugin-typography`,
+    //   options: {
+    //     pathToConfigModule: `src/utils/typography`,
+    //   },
+    // },
   ],
 }

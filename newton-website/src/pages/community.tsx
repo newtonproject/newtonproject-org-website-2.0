@@ -1,7 +1,7 @@
 import React from 'react'
 import CommunityContent from '../components/communityContent'
 import NormalLayout from '../components/NormalLayout'
-import { PageModelTitle } from '../hooks/PageModel'
+import { PageModelTitle } from '../model/PageModel'
 
 export default Community
 

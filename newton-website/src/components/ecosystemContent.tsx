@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import bannerEcosystem from '../static/images/ecosystem/ecosystem-banner.png'
 import bannerEcosystemH5 from '../static/images/ecosystem/ecosystem-banner-h5.png'
 import { useIntl } from 'gatsby-plugin-intl'
-import { newsEnvUrl } from '../hooks/url'
+import { newsEnvUrl } from '../utils/url'
 
 export default function EcosystemContent() {
   const intl = useIntl()

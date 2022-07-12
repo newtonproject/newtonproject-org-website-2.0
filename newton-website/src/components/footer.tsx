@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useIntl, Link } from 'gatsby-plugin-intl'
-import { newsEnvUrl } from '../hooks/url'
+import { newsEnvUrl } from '../utils/url'
 
 export default function Footer() {
   const intl = useIntl()
@@ -80,9 +80,9 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/roadmap/'} target="_blank">
+                <Link to={'/roadmap/'} target="_blank">
                   {intl.formatMessage({ id: 'Roadmap' })}
-                </a>
+                </Link>
               </dd>
             </dl>
             <dl>
@@ -191,9 +191,9 @@ const FooterMobile = () => {
             </a>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/roadmap/'} target="_blank">
+            <Link to={'/roadmap/'} target="_blank">
               {intl.formatMessage({ id: 'Roadmap' })}
-            </a>
+            </Link>
           </dd>
         </dl>
         <dl className={'footer-item3'}>

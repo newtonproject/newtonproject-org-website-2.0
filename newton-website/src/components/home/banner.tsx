@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { arrDateBanner } from '../../hooks/createTime'
+import { arrDateBanner } from '../../utils/createTime'
 import { useIntl, Link } from 'gatsby-plugin-intl'
-import { getRequest } from '../../hooks/axiosData'
-import { newsEnvUrl } from '../../hooks/url'
+import { getRequest } from '../../utils/axiosData'
+import { newsEnvUrl } from '../../utils/url'
 import BannerImg from './bannerImg'
 export default function Banner() {
   const intl = useIntl()

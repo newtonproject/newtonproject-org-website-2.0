@@ -21,6 +21,7 @@
     @apply z-50;
     .use {
       @apply cursor-pointer;
+      font-family: 'Ubuntu-Medium';
     }
     &:hover {
       .header-down {
@@ -32,6 +33,11 @@
       span {
         @apply bg-header-bot-hover;
       }
+    }
+  }
+  .header-learn {
+    .header-down {
+      // @apply w-[11.5rem] right-8;
     }
   }
   .header-down {
@@ -119,6 +125,8 @@
 }
 .header-nav-menu {
   @apply pl-8;
+  max-height: 65vh;
+  overflow-y: auto;
   li {
     @apply mb-6;
     a {

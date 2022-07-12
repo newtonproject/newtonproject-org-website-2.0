@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { useIntl } from 'gatsby-plugin-intl'
-import { newsEnvUrl } from '../../hooks/url'
+import { newsEnvUrl } from '../../utils/url'
 
 export default function Centent() {
   const intl = useIntl()
