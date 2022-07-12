@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import { AiOutlineClose } from 'react-icons/ai'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -94,7 +95,12 @@ const DocsPage = ({ data: { allMdx } }: any) => {
         <div className={'docs-content-title-modal'}>
           <div className={'docs-button-box'}>
             <button className={'docs-button'} type="button" onClick={openModal}>
-              <StaticImage placeholder="blurred" alt="docs-button" src="../static/images/docs/docs-header.png" />
+              <StaticImage
+                className={'button-img'}
+                placeholder="blurred"
+                alt="docs-button"
+                src="../static/images/docs/docs-header.png"
+              />
             </button>
           </div>
 
@@ -125,7 +131,10 @@ const DocsPage = ({ data: { allMdx } }: any) => {
                   >
                     <Dialog.Panel className="modal-box">
                       <Dialog.Title as="h3" className={'title'}>
-                        Payment successful
+                        {content.frontmatter.title}
+                        <div className={'close'} onClick={closeModal}>
+                          <StaticImage placeholder="blurred" alt="close" src="../static/images/docs/docs-close.png" />
+                        </div>
                       </Dialog.Title>
                       <div className={'docs-content-title'} onClick={closeModal}>
                         {tableOfContents && tableOfContents.length > 0
@@ -150,12 +159,6 @@ const DocsPage = ({ data: { allMdx } }: any) => {
                               )
                             })
                           : null}
-                      </div>
-
-                      <div className={'close-box'}>
-                        <button type="button" className={'close'} onClick={closeModal}>
-                          Close
-                        </button>
                       </div>
                     </Dialog.Panel>
                   </Transition.Child>
