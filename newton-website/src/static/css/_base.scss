@@ -21,10 +21,13 @@ body {
   font-family: 'Ubuntu';
   color: #2c465e !important;
   background-color: #f7fbff;
+  -webkit-tap-highlight-color: transparent;
 }
 * {
   -webkit-tap-highlight-color: transparent;
 }
+a:focus,
+div:focus,
 input:focus {
   outline: none;
 }

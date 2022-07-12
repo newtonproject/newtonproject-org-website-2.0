@@ -17,6 +17,9 @@
     @apply text-[3.4rem] font-bold text-grag2c mb-9;
     font-family: 'Ubuntu-Bold';
   }
+  h1 {
+    @apply pt-10;
+  }
   h2 {
     @apply text-[2rem] mt-[5.5rem] mb-9;
   }
@@ -154,19 +157,15 @@
 }
 
 .docs-content-title-pc {
-  @apply hidden md:block;
+  @apply hidden md:block max-w-[25%] min-w-[15rem] top-[16.25rem];
   position: sticky;
-  top: 7.25rem;
-  padding: 1rem 0px 1rem 1rem;
-  max-width: 25%;
-  min-width: 15rem;
-  height: calc(100vh - 80px);
+  height: calc(80vh - 100px);
   overflow-y: auto;
   overflow-x: hidden;
   transition: transform 0.2s ease 0s;
 }
 .docs-title-github {
-  @apply mb-[26px] md:mt-28 w-32;
+  @apply mb-[26px] w-32;
   background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
   box-shadow: -5px -5px 20px 5px #ffffff, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
   border: 2px solid rgba(255, 255, 255, 0);
@@ -221,7 +220,7 @@
   @apply block md:hidden;
 }
 .docs-button {
-  @apply w-10 h-10 cursor-pointer fixed bottom-[28%] right-4 text-center;
+  @apply w-10 h-10 cursor-pointer fixed bottom-[20%] right-4 text-center;
   background: #f6fbff;
   box-shadow: 2px 4px 20px 1px rgba(0, 64, 145, 0.12);
   border-radius: 50%;
@@ -249,7 +248,7 @@
   }
   .docs-content-title {
     @apply w-full pt-10;
-    max-height: 69vh;
+    max-height: 75vh;
     overflow-y: auto;
   }
 }
