@@ -4,7 +4,7 @@ import Centent from '../components/home/centent'
 import News from '../components/home/news'
 import GlobalCommunity from '../components/home/globalCommunity'
 import NormalLayout from '../components/NormalLayout'
-import { PageModelTitle } from '../hooks/PageModel'
+import { PageModelTitle } from '../model/PageModel'
 import { useIntl } from 'gatsby-plugin-intl'
 
 const IndexPage = () => {

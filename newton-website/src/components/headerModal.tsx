@@ -4,7 +4,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Languages from './languages'
 import { useIntl, Link } from 'gatsby-plugin-intl'
-import { newsEnvUrl } from '../hooks/url'
+import { newsEnvUrl } from '../utils/url'
 
 export default function HeaderModal() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
@@ -118,6 +118,17 @@ const SiteNavMenu = () => {
               <a href="https://nft.newscan.io/" target="_blank">
                 {intl.formatMessage({ id: 'NFT Viewer' })}
               </a>
+            </div>
+          </li>
+          <li className={'header-use'}>
+            <div className={'use'}>
+              {intl.formatMessage({ id: 'Learn' })}
+              <span></span>
+            </div>
+            <div className={'header-down'}>
+              {/* <Link to="/newton/">{intl.formatMessage({ id: 'What is Newton' })} ?</Link>
+              <Link to="/etv/">{intl.formatMessage({ id: 'What is EVT' })} ?</Link> */}
+              <Link to="/roadmap/">{intl.formatMessage({ id: 'Roadmap' })}</Link>
             </div>
           </li>
           <li>

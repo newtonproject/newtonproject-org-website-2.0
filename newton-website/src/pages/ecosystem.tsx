@@ -1,7 +1,7 @@
 import React from 'react'
 import EcosystemContent from '../components/ecosystemContent'
 import NormalLayout from '../components/NormalLayout'
-import { PageModelTitle } from '../hooks/PageModel'
+import { PageModelTitle } from '../model/PageModel'
 
 export default Ecosystem
 

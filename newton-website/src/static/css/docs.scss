@@ -1,0 +1,254 @@
+.docs {
+  @apply flex flex-row justify-between mb-32;
+  .docs-content {
+    @apply w-full md:w-[60%] mr-[16%];
+    ul {
+      li {
+        @apply relative pl-3 leading-8;
+        &::before {
+          @apply absolute top-[15px] left-0 w-1 h-1 bg-grag2c;
+          content: '';
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  .title {
+    @apply text-[3.4rem] font-bold text-grag2c mb-9;
+    font-family: 'Ubuntu-Bold';
+  }
+  h1 {
+    @apply pt-10;
+  }
+  h2 {
+    @apply text-[2rem] mt-[5.5rem] mb-9;
+  }
+  h3 {
+    // @apply text-[1.63rem] mt-20 mb-8 relative pl-3;
+    @apply text-[1.63rem] mt-12 mb-4;
+    // &::after {
+    //   content: '';
+    //   @apply absolute top-[9px] left-0 w-1 h-5 bg-gray11;
+    // }
+  }
+  h4 {
+    @apply text-xl mt-10 mb-6;
+  }
+  h5 {
+    @apply text-[1.63rem] mb-8 relative pl-9;
+    &::after {
+      content: '';
+      @apply absolute top-[9px] left-0 w-[24px] h-[24px] bg-contain bg-docs-tit bg-no-repeat;
+    }
+  }
+  p {
+    @apply my-8;
+  }
+  .title-small {
+    @apply text-xl font-bold;
+  }
+  a {
+    @apply text-gray20 ml-1 mr-6 relative;
+    &::after {
+      content: '';
+      @apply absolute top-[1px] right-[-19px] w-4 h-4 bg-contain bg-docs-a bg-no-repeat;
+    }
+  }
+  .articles-a {
+    @apply mr-1;
+    &::after {
+      @apply hidden;
+    }
+  }
+  table {
+    @apply cursor-pointer w-full;
+    background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+    box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0);
+    &:hover {
+      box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+      @apply border-grage5f border-solid border-2;
+    }
+    th,
+    td {
+      @apply text-center py-4;
+    }
+    th {
+      @apply text-lg relative;
+      &::after {
+        content: '';
+        @apply absolute top-1/2 mt-[-14px] right-0 w-[2px] h-7 bg-white;
+      }
+      &:last-child {
+        &::after {
+          @apply hidden;
+        }
+      }
+    }
+    td {
+      border: 1px solid #e3eef6;
+    }
+  }
+  thead {
+    @apply bg-graydd py-4;
+    tr {
+      @apply py-4;
+    }
+  }
+  .emoji {
+    p {
+      @apply mb-4 relative pl-9;
+      &::after {
+        @apply w-[24px] h-[24px] absolute top-0 left-0 bg-contain;
+        content: '';
+      }
+    }
+    .data {
+      &::after {
+        @apply bg-docs-data;
+      }
+    }
+    .money {
+      &::after {
+        @apply bg-docs-money;
+      }
+    }
+    .price {
+      &::after {
+        @apply bg-docs-price;
+      }
+    }
+  }
+}
+
+.expandable-card {
+  @apply cursor-pointer my-10 relative;
+  background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+  box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0);
+  &:hover {
+    box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+    @apply border-grage5f border-solid border-2;
+  }
+  h2 {
+    @apply text-xl text-grag2c mt-0 mb-4;
+    font-family: 'Ubuntu-Medium';
+  }
+  p {
+    @apply text-sm text-grag96a;
+  }
+  .card-title {
+    @apply pt-8 pb-0 px-4 w-full text-left;
+  }
+  .card {
+    @apply py-0 mx-4  border-t border-solid border-graye3 mt-0;
+    p {
+      @apply text-grag2c mt-7 relative pl-3;
+      &::after {
+        @apply absolute top-2 left-0 w-1 h-1 bg-grag2c;
+        content: '';
+        border-radius: 50%;
+      }
+    }
+  }
+  .card-img {
+    @apply w-[1.4rem] h-auto absolute top-[2.13rem] right-5;
+  }
+}
+
+.docs-content-title-pc {
+  @apply hidden md:block max-w-[25%] min-w-[15rem] top-[16.25rem];
+  position: sticky;
+  height: calc(80vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: transform 0.2s ease 0s;
+}
+.docs-title-github {
+  @apply mb-[26px] w-32;
+  background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+  box-shadow: -5px -5px 20px 5px #ffffff, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0);
+  &:hover {
+    @apply border-grage5f border-solid border-2;
+  }
+  .githtb-a {
+    @apply flex items-center w-full text-base text-grag2c ml-0 mr-3;
+    > div {
+      @apply h-10 ml-3 flex items-center justify-center mr-2;
+    }
+    &::after {
+      @apply hidden;
+    }
+    img {
+      @apply w-[24px] h-[24px];
+    }
+  }
+}
+.docs-content-title {
+  @apply w-full h-auto border-l border-solid border-graybc pl-4;
+  a {
+    @apply text-gray6a;
+    &::after {
+      @apply hidden;
+    }
+  }
+  .title-a {
+    @apply inline-block text-grag2c text-lg mb-4;
+    font-family: 'Ubuntu-Medium';
+  }
+
+  .title-a-content {
+    @apply my-4 pl-4;
+    a {
+      @apply relative overflow-ellipsis max-w-[14.5rem] ml-0 text-left;
+      &::before {
+        @apply w-1 h-1 absolute top-1/2 mt-[-2px] -left-4 bg-grag96a;
+        content: '';
+        border-radius: 50%;
+      }
+      &:hover {
+        @apply text-gray20;
+        &::before {
+          @apply bg-gray20;
+        }
+      }
+    }
+  }
+}
+.docs-button-box {
+  @apply block md:hidden;
+}
+.docs-button {
+  @apply w-10 h-10 cursor-pointer fixed bottom-[15%] right-4 text-center;
+  background: #f6fbff;
+  box-shadow: 2px 4px 20px 1px rgba(0, 64, 145, 0.12);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0);
+  .button-img {
+    @apply w-[22px] h-auto mt-[2px];
+  }
+  &:hover {
+    @apply border-grage5f border-solid border-2;
+  }
+}
+
+.docs-modal {
+  .title {
+    @apply bg-grayed text-base text-center py-4 font-bold text-gray3d3d relative;
+    font-family: 'Ubuntu-Bold';
+  }
+  .close {
+    @apply absolute top-[1.3rem] right-4 w-[1.13rem] h-[1.13rem] cursor-pointer;
+  }
+  .modal-box {
+    @apply fixed bottom-0 left-0  w-full transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all;
+    height: 87vh;
+    border-radius: 1rem 1rem 0 0;
+  }
+  .docs-content-title {
+    @apply w-full pt-10;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+}

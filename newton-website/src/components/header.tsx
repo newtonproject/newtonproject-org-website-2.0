@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import HeaderModal from './headerModal'
 import Language from './languages'
 import { useIntl, Link } from 'gatsby-plugin-intl'
-import { newsEnvUrl } from '../hooks/url'
+import { newsEnvUrl } from '../utils/url'
 
 export default function Header() {
   const intl = useIntl()
@@ -43,6 +43,17 @@ export default function Header() {
                 <a href="https://nft.newscan.io/" target="_blank">
                   {intl.formatMessage({ id: 'NFT Viewer' })}
                 </a>
+              </div>
+            </li>
+            <li className={'header-use header-learn'}>
+              <div className={'use'}>
+                {intl.formatMessage({ id: 'Learn' })}
+                <span></span>
+              </div>
+              <div className={'header-down'}>
+                {/* <Link to="/newton/">{intl.formatMessage({ id: 'What is Newton' })} ?</Link>
+                <Link to="/etv/">{intl.formatMessage({ id: 'What is EVT' })} ?</Link> */}
+                <Link to="/roadmap/">{intl.formatMessage({ id: 'Roadmap' })}</Link>
               </div>
             </li>
             <li>

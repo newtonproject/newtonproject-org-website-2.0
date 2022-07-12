@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+// @import 'antd/dist/antd.css';
 @import 'base';
 @import 'header';
 @import 'modal';
@@ -9,3 +9,4 @@
 @import 'banner';
 @import 'home';
 @import 'ecosystem';
+@import 'docs';

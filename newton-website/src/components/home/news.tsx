@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { arrDate } from '../../hooks/createTime'
-import { NewschildProps } from '../../hooks/PageModel'
+import { arrDate } from '../../utils/createTime'
+import { NewschildProps } from '../../model/PageModel'
 import { useIntl } from 'gatsby-plugin-intl'
-import { getRequest } from '../../hooks/axiosData'
-import { newsEnvUrl } from '../../hooks/url'
+import { getRequest } from '../../utils/axiosData'
+import { newsEnvUrl } from '../../utils/url'
 
 const News: React.FC<NewschildProps> = props => {
   const intl = useIntl()

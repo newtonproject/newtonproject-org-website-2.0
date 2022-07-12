@@ -3,12 +3,12 @@ import { StaticImage } from 'gatsby-plugin-image'
 import GlobalCommunity from '../components/home/globalCommunity'
 import SubmitContent from './submitContent'
 import News from '../components/home/news'
-import { arrDate } from '../hooks/createTime'
+import { arrDate } from '../utils/createTime'
 import bannerCommunity from '../static/images/ecosystem/community-banner.png'
 import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.png'
 import { useIntl } from 'gatsby-plugin-intl'
-import { getRequest } from '../hooks/axiosData'
-import { newsEnvUrl } from '../hooks/url'
+import { getRequest } from '../utils/axiosData'
+import { newsEnvUrl } from '../utils/url'
 
 export default function CommunityContent() {
   const intl = useIntl()
