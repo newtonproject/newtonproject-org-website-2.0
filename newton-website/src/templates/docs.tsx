@@ -17,6 +17,7 @@ import H3 from '../customMdx/h3'
 import H4 from '../customMdx/h4'
 import H5 from '../customMdx/h5'
 import H6 from '../customMdx/h6'
+import Codeblock from '../customMdx/codeblock'
 
 const components = {
   Link,
@@ -25,7 +26,8 @@ const components = {
   h3: H3,
   h4: H4,
   h5: H5,
-  h6: H6
+  h6: H6,
+  pre: Codeblock
 } // Provide common components here
 
 const DocsPage = ({ data: { allMdx } }: any) => {
