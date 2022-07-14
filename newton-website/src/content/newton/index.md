@@ -156,7 +156,9 @@ NewBridge 2.0基于Intel SGX和多方计算技术实现，链接Bitcoin、Ethere
 >
 > $time_{u,stake}$ - 用户$u$质押时间，以周为单位
 
-$$ C_j = C_{j-1} + \gamma \times \sum_{\forall u}f(amount_{u,stake}, time_{u, stake}) \times R_j \times \frac{\sum_{i=0}^{j} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i}}{T} $$ 其中 $$ T = \sum_{i = 0}^{\infty} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i} $$ 从2023年开始，**$NEW**的供应规则将采用等式1。和比特币等类似，供应数量将逐年递减。由于内置销毁机制，**$NEW**将会非常稀缺。下图为**$NEW**在20%质押、50%质押、100%质押情况下的供应曲线。
+$$ C_j = C_{j-1} + \gamma \times \sum_{\forall u}f(amount_{u,stake}, time_{u, stake}) \times R_j \times \frac{\sum_{i=0}^{j} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i}}{T} $$ 其中 $$ T = \sum_{i = 0}^{\infty} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i} $$ 
+
+从2023年开始，**$NEW**的供应规则将采用等式1。和比特币等类似，供应数量将逐年递减。由于内置销毁机制，**$NEW**将会非常稀缺。下图为**$NEW**在20%质押、50%质押、100%质押情况下的供应曲线。
 
 [![newton-supply](https://github.com/newtonproject/newton-2.0-papers/blob/main/images/newton-supply.png)]()
 
