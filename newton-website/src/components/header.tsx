@@ -51,8 +51,8 @@ export default function Header() {
                 <span></span>
               </div>
               <div className={'header-down'}>
-                {/* <Link to="/newton/">{intl.formatMessage({ id: 'What is Newton' })} ?</Link>
-                <Link to="/etv/">{intl.formatMessage({ id: 'What is EVT' })} ?</Link> */}
+                <Link to="/newton/">{intl.formatMessage({ id: 'What is Newton' })} ?</Link>
+                <Link to="/etv/">{intl.formatMessage({ id: 'What is EVT' })} ?</Link>
                 <Link to="/roadmap/">{intl.formatMessage({ id: 'Roadmap' })}</Link>
               </div>
             </li>
