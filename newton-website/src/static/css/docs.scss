@@ -66,6 +66,15 @@
       @apply absolute top-[1px] right-[-19px] w-4 h-4 bg-contain bg-docs-a bg-no-repeat;
     }
   }
+  ul {
+    li {
+      a {
+        &::after {
+          @apply hidden;
+        }
+      }
+    }
+  }
   .articles-a {
     @apply mr-1;
     &::after {
