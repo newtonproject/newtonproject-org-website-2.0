@@ -74,13 +74,13 @@
   }
   table {
     @apply cursor-pointer w-full;
-    background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
-    box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
-    border: 2px solid rgba(255, 255, 255, 0);
-    &:hover {
-      box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
-      @apply border-grage5f border-solid border-2;
-    }
+    // background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+    // box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
+    // border: 2px solid rgba(255, 255, 255, 0);
+    // &:hover {
+    //   box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
+    //   @apply border-grage5f border-solid border-2;
+    // }
     th,
     td {
       @apply text-center py-4;
