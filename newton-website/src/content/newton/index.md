@@ -6,186 +6,196 @@ sidebar: true
 ---
 ## What is Newton 2.0
 
-Newton 2.0是下一代的区块链网络，为WEB3、Metaverse而全新进行设计，旨在解决现有平台的用户和开发体验问题，开启大规模去中心化应用的新时代。
+Newton 2.0 is the next generation blockchain network designed for Web3 and Metaverse, conceived in response to the shortcomings of existing platforms and designed to enable a new era of large-scale decentralized applications. 
 
 
 
-## 1 动机
+## 1 Motivation
 
-随着Web3和Metaverse应用的快速增长，现有区块链正面临新的挑战。
+With the rapid growth of Web3 and Metaverse, we are facing the new chanllegs.
 
-虽然Ethereum通过智能合约支持任何应用程序的执行，但实际应用中仍然存在很多局限：交易速度慢、高昂的交易费、较差的用户体验、不佳的开发者支持。
+While platforms such as Ethereum allow any kind of application to be implemented in theory by smart contracts, in practice they have many limitations: low throughputs, high fees, bad user experience, frustrating developer experience. 
 
-为了解决这一系列问题，我们在Newton 1.x的基础上，全新设计了面向大规模去中心化应用的技术架构。
+In order to solve these problems, we designed a new technical architecture for large-scale decentralized applications based on Newton 1.x.
 
-Newton 2.0的主要贡献如下：
+The contributions of newton 2.0 is as follows:
 
-* NewConsensus共识
+* NewConsensus
 
-  通过采用随机选择验证节点集和快速确认算法，极大增加验证节点数量，从而提供安全、高性能、低延迟的用户体验。
+  By randomly selecting the validator sets and fastly confirmation algorithm, we significantly increase the number of validator nodes to provide a secure, high-performance, low-latency user experience.
 
-  
+* Multiple Virtual Machine Architecture
 
-* 多虚拟机架构
+  The execution environment requirements for large-scale decentralized applications are diverse. We designed an innovative multiple virtual machine architecture for this purpose, and this version is planned to implement NewVM and NewEVM virtual machines. More virtual machine types will be supported in future releases, including WebAssemblyVM, PrivacyVM, and more.
 
-  大规模去中心化应用对执行环境的需求是多样的。我们为此设计了创新性的多虚拟机架构，2.0版本计划将实现NewVM、NewEVM虚拟机。以后的版本会陆续支持更多的虚拟机类型，包括WebAssemblyVM、PrivacyVM等。
+* Fee Delegation
 
-   
+  A lot of Web3 and Metaverse users don't own cryptocurrencies, so we designed the fee delegation of transaction. Users can use the Newton blockchain with no transaction fees.
 
-* 交易费代理
+* Development Kit 
 
-  Web3和Metaverse的用户很多都是不持有加密货币的，因此我们设计了交易费代理机制。用户可以无交易费使用Newton区块链。
-
-
-
-* 行业开发工具包
-
-  我们设计了面向Web3、Metaverse等行业开发工具包，大幅提高应用开发的效率。
+  We designed development kits for Web3, Metaverse and other industries to greatly improve the efficiency of application development.
 
 
 
-## 2 技术
+## 2 Technology
 
 
 
-### 2.1 NewConsensus共识
+### 2.1 NewConsensus
 
-Newton 2.0采用PoS(Proof of Stake)类共识NewConsensus。
+Newton 2.0 uses the Proof of Stake (PoS) class consensus - NewConsensus.
 
-NewConsensus共识和Ethereum 2.0的Casper FFG相似，区别在于NewConsensus在每个epoch中随机选择出块节点和验证者集合。这一特性在参与验证节点数量非常很多的情况下仍旧可以实现高性能和快速确认。
-
-
-
-### 2.2 虚拟机
-
-Newton 2.0将实现多虚拟机架构。通过将共识层和执行层分离，可以实现多虚拟机支持。计划中支持的虚拟机包括NewVM, NewEVM。
-
-其中
-
-* NewVM是面向物联网设备而进行优化的虚拟机。
-* NewEVM是完全兼容Ethereum 1.x/2.x 的虚拟机
+NewConsensus is similar to Ethereum 2.0's Casper FFG, except that NewConsensus randomly selects the block producers and a collection of verifiers within each epoch. This feature can achieve high performance and fast validation even when the number of participating validation nodes is very large.
 
 
 
-### 2.3 动态交易类型
+### 2.2 Virtual Machine
 
-Newton 2.0支持可扩展的交易类型，内置的类型包括：
+Newton 2.0 will implement a multiple virtual machine architecture. Multiple virtual machine support can be achieved by separating the consensus layer from the execution layer. Supported VMs are NewVM and NewEVM.
 
-* 数据存储
-* 不同虚拟机之间原子交换
-* 多重签名
-* NFT、EVT(Encrypted Variable Token)
+NewVM is a virtual machine optimized for IoT devices.
 
-除了内置类型外，Newton 2.0同时支持自定义扩展交易类型。
+NewEVM is a fully Ethereum compliant virtual machine.
 
 
 
-### 2.4 交易费代理
+### 2.3 Dynamic Transaction Types
 
-交易费代理是一个内置的账号类型，支持代理扣费、多方管理、交易费设定、白名单等功能。
+Newton 2.0 supports extensible transaction types, with built-in types including:
+
+* data storage
+* atomic swap between different virutal machines
+* multiple signatures
+* all kinds of tokens such as NFT, EVT
+
+In addition to the built-in types, Newton 2.0 also supports custom extended transaction types.
+
+
+
+### 2.4 Fee Delegation
+
+Fee Delegation is a built-in account type, supporting the delegated deduction fee, multi-party management, transaction fee setting, whitelist and other functions.
 
 
 
 ### 2.5 NewBridge 2.0
 
-NewBridge 2.0基于Intel SGX和多方计算技术实现，链接Bitcoin、Ethereum、BSC、Solana等多个区块链。
+NewBridge 2.0 is based on Intel SGX and multi-party computing technology and links to multiple blockchains such as Bitcoin, Ethereum, BSC, Solana, etc.
 
-支持如下的特性：
+Supports the following features:
 
-* 支持NFT、EVT跨链；
-* 支持链间的原子交换；
-* 支持链间的消息通讯和合约调用。
-
-## 2 Newton原生货币(**$NEW**)经济模型
+* Support NFT, EVT cross-chain
+* Supports atom exchange between chains
+* Support for inter-chain messaging and contract invocation
 
 
 
-### 2.1 什么是$NEW
+## 3 **$NEW** Economic Model
 
-数字货币或资产的经济模型是区块链平台极其关键的组成部分。本文将讨论Newton区块链的原生货币 **$NEW** 的经济模型，包括治理、供应、挖矿奖励、费用机制。
+### 3.1 Introduction
 
-- **$NEW**是Newton区块链的原生货币。
-- **$NEW**是总量恒定的货币，最大数量为1000亿。
-- Newton 2.0上线以后，**$NEW** 将成为总量通缩的货币。
-- 验证节点所获挖矿奖励和质押 **$NEW**数量成正比。
-- 验证节点质押锁定的时间越长，奖励越多。
-- 验证节点通过PoU(Proof of Uptime)证明获得奖励。
+The economic model of a digital currency or asset is an extremely critical component of a blockchain platform. This article will discuss the economic model of Newton blockchain's native currency **$NEW**, including governance, supply, mining incentives, fee mechanism.
 
-### 2.2 治理
+*  **$NEW** is the native currency of the Newton blockchain.
+*  **$NEW** is a constant amount of money, up to 100 billion.
+*  When Newton 2.0 goes live, **$NEW** will be the currency of total deflation.
+*  The amount of mining bonus the validators get is proportional to the amount of staking **$NEW**.
+*  The longer the validators lock, the more rewards.
+*  The validators are rewarded with Proof of Uptime (PoU).
 
-对于Newton区块链平台的进化来说，治理扮演着非常关键的角色。Newton区块链通过内置的共识算法构建了一系列动态修改系统参数的机制。任何验证节点都可以发起修改系统参数的提议或参与决策投票。
 
-系统参数列表如下：
 
-> $\theta$ - 最小质押数量，缺省值为1000万**$NEW**
+
+
+### 3.2 Governance
+
+Governance has played a key role in the evolution of the Newton blockchain platform. The Newton blockchain uses a built-in consensus algorithm to build a set of mechanisms for dynamically modifying system parameters. Any validator can initiate a proposal to modify system parameters or participate in a decision vote.
+
+The system parameters are listed as follows:
+
+> $\theta$ - Minimum stake amount, default value is 10M **$NEW**
 >
-> $\delta_{min}$ - 最小质押时间，缺省值为2周
+> $\delta_{min}$ - Minimum stake duration, default value is 2 weeks
 >
-> $\delta_{max}$ - 最大质押时间，缺省值为52周
+> $\delta_{max}$ - Maximum stake duration, default value is 52 weeks
 >
-> $p$ - 只要手续费，缺省值为0.005
+> $p$ - Stake fee, default value is 0.005
 >
-> $\lambda$ - 费用销毁比例，缺省值为0.5
+> $\lambda$ - Ratio of fee burned, default value is 0.5
 >
-> $\mathcal{F}$ - 费用结构
+> $\mathcal{F}$ - Fee structure
 >
-> $\alpha$, $\beta$, $\gamma$ - 铸造函数参数, $\alpha$缺省值为$1.15$, $\beta$缺省值为$1$, $\gamma$缺省值为$0.2$
+> $\alpha$, $\beta$, $\gamma$ - Parameters of minting function, default value of $\alpha$, $\beta$, $\gamma$ is $1.15$,$1$, $0.2$ 
 
-其中, 费用结构参数 $\mathcal{F}$ 将在未来的文档版本中阐述。
+Where  $\mathcal{F}$ will be explained in later documents.
 
-**$NEW**治理遵循自有的设计哲学，即长期来看赋予系统灵活性和控制力的同时，确保短时间段内系统的可预测性和安全性。设计哲学体现在二方面，包括：
+**$NEW** Governance follows its own design philosophy of ensuring predictability and security in the short term while giving systems flexibility and control in the long term. Design philosophy is embodied in two aspects, including:
 
-- 系统参数的修改具有滞后性，包括参数生效时间、修改参数的频率。
-- 系统参数的修改值具有范围限制，不能进行大范围的修改，避免影响系统稳定性。
+* The modification of system parameters is delayed, including the effective time of parameters and the frequency of parameter modification.
+* The range of system parameters to be modified is limited. Otherwise, system stability may be affected.
 
-2.2 货币供应
 
-**$NEW**的硬顶为1000亿，其中600亿通过挖矿奖励产生。截止2023年2月1日，剩余供应为56665276147.8292。
 
-为了更好表述铸币函数，我们做如下的设定：
+### 3.3 Supply
 
-> $j$ - 年，取值范围为$1, 2, 3, ...$
+**$NEW** has a hard top of 100B, of which 60B is generated through mining incentives. As of February 1, 2023, the remaining supply is 56665276147.8292.
+
+we make the following Settings:
+
+> $j$ - year，for example, $1, 2, 3, ...$ 
 >
-> $C_j$ - 第$j$年流通供应量，$C_0$为0
+> $C_j$ - circulating supply of year $j$$, C_0$ is 0
 >
-> $R_j$ - 截止第$j$年剩余未释放**$NEW**数量
+> $R_j$ - unminted amount on year $j$
 >
-> $u$ - 用户$u$
+> $u$ - user $u$
 >
-> $amount_{u,stake}$ - 用户$u$质押**$NEW**数量
+> $amount_{u,stake}$ - stake amount of user $u$
 >
-> $time_{u,stake}$ - 用户$u$质押时间，以周为单位
+> $time_{u,stake}$ - stake duration of user $u$, unit is week
 
-$$ C_j = C_{j-1} + \gamma \times \sum_{\forall u}f(amount_{u,stake}, time_{u, stake}) \times R_j \times \frac{\sum_{i=0}^{j} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i}}{T} $$ 其中 $$ T = \sum_{i = 0}^{\infty} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i} $$ 
+$$
+C_j = C_{j-1} + \gamma \times \sum_{\forall u}f(amount_{u,stake}, time_{u, stake}) \times R_j \times \frac{\sum_{i=0}^{j} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i}}{T}
+$$
 
-从2023年开始，**$NEW**的供应规则将采用等式1。和比特币等类似，供应数量将逐年递减。由于内置销毁机制，**$NEW**将会非常稀缺。下图为**$NEW**在20%质押、50%质押、100%质押情况下的供应曲线。
+where
+$$
+T = \sum_{i = 0}^{\infty} \frac{1}{(\alpha + \frac{1}{1+i^\beta})^i}
+$$
+Starting in 2023, the supply rule for **$NEW** will use Equation 1. Like bitcoin and others, the supply will decrease year by year. **$NEW** will be scarce due to the built-in destruction mechanism. The following figure shows the supply curve of **$NEW** under the conditions of 20% stake, 50% stake and 100% stake.
 
-[![newton-supply](https://github.com/newtonproject/newton-2.0-papers/blob/main/images/newton-supply.png)]()
+![newton-supply](images/newton-supply.png)
 
-$$ f(amount_{u,stake},time_{u,stake}) = (0.002 \times time_{u, stake} + 0.896) \times \frac{amount_{u,stake}}{C_j} $$
+$$
+f(amount_{u,stake},time_{u,stake}) = (0.002 \times time_{u, stake} + 0.896) \times \frac{amount_{u,stake}}{C_j}
+$$
 
-如等式3所示，**$NEW**每年供应数量将和质押数量、质押时长成正比。这一特性有利于区块链网络短期、中长期的稳定和安全。
+As shown in Equation 3, the annual supply quantity of **$NEW** will be proportional to the stake amount and stake time. This feature is conducive to the stability and security of the blockchain network in the short and medium term.
 
-4 铸币机制
 
-## 4 铸币机制
 
-**$NEW**的铸造被用于激励节点诚实工作、处理交易、维护网络安全。这一过程通过特殊的铸币交易来完成。
 
-节点通过质押**$NEW**获得参与共识过程的权利。节点所有奖励与运行时间和响应延时相关，即PoU(Proof of Uptime)证明，这一设计也有益于未来网络中节点的多样性。
+### 3.4 Minting Incentive
 
-由于采用随机选择出块节点的共识机制，**$NEW**的铸造过程不会产生“富者越富”的马太效应。
+The minting of **$NEW** is used to incentive nodes to work honestly, process transactions, and maintain network security. This is done through special minting transactions.
 
-## 5 费用机制
+The node gains the right to participate in the consensus process by stake **$NEW**. All rewards of nodes are related to running time and response delay, that is, PoU(Proof of Uptime) proves that this design is also beneficial to the diversity of nodes in the future network.
 
-从2.0版本开始，Newton区块链的费用机制进行了全新设计，遵循费用的转移和消耗必须对全体**$NEW**持有者公平的原则。
+Due to the consensus mechanism of randomly selecting block nodes, the casting process of **$NEW** does not produce the Matthew effect of "the rich get richer".
 
-- 质押手续费
 
-  质押通过特殊的交易类型完成，并手续一定比例作为质押手续费。质押数量乘以$p$为质押手续费。不同于其他的区块链，质押手续费将全部销毁。
 
-- 交易费
+### 3.5 Fee Mechanism
 
-  交易费的一定比例$\lambda$将销毁。
+Starting with newton 2.0, the Newton blockchain fee mechanism was completely redesigned, following the principle that the transfer and consumption of fees must be fair to all **$NEW** holders.
 
-  更有效率的交易费设定机制将在未来的文档版本中阐述。
+* Stake fee
+
+  The stake is done through a special transaction type, and a certain percentage of the process as a stake fee. The stake amount multiplied by $p$ is the stake handling fee. Unlike other blockchains, the stake fee is completely burned.
+
+* Transaction fee
+
+  Percentage  $\lambda$ of the transaction fee will be destroyed.
+
+  A more efficient transaction fee setting mechanism will be described in later documents.
