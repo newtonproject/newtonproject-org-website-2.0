@@ -12,6 +12,18 @@
         }
       }
     }
+    pre {
+      &.code-block {
+        max-width: 100%;
+        overflow-x: scroll;
+        background-color: rgb(242, 242, 242);
+        border-radius: 0.25rem;
+        padding: 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        white-space: pre-wrap;
+        font-size: 13px;
+      }
+    }
   }
   .title {
     @apply text-[3.4rem] font-bold text-grag2c mb-9;
