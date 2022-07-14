@@ -59,7 +59,7 @@ const DocsPage = ({ data: { allMdx } }: any) => {
 
         <div className={'docs-content-title-pc'}>
           <div className={'docs-title-github'}>
-            <a href={mdGithub + slug + 'index.md'} className={'githtb-a'}>
+            <a href={mdGithub + slug + 'index.md'} className={'githtb-a'} target="_blank">
               <div className={'github-img'}>
                 <StaticImage placeholder="blurred" alt="github" src="../static/images/docs/docs-github.png" />
               </div>
