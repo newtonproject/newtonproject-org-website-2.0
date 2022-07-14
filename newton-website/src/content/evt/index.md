@@ -5,13 +5,14 @@ lang: en
 sidebar: true
 ---
 
-
 ## What's an EVT
+
 EVT(Encrypted Variable Token) is a new token that we can use to replace NFT in metaverse and physical world.
 
 ## Why EVT
 
 NFT is still limited to few applicable fields such as digital arts because of the aspects below.
+
 - Privacy and copyright protection
 - Variable property
 - Industry metadata
@@ -19,20 +20,22 @@ NFT is still limited to few applicable fields such as digital arts because of th
 EVT support the development of encrypted and variable decentralized applications.
 
 ## EVT vs NFT
-|           | NFT                                                         | EVT                                                          |
-| --------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
-| Concept   | Non- Fungible Token                                         | Encrypted Variable Token                                     |
+
+|           | NFT                                                         | EVT                                                                                                                                                                                |
+| --------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Concept   | Non- Fungible Token                                         | Encrypted Variable Token                                                                                                                                                           |
 | Features  | Invariable, non-programming                                 | Data is categorized as invariable and variable parts. variable data has multiple dimensions including time-based, space-based, function-based, oracle-based, fuse-based, ODI, etc. |
-|           | Compatible with NRC7                                        | Compatible with NRC7                                         |
-|           | Image, video, audio in NFT is public.                      | support multiple cryptography algorithm including AES, ECDSA, RSA, Lattice-based cryptography, etc. |
-|           | /                                                           | Builtin industry metadata                                    |
-|           | /                                                           | Custom Development Tools                                     |
-|           | /                                                           | Industry solutions                                           |
-| Use Cases | Digital Art such as Cryptopunks, Bored Ape Yacht Club(BAYC) | Movie&Music copyright trading, Streaming media, ODI, Assets group, game, metaverse, digital ticket, etc. |
+|           | Compatible with NRC7                                        | Compatible with NRC7                                                                                                                                                               |
+|           | Image, video, audio in NFT is public.                       | support multiple cryptography algorithm including AES, ECDSA, RSA, Lattice-based cryptography, etc.                                                                                |
+|           | /                                                           | Builtin industry metadata                                                                                                                                                          |
+|           | /                                                           | Custom Development Tools                                                                                                                                                           |
+|           | /                                                           | Industry solutions                                                                                                                                                                 |
+| Use Cases | Digital Art such as Cryptopunks, Bored Ape Yacht Club(BAYC) | Movie&Music copyright trading, Streaming media, ODI, Assets group, game, metaverse, digital ticket, etc.                                                                           |
 
 ## EVT Sources
 
 ### Variable Interfaces
+
 ```solidity
 interface EVTVariable {
     /// @notice Set the dynamic property
@@ -65,7 +68,9 @@ interface EVTVariable {
     function supportsProperty(bytes32 _propertyID) external view returns (bool);
 }
 ```
+
 ### Encryption Interfaces
+
 ```solidity
 interface EVTEncryption {
     /// @notice Register the encrypted key
@@ -104,19 +109,21 @@ interface EVTEncryption {
     function getEncryptedKeyValue(uint256 _tokenId, bytes32 _encryptedKeyID) external view returns (bytes);
 }
 ```
+
 ## What are EVTs used for
+
 - Metaverse — buildings, avatars, flowers, animals
 - Physical property — houses, artwork, movies, tickets
 - "Negative value" assets — loans, burdens and other responsibilities
 
 ## EVT Demo
+
 - InfinityFlower
 - SecureMovie
 
 ## Reference
+
 - https://www.newtonproject.org/
 - https://neps.newtonproject.org/neps/nep-53/
 - https://github.com/newtonproject/evt-lib
 - https://www.npmjs.com/package/@newton-protocol/evt-lib
-=======
-## ETV
