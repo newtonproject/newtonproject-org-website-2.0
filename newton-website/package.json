@@ -31,6 +31,7 @@
     "gatsby-source-filesystem": "^4.17.0",
     "gatsby-transformer-remark": "^5.17.0",
     "gatsby-transformer-sharp": "^4.15.1",
+    "is-relative-url": "^4.0.0",
     "node-sass": "^4.14.1",
     "npm": "^8.12.1",
     "prop-types": "^15.8.1",
@@ -39,7 +40,8 @@
     "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "unist-util-visit-parents": "^5.1.0"
   },
   "devDependencies": {
     "@types/mdx-js__react": "^1.5.5",
