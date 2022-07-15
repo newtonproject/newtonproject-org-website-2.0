@@ -126,7 +126,7 @@ const SiteNavMenu = () => {
               <span></span>
             </div>
             <div className={'header-down'}>
-              <Link to="/newton/">{intl.formatMessage({ id: 'Newton2.0' })}</Link>
+              <Link to="/newton2/">{intl.formatMessage({ id: 'Newton2.0' })}</Link>
               <Link to="/evt/">{intl.formatMessage({ id: 'EVT' })}</Link>
               <Link to="/roadmap/">{intl.formatMessage({ id: 'Roadmap' })}</Link>
             </div>
