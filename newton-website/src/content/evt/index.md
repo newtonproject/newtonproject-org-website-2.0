@@ -1,6 +1,6 @@
 ---
 title: EVT
-description: About the team, community and mission of newtonproject.org
+description: The introduction of EVT
 lang: en
 sidebar: true
 ---
