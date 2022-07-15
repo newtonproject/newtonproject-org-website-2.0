@@ -11,8 +11,6 @@ sidebar: true
 
 Newton 2.0 is the next generation blockchain network designed for Web3 and Metaverse, conceived in response to the shortcomings of existing platforms and designed to enable a new era of large-scale decentralized applications.
 
-Newton 2.0 draft(Updating),Welcome to the discussion,Last updated:July 14, 2022.
-
 ## 1 Motivation
 
 With the rapid growth of Web3 and Metaverse, we are facing the new chanllegs.
