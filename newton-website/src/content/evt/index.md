@@ -1,6 +1,6 @@
 ---
 title: EVT
-description: About the team, community and mission of ethereum.org
+description: About the team, community and mission of newtonproject.org
 lang: en
 sidebar: true
 ---
