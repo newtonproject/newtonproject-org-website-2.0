@@ -118,10 +118,10 @@ interface EVTEncryption {
 
 ## EVT Demo
 
-- InfinityFlower
+- SecureMovie
   - [Demo Preview](https://secure-movie.vercel.app/)
   - [Source Code](https://github.com/newtonproject/meta-movie)
-- SecureMovie
+- InfinityFlower
   - [Demo Preview](https://infinity-flower-3d.vercel.app/)
   - [Source Code](https://github.com/andverse-core/Infinity-Flower)
 
@@ -130,4 +130,3 @@ interface EVTEncryption {
 - https://www.newtonproject.org/
 - https://neps.newtonproject.org/neps/nep-53/
 - https://github.com/newtonproject/evt-lib
-- https://www.npmjs.com/package/@newton-protocol/evt-lib
