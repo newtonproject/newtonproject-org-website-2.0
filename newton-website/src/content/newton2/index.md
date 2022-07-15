@@ -11,8 +11,6 @@ sidebar: true
 
 Newton 2.0 is the next generation blockchain network designed for Web3 and Metaverse, conceived in response to the shortcomings of existing platforms and designed to enable a new era of large-scale decentralized applications.
 
-Newton 2.0 draft(Updating),Welcome to the discussion,Last updated:July 14, 2022.
-
 ## 1 Motivation
 
 With the rapid growth of Web3 and Metaverse, we are facing the new chanllegs.
@@ -103,7 +101,7 @@ Governance has played a key role in the evolution of the Newton blockchain platf
 - The modification of system parameters is delayed, including the effective time of parameters and the frequency of parameter modification.
 - The range of system parameters to be modified is limited. Otherwise, system stability may be affected.
 
-### 3.4 Minting Incentive
+### 3.3 Minting Incentive
 
 The minting of **$NEW** is used to incentive nodes to work honestly, process transactions, and maintain network security. This is done through special minting transactions.
 
@@ -111,7 +109,7 @@ The node gains the right to participate in the consensus process by stake **$NEW
 
 Due to the consensus mechanism of randomly selecting block nodes, the casting process of **$NEW** does not produce the Matthew effect of "the rich get richer".
 
-### 3.5 Fee Mechanism
+### 3.4 Fee Mechanism
 
 Starting with newton 2.0, the Newton blockchain fee mechanism was completely redesigned, following the principle that the transfer and consumption of fees must be fair to all **$NEW** holders.
 
