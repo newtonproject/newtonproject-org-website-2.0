@@ -118,7 +118,7 @@ interface EVTEncryption {
 
 ## EVT Demo
 
-- SecureMovie
+- MetaMovie
   - [Demo Preview](https://secure-movie.vercel.app/)
   - [Source Code](https://github.com/newtonproject/meta-movie)
 - InfinityFlower
