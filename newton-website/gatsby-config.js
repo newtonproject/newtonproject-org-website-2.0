@@ -69,7 +69,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-env-variables`,
       options: {
-        allowList: ["GATSBY_API_URL", "GATSBY_INTL_GITHUB","GATSBY_MD_GITHUB"]
+        allowList: ["GATSBY_API_URL", "GATSBY_INTL_GITHUB", "GATSBY_MD_GITHUB"]
       },
     },
     // md
@@ -81,7 +81,7 @@ module.exports = {
       },
       __key: "md",
     },
-  // Ability to set custom IDs for headings (for translations)
+    // Ability to set custom IDs for headings (for translations)
     // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
     `gatsby-remark-autolink-headers`,
     // Image support in markdown
@@ -94,18 +94,17 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-      },
-      // Workaround to fix `backgroundColor` bug:
-      // https://github.com/gatsbyjs/gatsby/issues/25272
-      plugins: [
-        {
-          resolve: `gatsby-remark-images`,
-          options: {
-            backgroundColor: `transparent`,
-            maxWidth: 1200,
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              backgroundColor: `transparent`,
+              maxWidth: 1200,
+            },
           },
-        },
-      ],
+        ],
+      },
+
       // Note: in order for MDX to work with gatsby-remark-plugins
       // The plugin must be listed top-level & in gatsbyRemarkPlugins
       // See: https://www.gatsbyjs.org/docs/mdx/plugins/
@@ -144,7 +143,7 @@ module.exports = {
         path: `${__dirname}/src/content`,
         name: 'content',
       },
-    }
+    },
     // `gatsby-transformer-remark`,
     // `gatsby-plugin-emotion`,
     // {
@@ -153,5 +152,18 @@ module.exports = {
     //     pathToConfigModule: `src/utils/typography`,
     //   },
     // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      },
+    },
+    `gatsby-transformer-gitinfo`,
+    {
+      resolve: `gatsby-transformer-gitinfo`,
+      options: {
+        include: /\.md$|\.csv/i, // Only .md & .csv files
+      },
+    },
   ],
 }
