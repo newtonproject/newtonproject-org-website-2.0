@@ -15,7 +15,7 @@ export function arrDate(dateTime: string) {
     mm = 'May'
   } else if (month == '6' || month == '06') {
     mm = 'June'
-  } else if (month == '7' || month == '06') {
+  } else if (month == '7' || month == '07') {
     mm = 'July'
   } else if (month == '8' || month == '08') {
     mm = 'August'
@@ -28,7 +28,7 @@ export function arrDate(dateTime: string) {
   } else if (month == '12') {
     mm = 'December'
   }
-  return mm + ' ' + timeArr[0] + ',' + dateArr[0]
+  return mm + ' ' + timeArr[0] + ', ' + dateArr[0]
 }
 
 export function arrDateBanner(dateTime: string) {
