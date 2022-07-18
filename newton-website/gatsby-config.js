@@ -152,12 +152,12 @@ module.exports = {
     //     pathToConfigModule: `src/utils/typography`,
     //   },
     // },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./src/data/`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `./src/data/`,
+    //   },
+    // },
     `gatsby-transformer-gitinfo`,
     {
       resolve: `gatsby-transformer-gitinfo`,
