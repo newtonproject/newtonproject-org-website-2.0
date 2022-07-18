@@ -18,6 +18,7 @@ import H4 from '../customMdx/h4'
 import H5 from '../customMdx/h5'
 import H6 from '../customMdx/h6'
 import Codeblock from '../customMdx/codeblock'
+import { arrDate } from '../utils/createTime'
 
 const components = {
   Link,
@@ -30,9 +31,9 @@ const components = {
   pre: Codeblock
 } // Provide common components here
 
-const DocsPage = ({ data: { allMdx } }: any) => {
+const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   // console.log(JSON.stringify(allMdx))
-
+  const gitLogLatestDate = allFile.edges[0].node.fields.gitLogLatestDate
   const content = allMdx.edges[0].node
   const tableOfContents = content.tableOfContents.items
   const slug = allMdx.edges[0].node.slug
@@ -53,6 +54,10 @@ const DocsPage = ({ data: { allMdx } }: any) => {
       <Header />
       <div className={'container docs'}>
         <div className={'docs-content'}>
+          <div className={'updated'}>
+            Page last updated :&nbsp;
+            {gitLogLatestDate && gitLogLatestDate !== undefined ? arrDate(gitLogLatestDate) : null}
+          </div>
           <h1 className={'title'}>{content.frontmatter.title}</h1>
           <MDXProvider components={components}>
             <MDXRenderer>{content.body}</MDXRenderer>
@@ -176,7 +181,7 @@ const DocsPage = ({ data: { allMdx } }: any) => {
 }
 // tableOfContents(maxDepth: 2)
 export const query = graphql`
-  query ($slug: String!) {
+  query ($slug: String!, $relativeDirectory: String!) {
     allMdx(filter: { slug: { eq: $slug } }) {
       edges {
         node {
@@ -187,6 +192,18 @@ export const query = graphql`
             title
           }
           tableOfContents
+        }
+      }
+    }
+    allFile(filter: { relativeDirectory: { eq: $relativeDirectory } }) {
+      edges {
+        node {
+          fields {
+            gitLogLatestAuthorName
+            gitLogLatestAuthorEmail
+            gitLogLatestDate
+          }
+          relativeDirectory
         }
       }
     }

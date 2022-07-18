@@ -80,6 +80,14 @@ const GlobalCommunity: React.FC<childProps> = props => {
             <h5>{intl.formatMessage({ id: 'YouTube' })}</h5>
           </a>
         </li>
+        <li>
+          <a href="https://discord.com/invite/BSbgK6J" target="_blank">
+            <div className={'global-img'}>
+              <StaticImage placeholder="blurred" alt="discord" src="../../static/images/home/discord.png" />
+            </div>
+            <h5>{intl.formatMessage({ id: 'Discord' })}</h5>
+          </a>
+        </li>
       </ul>
     </div>
   )
