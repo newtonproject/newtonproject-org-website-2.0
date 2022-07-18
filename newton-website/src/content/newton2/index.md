@@ -5,9 +5,9 @@ lang: en
 sidebar: true
 ---
 
-*Last updated:July 14.*
+_Last updated:July 14._
 
-*This draft is a work in progress,Welcome to join our <a href="https://t.me/Newtonproject"> telegram group</a> for discussion.*
+_This draft is a work in progress,Welcome to join our <a href="https://t.me/Newtonproject"> telegram group</a> for discussion._
 
 Newton 2.0 is the next generation blockchain network designed for Web3 and Metaverse, conceived in response to the shortcomings of existing platforms and designed to enable a new era of large-scale decentralized applications.
 

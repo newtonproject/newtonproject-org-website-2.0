@@ -46,6 +46,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allMdx.edges.forEach(({ node }) => {
     // console.log("start create page success====111" + node.frontmatter.lang);
     // console.log("start create page for:" + node.slug);
+    let relativeDirectory = node.slug;
+    if(relativeDirectory.endsWith("/")) {
+      relativeDirectory = relativeDirectory.substring(0, relativeDirectory.length - 1)
+    }
     createPage({
       path: `${node.slug}`,
       component: path.resolve(`./src/templates/docs.tsx`),
@@ -53,7 +57,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         // Data passed to context is available
         // in page queries as GraphQL variables.
         slug: node.slug,
-        id: node.id
+        id: node.id,
+        relativeDirectory: relativeDirectory
       }
     })
     // console.log("start create page success====" + node.slug);

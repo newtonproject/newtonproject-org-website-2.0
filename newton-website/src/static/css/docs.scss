@@ -2,6 +2,9 @@
   @apply flex flex-row justify-between mb-32;
   .docs-content {
     @apply w-full md:w-[60%] mr-[16%];
+    .updated {
+      @apply pt-10 text-gray6a;
+    }
     ul {
       li {
         @apply relative pl-3 leading-8;
@@ -14,14 +17,12 @@
     }
     pre {
       &.code-block {
-        max-width: 100%;
+        @apply max-w-full p-4 text-xs;
         overflow-x: scroll;
         background-color: rgb(242, 242, 242);
         border-radius: 0.25rem;
-        padding: 1rem;
         border: 1px solid rgba(0, 0, 0, 0.05);
         white-space: pre-wrap;
-        font-size: 13px;
       }
     }
   }
