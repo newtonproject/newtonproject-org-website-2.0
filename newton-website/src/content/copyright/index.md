@@ -1,6 +1,6 @@
 ---
-title: Contact Us
-description: Contact Us
+title: Copyright
+description: Copyright
 lang: en
 sidebar: true
 ---
