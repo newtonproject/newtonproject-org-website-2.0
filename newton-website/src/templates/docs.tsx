@@ -33,7 +33,10 @@ const components = {
 
 const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   // console.log(JSON.stringify(allMdx))
-  const gitLogLatestDate = allFile.edges[0].node.fields.gitLogLatestDate
+  let gitLogLatestDate
+  if (allFile.edges[0].node.fields !== null) {
+    gitLogLatestDate = allFile.edges[0].node.fields.gitLogLatestDate
+  }
   const content = allMdx.edges[0].node
   const tableOfContents = content.tableOfContents.items
   const slug = allMdx.edges[0].node.slug
