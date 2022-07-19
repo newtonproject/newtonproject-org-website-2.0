@@ -1,6 +1,6 @@
 ---
-title: terms-of-use
-description: terms-of-use
+title: Terms of Use
+description: Terms of Use
 lang: en
 sidebar: true
 ---
