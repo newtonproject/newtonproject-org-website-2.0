@@ -1,13 +1,13 @@
 ---
 title: EVT
-description: The introduction of EVT
+description: Introduction of EVT
 lang: en
 sidebar: true
 ---
 
-## What's an EVT
+## What's EVT
 
-EVT(Encrypted Variable Token) is a new token that we can use to replace NFT in metaverse and physical world.
+EVT(Encrypted Variable Token) is a new kind of token type that we can use to replace NFT in metaverse and physical world.
 
 ## Why EVT
 
@@ -32,7 +32,7 @@ EVT support the development of encrypted and variable decentralized applications
 |           | /                                                           | Industry solutions                                                                                                                                                                 |
 | Use Cases | Digital Art such as Cryptopunks, Bored Ape Yacht Club(BAYC) | Movie&Music copyright trading, Streaming media, ODI, Assets group, game, metaverse, digital ticket, etc.                                                                           |
 
-## EVT Sources
+## EVT Specs
 
 ### Variable Interfaces
 
