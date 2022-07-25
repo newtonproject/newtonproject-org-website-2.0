@@ -11,7 +11,7 @@ _This draft is a work in progress,Welcome to join our <a href="https://t.me/Newt
 
 Newton 2.0 is the next generation blockchain network designed for Web3 and Metaverse, conceived in response to the shortcomings of existing platforms and designed to enable a new era of large-scale decentralized applications.
 
-## 1.Motivation
+## 1. Motivation
 
 With the rapid growth of Web3 and Metaverse, we are facing the new chanllegs.
 
@@ -37,7 +37,7 @@ The contributions of newton 2.0 is as follows:
 
   We designed development kits for Web3, Metaverse and other industries to greatly improve the efficiency of application development.
 
-## 2.Technology
+## 2. Technology
 
 ### 2.1 NewConsensus
 
@@ -83,7 +83,7 @@ Supports the following features:
 
 - Support for inter-chain messaging and contract invocation
 
-## 3.$NEW
+## 3. $NEW
 
 ### 3.1 What is $NEW
 
