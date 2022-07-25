@@ -154,6 +154,9 @@
     }
     dd {
       @apply md:flex md:flex-wrap md:flex-col text-sm md:w-full md:ml-5;
+      a {
+        @apply hover:text-gray20;
+      }
       span {
         @apply flex flex-col md:flex-row text-center;
         &:nth-child(1) {
@@ -276,7 +279,7 @@
       @apply ml-8 sm:ml-11 md:ml-40;
     }
     .wallet-a {
-      @apply inline;
+      @apply inline hover:text-gray20;
     }
   }
 }
