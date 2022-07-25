@@ -125,13 +125,13 @@ interface EVTEncryption {
 - MetaMovie
 
   - [Demo Preview](https://secure-movie.vercel.app/)
-  
+
   - [Source Code](https://github.com/newtonproject/meta-movie)
-  
+
 - InfinityFlower
 
   - [Demo Preview](https://infinity-flower-3d.vercel.app/)
-  
+
   - [Source Code](https://github.com/andverse-core/Infinity-Flower)
 
 ## Reference
