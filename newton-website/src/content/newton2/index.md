@@ -58,8 +58,11 @@ NewEVM is a fully Ethereum compliant virtual machine.
 Newton 2.0 supports extensible transaction types, with built-in types including:
 
 - data storage
+
 - atomic swap between different virutal machines
+
 - multiple signatures
+
 - all kinds of tokens such as NFT, EVT
 
 In addition to the built-in types, Newton 2.0 also supports custom extended transaction types.
@@ -75,7 +78,9 @@ NewBridge 2.0 is based on Intel SGX and multi-party computing technology and lin
 Supports the following features:
 
 - Support NFT, EVT cross-chain
+
 - Supports atom exchange between chains
+
 - Support for inter-chain messaging and contract invocation
 
 ## 3 $NEW
@@ -83,11 +88,17 @@ Supports the following features:
 ### 3.1 What is $NEW
 
 - **$NEW** is the native currency of the Newton blockchain.
+
 - **$NEW** The total amount is 100 billion, of which 60 billion is generated through mining rewards.
+
 - When Newton 2.0 goes live, **$NEW** will be the currency of total deflation.
+
 - The amount of mining bonus the validators get is proportional to the amount of staking **$NEW**.
+
 - The longer the validators lock, the more rewards.
+
 - The validators are rewarded with Proof of Uptime (PoU).
+
 - As of February 1, 2023, the remaining supply is 56665276147.8292.
 
 Starting in 2023, the supply of **$NEW** and Bitcoin, for example, will have similar rules, and the number of supplies will decrease each year. Due to the built-in destruction mechanism, **$NEW** will be very scarce. The number of **$NEW** supplied per year will be proportional to the number of pledges and the length of pledges. This feature facilitates the stability and security of the blockchain network in the short, medium and long term. The graph below shows the supply curve of **$NEW** in the case of 20% pledge, 50% pledge, and 100% pledge.
@@ -99,6 +110,7 @@ Governance has played a key role in the evolution of the Newton blockchain platf
 **$NEW** Governance follows its own design philosophy of ensuring predictability and security in the short term while giving systems flexibility and control in the long term. Design philosophy is embodied in two aspects, including:
 
 - The modification of system parameters is delayed, including the effective time of parameters and the frequency of parameter modification.
+
 - The range of system parameters to be modified is limited. Otherwise, system stability may be affected.
 
 ### 3.3 Minting Incentive
@@ -126,4 +138,5 @@ Starting with newton 2.0, the Newton blockchain fee mechanism was completely red
 ## Reference
 
 1. <a href="https://github.com/newtonproject/newton-2.0-papers/blob/main/litepaper.md">Newton 2.0 LitePaper</a>
+
 2. <a href="https://github.com/newtonproject/newton-2.0-papers/blob/main/economy-paper.md">Economic Model</a>
