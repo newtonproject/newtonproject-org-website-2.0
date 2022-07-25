@@ -214,8 +214,20 @@
     // font-family: 'Ubuntu-Medium';
   }
 
+  ul {
+    li {
+      div {
+        @apply my-4 pl-4;
+      }
+      &:nth-child(1) {
+        div {
+          @apply mt-0;
+        }
+      }
+    }
+  }
+
   .title-a-content {
-    @apply my-4 pl-4;
     a {
       @apply relative overflow-ellipsis max-w-[14.5rem] ml-0 text-left;
       &::before {
