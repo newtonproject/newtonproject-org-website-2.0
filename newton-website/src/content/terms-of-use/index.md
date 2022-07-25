@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## PLEASE READ THESE TERMS OF USE BEFORE USING THE WEBSITE.
+## Please Read These Terms of Use before Using the Website
 
 Acceptance of the Terms of Use These terms of use are entered into by and between You and the Newton Foundation ('Company', 'we' or 'us'). The following terms and conditions, together with any documents they expressly incorporate by reference (collectively, these 'Terms of Use'), govern your access to and use of newtonproject.org, including any content, functionality and services offered on or through newtonproject.org.
 
@@ -26,6 +26,7 @@ We reserve the right to withdraw or amend this Website, and any service or mater
 You are responsible for:
 
 - Making all arrangements necessary for you to have access to the Website.
+
 - Ensuring that all persons who access the Website through your internet connection are aware of these Terms of Use and comply with them.
 
 To access the Website or some of the resources it offers, you may be asked to provide certain registration details or other information. It is a condition of your use of the Website that all the information you provide on the Website is correct, current and complete. You agree that all information you provide to register using this Website or otherwise, including, but not limited to, using any interactive features on the Website, is governed by our Privacy Policy, and you consent to all actions we take with respect to your information consistent with our Privacy Policy.
@@ -39,13 +40,17 @@ The Website and its entire contents, features and functionality (including but n
 These Terms of Use permit you to use the Website for your personal, non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store or transmit any of the material on our Website, except as follows:
 
 - Your computer may temporarily store copies of such materials in RAM incidental to your accessing and viewing those materials.
+
 - You may store files that are automatically cached by your Web browser for display enhancement purposes.
+
 - You may print or download one copy of a reasonable number of pages of the Website for your own personal, non-commercial use and not for further reproduction, publication or distribution.
+
 - If we provide desktop, mobile or other applications for download, you may download a single copy to your computer or mobile device solely for your own personal, non-commercial use, provided you agree to be bound by our end user license agreement for such applications.
 
-## You must not
+## You Must Not
 
 - Modify copies of any materials from this site.
+
 - Delete or alter any copyright, trademark or other proprietary rights notices from copies of materials from this site.
 
 You must not access or use for any commercial purposes any part of the Website or any services or materials available through the Website.
@@ -63,20 +68,31 @@ The Company name, the terms Newton, the Company logo and all related names, logo
 You may use the Website only for lawful purposes and in accordance with these Terms of Use. You agree not to use the Website:
 
 - In any way that violates any applicable federal, state, local or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).
+
 - For the purpose of exploiting, harming or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.
+
 - To send, knowingly receive, upload, download, use or re-use any material which does not comply with these Terms of Use.
+
 - To transmit, or procure the sending of, any advertising or promotional material without our prior written consent, including any 'junk mail', 'chain letter' or 'spam' or any other similar solicitation.
+
 - To impersonate or attempt to impersonate the Company, a Company employee, another user or any other person or entity (including, without limitation, by using e-mail addresses or screen names associated with any of the foregoing).
+
 - To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website, or which, as determined by us, may harm the Company or users of the Website or expose them to liability.
 
 ### Additionally, you agree not to:
 
 - Use the Website in any manner that could disable, overburden, damage, or impair the site or interfere with any other party's use of the Website, including their ability to engage in real time activities through the Website.
+
 - Use any robot, spider or other automatic device, process or means to access the Website for any purpose, including monitoring or copying any of the material on the Website.
+
 - Use any manual process to monitor or copy any of the material on the Website or for any other unauthorized purpose without our prior written consent.
+
 - Use any device, software or routine that interferes with the proper working of the Website.
+
 - Introduce any viruses, Trojan horses, worms, logic bombs or other material which is malicious or technologically harmful.
+
 - Attempt to gain unauthorized access to, interfere with, damage or disrupt any parts of the Website, the server on which the Website is stored, or any server, computer or database connected to the Website.
+
 - Attack the Website via a denial-of-service attack or a distributed denial-of-service attack.
   Otherwise attempt to interfere with the proper working of the Website.
 
@@ -108,17 +124,17 @@ If the Website contains links to other sites and resources provided by third par
 
 ## Disclaimer of Warranties
 
-You understand that we cannot and do not guarantee or warrant that files available for downloading from the internet or the Website will be free of viruses or other destructive code. You are responsible for implementing sufficient procedures and checkpoints to satisfy your particular requirements for anti-virus protection and accuracy of data input and output, and for maintaining a means external to our site for any reconstruction of any lost data. WE WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE CAUSED BY A DISTRIBUTED DENIAL-OF-SERVICE ATTACK, VIRUSES OR OTHER TECHNOLOGICALLY HARMFUL MATERIAL THAT MAY INFECT YOUR COMPUTER EQUIPMENT, COMPUTER PROGRAMS, DATA OR OTHER PROPRIETARY MATERIAL DUE TO YOUR USE OF THE WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR TO YOUR DOWNLOADING OF ANY MATERIAL POSTED ON IT, OR ON ANY WEBSITE LINKED TO IT.
+You understand that we cannot and do not guarantee or warrant that files available for downloading from the internet or the website will be free of viruses or other destructive code. you are responsible for implementing sufficient procedures and checkpoints to satisfy your particular requirements for anti-virus protection and accuracy of data input and output, and for maintaining a means external to our site for any reconstruction of any lost data. we will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of the website or any services or items obtained through the website or to your downloading of any material posted on it, or on any website linked to it.
 
-YOUR USE OF THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE ARE PROVIDED ON AN 'AS IS' AND 'AS AVAILABLE' BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. NEITHER THE COMPANY NOR ANY PERSON ASSOCIATED WITH THE COMPANY MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY OR AVAILABILITY OF THE WEBSITE. WITHOUT LIMITING THE FOREGOING, NEITHER THE COMPANY NOR ANYONE ASSOCIATED WITH THE COMPANY REPRESENTS OR WARRANTS THAT THE WEBSITE, ITS CONTENT OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE WILL BE ACCURATE, RELIABLE, ERROR-FREE OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT OUR SITE OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.
+Your use of the website, its content and any services or items obtained through the website is at your own risk. the website, its content and any services or items obtained through the website are provided on an 'as is' and 'as available' basis, without any warranties of any kind, either express or implied. neither the company nor any person associated with the company makes any warranty or representation with respect to the completeness, security, reliability, quality, accuracy or availability of the website. without limiting the foregoing, neither the company nor anyone associated with the company represents or warrants that the website, its content or any services or items obtained through the website will be accurate, reliable, error-free or uninterrupted, that defects will be corrected, that our site or the server that makes it available are free of viruses or other harmful components or that the website or any services or items obtained through the website will otherwise meet your needs or expectations.
 
-THE COMPANY HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR PARTICULAR PURPOSE.
+The company hereby disclaims all warranties of any kind, whether express or implied, statutory or otherwise, including but not limited to any warranties of merchantability, non-infringement and fitness for particular purpose.
 
-SOME JURISDICTIONS DO NOT ALLOW EXCLUSION OF WARRANTIES OR LIMITATIONS ON THE DURATION OF IMPLIED WARRANTIES, SO THE ABOVE DISCLAIMER MAY NOT APPLY TO YOU IN THEIR ENTIRETY, BUT WILL APPLY TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW.
+Some jurisdictions do not allow exclusion of warranties or limitations on the duration of implied warranties, so the above disclaimer may not apply to you in their entirety, but will apply to the maximum extent permitted by applicable law.
 
 ## Limitation on Liability
 
-IN NO EVENT WILL THE COMPANY, ITS AFFILIATES OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE. THE FOREGOING DOES NOT AFFECT ANY LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW WHICH MAY INCLUDE FRAUD.
+In no event will the company, its affiliates or their licensors, service providers, employees, agents, officers or directors be liable for damages of any kind, under any legal theory, arising out of or in connection with your use, or inability to use, the website, any websites linked to it, any content on the website or such other websites or any services or items obtained through the website or such other websites, including any direct, indirect, special, incidental, consequential or punitive damages, including but not limited to, personal injury, pain and suffering, emotional distress, loss of revenue, loss of profits, loss of business or anticipated savings, loss of use, loss of goodwill, loss of data, and whether caused by tort (including negligence), breach of contract or otherwise, even if foreseeable. the foregoing does not affect any liability which cannot be excluded or limited under applicable law which may include fraud.
 
 ## Indemnification
 
