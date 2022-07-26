@@ -1,7 +1,7 @@
 .docs {
   @apply flex flex-row justify-between mb-32;
   .docs-content {
-    @apply w-full md:w-[60%] mr-[16%];
+    @apply w-full md:w-[60%] md:mr-[16%];
     .updated {
       @apply pt-10 text-gray6a;
     }
@@ -55,17 +55,18 @@
     }
   }
   p {
-    @apply my-8;
+    @apply my-8 leading-[1.8rem];
   }
   .title-small {
     @apply text-xl font-bold;
   }
   a {
-    @apply text-gray20 ml-1 mr-6 relative;
-    &::after {
-      content: '';
-      @apply absolute top-[1px] right-[-19px] w-4 h-4 bg-contain bg-docs-a bg-no-repeat;
-    }
+    @apply text-gray20 relative;
+    // &::after {
+    //   content: '';
+    //   @apply absolute top-1/2 right-[-30px] w-4 h-4 bg-contain bg-docs-a bg-no-repeat;
+    //   transform: translate(-50%, -50%);
+    // }
   }
   ul {
     li {
@@ -84,13 +85,6 @@
   }
   table {
     @apply cursor-pointer w-full;
-    // background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
-    // box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
-    // border: 2px solid rgba(255, 255, 255, 0);
-    // &:hover {
-    //   box-shadow: -4px -4px 20px 5px #ffffff, 1px 1px 20px 0px rgba(0, 64, 145, 0.12);
-    //   @apply border-grage5f border-solid border-2;
-    // }
     th,
     td {
       @apply text-center py-4;
@@ -202,6 +196,9 @@
     &::after {
       @apply hidden;
     }
+    span {
+      @apply hover:text-gray20;
+    }
     img {
       @apply w-[24px] h-[24px];
     }
@@ -217,11 +214,23 @@
   }
   .title-a {
     @apply inline-block text-grag2c text-lg mb-4;
-    font-family: 'Ubuntu-Medium';
+    // font-family: 'Ubuntu-Medium';
+  }
+
+  ul {
+    li {
+      div {
+        @apply my-4 pl-4;
+      }
+      &:nth-child(1) {
+        div {
+          @apply mt-0;
+        }
+      }
+    }
   }
 
   .title-a-content {
-    @apply my-4 pl-4;
     a {
       @apply relative overflow-ellipsis max-w-[14.5rem] ml-0 text-left;
       &::before {

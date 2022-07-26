@@ -70,7 +70,7 @@ export default function Banner() {
             <div className={'banner-title'}>
               {intl.formatMessage({ id: 'Infrastructure' })}
               <br />
-              {intl.formatMessage({ id: 'For The' })}
+              {intl.formatMessage({ id: 'for the' })}
               <br />
               {intl.formatMessage({ id: 'Community' })}
               <br />
@@ -108,7 +108,7 @@ export default function Banner() {
           <div className={'banner-title'}>
             {intl.formatMessage({ id: 'Infrastructure' })}
             <br />
-            {intl.formatMessage({ id: 'For The' })}
+            {intl.formatMessage({ id: 'for the' })}
             <br />
             {intl.formatMessage({ id: 'Community' })} {intl.formatMessage({ id: 'Economy' })}
           </div>

@@ -106,24 +106,14 @@
 }
 .ecosystem-submit {
   @apply px-0 md:px-32 bg-blue92 mt-[5.5rem] md:mt-36 mb-20 md:mb-0;
+  .submit-box {
+    @apply h-64;
+  }
   a {
-    @apply block h-64 bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center md:flex justify-center items-center;
+    @apply bg-ecosystem-submit-h5 md:bg-ecosystem-submit  bg-no-repeat bg-cover text-center flex justify-center items-center;
   }
   i {
-    @apply text-white text-base py-4 md:px-24 bg-blue70 border-solid border-blue59 border-2 rounded-lg;
-  }
-  .submit {
-    @apply hidden md:block;
-  }
-  .add-content,
-  .add-community {
-    @apply block md:hidden;
-  }
-  .add-content {
-    @apply text-white text-lg pt-[4.7rem] mb-6;
-  }
-  .add-community {
-    @apply mx-5;
+    @apply w-full md:w-[340px] text-white text-base block mx-4 md:mx-0 py-4  bg-blue70 border-solid border-blue59 border-2 rounded-lg;
   }
 }
 // getNew
@@ -154,12 +144,15 @@
     }
     dd {
       @apply md:flex md:flex-wrap md:flex-col text-sm md:w-full md:ml-5;
+      a {
+        @apply text-gray20;
+      }
       span {
         @apply flex flex-col md:flex-row text-center;
         &:nth-child(1) {
           @apply md:mb-5;
         }
-        i {
+        > i {
           &:nth-child(1) {
             @apply text-xl md:text-sm mt-8 mb-4 md:my-0;
             font-family: 'Ubuntu-Bold';
@@ -270,13 +263,13 @@
   }
   .Wallet {
     a {
-      @apply w-[8.4rem];
+      @apply w-[8.57rem];
     }
     .new-mask {
-      @apply ml-8 sm:ml-11 md:ml-40;
+      @apply ml-8 sm:ml-11 md:ml-40 w-[9.8rem];
     }
     .wallet-a {
-      @apply inline;
+      @apply inline text-gray20;
     }
   }
 }
@@ -298,8 +291,36 @@
       @apply block;
     }
   }
+  .ecosystem-submit {
+    a {
+      @apply flex-wrap;
+    }
+    .add-content {
+      @apply text-white text-lg pt-[4.7rem] mb-6 w-full;
+    }
+    .add-community {
+      @apply mx-5 mb-[4.7rem];
+    }
+  }
 }
-@media (min-width: 1450px) {
+// @media (min-width: 1450px) {
+//   #ecosystem {
+//     .getnew-banner {
+//       padding-top: 447px !important;
+//     }
+//   }
+//   #community {
+//     .getnew-banner {
+//       padding-top: 479px !important;
+//     }
+//   }
+//   #getnew {
+//     .getnew-banner {
+//       padding-top: 491px !important;
+//     }
+//   }
+// }
+@media (min-width: 1200px) {
   #ecosystem {
     .getnew-banner {
       padding-top: 447px !important;
