@@ -49,7 +49,7 @@ export default function GetNewContent() {
               <span>
                 <i>{intl.formatMessage({ id: 'Address' })}:&nbsp;</i>
                 <a
-                  href="https://explorer.newtonproject.org/address/0x4309037Eb881dC907d8301175cE7d004B76a202C/transactions>"
+                  href="https://explorer.newtonproject.org/address/0x4309037Eb881dC907d8301175cE7d004B76a202C/transactions"
                   target="_blank"
                 >
                   <i>NEW182K9sX2KE3gw6o7WNNroW1K7FDuvhMfEtkF</i>
@@ -197,13 +197,13 @@ export default function GetNewContent() {
             </a>
           </div>
           <p>
-            <span>{intl.formatMessage({ id: 'Announcement' })}: </span>&lt;
+            <span>{intl.formatMessage({ id: 'Announcement' })}: </span>
             <a
               className={'wallet-a'}
               href={newsEnvUrl + '/announcement/2019/07/17/newchain-new-and-binance-new-09e-swap-instructions/'}
               target="_blank"
             >
-              {intl.formatMessage({ id: 'NewChain NEW and Binance NEW-09E SWAP instructions' })}&gt;
+              &lt;{intl.formatMessage({ id: 'NewChain NEW and Binance NEW-09E SWAP instructions' })}&gt;
             </a>
           </p>
         </div>

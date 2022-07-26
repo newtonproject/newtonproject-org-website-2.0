@@ -97,10 +97,10 @@ export default function EcosystemContent() {
         </dl>
       </div>
       <div className={'ecosystem-submit'}>
-        <a href="https://github.com/newtonproject/ecosystem-projects" target="_blank">
+        <a href="https://github.com/newtonproject/ecosystem-projects" target="_blank" className={'submit-box'}>
           <i className={'submit'}>{intl.formatMessage({ id: 'Submit Your project' })}</i>
-          <span className={'add-content'}>{intl.formatMessage({ id: 'Create a Newton Community With Us' })}</span>
-          <i className={'add-community'}>{intl.formatMessage({ id: 'Add Community' })}</i>
+          {/* <span className={'add-content'}>{intl.formatMessage({ id: 'Create a Newton Community With Us' })}</span>
+          <i className={'add-community'}>{intl.formatMessage({ id: 'Add Community' })}</i> */}
         </a>
       </div>
     </div>

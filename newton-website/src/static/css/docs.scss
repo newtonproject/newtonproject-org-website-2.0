@@ -55,7 +55,7 @@
     }
   }
   p {
-    @apply my-8;
+    @apply my-8 leading-6;
   }
   .title-small {
     @apply text-xl font-bold;
@@ -195,6 +195,9 @@
     }
     &::after {
       @apply hidden;
+    }
+    span {
+      @apply hover:text-gray20;
     }
     img {
       @apply w-[24px] h-[24px];
