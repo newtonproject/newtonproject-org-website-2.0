@@ -47,11 +47,16 @@ export default function GetNewContent() {
             </dt>
             <dd>
               <span>
-                <i>{intl.formatMessage({ id: 'Address' })}:</i>
-                <i>NEW182K9sX2KE3gw6o7WNNroW1K7FDuvhMfEtkF</i>
+                <i>{intl.formatMessage({ id: 'Address' })}:&nbsp;</i>
+                <a
+                  href="https://explorer.newtonproject.org/address/0x4309037Eb881dC907d8301175cE7d004B76a202C/transactions"
+                  target="_blank"
+                >
+                  <i>NEW182K9sX2KE3gw6o7WNNroW1K7FDuvhMfEtkF</i>
+                </a>
               </span>
               <span>
-                <i>{intl.formatMessage({ id: 'Effective Time' })}:</i>
+                <i>{intl.formatMessage({ id: 'Effective Time' })}:&nbsp;</i>
                 <i>2020-01-01 17:48:57</i>
               </span>
             </dd>
@@ -65,11 +70,16 @@ export default function GetNewContent() {
             </dt>
             <dd>
               <span>
-                <i>{intl.formatMessage({ id: 'Address' })}:</i>
-                <i>NEW182GJfscSmL2TjVdqbcVm3uZKGgUSitCjxt4</i>
+                <i>{intl.formatMessage({ id: 'Address' })}:&nbsp;</i>
+                <a
+                  href="https://explorer.newtonproject.org/address/0x23cAa8bfe91db6c14b148bf54aE49DC19e386b35/transactions"
+                  target="_blank"
+                >
+                  <i>NEW182GJfscSmL2TjVdqbcVm3uZKGgUSitCjxt4</i>
+                </a>
               </span>
               <span>
-                <i>{intl.formatMessage({ id: 'Effective Time' })}:</i>
+                <i>{intl.formatMessage({ id: 'Effective Time' })}:&nbsp;</i>
                 <i>2019-05-24 09:32:51 ~ 2020-01-01 17:48:56</i>
               </span>
             </dd>
@@ -187,13 +197,13 @@ export default function GetNewContent() {
             </a>
           </div>
           <p>
-            <span>{intl.formatMessage({ id: 'Announcement' })}: </span>&lt;
+            <span>{intl.formatMessage({ id: 'Announcement' })}: </span>
             <a
               className={'wallet-a'}
               href={newsEnvUrl + '/announcement/2019/07/17/newchain-new-and-binance-new-09e-swap-instructions/'}
               target="_blank"
             >
-              {intl.formatMessage({ id: 'NewChain NEW and Binance NEW-09E SWAP instructions' })}&gt;
+              &lt;{intl.formatMessage({ id: 'NewChain NEW and Binance NEW-09E SWAP instructions' })}&gt;
             </a>
           </p>
         </div>

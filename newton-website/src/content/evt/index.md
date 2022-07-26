@@ -1,20 +1,22 @@
 ---
 title: EVT
-description: The introduction of EVT
+description: Introduction of EVT
 lang: en
 sidebar: true
 ---
 
-## What's an EVT
+## What's EVT
 
-EVT(Encrypted Variable Token) is a new token that we can use to replace NFT in metaverse and physical world.
+EVT(Encrypted Variable Token) is a new kind of token type that we can use to replace NFT in metaverse and physical world.
 
 ## Why EVT
 
 NFT is still limited to few applicable fields such as digital arts because of the aspects below.
 
 - Privacy and copyright protection
+
 - Variable property
+
 - Industry metadata
 
 EVT support the development of encrypted and variable decentralized applications.
@@ -32,7 +34,7 @@ EVT support the development of encrypted and variable decentralized applications
 |           | /                                                           | Industry solutions                                                                                                                                                                 |
 | Use Cases | Digital Art such as Cryptopunks, Bored Ape Yacht Club(BAYC) | Movie&Music copyright trading, Streaming media, ODI, Assets group, game, metaverse, digital ticket, etc.                                                                           |
 
-## EVT Sources
+## EVT Specs
 
 ### Variable Interfaces
 
@@ -113,20 +115,29 @@ interface EVTEncryption {
 ## What are EVTs used for
 
 - Metaverse — buildings, avatars, flowers, animals
+
 - Physical property — houses, artwork, movies, tickets
+
 - "Negative value" assets — loans, burdens and other responsibilities
 
 ## EVT Demo
 
 - MetaMovie
+
   - [Demo Preview](https://secure-movie.vercel.app/)
+
   - [Source Code](https://github.com/newtonproject/meta-movie)
+
 - InfinityFlower
+
   - [Demo Preview](https://infinity-flower-3d.vercel.app/)
+
   - [Source Code](https://github.com/andverse-core/Infinity-Flower)
 
 ## Reference
 
 - https://www.newtonproject.org/
+
 - https://neps.newtonproject.org/neps/nep-53/
+
 - https://github.com/newtonproject/evt-lib

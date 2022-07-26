@@ -44,9 +44,7 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/faq/'} target="_blank">
-                  {intl.formatMessage({ id: 'FAQ' })}
-                </a>
+                <Link to="/faq/">{intl.formatMessage({ id: 'FAQ' })}</Link>
               </dd>
             </dl>
             <dl>
@@ -70,9 +68,7 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/contact/'} target="_blank">
-                  {intl.formatMessage({ id: 'Contact Us' })}
-                </a>
+                <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
               </dd>
               <dd>
                 <a href={newsEnvUrl + '/mediakit/'} target="_blank">
@@ -88,19 +84,13 @@ export default function Footer() {
             <dl>
               <dt>{intl.formatMessage({ id: 'SERVICE TERMS' })}</dt>
               <dd>
-                <a href={newsEnvUrl + '/copyright/'} target="_blank">
-                  {intl.formatMessage({ id: 'Copyright' })}
-                </a>
+                <Link to="/copyright/">{intl.formatMessage({ id: 'Copyright' })}</Link>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/terms-of-use/'} target="_blank">
-                  {intl.formatMessage({ id: 'Terms of Use' })}
-                </a>
+                <Link to="/terms-of-use/">{intl.formatMessage({ id: 'Terms of Use' })}</Link>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/privacy/'} target="_blank">
-                  {intl.formatMessage({ id: 'Privacy Policy' })}
-                </a>
+                <Link to="/privacy/">{intl.formatMessage({ id: 'Privacy Policy' })}</Link>
               </dd>
             </dl>
           </div>
@@ -155,9 +145,7 @@ const FooterMobile = () => {
             </a>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/faq/'} target="_blank">
-              {intl.formatMessage({ id: 'FAQ' })}
-            </a>
+            <Link to="/faq/">{intl.formatMessage({ id: 'FAQ' })}</Link>
           </dd>
         </dl>
         <dl className={'footer-item2'}>
@@ -181,9 +169,7 @@ const FooterMobile = () => {
             </a>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/contact/'} target="_blank">
-              {intl.formatMessage({ id: 'Contact Us' })}
-            </a>
+            <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
           </dd>
           <dd>
             <a href={newsEnvUrl + '/mediakit/'} target="_blank">
@@ -199,19 +185,13 @@ const FooterMobile = () => {
         <dl className={'footer-item3'}>
           <dt>{intl.formatMessage({ id: 'SERVICE TERMS' })}</dt>
           <dd>
-            <a href={newsEnvUrl + '/copyright/'} target="_blank">
-              {intl.formatMessage({ id: 'Copyright' })}
-            </a>
+            <Link to="/copyright/">{intl.formatMessage({ id: 'Copyright' })}</Link>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/terms-of-use/'} target="_blank">
-              {intl.formatMessage({ id: 'Terms of Use' })}
-            </a>
+            <Link to="/terms-of-use/">{intl.formatMessage({ id: 'Terms of Use' })}</Link>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/privacy/'} target="_blank">
-              {intl.formatMessage({ id: 'Privacy Policy' })}
-            </a>
+            <Link to="/privacy/">{intl.formatMessage({ id: 'Privacy Policy' })}</Link>
           </dd>
         </dl>
       </div>
