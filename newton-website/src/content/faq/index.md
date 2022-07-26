@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## 1. What is Newton Project？
+## 1. What Is Newton Project?
 
 Newton Project aims to build infrastructure for community-based economy, and through the provision of services around governance, collaboration and incentives, Newton upgrades corporate economy to a brand new community-based economy that benefits everyone who contributes.
 
@@ -15,14 +15,14 @@ The first application running on Newton is New Mall, which is an on-line chain r
 
 Besides, Newton currently has a global and diverse community distributed over 89 countries. Newton has established 32 overseas telegraph groups covering more than 170,000 people. Community is the foundation for the Newton community-based economy.
 
-## 2. What is Community Economy?
+## 2. What Is Community Economy?
 
 The Newton Project has created the world’s first smart community system which involves both the humans and machines. Together, this helps establish new economic models via smart collaborations and stabilizes the community economy.
 Comparing to traditional business model, It has obvious advantages in terms of Organizational structure, Cooperation mode, Incentive mechanisms, The ownership of the data, and Transactional costs.
 
 Newton is the infrastructure of the community economy and its technical framework includes: the Application layer, the Protocol layer and the Basic foundation technology layer, providing the back bone for complete governance, collaboration, incentives to stabilize the community economy.
 
-## 3. What is the tech behind the Newton Project?
+## 3. What Is the Tech behind the Newton Project?
 
 Newton has a full stack technology architecture to support current Dapps such as NewPay and NewMall.
 This tech infrastructure contains all elements for developers to continuously develop Dapps within the Newton Ecosystem:
@@ -36,17 +36,17 @@ This tech infrastructure contains all elements for developers to continuously de
 
 - The Application Layer: The Dapp Layer. Newton’s premier Dapp, NewMall is the first blockchain secured E-Commerce platform to operate globally. The platform allows Peer to Peer buying and selling without the injection of a commercial intermediary. Through the success of NewMall, this demonstrates a real world use case for blockchain and is a proven system that can be applied towards various other industries such as agriculture, supply chain, finance, public welfare, games etc.
 
-## 4. What are current Newton Project use cases?
+## 4. What Are Current Newton Project Use Cases?
 
 NewMall is chain merchant online retailers combining blockchain and other technologies. Through Newton technology, Newmall eliminates giant business intermediaries and creates a new business paradigm of "everyone recommend seller, everyone promotes, everyone benefits".
 
 In addition to the retail industry, Newton is also committed to continuously applying Newton technology in various fields such as blockchain invoicing, agriculture, supply chain, self-finance, payment, public welfare, and games.
 
-## 5. How big is the Newton Project Communities?
+## 5. How Big Is the Newton Project Communities?
 
 The Newton Project is a global project with communities distributed across 89 countries and growing. Newton has established 32 overseas telegraph groups covering more than 170,000 people as of June, 2019. Community is the foundation for the Newton community-based economy. NewIDs exceeded 650,000.
 
-## 6. What is the Human-Machine Community? How does it work?
+## 6. What Is the Human-Machine Community? How Does It Work?
 
 Newton is made up of two types of governance to help run the system smoothly, humans and machines. The Newton Project believes in the progression of machines aiding humans in daily life interactions, and this also includes high level decision making to achieve transparency and fairness.
 
@@ -54,37 +54,37 @@ Blockchain technology can automatically verify trustworthiness of users in the u
 
 Each person and each machine can be a node, linked together to form a human-machine community. Through comprehensive evaluation of the credit, token holds, human power, and computing power of the node, the node’s NewForce, which is a contributions measurement system, can be accurately assessed. Under the premise of orderly governance, super nodes can be elected through voting mechanism to optimize the human-machine community.
 
-## 7. How does Individual take part in Newton Project?
+## 7. How Does Individual Take Part in Newton Project?
 
 Without holding NEW, after creating NewID, individuals can invite new users to use NewPay and create NewID, invite users to participate in governance (staking a certain number of NEW running nodes or voting), and use NewMall to shop to gain NewForce, and then get NEW, also known as "mining". If a NewPay user who created NewID with your invitation code has gained NewForce through any contribution in the Newton ecosystem, you can also get the corresponding NewForce.
 
-## 8. What is NEW?
+## 8. What Is New?
 
 NEW is the symbol of the Newton token. In the ecology of the Newton community economy, NEW is a super carrier of value and rights, with characteristics of easy circulation, digitization, encryption, and decentralization.
 
-## 9. What is NewTax?
+## 9. What Is Newtax?
 
 The NEW revenue generated by the DApp in Newton's ecosystem will enter NewTax. The Addresses are NEW182GJfscSmL2TjVdqbcVm3uZKGgUSitCjxt(Year 2020) and NEW182K9sX2KE3gw6o7WNNroW1K7FDuvhMfEtkF(Year 2020).
 
 This part of the NEW will be released into NewPool in the future to provide more incentives for contributors within the Newton community. NewTax's specific release time and release method will be announced in future.
 
-## 10. What is NewID?
+## 10. What Is NewID?
 
 The NewID is the secure-decentralized ID so individual users can navigate the Newton ecosystem. Creation of the NewID costs 99NEW and some Gas fee.
 
-## 11. What is Newton’s consensus mechanism?
+## 11. What Is Newton’s consensus mechanism?
 
 POA(Proof of Authority). Contribution of individuals are measured in NewForce, contributors earn NEW as per mining rules.
 
-## 12. What is NewForce?
+## 12. What Is NewForce?
 
 NewForce can be understood as a tool for measuring contributions. The contribution of the members of the community on the day is calculated according to the rules of the mining system. The individual's NewForce is divided by the total pool of NewForce of the day, and the NEW amount released on the same day is the individual contribution of the day.
 
-## 13. When can we see our NewForce amount daily?
+## 13. When Can We See Our Newforce Amount Daily?
 
 At 8:00 Singapore time every day, you will see your NEW amount earned via NewForce of the previous day. The amount can be seen in the updated mining page in the NewPay Wallet.
 
-## 14. What are Newton’s mining rules?
+## 14. What Are Newton’s Mining Rules?
 
 A total of 60 billion NEW is used for community mining, which will be released in 50 years. Starting from March 15, 2019, 800 million will be released in the first year and 1 billion will be released in the second year, showing an overall inverted U-shaped curve.
 
@@ -141,25 +141,25 @@ The human node election rule: elected as human nodes after getting 10 votes.
 Human node income: The elected node can get 2x NewForce of the part of its own pledge NEW (for example, using 10 million NEW to initiate the node, it will receive 2000 NF per day), get 1x NewForce of voting pledge NEW (for example, voter A has 1 million pledge NEW, and the elected node can get 100 NF per day.
 Voters can get 1x NF (if you use 10,000NEW to vote, you will get 1 NF day. NF begins to calculate after 24 hours. The system takes a snapshot of the number of votes per node at 8:00 Singapore time each day.
 
-## 16. What is NEP？
+## 16. What Is Nep?
 
 Newton evulation proposals(NEP) describe the standards of the Newton platform, including core protocol specifications, client APIs and contract standards. Anyone can participate in the evluation of Newton.
 
 https://neps.newtonproject.org/
 
-## 17. Is the NewChain code open?
+## 17. Is the Newchain Code Open?
 
 Newton's main chain NewChain has been open sourced. For technical documents and other open source codes, please visit: https://github.com/newtonproject.
 
 NewChain accounting nodes have been open, and there are currently more than 20 testnet and mainnet accounting nodes, https://github.com/newtonproject/newchain-nodes.
 
-## 18. What is the difference between Newton MainNet and TestNet?
+## 18. What Is the Difference between Newton Mainnet and Testnet?
 
 The Testnet is a first beta release of all Dapps. Often communities will give constructive feedback for the development team, and final changes will then be released to the public via the MainNet.
 
 Testnet and mainnet accounting nodes info：https://github.com/newtonproject/newchain-nodes.
 
-## 19. What is the difference between NewMall and traditional E-commerce platform?
+## 19. What Is the Difference between Newmall and Traditional E-commerce Platform?
 
 The current E-commerce platforms benefits a small group of people. NewMall, is the first global decentralized E-commerce platform that allows true peer to peer trading without a third party intermediary. This allows profits to be distributed evenly throughout the ecosystem.
 
