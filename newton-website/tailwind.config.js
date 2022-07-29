@@ -50,7 +50,9 @@ module.exports = {
         graybc: '#BCE6FF',
         green07: '#07D600',
         grayed: '#EDF5FA',
-        gray3d3d:'#3D3D3D'
+        gray3d3d:'#3D3D3D',
+        grayf0:'#F0F6FB',
+        redd0: '#d00009'
       },
       width: {
         'w1/3': '31%',
@@ -63,5 +65,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-  ],
+  ]
+  
 }

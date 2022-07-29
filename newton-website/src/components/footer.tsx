@@ -48,6 +48,12 @@ export default function Footer() {
               </dd>
             </dl>
             <dl>
+              <dt>{intl.formatMessage({ id: 'Developers' })}</dt>
+              <dd>
+                <Link to="/faucet/">{intl.formatMessage({ id: 'Get Faucet' })}</Link>
+              </dd>
+            </dl>
+            <dl>
               <dt>{intl.formatMessage({ id: 'ABOUT' })}</dt>
               <dd>
                 <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
@@ -146,6 +152,12 @@ const FooterMobile = () => {
           </dd>
           <dd>
             <Link to="/faq/">{intl.formatMessage({ id: 'FAQ' })}</Link>
+          </dd>
+        </dl>
+        <dl className={'footer-item4'}>
+          <dt>{intl.formatMessage({ id: 'Developers' })}</dt>
+          <dd>
+            <Link to="/faucet/">{intl.formatMessage({ id: 'Get Faucet' })}</Link>
           </dd>
         </dl>
         <dl className={'footer-item2'}>
