@@ -53,6 +53,7 @@
   "Developer": "Developer",
   "NewStatus": "NewStatus",
   "FAQ": "FAQ",
+  "Get Faucet": "Get Faucet",
   "ABOUT": "ABOUT",
   "Economy": "Economy",
   "Technology": "Technology",
@@ -112,5 +113,11 @@
   "Listed Exchange": "Listed Exchange",
   "Announcement": "Announcement",
   "NewChain NEW and Binance NEW-09E SWAP instructions": "NewChain NEW and Binance NEW-09E SWAP instructions",
-  "Loading": "Loading"
+  "Loading": "Loading",
+  "Please enter your Newton Testnet address": "Please enter your Newton Testnet address",
+  "Please check that the address you entered": "Please check that the address you entered",
+  "Done! Go check your balance": "Done! Go check your balance",
+  "Newton Testnet Faucet": "Newton Testnet Faucet",
+  "Give Me Testnet NEW": "Give Me Testnet NEW",
+  "Your Newton Address": "Your Newton Address"
 }
