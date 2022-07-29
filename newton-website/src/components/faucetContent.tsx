@@ -47,12 +47,12 @@ export default function FaucetContent() {
           method: 'GET',
           mode: 'no-cors',
           headers: {
-            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': 'https://rpc3.newchain.cloud.diynova.com',
             'Content-Type': 'multipart/form-data'
           }
         })
           .then(response => {
-            console.log(response)
+            // console.log(response)
           })
           .catch(error => {
             console.log(error)
