@@ -60,15 +60,20 @@
     box-shadow: -9px -9px 20px 5px #ffffff;
     @apply px-4 bg-footer-bg-h5 bg-no-repeat bg-contain;
   }
-  .footer-item1 {
-    width: 174px;
+  dl {
+    @apply w-1/2;
   }
-  .footer-item2 {
-    @apply ml-12;
-    width: 65px;
-  }
-  .footer-item3 {
-    @apply pt-2 pb-12;
-    flex: 100%;
-  }
+  // .footer-item1 {
+  //   @apply w-1/2;
+  // }
+  // .footer-item2 {
+  //   @apply ml-12 w-[65px];
+  // }
+  // .footer-item3 {
+  //   @apply pt-2 pb-12;
+  //   flex: 100%;
+  // }
+  // .footer-item4 {
+  //   @apply ml-12 w-[95px];
+  // }
 }
