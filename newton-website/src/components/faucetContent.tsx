@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { getRequest } from '../utils/axiosData'
 import { utils } from 'ethers'
 import { useIntl } from 'gatsby-plugin-intl'
-
 const base58check = require('base58check')
 const NEW_PREFIX = 'NEW'
 
@@ -35,18 +33,34 @@ export default function FaucetContent() {
       setTitHidden(false)
       return
     } else if (utils.isAddress(targetAddress)) {
-      const address = async () => {
-        getRequest(`${faucetUrl}${targetAddress}`)
-          .then(res => {
-            console.log(res)
+      // const address = async () => {
+      //   getRequest(`${faucetUrl}${targetAddress}`)
+      //     .then(res => {
+      //       console.log(res)
+      //     })
+      //     .catch(error => {
+      //       console.log(error)
+      //     })
+      // }
+      const address = () => {
+        fetch(`${faucetUrl}${targetAddress}`, {
+          method: 'GET',
+          mode: 'no-cors',
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'multipart/form-data'
+          }
+        })
+          .then(response => {
+            console.log(response)
           })
           .catch(error => {
             console.log(error)
           })
       }
+      address()
       setAdresseTit(tit3)
       setTitHidden(false)
-      address()
     }
   }
   function new2hex(newAddress: string) {
