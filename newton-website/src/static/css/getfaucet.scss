@@ -8,10 +8,10 @@
     @apply pt-[113px] md:pt-52 text-[1.7rem] leading-[46px] md:text-[2.5rem] text-grag2c;
   }
   .newton-box {
-    @apply mx-4 mt-14 flex flex-wrap items-center justify-items-center md:mx-auto md:mt-16 md:flex-nowrap;
+    @apply mt-14 flex flex-wrap items-center justify-items-center md:mx-auto md:mt-16 md:flex-nowrap;
     input {
       border: 1px solid #e5f2ff;
-      @apply w-full px-6 h-[52px] md:w-[573px] text-xs md:text-sm;
+      @apply w-full px-3 md:px-6 h-[52px] md:w-[573px] text-xs md:text-sm;
       &:focus {
         outline: 2px solid #e5f5ff;
         border: 1px solid rgba(255, 255, 255, 0);
@@ -64,7 +64,7 @@
       }
     }
     .success {
-      @apply mx-auto w-52 rounded-full py-4;
+      @apply mx-auto w-52 rounded-full py-3;
       background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
       box-shadow: -9px -9px 20px 5px #ffffff, 4px 4px 20px 0px rgba(0, 64, 145, 0.12);
       border: 2px solid rgba(255, 255, 255, 0);
