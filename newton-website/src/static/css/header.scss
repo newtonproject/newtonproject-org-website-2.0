@@ -128,7 +128,7 @@
 }
 .header-nav-menu {
   @apply pl-8;
-  max-height: 73vh;
+  max-height: 68vh;
   overflow-y: auto;
   .header-use .use,
   li a {
@@ -149,7 +149,7 @@
   }
 }
 .header-footer-box {
-  @apply fixed left-0 w-full;
+  @apply fixed left-0 bottom-[102px] w-full;
 }
 .header-footer {
   @apply flex flex-row pb-8;
