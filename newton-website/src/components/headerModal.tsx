@@ -144,12 +144,14 @@ const SiteNavMenu = () => {
           </li>
         </ul>
       </div>
-      <div className={'header-footer'}>
-        <div className={'search'}>
-          <a href={newsEnvUrl + '/search/?q='} target="_blank"></a>
-          <p>{intl.formatMessage({ id: 'Search' })}</p>
+      <div className={'header-footer-box'}>
+        <div className={'header-footer'}>
+          <div className={'search'}>
+            <a href={newsEnvUrl + '/search/?q='} target="_blank"></a>
+            <p>{intl.formatMessage({ id: 'Search' })}</p>
+          </div>
+          <Languages />
         </div>
-        <Languages />
       </div>
     </>
   )
