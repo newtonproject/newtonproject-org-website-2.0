@@ -122,13 +122,13 @@
     @apply w-28 absolute top-[1.8rem] left-1/2;
     transform: translate(-50%, -50%);
     img {
-      @apply w-full h-auto;
+      @apply w-full h-full;
     }
   }
 }
 .header-nav-menu {
   @apply pl-8;
-  max-height: 73vh;
+  max-height: 68vh;
   overflow-y: auto;
   .header-use .use,
   li a {
@@ -149,7 +149,7 @@
   }
 }
 .header-footer-box {
-  @apply fixed left-0 w-full;
+  @apply fixed left-0 bottom-[102px] w-full;
 }
 .header-footer {
   @apply flex flex-row pb-8;
