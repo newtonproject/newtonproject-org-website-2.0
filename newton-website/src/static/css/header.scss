@@ -152,7 +152,7 @@
   @apply fixed left-0 w-full;
 }
 .header-footer {
-  @apply flex flex-row;
+  @apply flex flex-row pb-8;
   background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
   box-shadow: -9px -9px 20px 5px #ffffff;
   .search {

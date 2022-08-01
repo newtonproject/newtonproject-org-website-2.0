@@ -2,7 +2,7 @@
   @apply cursor-pointer;
 }
 .modal {
-  @apply fixed pt-8 top-12 left-0 z-40 flex h-full w-full bg-grayf7 lg:hidden;
+  @apply fixed pt-8 top-12 left-0 z-40 flex h-full w-full bg-grayf7 lg:hidden h-screen;
   .close-btn {
     top: -4rem;
     @apply fixed bg-grayf7 left-4;
