@@ -13,7 +13,7 @@ export default function EcosystemContent() {
       <div className={'getnew-banner'}>
         <img className={'ecosystem-banner-pc'} src={bannerEcosystem} alt="img" />
         <img className={'ecosystem-banner-h5'} src={bannerEcosystemH5} alt="img" />
-        <h2>ECOSYSTEM</h2>
+        <h2>{intl.formatMessage({ id: 'ECOSYSTEM' })}</h2>
       </div>
       <div className={'ecosystem-content ecosystem-container container'}>
         <dl>
