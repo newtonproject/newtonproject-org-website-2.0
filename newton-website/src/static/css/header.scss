@@ -121,6 +121,9 @@
   .logo {
     @apply w-28 absolute top-[1.8rem] left-1/2;
     transform: translate(-50%, -50%);
+    img {
+      @apply w-full h-auto;
+    }
   }
 }
 .header-nav-menu {
@@ -144,6 +147,9 @@
       @apply text-gray6a block mb-6 font-normal;
     }
   }
+}
+.header-footer-box {
+  @apply fixed left-0 w-full;
 }
 .header-footer {
   @apply flex flex-row;
