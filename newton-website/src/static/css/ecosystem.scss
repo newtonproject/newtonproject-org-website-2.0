@@ -33,7 +33,7 @@
   .getnew-banner {
     @apply relative;
     h2 {
-      @apply absolute md:top-1/2 top-[40%] left-1/2 text-5xl md:text-[6.6rem] w-full text-center whitespace-nowrap;
+      @apply absolute md:top-1/2 top-[40%] left-1/2 text-5xl md:text-[5.32rem] w-full text-center whitespace-nowrap;
       transform: translate(-50%, -50%);
     }
   }
@@ -41,10 +41,10 @@
 // ecosystem
 #ecosystem {
   .getnew-banner {
-    @apply pt-[98%] sm:pt-[94%] md:pt-[36%];
+    @apply pt-[98%] sm:pt-[94%] md:pt-[30%];
 
     h2 {
-      @apply top-[23%] md:top-[39%];
+      @apply top-[23%] md:top-[27%];
     }
   }
   .ecosystem-content {
@@ -119,9 +119,9 @@
 // getNew
 #getnew {
   .getnew-banner {
-    @apply pt-[127%] sm:pt-[122%] md:pt-[41%];
+    @apply pt-[127%] sm:pt-[122%] md:pt-[30%];
     h2 {
-      @apply text-[3.25rem] md:text-[6.6rem];
+      @apply text-5xl md:text-[5.32rem];
     }
   }
   .newtax {
@@ -143,7 +143,7 @@
       }
     }
     dd {
-      @apply md:flex md:flex-wrap md:flex-col text-sm md:w-full md:ml-5;
+      @apply md:flex md:flex-wrap md:flex-col text-sm md:w-[99%] md:ml-5;
       a {
         @apply text-gray20;
       }
@@ -277,7 +277,7 @@
 // community
 #community {
   .getnew-banner {
-    @apply pt-[96%] sm:pt-[92%] md:pt-[39%];
+    @apply pt-[96%] sm:pt-[92%] md:pt-[30%];
     h2 {
       @apply md:top-[45%] top-[50%];
     }
@@ -303,37 +303,20 @@
     }
   }
 }
-// @media (min-width: 1450px) {
-//   #ecosystem {
-//     .getnew-banner {
-//       padding-top: 447px !important;
-//     }
-//   }
-//   #community {
-//     .getnew-banner {
-//       padding-top: 479px !important;
-//     }
-//   }
-//   #getnew {
-//     .getnew-banner {
-//       padding-top: 491px !important;
-//     }
-//   }
-// }
+
 @media (min-width: 1200px) {
-  #ecosystem {
-    .getnew-banner {
-      padding-top: 447px !important;
-    }
-  }
-  #community {
-    .getnew-banner {
-      padding-top: 479px !important;
-    }
-  }
+  #ecosystem,
+  #community,
   #getnew {
     .getnew-banner {
-      padding-top: 491px !important;
+      padding-top: 360px !important;
+    }
+  }
+
+  #community,
+  #ecosystem {
+    .getnew-banner h2 {
+      letter-spacing: 15px;
     }
   }
 }
