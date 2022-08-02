@@ -33,7 +33,7 @@
   .getnew-banner {
     @apply relative;
     h2 {
-      @apply absolute md:top-1/2 top-[40%] left-1/2 text-5xl md:text-[5.32rem] w-full text-center whitespace-nowrap;
+      @apply absolute md:top-1/2 top-[40%] left-1/2 text-5xl md:text-[4.38rem] w-full text-center whitespace-nowrap;
       transform: translate(-50%, -50%);
     }
   }
@@ -50,7 +50,7 @@
   .ecosystem-content {
     @apply w-full flex flex-col md:flex-row md:flex-wrap md:justify-between;
     dl {
-      @apply w-full md:w-1/2 mt-[4.5rem] md:mt-24;
+      @apply w-full md:w-1/2 mt-[4.5rem] md:mt-20;
     }
     dt {
       @apply text-3xl text-gray333 font-bold;
@@ -121,11 +121,11 @@
   .getnew-banner {
     @apply pt-[127%] sm:pt-[122%] md:pt-[24%];
     h2 {
-      @apply text-5xl md:text-[5.32rem];
+      @apply text-5xl md:text-[4.38rem];
     }
   }
   .newtax {
-    @apply flex flex-wrap justify-center items-center mt-8 mb-16 lg:justify-between xl:flex-nowrap;
+    @apply flex flex-wrap justify-center items-center mt-8 md:mt-12 mb-16 lg:justify-between xl:flex-nowrap;
     dl {
       @apply flex flex-wrap flex-col justify-center w-full lg:w-w2/3 md:flex-nowrap xl:flex-row xl:w-w2/3 xl:justify-between;
     }
