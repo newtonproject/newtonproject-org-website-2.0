@@ -41,7 +41,7 @@
 // ecosystem
 #ecosystem {
   .getnew-banner {
-    @apply pt-[98%] sm:pt-[94%] md:pt-[30%];
+    @apply pt-[98%] sm:pt-[94%] md:pt-[25%];
 
     h2 {
       @apply top-[23%] md:top-[27%];
@@ -119,7 +119,7 @@
 // getNew
 #getnew {
   .getnew-banner {
-    @apply pt-[127%] sm:pt-[122%] md:pt-[30%];
+    @apply pt-[127%] sm:pt-[122%] md:pt-[24%];
     h2 {
       @apply text-5xl md:text-[5.32rem];
     }
@@ -277,7 +277,7 @@
 // community
 #community {
   .getnew-banner {
-    @apply pt-[96%] sm:pt-[92%] md:pt-[30%];
+    @apply pt-[96%] sm:pt-[92%] md:pt-[26%];
     h2 {
       @apply md:top-[45%] top-[50%];
     }
@@ -309,7 +309,7 @@
   #community,
   #getnew {
     .getnew-banner {
-      padding-top: 360px !important;
+      padding-top: 300px !important;
     }
   }
 
