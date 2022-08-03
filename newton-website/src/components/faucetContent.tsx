@@ -33,15 +33,6 @@ export default function FaucetContent() {
       setTitHidden(false)
       return
     } else if (utils.isAddress(targetAddress)) {
-      // const address = async () => {
-      //   getRequest(`${faucetUrl}${targetAddress}`)
-      //     .then(res => {
-      //       console.log(res)
-      //     })
-      //     .catch(error => {
-      //       console.log(error)
-      //     })
-      // }
       const address = () => {
         fetch(`${faucetUrl}${targetAddress}`, {
           method: 'GET',
@@ -97,10 +88,7 @@ export default function FaucetContent() {
       </div>
       {titHidden !== true ? (
         adresseTit !== tit3 ? (
-          <div className={'tit error'}>
-            <StaticImage placeholder="blurred" alt="error" src="../static/images/error.png" />
-            {adresseTit}
-          </div>
+          <div className={'tit error'}>{adresseTit}</div>
         ) : (
           <div className={'tit success'}>
             <StaticImage placeholder="blurred" alt="success" src="../static/images/success.png" />
