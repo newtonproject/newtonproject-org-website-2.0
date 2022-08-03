@@ -155,7 +155,7 @@ const FooterMobile = () => {
           </dd>
         </dl>
         <dl className={'footer-item4'}>
-          <dt>{intl.formatMessage({ id: 'Developers' })}</dt>
+          <dt>{intl.formatMessage({ id: 'DEVELOPERS' })}</dt>
           <dd>
             <Link to="/faucet/">{intl.formatMessage({ id: 'Get Faucet' })}</Link>
           </dd>
