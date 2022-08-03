@@ -1,7 +1,7 @@
 .get-faucet {
   @apply flex flex-col text-center pb-[140px] md:pb-52 relative;
   .tit {
-    @apply w-full py-4 md:py-0 mt-6 text-base md:text-xs absolute top-0 left-0 md:static bg-grayf0 md:bg-grayf7;
+    @apply w-full py-4 md:py-0 md:mt-6 text-base md:text-xs absolute top-0 left-0 md:static bg-grayf0 md:bg-grayf7;
     box-shadow: -17px -11px 20px 7px #ffffff;
   }
   .title {
