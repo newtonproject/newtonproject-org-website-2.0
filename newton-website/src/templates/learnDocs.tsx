@@ -20,8 +20,6 @@ import H6 from '../customMdx/h6'
 import Codeblock from '../customMdx/codeblock'
 import { arrDate } from '../utils/createTime'
 
-import Developers from '../pages/developers/'
-
 const components = {
   Link,
   ExpandableCard,
@@ -56,9 +54,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   return (
     <>
       <Seo title={content.frontmatter.title} description={''} meta={[]} lang={''} />
-      {/* <Header /> */}
-      <Developers />
-      <div>我是总的页面啊 hhhhh</div>
+      <Header />
       <div className={'container docs'}>
         <div className={'docs-content'}>
           <div className={'updated'}>
@@ -182,7 +178,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
           </Transition>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

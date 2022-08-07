@@ -2,6 +2,7 @@
 title: Copyright
 description: Copyright
 lang: en
+template: learnDocs
 sidebar: true
 ---
 

@@ -52,6 +52,7 @@ module.exports = {
         grayed: '#EDF5FA',
         gray3d3d:'#3D3D3D',
         grayf0:'#F0F6FB',
+        graye0:'#E0ECF6',
         redd0: '#d00009'
       },
       width: {
