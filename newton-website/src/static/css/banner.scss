@@ -72,7 +72,12 @@
   }
 }
 .banner-mobile-news {
-  @apply -mt-40 md:mt-0;
+  @apply -mt-40 md:mt-0 absolute left-0 md:static;
+}
+.new-index {
+  .centent-community {
+    @apply mt-[8.5rem] md:mt-0;
+  }
 }
 .banner-mobile {
   @apply overflow-hidden;
