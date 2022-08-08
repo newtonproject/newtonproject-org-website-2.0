@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { AiOutlineClose } from 'react-icons/ai'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -20,7 +19,7 @@ import H6 from '../customMdx/h6'
 import Codeblock from '../customMdx/codeblock'
 import { arrDate } from '../utils/createTime'
 
-import Developers from '../pages/developers/'
+import Developers from '../components/developerSide'
 
 const components = {
   Link,
@@ -56,133 +55,140 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   return (
     <>
       <Seo title={content.frontmatter.title} description={''} meta={[]} lang={''} />
-      {/* <Header /> */}
-      <Developers />
-      <div>我是总的页面啊 hhhhh</div>
-      <div className={'container docs'}>
-        <div className={'docs-content'}>
-          <div className={'updated'}>
-            Page last updated :&nbsp;
-            {gitLogLatestDate && gitLogLatestDate !== undefined ? arrDate(gitLogLatestDate) : null}
-          </div>
-          <h1 className={'title'}>{content.frontmatter.title}</h1>
-          <MDXProvider components={components}>
-            <MDXRenderer>{content.body}</MDXRenderer>
-          </MDXProvider>
-        </div>
-
-        <div className={'docs-content-title-pc'}>
-          <div className={'docs-title-github'}>
-            <a href={mdGithub + slug + 'index.md'} className={'githtb-a'} target="_blank">
-              <div className={'github-img'}>
-                <StaticImage placeholder="blurred" alt="github" src="../static/images/docs/docs-github.png" />
+      <Header />
+      <div className={'developers-box'}>
+        <div className={'developers-item container'}>
+          <Developers />
+          <div className={'docs'}>
+            <div className={'docs-content'}>
+              <div className={'updated'}>
+                Page last updated :&nbsp;
+                {gitLogLatestDate && gitLogLatestDate !== undefined ? arrDate(gitLogLatestDate) : null}
               </div>
-              <span>Edit Page</span>
-            </a>
-          </div>
-          <div className={'docs-content-title'}>
-            {tableOfContents && tableOfContents.length > 0
-              ? tableOfContents.map((item: any, index: number) => {
-                  return (
-                    <ul key={index}>
-                      <li>
-                        <Link to={item.url} className={'title-a'}>
-                          {item.title}
-                        </Link>
-                        {item.items && item.items.length > 0
-                          ? item.items.map((data: any, index: number) => {
-                              return (
-                                <div key={index} className={'title-a-content'}>
-                                  {<Link to={data.url}>{data.title}</Link>}
-                                </div>
-                              )
-                            })
-                          : null}
-                      </li>
-                    </ul>
-                  )
-                })
-              : null}
-          </div>
-        </div>
+              <h1 className={'title'}>{content.frontmatter.title}</h1>
+              <MDXProvider components={components}>
+                <MDXRenderer>{content.body}</MDXRenderer>
+              </MDXProvider>
+            </div>
 
-        <div className={'docs-content-title-modal'}>
-          <div className={'docs-button-box'}>
-            <button className={'docs-button'} type="button" onClick={openModal}>
-              <StaticImage
-                className={'button-img'}
-                placeholder="blurred"
-                alt="docs-button"
-                src="../static/images/docs/docs-header.png"
-              />
-            </button>
-          </div>
+            <div className={'docs-content-title-pc'}>
+              <div className={'docs-title-github'}>
+                <a href={mdGithub + slug + 'index.md'} className={'githtb-a'} target="_blank">
+                  <div className={'github-img'}>
+                    <StaticImage placeholder="blurred" alt="github" src="../static/images/docs/docs-github.png" />
+                  </div>
+                  <span>Edit Page</span>
+                </a>
+              </div>
+              <div className={'docs-content-title'}>
+                {tableOfContents && tableOfContents.length > 0
+                  ? tableOfContents.map((item: any, index: number) => {
+                      return (
+                        <ul key={index}>
+                          <li>
+                            <Link to={item.url} className={'title-a'}>
+                              {item.title}
+                            </Link>
+                            {item.items && item.items.length > 0
+                              ? item.items.map((data: any, index: number) => {
+                                  return (
+                                    <div key={index} className={'title-a-content'}>
+                                      {<Link to={data.url}>{data.title}</Link>}
+                                    </div>
+                                  )
+                                })
+                              : null}
+                          </li>
+                        </ul>
+                      )
+                    })
+                  : null}
+              </div>
+            </div>
 
-          <Transition appear show={isOpen} as={Fragment}>
-            <Dialog as="div" className="docs-modal relative z-10" onClose={closeModal}>
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
-                <div className="fixed inset-0 bg-black bg-opacity-25" />
-              </Transition.Child>
+            <div className={'docs-content-title-modal'}>
+              <div className={'docs-button-box'}>
+                <button className={'docs-button'} type="button" onClick={openModal}>
+                  <StaticImage
+                    className={'button-img'}
+                    placeholder="blurred"
+                    alt="docs-button"
+                    src="../static/images/docs/docs-header.png"
+                  />
+                </button>
+              </div>
 
-              <div className="fixed inset-0 overflow-y-auto">
-                <div className="flex min-h-full items-center justify-center text-center">
+              <Transition appear show={isOpen} as={Fragment}>
+                <Dialog as="div" className="docs-modal relative z-10" onClose={closeModal}>
                   <Transition.Child
                     as={Fragment}
                     enter="ease-out duration-300"
-                    enterFrom="opacity-0 scale-95"
-                    enterTo="opacity-100 scale-100"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
                     leave="ease-in duration-200"
-                    leaveFrom="opacity-100 scale-100"
-                    leaveTo="opacity-0 scale-95"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
                   >
-                    <Dialog.Panel className="modal-box">
-                      <Dialog.Title as="h3" className={'title'}>
-                        {content.frontmatter.title}
-                        <div className={'close'} onClick={closeModal}>
-                          <StaticImage placeholder="blurred" alt="close" src="../static/images/docs/docs-close.png" />
-                        </div>
-                      </Dialog.Title>
-                      <div className={'docs-content-title'} onClick={closeModal}>
-                        {tableOfContents && tableOfContents.length > 0
-                          ? tableOfContents.map((item: any, index: number) => {
-                              return (
-                                <ul key={index}>
-                                  <li>
-                                    <Link to={item.url} className={'title-a'}>
-                                      {item.title}
-                                    </Link>
-                                    {item.items && item.items.length > 0
-                                      ? item.items.map((data: any, index: number) => {
-                                          return (
-                                            <div key={index} className={'title-a-content'}>
-                                              {<Link to={data.url}>{data.title}</Link>}
-                                            </div>
-                                          )
-                                        })
-                                      : null}
-                                  </li>
-                                </ul>
-                              )
-                            })
-                          : null}
-                      </div>
-                    </Dialog.Panel>
+                    <div className="fixed inset-0 bg-black bg-opacity-25" />
                   </Transition.Child>
-                </div>
-              </div>
-            </Dialog>
-          </Transition>
+
+                  <div className="fixed inset-0 overflow-y-auto">
+                    <div className="flex min-h-full items-center justify-center text-center">
+                      <Transition.Child
+                        as={Fragment}
+                        enter="ease-out duration-300"
+                        enterFrom="opacity-0 scale-95"
+                        enterTo="opacity-100 scale-100"
+                        leave="ease-in duration-200"
+                        leaveFrom="opacity-100 scale-100"
+                        leaveTo="opacity-0 scale-95"
+                      >
+                        <Dialog.Panel className="modal-box">
+                          <Dialog.Title as="h3" className={'title'}>
+                            {content.frontmatter.title}
+                            <div className={'close'} onClick={closeModal}>
+                              <StaticImage
+                                placeholder="blurred"
+                                alt="close"
+                                src="../static/images/docs/docs-close.png"
+                              />
+                            </div>
+                          </Dialog.Title>
+                          <div className={'docs-content-title'} onClick={closeModal}>
+                            {tableOfContents && tableOfContents.length > 0
+                              ? tableOfContents.map((item: any, index: number) => {
+                                  return (
+                                    <ul key={index}>
+                                      <li>
+                                        <Link to={item.url} className={'title-a'}>
+                                          {item.title}
+                                        </Link>
+                                        {item.items && item.items.length > 0
+                                          ? item.items.map((data: any, index: number) => {
+                                              return (
+                                                <div key={index} className={'title-a-content'}>
+                                                  {<Link to={data.url}>{data.title}</Link>}
+                                                </div>
+                                              )
+                                            })
+                                          : null}
+                                      </li>
+                                    </ul>
+                                  )
+                                })
+                              : null}
+                          </div>
+                        </Dialog.Panel>
+                      </Transition.Child>
+                    </div>
+                  </div>
+                </Dialog>
+              </Transition>
+            </div>
+          </div>
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

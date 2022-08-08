@@ -287,15 +287,22 @@
   @apply border-t-[1px] border-solid border-graye0;
 }
 .developers {
-  @apply flex justify-between;
+  @apply border-r-[1px] border-solid border-graye0 pr-4;
   .side-nav {
-    @apply flex flex-wrap w-[158px] border-r-[1px] border-solid border-graye0 pr-4 pb-32;
-    .nav-title {
-      @apply w-full text-left mt-10 mb-3 flex justify-between items-center;
-      span {
-        @apply text-grag2c text-base;
-        font-family: 'Ubuntu-Bold';
+    @apply flex flex-wrap w-[158px] pb-32;
+    .overview a,
+    .nav-title span {
+      @apply text-grag2c text-base;
+      font-family: 'Ubuntu-Bold';
+    }
+    .overview {
+      @apply mt-10;
+      .active {
+        @apply text-gray20;
       }
+    }
+    .nav-title {
+      @apply w-full text-left mt-9 flex justify-between items-center;
       img {
         @apply w-[11px] h-[6px];
       }
@@ -305,10 +312,26 @@
         }
       }
     }
-    .nav-title-list {
-      a {
-        @apply text-sm leading-[30px] block w-full hover:text-gray20;
+    .nav-title-active {
+      span {
+        @apply text-gray20;
       }
     }
+    .nav-title-list {
+      a {
+        @apply mt-3 text-sm leading-[30px] block w-full hover:text-gray20;
+      }
+      .active {
+        @apply text-gray20;
+      }
+    }
+  }
+}
+
+// developers docs
+.developers-item {
+  @apply flex justify-between;
+  .docs {
+    @apply w-[83%];
   }
 }

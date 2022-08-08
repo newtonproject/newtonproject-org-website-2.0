@@ -1,12 +1,12 @@
 ---
-title: Projects
-description: Projects
+title: Mining
+description: Mining
 lang: en
 template: docs
 sidebar: true
 ---
 
-Projects 内容
+你好吗
 
 ## diyigebiaoti
 
