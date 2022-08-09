@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
@@ -18,9 +18,9 @@ import H5 from '../customMdx/h5'
 import H6 from '../customMdx/h6'
 import Codeblock from '../customMdx/codeblock'
 import { arrDate } from '../utils/createTime'
-
+// import {useActiveHash} from  '../hooks/useActiveHash'
 import DeveloperSide from '../components/developerSide'
-
+import DeveloperSideMobile from '../components/developerSideMobile'
 const components = {
   Link,
   ExpandableCard,
@@ -41,8 +41,9 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   const content = allMdx.edges[0].node
   const tableOfContents = content.tableOfContents.items
   const slug = allMdx.edges[0].node.slug
-  // console.log('======', slug)
   const [isOpen, setIsOpen] = useState(false)
+
+  const urlTitle = '/' + window.location.pathname.slice(4)
 
   function closeModal() {
     setIsOpen(false)
@@ -57,6 +58,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
       <Seo title={content.frontmatter.title} description={''} meta={[]} lang={''} />
       <Header />
       <div className={'developers-box'}>
+        <DeveloperSideMobile />
         <div className={'developers-item container'}>
           <DeveloperSide />
           <div className={'docs'}>
@@ -86,7 +88,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
                       return (
                         <ul key={index}>
                           <li>
-                            <Link to={item.url} className={'title-a'}>
+                            <Link to={urlTitle + item.url} className={'title-a'}>
                               {item.title}
                             </Link>
                             {item.items && item.items.length > 0
