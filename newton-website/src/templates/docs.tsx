@@ -3,10 +3,10 @@ import { Dialog, Transition } from '@headlessui/react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { mdGithub } from '../utils/url'
-// import { Link } from 'gatsby-plugin-intl'
+import { Link } from 'gatsby-plugin-intl'
 import ExpandableCard from '../components/docs/expandableCard'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -19,7 +19,7 @@ import H6 from '../customMdx/h6'
 import Codeblock from '../customMdx/codeblock'
 import { arrDate } from '../utils/createTime'
 
-import Developers from '../components/developerSide'
+import DeveloperSide from '../components/developerSide'
 
 const components = {
   Link,
@@ -58,7 +58,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
       <Header />
       <div className={'developers-box'}>
         <div className={'developers-item container'}>
-          <Developers />
+          <DeveloperSide />
           <div className={'docs'}>
             <div className={'docs-content'}>
               <div className={'updated'}>

@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 import { StaticImage } from 'gatsby-plugin-image'
 
-
-function Developers() {
+function DeveloperSide() {
   const intl = useIntl()
   const tagList1 = ['consensus', 'whitepapers', 'projects', 'audits']
   const tagList2 = ['run-a-node', 'mining', 'get-faucet', 'wallet', 'transaction', 'smart-contracts']
@@ -15,22 +14,22 @@ function Developers() {
   }
 
   const isShow = (avctionList: any) => {
-    // if()
-    const herf = window.location.pathname
-    const herfName = herf.split('/')[4]
-    let activeName: any
-    avctionList &&
-      avctionList.forEach((val: any) => {
-        if (val == herfName) {
-          return (activeName = val)
-        }
-      })
-    if (herf.indexOf(activeName) > -1) {
-      return true
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const herf = window.location.pathname
+      const herfName = herf.split('/')[4]
+      let activeName: any
+      avctionList &&
+        avctionList.forEach((val: any) => {
+          if (val == herfName) {
+            return (activeName = val)
+          }
+        })
+      if (herf.indexOf(activeName) > -1) {
+        return true
+      }
+      return false
     }
-    return false
   }
-  
 
   return (
     <div className={'developers'}>
@@ -46,9 +45,9 @@ function Developers() {
               <Disclosure.Button className={open ? 'nav-title-active nav-title' : 'nav-title'}>
                 <span>{intl.formatMessage({ id: 'Intro to Newton' })}</span>
                 {open ? (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot-hover.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot-hover.png" />
                 ) : (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot.png" />
                 )}
               </Disclosure.Button>
               <Disclosure.Panel className={'nav-title-list'}>
@@ -74,9 +73,9 @@ function Developers() {
               <Disclosure.Button className={open ? 'nav-title-active nav-title' : 'nav-title'}>
                 <span>{intl.formatMessage({ id: 'Quick start' })}</span>
                 {open ? (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot-hover.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot-hover.png" />
                 ) : (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot.png" />
                 )}
               </Disclosure.Button>
               <Disclosure.Panel className={'nav-title-list'}>
@@ -108,9 +107,9 @@ function Developers() {
               <Disclosure.Button className={open ? 'nav-title-active nav-title' : 'nav-title'}>
                 <span>{intl.formatMessage({ id: 'Specs' })}</span>
                 {open ? (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot-hover.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot-hover.png" />
                 ) : (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot.png" />
                 )}
               </Disclosure.Button>
               <Disclosure.Panel className={'nav-title-list'}>
@@ -127,9 +126,9 @@ function Developers() {
               <Disclosure.Button className={open ? 'nav-title-active nav-title' : 'nav-title'}>
                 <span>{intl.formatMessage({ id: 'Community' })}</span>
                 {open ? (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot-hover.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot-hover.png" />
                 ) : (
-                  <StaticImage placeholder="blurred" alt="img" src="../../static/images/header-bot.png" />
+                  <StaticImage placeholder="blurred" alt="img" src="../static/images/header-bot.png" />
                 )}
               </Disclosure.Button>
               <Disclosure.Panel className={'nav-title-list'}>
@@ -150,4 +149,4 @@ function Developers() {
     </div>
   )
 }
-export default Developers
+export default DeveloperSide
