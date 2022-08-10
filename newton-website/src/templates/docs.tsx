@@ -164,7 +164,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
                                   return (
                                     <ul key={index}>
                                       <li>
-                                        <Link to={item.url} className={'title-a'}>
+                                        <Link to={urlTitle + item.url} className={'title-a'}>
                                           {item.title}
                                         </Link>
                                         {item.items && item.items.length > 0
