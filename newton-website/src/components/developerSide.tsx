@@ -80,7 +80,7 @@ function DeveloperSide() {
               </Disclosure.Button>
               <Disclosure.Panel className={'nav-title-list'}>
                 <Link getProps={isActive} to="/developers/docs/run-a-node/">
-                  {intl.formatMessage({ id: ' Run a node' })}
+                  {intl.formatMessage({ id: 'Run a node' })}
                 </Link>
                 <Link getProps={isActive} to="/developers/docs/mining/">
                   {intl.formatMessage({ id: 'Mining' })}

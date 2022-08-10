@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -8,15 +8,18 @@ function DeveloperSideMobile() {
   const isActive = ({ isCurrent }: any) => {
     return isCurrent ? { className: 'active' } : {}
   }
-  const herf = window.location.pathname
-  const herfName = herf.split('/')[4]
-  let hertTitle: string
-  if (herfName == '' || undefined) {
-    hertTitle = 'Overview'
-  } else {
-    hertTitle = herfName[0].toUpperCase() + herfName.substr(1)
-    let arr = hertTitle.split('-')
-    hertTitle = arr.join(' ')
+  let hrefTitle: string
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    const herf = window.location.pathname
+    const herfName = herf.split('/')[4]
+
+    if (herfName == '' || undefined) {
+      hrefTitle = 'Overview'
+    } else {
+      hrefTitle = herfName[0].toUpperCase() + herfName.substr(1)
+      let arr = hrefTitle.split('-')
+      hrefTitle = arr.join(' ')
+    }
   }
 
   return (
@@ -25,7 +28,7 @@ function DeveloperSideMobile() {
         {({ open }) => (
           <>
             <Disclosure.Button className={'title'}>
-              <span>{intl.formatMessage({ id: hertTitle })}</span>
+              <span>{intl.formatMessage({ id: `${hrefTitle}` })}</span>
               <StaticImage
                 className={open ? 'avtice-bot' : ''}
                 placeholder="blurred"
@@ -81,7 +84,7 @@ function DeveloperSideMobile() {
                       </Disclosure.Button>
                       <Disclosure.Panel className={'nav-title-list'}>
                         <Link getProps={isActive} to="/developers/docs/run-a-node/">
-                          {intl.formatMessage({ id: ' Run a node' })}
+                          {intl.formatMessage({ id: 'Run a node' })}
                         </Link>
                         <Link getProps={isActive} to="/developers/docs/mining/">
                           {intl.formatMessage({ id: 'Mining' })}

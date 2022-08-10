@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react'
+import React, { useState, Fragment } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 // import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { mdGithub } from '../utils/url'
-import { Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl'
 import ExpandableCard from '../components/docs/expandableCard'
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -18,9 +18,9 @@ import H5 from '../customMdx/h5'
 import H6 from '../customMdx/h6'
 import Codeblock from '../customMdx/codeblock'
 import { arrDate } from '../utils/createTime'
-// import {useActiveHash} from  '../hooks/useActiveHash'
 import DeveloperSide from '../components/developerSide'
 import DeveloperSideMobile from '../components/developerSideMobile'
+
 const components = {
   Link,
   ExpandableCard,
@@ -42,8 +42,10 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   const tableOfContents = content.tableOfContents.items
   const slug = allMdx.edges[0].node.slug
   const [isOpen, setIsOpen] = useState(false)
-
-  const urlTitle = '/' + window.location.pathname.slice(4)
+  let urlTitle: any
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    urlTitle = '/' + window.location.pathname.slice(4)
+  }
 
   function closeModal() {
     setIsOpen(false)
@@ -52,7 +54,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   function openModal() {
     setIsOpen(true)
   }
-
+  const intl = useIntl()
   return (
     <>
       <Seo title={content.frontmatter.title} description={''} meta={[]} lang={''} />
@@ -64,7 +66,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
           <div className={'docs'}>
             <div className={'docs-content'}>
               <div className={'updated'}>
-                Page last updated :&nbsp;
+                {intl.formatMessage({ id: 'Page last updated' })} :&nbsp;
                 {gitLogLatestDate && gitLogLatestDate !== undefined ? arrDate(gitLogLatestDate) : null}
               </div>
               <h1 className={'title'}>{content.frontmatter.title}</h1>
@@ -79,7 +81,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
                   <div className={'github-img'}>
                     <StaticImage placeholder="blurred" alt="github" src="../static/images/docs/docs-github.png" />
                   </div>
-                  <span>Edit Page</span>
+                  <span>{intl.formatMessage({ id: 'Edit Page' })}</span>
                 </a>
               </div>
               <div className={'docs-content-title'}>

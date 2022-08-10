@@ -4,7 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { Link } from 'gatsby'
+import { useIntl, Link } from 'gatsby-plugin-intl'
 import { StaticImage } from 'gatsby-plugin-image'
 import { mdGithub } from '../utils/url'
 // import { Link } from 'gatsby-plugin-intl'
@@ -50,7 +50,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   function openModal() {
     setIsOpen(true)
   }
-
+  const intl = useIntl()
   return (
     <>
       <Seo title={content.frontmatter.title} description={''} meta={[]} lang={''} />
@@ -58,7 +58,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
       <div className={'container docs'}>
         <div className={'docs-content'}>
           <div className={'updated'}>
-            Page last updated :&nbsp;
+            {intl.formatMessage({ id: 'Page last updated' })} :&nbsp;
             {gitLogLatestDate && gitLogLatestDate !== undefined ? arrDate(gitLogLatestDate) : null}
           </div>
           <h1 className={'title'}>{content.frontmatter.title}</h1>
@@ -73,7 +73,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
               <div className={'github-img'}>
                 <StaticImage placeholder="blurred" alt="github" src="../static/images/docs/docs-github.png" />
               </div>
-              <span>Edit Page</span>
+              <span>{intl.formatMessage({ id: 'Edit Page' })}</span>
             </a>
           </div>
           <div className={'docs-content-title'}>
