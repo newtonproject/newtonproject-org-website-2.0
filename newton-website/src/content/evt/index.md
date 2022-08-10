@@ -2,6 +2,7 @@
 title: EVT
 description: Introduction of EVT
 lang: en
+template: learnDocs
 sidebar: true
 ---
 

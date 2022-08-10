@@ -61,7 +61,7 @@
     @apply text-xl font-bold;
   }
   a {
-    @apply text-gray20 relative;
+    @apply text-gray20 relative break-words;
     // &::after {
     //   content: '';
     //   @apply absolute top-1/2 right-[-30px] w-4 h-4 bg-contain bg-docs-a bg-no-repeat;
@@ -281,5 +281,97 @@
     @apply w-full pt-10;
     max-height: 75vh;
     overflow-y: auto;
+  }
+}
+.developers-box {
+  @apply border-t-[1px] border-solid border-graye0;
+}
+.developers {
+  @apply border-r-[1px] border-solid border-graye0 pr-4 hidden md:block;
+  .side-nav {
+    @apply flex flex-wrap w-[158px] pb-32;
+    .overview a,
+    .nav-title span {
+      @apply text-grag2c text-base;
+      font-family: 'Ubuntu-Bold';
+    }
+    .overview {
+      @apply mt-10;
+      .active {
+        @apply text-gray20;
+      }
+    }
+    .nav-title {
+      @apply w-full text-left mt-9 flex justify-between items-center;
+      img {
+        @apply w-[11px] h-[6px];
+      }
+      .title-img {
+        img {
+          @apply rotate-180;
+        }
+      }
+    }
+    .nav-title-active {
+      span {
+        @apply text-gray20;
+      }
+    }
+    .nav-title-list {
+      a {
+        @apply mt-3 text-sm leading-[30px] block w-full hover:text-gray20;
+      }
+      .active {
+        @apply text-gray20;
+      }
+    }
+  }
+}
+
+.developers-mobile {
+  @apply block md:hidden bg-grayeb;
+  .title {
+    @apply flex items-center justify-center w-full cursor-pointer text-center text-gray20 font-bold h-[46px] leading-[46px] border-solid border-b-[1px] border-grayd7;
+    img {
+      @apply w-3 h-3 ml-1 rotate-90;
+    }
+    .avtice-bot {
+      @apply rotate-[270deg] mt-[2px];
+    }
+  }
+
+  .developers-content {
+    @apply px-5 py-[14px];
+    .overview {
+      @apply py-[14px];
+      a {
+        @apply font-bold text-base;
+      }
+    }
+    button {
+      @apply w-full text-left py-[14px] flex items-center;
+      span {
+        @apply font-bold text-base;
+      }
+      img {
+        @apply w-3 h-3 ml-1 mt-[2px];
+      }
+    }
+    .nav-title-list {
+      a {
+        @apply w-full block text-sm py-3 hover:text-gray20;
+      }
+      .active {
+        @apply text-gray20;
+      }
+    }
+  }
+}
+
+// developers docs
+.developers-item {
+  @apply flex justify-between;
+  .docs {
+    @apply w-full md:w-[83%];
   }
 }

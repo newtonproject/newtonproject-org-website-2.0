@@ -2,6 +2,7 @@
 title: Roadmap
 description: Roadmap
 lang: en
+template: learnDocs
 sidebar: true
 ---
 

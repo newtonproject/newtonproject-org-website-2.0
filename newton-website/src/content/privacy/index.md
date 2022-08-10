@@ -2,6 +2,7 @@
 title: Privacy Policy
 description: Privacy Policy
 lang: en
+template: learnDocs
 sidebar: true
 ---
 

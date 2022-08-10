@@ -57,9 +57,7 @@ export default function Header() {
               </div>
             </li>
             <li>
-              <a href="https://developer.newtonproject.org/" target="_blank">
-                {intl.formatMessage({ id: 'Developers' })}
-              </a>
+              <Link to="/developers/docs/">{intl.formatMessage({ id: 'Developers' })}</Link>
             </li>
             <li>
               <Link to="/community/">{intl.formatMessage({ id: 'Community' })}</Link>
