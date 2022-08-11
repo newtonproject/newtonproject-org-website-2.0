@@ -58,7 +58,7 @@ function DeveloperSideMobile() {
                         <Link getProps={isActive} to="/developers/docs/consensus/">
                           {intl.formatMessage({ id: 'Consensus' })}
                         </Link>
-                        <Link getProps={isActive} to="/developers/docs/whitepapers">
+                        <Link getProps={isActive} to="/developers/docs/white-papers">
                           {intl.formatMessage({ id: 'Whitepapers' })}
                         </Link>
                         <Link getProps={isActive} to="/developers/docs/projects">
