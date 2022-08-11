@@ -11,11 +11,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `Mdx`) {
     const slug = createFilePath({ node, getNode, basePath: `content` })
-    // console.log("create file path by type for mdx:" + slug);
     createNodeField({
       node,
       name: `slug`,
-      value: slug
+      value: slug,
+      template: node.internal.template
     })
   }
 }
@@ -30,6 +30,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug
             frontmatter {
               lang
+              template
             }
           }
         }
@@ -42,17 +43,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
 
-
+  // For all markdown nodes, create a page
   result.data.allMdx.edges.forEach(({ node }) => {
-    // console.log("start create page success====111" + node.frontmatter.lang);
-    // console.log("start create page for:" + node.slug);
+
     let relativeDirectory = node.slug;
     if(relativeDirectory.endsWith("/")) {
       relativeDirectory = relativeDirectory.substring(0, relativeDirectory.length - 1)
     }
     createPage({
       path: `${node.slug}`,
-      component: path.resolve(`./src/templates/docs.tsx`),
+      component: path.resolve(`./src/templates/${node.frontmatter.template}.tsx`),
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.

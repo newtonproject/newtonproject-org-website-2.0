@@ -2,6 +2,7 @@
 title: Terms of Use
 description: Terms of Use
 lang: en
+template: learnDocs
 sidebar: true
 ---
 

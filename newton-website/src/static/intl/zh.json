@@ -119,5 +119,21 @@
   "Done! Go check your balance": "Done! Go check your balance",
   "Newton Testnet Faucet": "Newton Testnet Faucet",
   "Give Me Testnet NEW": "Give Me Testnet NEW",
-  "Your Newton Address": "Your Newton Address"
+  "Your Newton Address": "Your Newton Address",
+  "Overview": "Overview",
+  "Intro to Newton": "Intro to Newton",
+  "Consensus": "Consensus",
+  "Whitepapers": "Whitepapers",
+  "Projects": "Projects",
+  "Audits": "Audits",
+  "Quick start": "Quick start",
+  "Run a node": "Run a node",
+  "Mining": "Mining",
+  "Transaction": "Transaction",
+  "Smart contracts": "Smart contracts",
+  "Specs": "Specs",
+  "NEP": "NEP",
+  "Workshop": "Workshop",
+  "Hackathon": "Hackathon",
+  "Grant": "Grant"
 }

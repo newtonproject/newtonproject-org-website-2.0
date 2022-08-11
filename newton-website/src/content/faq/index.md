@@ -2,6 +2,7 @@
 title: FAQ
 description: FAQ
 lang: en
+template: learnDocs
 sidebar: true
 ---
 

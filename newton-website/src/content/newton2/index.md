@@ -2,6 +2,7 @@
 title: Newton 2.0
 description: Newton 2.0
 lang: en
+template: learnDocs
 sidebar: true
 ---
 
