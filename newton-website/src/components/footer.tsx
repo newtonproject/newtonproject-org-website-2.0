@@ -34,9 +34,7 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href="https://developer.newtonproject.org/" target="_blank">
-                  {intl.formatMessage({ id: 'Developer' })}
-                </a>
+                <Link to="/developers/docs/">{intl.formatMessage({ id: 'Developers' })}</Link>
               </dd>
               <dd>
                 <a href={newsEnvUrl + '/newstatus/'} target="_blank">
@@ -141,9 +139,7 @@ const FooterMobile = () => {
             </a>
           </dd>
           <dd>
-            <a href="https://developer.newtonproject.org/" target="_blank">
-              {intl.formatMessage({ id: 'Developer' })}
-            </a>
+            <Link to="/developers/docs/">{intl.formatMessage({ id: 'Developers' })}</Link>
           </dd>
           <dd>
             <a href={newsEnvUrl + '/newstatus/'} target="_blank">

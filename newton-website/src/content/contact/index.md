@@ -2,6 +2,7 @@
 title: Contact Us
 description: Contact Us
 lang: en
+template: learnDocs
 sidebar: true
 ---
 

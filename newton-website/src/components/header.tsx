@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import HeaderModal from './headerModal'
 import Language from './languages'
@@ -7,6 +7,20 @@ import { newsEnvUrl } from '../utils/url'
 
 export default function Header() {
   const intl = useIntl()
+  const isActive = ({ isCurrent }: any) => {
+    return isCurrent ? { className: 'active' } : {}
+  }
+
+  const [activeName, setActiveName] = useState(false)
+  const [activeLearn, setActiveLearn] = useState(false)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const herf = window.location.pathname
+      const herfName = herf.split('/')[2]
+      herfName == 'getnew' ? setActiveName(true) : setActiveName(false)
+      herfName == 'newton2' || herfName == 'evt' || herfName == 'roadmap' ? setActiveLearn(true) : setActiveLearn(false)
+    }
+  })
 
   return (
     <>
@@ -19,12 +33,14 @@ export default function Header() {
           </div>
           <ul>
             <li className={'header-use'}>
-              <div className={'use'}>
+              <div className={activeName ? 'use active' : 'use'}>
                 {intl.formatMessage({ id: 'Use Newton' })}
-                <span></span>
+                <span className={activeName ? 'activeImg' : ''}></span>
               </div>
               <div className={'header-down'}>
-                <Link to="/getnew/">{intl.formatMessage({ id: 'Get New' })}</Link>
+                <Link getProps={isActive} to="/getnew/">
+                  {intl.formatMessage({ id: 'Get New' })}
+                </Link>
                 <a href={newsEnvUrl + '/newpay/'} target="_blank">
                   {intl.formatMessage({ id: 'NewPay' })}
                 </a>
@@ -46,26 +62,36 @@ export default function Header() {
               </div>
             </li>
             <li className={'header-use header-learn'}>
-              <div className={'use'}>
+              <div className={activeLearn ? 'use active' : 'use'}>
                 {intl.formatMessage({ id: 'Learn' })}
-                <span></span>
+                <span className={activeLearn ? 'activeImg' : ''}></span>
               </div>
               <div className={'header-down'}>
-                <Link to="/newton2/">{intl.formatMessage({ id: 'Newton2.0' })}</Link>
-                <Link to="/evt/">{intl.formatMessage({ id: 'EVT' })}</Link>
-                <Link to="/roadmap/">{intl.formatMessage({ id: 'Roadmap' })}</Link>
+                <Link getProps={isActive} to="/newton2/">
+                  {intl.formatMessage({ id: 'Newton2.0' })}
+                </Link>
+                <Link getProps={isActive} to="/evt/">
+                  {intl.formatMessage({ id: 'EVT' })}
+                </Link>
+                <Link getProps={isActive} to="/roadmap/">
+                  {intl.formatMessage({ id: 'Roadmap' })}
+                </Link>
               </div>
             </li>
             <li>
-              <a href="https://developer.newtonproject.org/" target="_blank">
+              <Link getProps={isActive} to="/developers/docs/">
                 {intl.formatMessage({ id: 'Developers' })}
-              </a>
+              </Link>
             </li>
             <li>
-              <Link to="/community/">{intl.formatMessage({ id: 'Community' })}</Link>
+              <Link getProps={isActive} to="/community/">
+                {intl.formatMessage({ id: 'Community' })}
+              </Link>
             </li>
             <li>
-              <Link to="/ecosystem/">{intl.formatMessage({ id: 'Ecosystem' })}</Link>
+              <Link getProps={isActive} to="/ecosystem/">
+                {intl.formatMessage({ id: 'Ecosystem' })}
+              </Link>
             </li>
           </ul>
           <div className={'header-search'}>
