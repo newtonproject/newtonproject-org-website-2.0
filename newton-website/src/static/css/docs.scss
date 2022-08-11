@@ -173,7 +173,7 @@
 }
 
 .docs-content-title-pc {
-  @apply hidden md:block max-w-[25%] min-w-[15rem] top-[16.25rem];
+  @apply hidden md:block max-w-[25%] min-w-[15rem] top-[16.25rem] mt-4;
   position: sticky;
   height: calc(80vh - 100px);
   overflow-y: auto;
