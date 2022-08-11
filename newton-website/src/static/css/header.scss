@@ -36,6 +36,9 @@
       .header-down {
         @apply block;
       }
+      .use {
+        @apply text-gray20;
+      }
       > a {
         @apply text-gray20;
       }
