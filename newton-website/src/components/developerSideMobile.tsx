@@ -8,7 +8,7 @@ function DeveloperSideMobile() {
   const isActive = ({ isCurrent }: any) => {
     return isCurrent ? { className: 'active' } : {}
   }
-  let hrefTitle: string
+  let hrefTitle = intl.formatMessage({ id: 'Overview' })
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     const herf = window.location.pathname
     const herfName = herf.split('/')[4]
