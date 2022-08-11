@@ -94,12 +94,14 @@ const SiteNavMenu = () => {
   }
   const [activeName, setActiveName] = useState(false)
   const [activeLearn, setActiveLearn] = useState(false)
+  const [activedevelopers, setActiveDevelopers] = useState(false)
   useEffect(() => {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const herf = window.location.pathname
       const herfName = herf.split('/')[2]
       herfName == 'getnew' ? setActiveName(true) : setActiveName(false)
       herfName == 'newton2' || herfName == 'evt' || herfName == 'roadmap' ? setActiveLearn(true) : setActiveLearn(false)
+      herfName == 'developers' ? setActiveDevelopers(true) : setActiveDevelopers(false)
     }
   })
   return (
@@ -153,7 +155,7 @@ const SiteNavMenu = () => {
             </div>
           </li>
           <li>
-            <Link getProps={isActive} to="/developers/docs/">
+            <Link getProps={isActive} to="/developers/docs/" className={activedevelopers ? 'active' : ''}>
               {intl.formatMessage({ id: 'Developers' })}
             </Link>
           </li>
