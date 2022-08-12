@@ -14,14 +14,22 @@ export default function Header() {
   const [activeName, setActiveName] = useState(false)
   const [activeLearn, setActiveLearn] = useState(false)
   const [activedevelopers, setActiveDevelopers] = useState(false)
+  const [activeCommunity, setActiveCommunity] = useState(false)
   useEffect(() => {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const herf = window.location.pathname
       const herfName = herf.split('/')[2]
-      console.log('====', herfName)
+      // console.log('====111', herfName)
       herfName == 'getnew' ? setActiveName(true) : setActiveName(false)
       herfName == 'newton2' || herfName == 'evt' || herfName == 'roadmap' ? setActiveLearn(true) : setActiveLearn(false)
       herfName == 'developers' ? setActiveDevelopers(true) : setActiveDevelopers(false)
+      herfName == 'announcements' ||
+      herfName == 'activity' ||
+      herfName == 'press' ||
+      herfName == 'blog' ||
+      herfName == 'voice'
+        ? setActiveCommunity(true)
+        : setActiveCommunity(false)
     }
   })
 
@@ -87,7 +95,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link getProps={isActive} to="/community/">
+              <Link getProps={isActive} to="/announcements/" className={activeCommunity ? 'active' : ''}>
                 {intl.formatMessage({ id: 'Community' })}
               </Link>
             </li>

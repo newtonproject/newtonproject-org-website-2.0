@@ -1,0 +1,56 @@
+.community-html {
+  @apply bg-grayf7;
+}
+.community-tab {
+  @apply bg-grayef h-[58px] leading-[58px] hidden md:block;
+  a {
+    @apply mr-16 text-base flex md:inline-block py-[14px] md:py-0;
+  }
+  .active {
+    @apply text-gray20;
+  }
+}
+.community-tab-h5 {
+  @apply bg-grayef block md:hidden;
+  button {
+    @apply flex items-center justify-center text-base text-gray20 w-full text-center h-[46px] leading-[46px] border-b-[1px] border-solid border-grayd7;
+    font-family: 'Ubuntu-Medium';
+    .bot {
+      @apply w-3 h-3 ml-1 rotate-90;
+      img {
+        @apply w-full h-full;
+      }
+    }
+    .avtice-bot {
+      @apply rotate-[360deg] mt-[2px];
+    }
+  }
+  .tab-list {
+    @apply py-[14px];
+    a {
+      @apply block py-[14px];
+      font-family: 'Ubuntu-Medium';
+    }
+    .active {
+      @apply text-gray20;
+    }
+  }
+}
+.community-banner {
+  @apply h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[41px] md:text-5xl bg-community-banner-h5 md:bg-community-banner bg-no-repeat bg-cover;
+}
+.community-data {
+  @apply pb-[5.5rem];
+  li {
+    @apply flex md:items-center flex-wrap md:flex-nowrap border-b-[1px] border-solid border-graye0 cursor-pointer py-6 md:py-10 hover:text-gray20;
+    &:last-child {
+      @apply md:border-none;
+    }
+  }
+  h3 {
+    @apply w-full md:w-[80px] md:mr-14 text-gray96 text-sm;
+  }
+  p {
+    @apply text-xl md:text-[22px];
+  }
+}

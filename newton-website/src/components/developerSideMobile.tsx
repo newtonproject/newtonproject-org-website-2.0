@@ -30,7 +30,7 @@ function DeveloperSideMobile() {
             <Disclosure.Button className={'title'}>
               <span>{intl.formatMessage({ id: `${hrefTitle}` })}</span>
               <StaticImage
-                className={open ? 'avtice-bot' : ''}
+                className={open ? 'avtice-bot' : 'bot'}
                 placeholder="blurred"
                 alt="img"
                 src="../static/images/header-bot-hover.png"

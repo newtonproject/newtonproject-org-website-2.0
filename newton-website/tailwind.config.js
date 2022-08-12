@@ -16,6 +16,8 @@ module.exports = {
         'community-bg-h5': "url('../images/ecosystem/community-bg-h5.png')",
         'ecosystem-submit': "url('../images/ecosystem/ecosystem-submit.png')",
         'ecosystem-submit-h5': "url('../images/ecosystem/ecosystem-submit-h5.png')",
+        'community-banner': "url('../images/community-banner.png')",
+        'community-banner-h5': "url('../images/community-banner-h5.png')",
         'footer-bg': "url('../images/footer/footer-bg.png')",
         'footer-bg-h5': "url('../images/footer/footer-bg-h5.png')",
         'docs-a': "url('../images/docs/docs-a.png')",
@@ -55,6 +57,7 @@ module.exports = {
         graye0:'#E0ECF6',
         grayeb:'#EBF3FA',
         grayd7:'#D7E5F1',
+        grayef:'#EFF6FC',
         redd0: '#d00009'
       },
       width: {

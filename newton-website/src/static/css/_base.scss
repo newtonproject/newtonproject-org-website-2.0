@@ -28,7 +28,8 @@ body {
 }
 a:focus,
 div:focus,
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 .new-index {
