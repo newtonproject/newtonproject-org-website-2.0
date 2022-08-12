@@ -54,3 +54,54 @@
     @apply text-xl md:text-[22px];
   }
 }
+
+.community-list {
+  .community-banner {
+    @apply hidden;
+  }
+}
+.community-side {
+  @apply pb-[5.5rem];
+  h2 {
+    @apply text-2xl md:text-5xl mt-12 md:mt-20 mb-10 md:mb-16;
+  }
+  .author-box {
+    @apply flex justify-between items-center leading-8;
+    img {
+      @apply w-8 h-8 mr-2;
+    }
+  }
+  .share {
+    @apply text-gray96 text-base;
+    a {
+      @apply flex justify-between items-center;
+      span {
+        @apply hidden md:block;
+      }
+      .img {
+        @apply w-10 h-10 ml-4;
+        background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+        box-shadow: -5px -5px 20px 5px #ffffff, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0);
+      }
+      img {
+        @apply w-[26px] h-[26px] mx-auto mt-1;
+      }
+      &:hover {
+        .img {
+          @apply border-grage5f border-solid border-2;
+        }
+      }
+    }
+  }
+  .side-list {
+    h3 {
+      @apply text-xl md:text-[26px] mt-10 md:mt-12 mb-9;
+      font-family: 'Ubuntu-Medium';
+    }
+    p {
+      @apply text-base py-[14px];
+    }
+  }
+}
