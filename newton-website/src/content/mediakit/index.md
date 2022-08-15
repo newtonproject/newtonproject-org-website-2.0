@@ -1,6 +1,6 @@
 ---
-title: Mediakit
-description: Mmediakit
+title: Media kit
+description: Mmedia kit
 lang: en
 template: learnDocs
 sidebar: true
