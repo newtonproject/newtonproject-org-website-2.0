@@ -6,7 +6,7 @@ template: learnDocs
 sidebar: true
 ---
 
-## Newton jobs 
+## Newton jobs
 
 **Want to find a job working in Newton?**
 
