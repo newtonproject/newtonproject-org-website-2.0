@@ -56,7 +56,7 @@ export default function Footer() {
               <dd>
                 <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
               </dd>
-              <dd>
+              {/* <dd>
                 <a href={newsEnvUrl + '/technology/'} target="_blank">
                   {intl.formatMessage({ id: 'Technology' })}
                 </a>
@@ -65,19 +65,18 @@ export default function Footer() {
                 <a href={newsEnvUrl + '/solutions/'} target="_blank">
                   {intl.formatMessage({ id: 'Industry' })}
                 </a>
-              </dd>
+              </dd> */}
               <dd>
-                <a href={newsEnvUrl + '/joinus/'} target="_blank">
-                  {intl.formatMessage({ id: 'Join Us' })}
-                </a>
+                <Link to="/get-involved/">{intl.formatMessage({ id: 'Get involved' })}</Link>
               </dd>
               <dd>
                 <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/mediakit/'} target="_blank">
+                {/* <a href={newsEnvUrl + '/mediakit/'} target="_blank">
                   {intl.formatMessage({ id: 'Media Kit' })}
-                </a>
+                </a> */}
+                <Link to="/mediakit/">{intl.formatMessage({ id: 'Media Kit' })}</Link>
               </dd>
               <dd>
                 <Link to={'/roadmap/'} target="_blank">
@@ -161,7 +160,7 @@ const FooterMobile = () => {
           <dd>
             <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
           </dd>
-          <dd>
+          {/* <dd>
             <a href={newsEnvUrl + '/technology/'} target="_blank">
               {intl.formatMessage({ id: 'Technology' })}
             </a>
@@ -170,19 +169,18 @@ const FooterMobile = () => {
             <a href={newsEnvUrl + '/solutions/'} target="_blank">
               {intl.formatMessage({ id: 'Industry' })}
             </a>
-          </dd>
+          </dd> */}
           <dd>
-            <a href={newsEnvUrl + '/joinus/'} target="_blank">
-              {intl.formatMessage({ id: 'Join Us' })}
-            </a>
+            <Link to="/get-involved/">{intl.formatMessage({ id: 'Get involved' })}</Link>
           </dd>
           <dd>
             <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/mediakit/'} target="_blank">
+            {/* <a href={newsEnvUrl + '/mediakit/'} target="_blank">
               {intl.formatMessage({ id: 'Media Kit' })}
-            </a>
+            </a> */}
+            <Link to="/mediakit/">{intl.formatMessage({ id: 'Media Kit' })}</Link>
           </dd>
           <dd>
             <Link to={'/roadmap/'} target="_blank">
