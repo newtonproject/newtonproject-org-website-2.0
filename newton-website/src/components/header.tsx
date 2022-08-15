@@ -14,6 +14,7 @@ export default function Header() {
   const [activeName, setActiveName] = useState(false)
   const [activeLearn, setActiveLearn] = useState(false)
   const [activedevelopers, setActiveDevelopers] = useState(false)
+  const [activecommunity, setActiveCommunity] = useState(false)
   useEffect(() => {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const herf = window.location.pathname
@@ -22,6 +23,7 @@ export default function Header() {
       herfName == 'getnew' ? setActiveName(true) : setActiveName(false)
       herfName == 'newton2' || herfName == 'evt' || herfName == 'roadmap' ? setActiveLearn(true) : setActiveLearn(false)
       herfName == 'developers' ? setActiveDevelopers(true) : setActiveDevelopers(false)
+      herfName == 'community' || herfName == 'get-involved' ? setActiveCommunity(true) : setActiveCommunity(false)
     }
   })
 
@@ -86,10 +88,19 @@ export default function Header() {
                 {intl.formatMessage({ id: 'Developers' })}
               </Link>
             </li>
-            <li>
-              <Link getProps={isActive} to="/community/">
+            <li className={'header-use header-learn'}>
+              <div className={activecommunity ? 'use active' : 'use'}>
                 {intl.formatMessage({ id: 'Community' })}
-              </Link>
+                <span className={activecommunity ? 'activeImg' : ''}></span>
+              </div>
+              <div className={'header-down'}>
+                <Link getProps={isActive} to="/community/">
+                  {intl.formatMessage({ id: 'Community hub' })}
+                </Link>
+                <Link getProps={isActive} to="/get-involved/">
+                  {intl.formatMessage({ id: 'Get involved' })}
+                </Link>
+              </div>
             </li>
             <li>
               <Link getProps={isActive} to="/ecosystem/">

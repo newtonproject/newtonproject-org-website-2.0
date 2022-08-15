@@ -56,7 +56,7 @@ export default function Footer() {
               <dd>
                 <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
               </dd>
-              <dd>
+              {/* <dd>
                 <a href={newsEnvUrl + '/technology/'} target="_blank">
                   {intl.formatMessage({ id: 'Technology' })}
                 </a>
@@ -65,11 +65,9 @@ export default function Footer() {
                 <a href={newsEnvUrl + '/solutions/'} target="_blank">
                   {intl.formatMessage({ id: 'Industry' })}
                 </a>
-              </dd>
+              </dd> */}
               <dd>
-                <a href={newsEnvUrl + '/joinus/'} target="_blank">
-                  {intl.formatMessage({ id: 'Join Us' })}
-                </a>
+                <Link to="/get-involved/">{intl.formatMessage({ id: 'Get involved' })}</Link>
               </dd>
               <dd>
                 <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
@@ -161,7 +159,7 @@ const FooterMobile = () => {
           <dd>
             <Link to="/getnew/">{intl.formatMessage({ id: 'Economy' })}</Link>
           </dd>
-          <dd>
+          {/* <dd>
             <a href={newsEnvUrl + '/technology/'} target="_blank">
               {intl.formatMessage({ id: 'Technology' })}
             </a>
@@ -170,11 +168,9 @@ const FooterMobile = () => {
             <a href={newsEnvUrl + '/solutions/'} target="_blank">
               {intl.formatMessage({ id: 'Industry' })}
             </a>
-          </dd>
+          </dd> */}
           <dd>
-            <a href={newsEnvUrl + '/joinus/'} target="_blank">
-              {intl.formatMessage({ id: 'Join Us' })}
-            </a>
+            <Link to="/get-involved/">{intl.formatMessage({ id: 'Get involved' })}</Link>
           </dd>
           <dd>
             <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
