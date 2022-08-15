@@ -76,7 +76,7 @@ export default function Footer() {
                 {/* <a href={newsEnvUrl + '/mediakit/'} target="_blank">
                   {intl.formatMessage({ id: 'Media Kit' })}
                 </a> */}
-                 <Link to="/mediakit/">{intl.formatMessage({ id: 'Media Kit' })}</Link>
+                <Link to="/mediakit/">{intl.formatMessage({ id: 'Media Kit' })}</Link>
               </dd>
               <dd>
                 <Link to={'/roadmap/'} target="_blank">
