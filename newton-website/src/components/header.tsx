@@ -19,7 +19,7 @@ export default function Header() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const herf = window.location.pathname
       const herfName = herf.split('/')[2]
-      console.log('====', herfName)
+      // console.log('====', herfName)
       herfName == 'getnew' ? setActiveName(true) : setActiveName(false)
       herfName == 'newton2' || herfName == 'evt' || herfName == 'roadmap' ? setActiveLearn(true) : setActiveLearn(false)
       herfName == 'developers' ? setActiveDevelopers(true) : setActiveDevelopers(false)
