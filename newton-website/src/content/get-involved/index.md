@@ -6,8 +6,9 @@ template: learnDocs
 sidebar: true
 ---
 
-## Newton jobs
+
+## How can I get involved?
 
 **Want to find a job working in Newton?**
 
-- [newton jobs](https://jobs.lever.co/newtonproject)
+- [Newton Foundation job board](https://jobs.lever.co/newtonproject)
