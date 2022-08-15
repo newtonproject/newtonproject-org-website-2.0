@@ -51,6 +51,10 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
     setIsOpen(true)
   }
   const intl = useIntl()
+  let urlTitle: any
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    urlTitle = '/' + window.location.pathname.slice(4)
+  }
   return (
     <>
       <Seo title={content.frontmatter.title} description={''} meta={[]} lang={''} />
@@ -82,14 +86,14 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
                   return (
                     <ul key={index}>
                       <li>
-                        <Link to={item.url} className={'title-a'}>
+                        <Link to={urlTitle + item.url} className={'title-a'}>
                           {item.title}
                         </Link>
                         {item.items && item.items.length > 0
                           ? item.items.map((data: any, index: number) => {
                               return (
                                 <div key={index} className={'title-a-content'}>
-                                  {<Link to={data.url}>{data.title}</Link>}
+                                  {<Link to={urlTitle + data.url}>{data.title}</Link>}
                                 </div>
                               )
                             })
@@ -152,14 +156,14 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
                               return (
                                 <ul key={index}>
                                   <li>
-                                    <Link to={item.url} className={'title-a'}>
+                                    <Link to={urlTitle + item.url} className={'title-a'}>
                                       {item.title}
                                     </Link>
                                     {item.items && item.items.length > 0
                                       ? item.items.map((data: any, index: number) => {
                                           return (
                                             <div key={index} className={'title-a-content'}>
-                                              {<Link to={data.url}>{data.title}</Link>}
+                                              {<Link to={urlTitle + data.url}>{data.title}</Link>}
                                             </div>
                                           )
                                         })
