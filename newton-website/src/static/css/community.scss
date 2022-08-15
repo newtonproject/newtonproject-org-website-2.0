@@ -41,18 +41,56 @@
 }
 .community-data {
   @apply pb-[5.5rem];
-  li {
-    @apply flex md:items-center flex-wrap md:flex-nowrap border-b-[1px] border-solid border-graye0 cursor-pointer py-6 md:py-10 hover:text-gray20;
-    &:last-child {
-      @apply md:border-none;
+  .data-list {
+    li {
+      @apply flex md:items-center flex-wrap md:flex-nowrap border-b-[1px] border-solid border-graye0 cursor-pointer py-6 md:py-10 hover:text-gray20;
+      &:last-child {
+        @apply md:border-none;
+      }
     }
   }
+
   h3 {
-    @apply w-full md:w-[80px] md:mr-14 text-gray96 text-sm;
+    @apply w-full md:w-[85px] md:mr-14 text-gray96 text-sm;
   }
   p {
     @apply text-xl md:text-[22px];
   }
+  // pagination
+  .ant-pagination {
+    @apply text-center md:text-right mt-10 md:mt-3;
+  }
+  .ant-pagination-options {
+    @apply hidden;
+  }
+  .ant-pagination-item {
+    @apply border-graye0 h-[34px] leading-[34px];
+    a {
+      @apply text-base text-grag96a h-[34px] leading-[34px];
+      font-family: 'Ubuntu-Medium';
+    }
+  }
+  .ant-pagination-item-active {
+    a {
+      @apply bg-grag2c text-white h-[32px] leading-[32px];
+    }
+  }
+  .ant-pagination-item-link {
+    .anticon-right,
+    .anticon-left {
+      svg {
+        @apply hidden;
+      }
+    }
+    .anticon-right,
+    .anticon-left {
+      @apply bg-page-right bg-no-repeat bg-contain w-5 h-5 mt-[5px];
+    }
+    .anticon-left {
+      @apply rotate-180;
+    }
+  }
+  // .ant-pagination-item-active a
 }
 
 .community-list {

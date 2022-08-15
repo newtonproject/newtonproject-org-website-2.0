@@ -25,6 +25,7 @@ module.exports = {
         'docs-data': "url('../images/docs/docs-data.png')",
         'docs-money': "url('../images/docs/docs-money.png')",
         'docs-price': "url('../images/docs/docs-price.png')",
+        'page-right': "url('../images/page-right.png')",
        },
       colors: {
         blue74: '#74CBFF',

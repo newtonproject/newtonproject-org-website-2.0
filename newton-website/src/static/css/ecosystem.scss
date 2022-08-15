@@ -149,6 +149,7 @@
           @apply md:mb-5;
         }
         > i {
+          @apply whitespace-nowrap;
           &:nth-child(1) {
             @apply text-xl md:text-sm mt-8 mb-4 md:my-0;
             font-family: 'Ubuntu-Bold';

@@ -30,7 +30,10 @@
     font-family: 'Ubuntu';
   }
   dd {
-    @apply text-grag96a mb-4 text-sm hover:text-gray20;
+    @apply text-grag96a mb-4 text-sm;
+    a {
+      @apply text-gray96 hover:text-gray20;
+    }
   }
 }
 .footer-copyright {
