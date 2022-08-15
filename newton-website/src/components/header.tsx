@@ -28,13 +28,12 @@ export default function Header() {
       herfName == 'press' ||
       herfName == 'blog' ||
       herfName == 'voice' ||
-      herfName == 'community'||
+      herfName == 'community' ||
       herfName == 'get-involved'
         ? setActiveCommunity(true)
         : setActiveCommunity(false)
-
     }
-  },[])
+  }, [])
 
   return (
     <>
@@ -97,7 +96,7 @@ export default function Header() {
                 {intl.formatMessage({ id: 'Developers' })}
               </Link>
             </li>
-            
+
             <li className={'header-use header-learn'}>
               <div className={activecommunity ? 'use active' : 'use'}>
                 {intl.formatMessage({ id: 'Community' })}

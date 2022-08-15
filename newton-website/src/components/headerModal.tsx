@@ -113,7 +113,6 @@ const SiteNavMenu = () => {
       herfName == 'get-involved'
         ? setActiveCommunity(true)
         : setActiveCommunity(false)
-
     }
   })
   return (
