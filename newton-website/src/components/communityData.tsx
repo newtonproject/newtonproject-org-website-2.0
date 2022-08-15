@@ -1,7 +1,7 @@
 import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { useIntl, Link } from 'gatsby-plugin-intl'
-
+import { Button } from 'antd'
 function CommunityData() {
   const intl = useIntl()
 
@@ -29,7 +29,16 @@ function CommunityData() {
           <p>Newton Weekly | 2022.07.18 - 2022.07.22</p>
         </li>
       </ul>
+      <App />
     </div>
   )
 }
 export default CommunityData
+
+const App = ()=>{
+  return(
+    <Button type="primary">Primary</Button>
+  )
+}
+
+// export default () => 
