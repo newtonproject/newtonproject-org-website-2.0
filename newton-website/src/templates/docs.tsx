@@ -97,7 +97,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
                               ? item.items.map((data: any, index: number) => {
                                   return (
                                     <div key={index} className={'title-a-content'}>
-                                      {<Link to={data.url}>{data.title}</Link>}
+                                      {<Link to={urlTitle + data.url}>{data.title}</Link>}
                                     </div>
                                   )
                                 })
@@ -171,7 +171,7 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
                                           ? item.items.map((data: any, index: number) => {
                                               return (
                                                 <div key={index} className={'title-a-content'}>
-                                                  {<Link to={data.url}>{data.title}</Link>}
+                                                  {<Link to={urlTitle + data.url}>{data.title}</Link>}
                                                 </div>
                                               )
                                             })
