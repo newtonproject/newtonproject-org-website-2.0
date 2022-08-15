@@ -6,4 +6,8 @@ template: learnDocs
 sidebar: true
 ---
 
-## TBD
+## Newton jobs
+
+**Want to find a job working in Newton?**
+
+- [newton jobs](https://jobs.lever.co/newtonproject)

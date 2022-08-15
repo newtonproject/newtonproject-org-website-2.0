@@ -73,9 +73,10 @@ export default function Footer() {
                 <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/mediakit/'} target="_blank">
+                {/* <a href={newsEnvUrl + '/mediakit/'} target="_blank">
                   {intl.formatMessage({ id: 'Media Kit' })}
-                </a>
+                </a> */}
+                <Link to="/mediakit/">{intl.formatMessage({ id: 'Media Kit' })}</Link>
               </dd>
               <dd>
                 <Link to={'/roadmap/'} target="_blank">
@@ -176,9 +177,10 @@ const FooterMobile = () => {
             <Link to="/contact/">{intl.formatMessage({ id: 'Contact Us' })}</Link>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/mediakit/'} target="_blank">
+            {/* <a href={newsEnvUrl + '/mediakit/'} target="_blank">
               {intl.formatMessage({ id: 'Media Kit' })}
-            </a>
+            </a> */}
+            <Link to="/mediakit/">{intl.formatMessage({ id: 'Media Kit' })}</Link>
           </dd>
           <dd>
             <Link to={'/roadmap/'} target="_blank">
