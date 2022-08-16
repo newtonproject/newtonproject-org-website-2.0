@@ -11,4 +11,4 @@ sidebar: true
 
 **Want to find a job working in Newton?**
 
-- [Newton Foundation job board](https://jobs.lever.co/newtonproject)
+<a href="https://jobs.lever.co/newtonproject" target="_blank">Newton Foundation job board</a>
