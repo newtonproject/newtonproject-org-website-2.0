@@ -1,9 +1,10 @@
 ---
-title: Fet Faucet
-description: Fet Faucet
+title: Get Faucet
+description: Get Faucet
 lang: en
 template: docs
 sidebar: true
 ---
 
-## TBD
+## Newton Testnet Faucet
+[Get Faucet](https://www.newtonproject.org/en/faucet/)
