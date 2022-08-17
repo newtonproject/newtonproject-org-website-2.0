@@ -13,14 +13,14 @@ function PressData() {
     const listUrl = newsEnvUrl + 'api/v1/press/list'
     getDate(listUrl)
   }, [])
-  const getDate = (bannerUrl: any) => {
-    const fetchData = async (bannerUrl: any) => {
-      const res = await getRequest(bannerUrl)
+  const getDate = (listUrl: any) => {
+    const fetchData = async (listUrl: any) => {
+      const res = await getRequest(listUrl)
       setData(res.data.result.data)
       setCurrentPage(res.data.result.page_id)
       setTotalPage(res.data.result.total_page)
     }
-    fetchData(bannerUrl)
+    fetchData(listUrl)
   }
   const onPageChange = (page: any) => {
     const detailUrl = newsEnvUrl + 'api/v1/press/list?page_id=' + page + '&page_size=10'
