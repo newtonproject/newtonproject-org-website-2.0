@@ -7,4 +7,5 @@ sidebar: true
 ---
 
 ## Newton Testnet Faucet
-[Get Faucet](https://www.newtonproject.org/en/faucet/)
+
+<a href="https://www.newtonproject.org/en/faucet/" target="_blank">Get Faucet</a>
