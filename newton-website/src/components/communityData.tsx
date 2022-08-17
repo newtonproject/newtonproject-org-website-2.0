@@ -12,7 +12,7 @@ function CommunityData(props: any) {
   const [totalPage, setTotalPage] = useState(1)
 
   useEffect(() => {
-    const listUrl = newsEnvUrl + '/api/v1/community/entry-list?entry_type=' + entryType
+    const listUrl = newsEnvUrl + 'api/v1/community/entry-list?entry_type=' + entryType
     getDate(listUrl)
   }, [])
 
@@ -37,6 +37,15 @@ function CommunityData(props: any) {
     getDate(detailUrl)
   }
 
+  const onEntryPage = (id:any)=> {
+    const listUrl = newsEnvUrl + 'api/v1/community/entry-detail?id=' + id
+    const fetchData = async (listUrl: any) => {
+      const res = await getRequest(listUrl)
+      props.setEntryBlog(res.data.result)
+    }
+    fetchData(listUrl)
+  }
+
   return (
     <div className={'container community-data'}>
       <ul className={'data-list'}>
@@ -44,7 +53,7 @@ function CommunityData(props: any) {
           ? data.map((item: any, index) => {
               return (
                 <li key={index}>
-                  <a href={item.url} target="_blank">
+                  <a onClick={()=>onEntryPage(item.id)}>
                     <h3>{arrDate(item.created_at)}</h3>
                     <p>{item.title}</p>
                   </a>
