@@ -6,28 +6,21 @@ template: docs
 sidebar: true
 ---
 
-
 ## newton-2.0-papers
 
 [newton-2.0-papers](https://github.com/newtonproject/newton-2.0-papers)
-
-
 
 ## White Paper V0.6
 
 Latest Version：2018-11-19
 
-
-[English White Paper](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.6-release-english.pdf?v=461)         
+[English White Paper](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.6-release-english.pdf?v=461)
 
 [中文白皮书](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.6-release.pdf?v=461)
 
 [日本語 ホワイトペーパー](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.6-release-japanese.pdf?v=461)
 
-
 [Deutsch White Paper](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.6-release-german.pdf?v=461)
-
-
 
 [العربية ورق ابيض](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.6-release-arabic.pdf?v=461)
 
@@ -59,13 +52,9 @@ Latest Version：2018-11-19
 
 [ภาษาไทยกระดาษสีขาว](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.6-release-thai.pdf?v=461)
 
-
 ## White Paper V0.5
 
-
-            
 History Version：2018-07-18
-
 
 [English White Paper](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.5-release-english.pdf?v=461)
 
@@ -96,7 +85,3 @@ History Version：2018-07-18
 [Hrvatski bijeli papir](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.5-release-croatian.pdf?v=461)
 
 [Suomen valkoinen kirja](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.5-release-finnish.pdf?v=461)
-
-
-
-

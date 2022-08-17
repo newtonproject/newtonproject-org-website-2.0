@@ -6,7 +6,6 @@ template: learnDocs
 sidebar: true
 ---
 
-
 ## How can I get involved?
 
 **Want to find a job working in Newton?**
