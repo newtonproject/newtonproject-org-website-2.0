@@ -10,7 +10,7 @@ import { Skeleton } from 'antd'
 import { flex } from 'styled-system'
 
 import CommunityTab from '../components/communityTab'
-import CommunityData from '../components/communityData'
+import PressData from '../components/pressData'
 export default Community
 
 function Community() {
@@ -24,7 +24,7 @@ function Main() {
   return (
     <>
       <CommunityTab />
-      <CommunityData />
+      <PressData />
     </>
   )
 }

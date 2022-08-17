@@ -4,7 +4,7 @@ import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
 import { arrDate } from '../utils/createTime'
 
-function CommunityData() {
+function PressData() {
   const [data, setData] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
@@ -30,15 +30,21 @@ function CommunityData() {
   return (
     <div className={'container community-data'}>
       <ul className={'data-list'}>
-        <li>
-          <a href="" target="_blank">
-            <h3>标题</h3>
-            <p>日期d</p>
-          </a>
-        </li>
+        {data && data.length > 0
+          ? data.map((item: any, index) => {
+              return (
+                <li key={index}>
+                  <a href={item.url} target="_blank">
+                    <h3>{arrDate(item.created_at)}</h3>
+                    <p>{item.title}</p>
+                  </a>
+                </li>
+              )
+            })
+          : null}
       </ul>
-      <Pagination defaultCurrent={1} total={50} />
+      <Pagination defaultCurrent={1} current={currentPage} total={totalPage} onChange={onPageChange} />
     </div>
   )
 }
-export default CommunityData
+export default PressData

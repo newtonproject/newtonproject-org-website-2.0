@@ -43,7 +43,10 @@
   @apply pb-[5.5rem];
   .data-list {
     li {
-      @apply flex md:items-center flex-wrap md:flex-nowrap border-b-[1px] border-solid border-graye0 cursor-pointer py-6 md:py-10 hover:text-gray20;
+      @apply border-b-[1px] border-solid border-graye0;
+      a {
+        @apply flex md:items-center flex-wrap md:flex-nowrap py-6 md:py-10 hover:text-gray20;
+      }
       &:last-child {
         @apply md:border-none;
       }
@@ -51,10 +54,10 @@
   }
 
   h3 {
-    @apply w-full md:w-[85px] md:mr-14 text-gray96 text-sm;
+    @apply w-full md:w-[100px] md:mr-14 text-gray96 text-sm;
   }
   p {
-    @apply text-xl md:text-[22px];
+    @apply text-xl md:text-[22px] md:-mt-[3px];
   }
   // pagination
   .ant-pagination {
