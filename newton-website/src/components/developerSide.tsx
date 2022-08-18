@@ -6,7 +6,15 @@ import { StaticImage } from 'gatsby-plugin-image'
 function DeveloperSide() {
   const intl = useIntl()
   const tagList1 = ['consensus', 'white-papers', 'projects', 'audits']
-  const tagList2 = ['run-a-node', 'mining', 'get-faucet', 'wallet', 'transaction', 'smart-contracts']
+  const tagList2 = [
+    'run-a-node',
+    'mining',
+    'get-faucet',
+    'wallet',
+    'transaction',
+    'develop-evt',
+    'exchange-integration'
+  ]
   const tagList3 = ['nep']
   const tagList4 = ['workshop', 'hackathon', 'grant']
   const isActive = ({ isCurrent }: any) => {
@@ -94,8 +102,11 @@ function DeveloperSide() {
                 <Link getProps={isActive} to="/developers/docs/transaction/">
                   {intl.formatMessage({ id: 'Transaction' })}
                 </Link>
-                <Link getProps={isActive} to="/developers/docs/smart-contracts/">
-                  {intl.formatMessage({ id: 'Smart contracts' })}
+                <Link getProps={isActive} to="/developers/docs/develop-evt/">
+                  {intl.formatMessage({ id: 'Develop EVT' })}
+                </Link>
+                <Link getProps={isActive} to="/developers/docs/exchange-integration/">
+                  {intl.formatMessage({ id: 'Exchange Integration' })}
                 </Link>
               </Disclosure.Panel>
             </>

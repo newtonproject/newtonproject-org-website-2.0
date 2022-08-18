@@ -1,6 +1,6 @@
 ---
-title: Samart-contracts
-description: Samart contracts
+title: Develop EVT
+description: Develop EVT
 lang: en
 template: docs
 sidebar: true
