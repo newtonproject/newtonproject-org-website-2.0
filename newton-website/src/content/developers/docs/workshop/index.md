@@ -62,7 +62,6 @@ Coding solution （contract assignment)
 1.
 2.
 3.
-
 To make workshops hands-on, you will find them useful and develop exploring for them yourself.
 
 We have prepared a few pieces of information for reference. As this workshop was intended for a few hours online, we have simplified exploring the science & technology & design products & community’s future with experts from worldwide. This allows you to focus on finding and exploring code-engineering functionality.
