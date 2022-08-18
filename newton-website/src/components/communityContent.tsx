@@ -10,7 +10,7 @@ import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
 import { Link } from 'gatsby'
-
+import { Skeleton } from 'antd'
 export default function CommunityContent() {
   const intl = useIntl()
   const isActive = ({ isCurrent }: any) => {
@@ -63,7 +63,11 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
@@ -100,7 +104,11 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
@@ -130,7 +138,11 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
@@ -159,7 +171,11 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>

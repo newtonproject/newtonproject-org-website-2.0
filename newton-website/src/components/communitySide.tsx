@@ -5,23 +5,37 @@ import { useIntl, Link } from 'gatsby-plugin-intl'
 import { newsEnvUrl } from '../utils/url'
 import { getRequest } from '../utils/axiosData'
 import { getQueryVariable } from '../utils/getQueryVariable'
+import { Skeleton } from 'antd'
 
 function CommunitySide() {
   const intl = useIntl()
   const [dataTitle, setDataTitle]: any = useState()
   const [dataContent, setDataContent]: any = useState()
   let path: any = getQueryVariable('path')
-  path != undefined ? (path = path.substr(1)) : ''
+  let urlPath = ''
+  let hrefTitle = ''
+  if (path) {
+    hrefTitle = path.split('/')[1]
+    urlPath = path.split('/')[1]
+  }
+
+  if (hrefTitle == 'announcements') {
+    hrefTitle = 'Announcements'
+  } else if (hrefTitle == 'activity') {
+    hrefTitle = 'Activity'
+  } else if (hrefTitle == 'press') {
+    hrefTitle = 'Press'
+  } else if (hrefTitle == 'blog') {
+    hrefTitle = 'Blog'
+  } else if (hrefTitle == 'voice') {
+    hrefTitle = 'Community Voice'
+  }
+
   let twitterUrl: any
-  let hrefTitle: any
-  hrefTitle != undefined ? (hrefTitle = path.split('/')[0]) : ''
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     twitterUrl = window.location.href
   }
-  const isActive = ({ isCurrent }: any) => {
-    console.log('isCurrent', isCurrent)
-    return isCurrent ? { className: 'active' } : {}
-  }
+
   useEffect(() => {
     const listUrl = newsEnvUrl + 'api/v1/community/entry-detail?path=' + path
     const fetchData = async () => {
@@ -31,18 +45,40 @@ function CommunitySide() {
     }
     fetchData()
   }, [])
-  // let a = DOMPurify.sanitize(dataContent);
+
+  let headerTitle = [
+    {
+      url: 'announcements',
+      content: 'Announcements'
+    },
+    {
+      url: 'activity',
+      content: 'Activity'
+    },
+    {
+      url: 'press',
+      content: 'Press'
+    },
+    {
+      url: 'blog',
+      content: 'Blog'
+    },
+    {
+      url: 'voice',
+      content: 'Community Voice'
+    }
+  ]
   return (
     <>
       <div className={'community-tab'}>
         <div className={'container'}>
-          <Link to="/announcements/">{intl.formatMessage({ id: 'Announcements' })}</Link>
-          <Link to="/activity/">{intl.formatMessage({ id: 'Activity' })}</Link>
-          <Link to="/press/">{intl.formatMessage({ id: 'Press' })}</Link>
-          <Link to="/blog/" getProps={isActive}>
-            {intl.formatMessage({ id: 'Blog' })}
-          </Link>
-          <Link to="/voice/">{intl.formatMessage({ id: 'Community Voice' })}</Link>
+          {headerTitle.map((item, index) => {
+            return (
+              <Link key={index} to={'/' + item.url + '/'} className={urlPath == item.url ? 'active' : ''}>
+                {intl.formatMessage({ id: `${item.content}` })}
+              </Link>
+            )
+          })}
         </div>
       </div>
       <div className={'community-tab-h5'}>
@@ -50,7 +86,8 @@ function CommunitySide() {
           {({ open }) => (
             <>
               <Disclosure.Button>
-                <span>{intl.formatMessage({ id: `${hrefTitle}` })}</span>
+                {/* <span>{intl.formatMessage({ id: `${hrefTitle}` })}</span> */}
+                {<span>{hrefTitle}</span>}
                 <StaticImage
                   className={open ? 'avtice-bot bot' : ' bot'}
                   placeholder="blurred"
@@ -60,11 +97,13 @@ function CommunitySide() {
               </Disclosure.Button>
               <Disclosure.Panel>
                 <div className={'container tab-list'}>
-                  <Link to="/announcements/">{intl.formatMessage({ id: 'Announcements' })}</Link>
-                  <Link to="/activity/">{intl.formatMessage({ id: 'Activity' })}</Link>
-                  <Link to="/press/">{intl.formatMessage({ id: 'Press' })}</Link>
-                  <Link to="/blog/">{intl.formatMessage({ id: 'Blog' })}</Link>
-                  <Link to="/voice/">{intl.formatMessage({ id: 'Community Voice' })}</Link>
+                  {headerTitle.map((item, index) => {
+                    return (
+                      <Link key={index} to={'/' + item.url + '/'} className={urlPath == item.url ? 'active' : ''}>
+                        {intl.formatMessage({ id: `${item.content}` })}
+                      </Link>
+                    )
+                  })}
                 </div>
               </Disclosure.Panel>
             </>
@@ -72,7 +111,7 @@ function CommunitySide() {
         </Disclosure>
       </div>
       <div className={'container community-side'}>
-        <h2>{dataTitle}</h2>
+        <h2>{!dataTitle ? <Skeleton paragraph={{ rows: 0 }} active /> : dataTitle}</h2>
         <div className={'author-box'}>
           <div className={'author'}>
             <StaticImage
@@ -96,7 +135,11 @@ function CommunitySide() {
           </div>
         </div>
         <div className={'side-list'}>
-          <div dangerouslySetInnerHTML={{ __html: dataContent }}></div>
+          {!dataContent ? (
+            <Skeleton paragraph={{ rows: 10 }} active />
+          ) : (
+            <div dangerouslySetInnerHTML={{ __html: dataContent }}></div>
+          )}
         </div>
       </div>
     </>

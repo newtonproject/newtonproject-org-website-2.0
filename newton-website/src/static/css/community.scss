@@ -1,5 +1,8 @@
 .community-html {
   @apply bg-grayf7;
+  .ant-skeleton {
+    @apply pt-7;
+  }
 }
 .community-tab {
   @apply bg-grayef h-[58px] leading-[58px] hidden md:block;
@@ -54,7 +57,7 @@
   }
 
   h3 {
-    @apply w-full md:w-[110px] md:mr-14 text-gray96 text-sm;
+    @apply w-full md:w-[115px] md:mr-14 text-gray96 text-sm;
   }
   p {
     @apply text-xl md:text-[22px] md:-mt-[3px];

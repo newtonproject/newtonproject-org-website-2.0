@@ -4,6 +4,7 @@ import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
 import { arrDate } from '../utils/createTime'
 import { Link } from 'gatsby-plugin-intl'
+import { Skeleton } from 'antd'
 function CommunityData(props: any) {
   const { entryType } = props
   console.log('==类型', entryType)
@@ -40,20 +41,22 @@ function CommunityData(props: any) {
   return (
     <div className={'container community-data'}>
       <ul className={'data-list'}>
-        {data && data.length > 0
-          ? data.map((item: any, index) => {
-              return (
-                <li key={index}>
-                  <Link to={'/communitys?path=' + item.url}>
-                    <h3>{arrDate(item.created_at)}</h3>
-                    <p>{item.title}</p>
-                  </Link>
-                </li>
-              )
-            })
-          : null}
+        {data && data.length > 0 ? (
+          data.map((item: any, index) => {
+            return (
+              <li key={index}>
+                <Link to={'/communitys?path=' + item.url}>
+                  <h3>{arrDate(item.created_at)}</h3>
+                  <p>{item.title}</p>
+                </Link>
+              </li>
+            )
+          })
+        ) : (
+          <Skeleton paragraph title active />
+        )}
       </ul>
-      <Pagination defaultCurrent={1} current={currentPage} total={totalPage} onChange={onPageChange} />
+      <Pagination defaultCurrent={1} current={currentPage} total={totalPage * 10} onChange={onPageChange} />
     </div>
   )
 }

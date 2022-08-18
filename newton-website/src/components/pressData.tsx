@@ -43,7 +43,7 @@ function PressData() {
             })
           : null}
       </ul>
-      <Pagination defaultCurrent={1} current={currentPage} total={totalPage} onChange={onPageChange} />
+      <Pagination defaultCurrent={1} current={currentPage} total={totalPage * 10} onChange={onPageChange} />
     </div>
   )
 }
