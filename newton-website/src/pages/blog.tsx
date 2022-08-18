@@ -1,4 +1,4 @@
-import React,{useState,createContext} from 'react'
+import React, { useState, createContext } from 'react'
 import NormalLayout from '../components/NormalLayout'
 import { PageModelTitle } from '../model/PageModel'
 import CommunityTab from '../components/communityTab'
@@ -15,18 +15,17 @@ function Blog() {
 
 // export default class Ceshi extends Component <any>
 function Main() {
-  const [entryBlog,setEntryBlog] = useState();
-  console.log('伏组件',entryBlog)
+  const [entryBlog, setEntryBlog] = useState()
+  console.log('伏组件', entryBlog)
 
-  function changeValue(value:any) {
-    setEntryBlog(value);
+  function changeValue(value: any) {
+    setEntryBlog(value)
   }
-
 
   return (
     <>
       <CommunityTab />
       <CommunityData entryType={'blog'} setEntryBlog={setEntryBlog} />
-      </ >
+    </>
   )
 }

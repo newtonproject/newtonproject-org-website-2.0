@@ -3,7 +3,7 @@ import { Pagination } from 'antd'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
 import { arrDate } from '../utils/createTime'
-
+import { Link } from 'gatsby-plugin-intl'
 function CommunityData(props: any) {
   const { entryType } = props
   console.log('==类型', entryType)
@@ -37,7 +37,7 @@ function CommunityData(props: any) {
     getDate(detailUrl)
   }
 
-  const onEntryPage = (id:any)=> {
+  const onEntryPage = (id: any) => {
     const listUrl = newsEnvUrl + 'api/v1/community/entry-detail?id=' + id
     const fetchData = async (listUrl: any) => {
       const res = await getRequest(listUrl)
@@ -53,10 +53,10 @@ function CommunityData(props: any) {
           ? data.map((item: any, index) => {
               return (
                 <li key={index}>
-                  <a onClick={()=>onEntryPage(item.id)}>
+                  <Link to={'/communitys?id=' + item.id + '&entryType='+entryType}>
                     <h3>{arrDate(item.created_at)}</h3>
                     <p>{item.title}</p>
-                  </a>
+                  </Link>
                 </li>
               )
             })
