@@ -7,7 +7,7 @@ import CommunityData from '../components/communityData'
 export default Voice
 
 function Voice() {
-  let pageModel = new PageModelTitle('Voices', 'community-html')
+  let pageModel = new PageModelTitle('Community Voices', 'community-html')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }
 
