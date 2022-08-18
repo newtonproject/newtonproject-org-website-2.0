@@ -85,3 +85,5 @@ History Version：2018-07-18
 [Hrvatski bijeli papir](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.5-release-croatian.pdf?v=461)
 
 [Suomen valkoinen kirja](https://www.newtonproject.org/static-v1/whitepaper/newton-whitepaper-0.5-release-finnish.pdf?v=461)
+
+
