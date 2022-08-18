@@ -4,113 +4,45 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 import { newsEnvUrl } from '../utils/url'
 import { getRequest } from '../utils/axiosData'
+import { getQueryVariable } from '../utils/getQueryVariable'
 
 function CommunitySide() {
   const intl = useIntl()
-
-
-
-  const [data, setData] = useState([])
-
-
-  // const isActive = ({ isCurrent }: any) => {
-  //   console.log('isCurrent',isCurrent)
-  //   return isCurrent ? { className: 'active' } : {}
-  // }
-  let hrefTitle: any = getQueryVariable('entryType');
-  const [announcements, setAnnouncements] = useState(false)
-  const [activity, setActivity] = useState(false)
-  const [press, setPress] = useState(false)
-  const [blog, setBlog] = useState(false)
-  const [voice, setVoice] = useState(false)
-
-  // if (hrefTitle == 'announcements') {
-  //   setAnnouncements(true)
-  //   setActivity(false)
-  //   setPress(false)
-  //   setBlog(false)
-  //   setVoice(false)
-  // } else if (hrefTitle == 'activity') {
-  //   setAnnouncements(true)
-  //   setActivity(true)
-  //   setPress(false)
-  //   setBlog(false)
-  //   setVoice(false)
-
-  // }
-  // else if (hrefTitle == 'press') {
-  //   setAnnouncements(true)
-  //   setActivity(false)
-  //   setPress(true)
-  //   setBlog(false)
-  //   setVoice(false)
-  if (hrefTitle == 'blog') {
-    setAnnouncements(true)
-    setActivity(false)
-    setPress(false)
-    setBlog(true)
-    setVoice(false)
+  const [dataTitle, setDataTitle]: any = useState()
+  const [dataContent, setDataContent]: any = useState()
+  let path: any = getQueryVariable('path')
+  path != undefined ? (path = path.substr(1)) : ''
+  let twitterUrl: any
+  let hrefTitle: any
+  hrefTitle != undefined ? (hrefTitle = path.split('/')[0]) : ''
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    twitterUrl = window.location.href
   }
-  // else if (hrefTitle == 'voice') {
-  //   setAnnouncements(true)
-  //   setActivity(false)
-  //   setPress(false)
-  //   setBlog(false)
-  //   setVoice(true)
-  // }
-
-
-  hrefTitle = hrefTitle.charAt(0).toUpperCase() + hrefTitle.slice(1)
-  if (hrefTitle === 'Voice') {
-    hrefTitle = 'Community Voice'
+  const isActive = ({ isCurrent }: any) => {
+    console.log('isCurrent', isCurrent)
+    return isCurrent ? { className: 'active' } : {}
   }
-
-
-
-
-
-
   useEffect(() => {
-    const listUrl = newsEnvUrl + 'api/v1/community/entry-detail?id=' + getQueryVariable('id')
+    const listUrl = newsEnvUrl + 'api/v1/community/entry-detail?path=' + path
     const fetchData = async () => {
       const res = await getRequest(listUrl)
-      // props.setEntryBlog(res.data.result)
-      console.log('====', listUrl, res)
+      setDataTitle(res.data.result.title)
+      setDataContent(res.data.result.content)
     }
     fetchData()
   }, [])
-
-  function getQueryVariable(variable: any) {
-    let query = window.location.search.substring(1)
-    let vars = query.split('&')
-    for (let i = 0; i < vars.length; i++) {
-      let pair = vars[i].split('=')
-      if (pair[0] == variable) {
-        return pair[1]
-      }
-    }
-    return false
-  }
-
+  // let a = DOMPurify.sanitize(dataContent);
   return (
     <>
       <div className={'community-tab'}>
         <div className={'container'}>
-          <Link to="/announcements/">
-            {intl.formatMessage({ id: 'Announcements' })}
-          </Link>
-          <Link to="/activity/">
-            {intl.formatMessage({ id: 'Activity' })}
-          </Link>
-          <Link to="/press/">
-            {intl.formatMessage({ id: 'Press' })}
-          </Link>
-          <Link to="/blog/">
+          <Link to="/announcements/">{intl.formatMessage({ id: 'Announcements' })}</Link>
+          <Link to="/activity/">{intl.formatMessage({ id: 'Activity' })}</Link>
+          <Link to="/press/">{intl.formatMessage({ id: 'Press' })}</Link>
+          <Link to="/blog/" getProps={isActive}>
             {intl.formatMessage({ id: 'Blog' })}
           </Link>
-          <Link to="/voice/">
-            {intl.formatMessage({ id: 'Community Voice' })}
-          </Link>
+          <Link to="/voice/">{intl.formatMessage({ id: 'Community Voice' })}</Link>
         </div>
       </div>
       <div className={'community-tab-h5'}>
@@ -128,30 +60,19 @@ function CommunitySide() {
               </Disclosure.Button>
               <Disclosure.Panel>
                 <div className={'container tab-list'}>
-                  <Link to="/announcements/">
-                    {intl.formatMessage({ id: 'Announcements' })}
-                  </Link>
-                  <Link to="/activity/">
-                    {intl.formatMessage({ id: 'Activity' })}
-                  </Link>
-                  <Link to="/press/">
-                    {intl.formatMessage({ id: 'Press' })}
-                  </Link>
-                  <Link to="/blog/">
-                    {intl.formatMessage({ id: 'Blog' })}
-                  </Link>
-                  <Link to="/voice/">
-                    {intl.formatMessage({ id: 'Community Voice' })}
-                  </Link>
+                  <Link to="/announcements/">{intl.formatMessage({ id: 'Announcements' })}</Link>
+                  <Link to="/activity/">{intl.formatMessage({ id: 'Activity' })}</Link>
+                  <Link to="/press/">{intl.formatMessage({ id: 'Press' })}</Link>
+                  <Link to="/blog/">{intl.formatMessage({ id: 'Blog' })}</Link>
+                  <Link to="/voice/">{intl.formatMessage({ id: 'Community Voice' })}</Link>
                 </div>
               </Disclosure.Panel>
             </>
           )}
         </Disclosure>
       </div>
-
       <div className={'container community-side'}>
-        <h2>Newton Weekly | 2022.07.18 -2022.07.22</h2>
+        <h2>{dataTitle}</h2>
         <div className={'author-box'}>
           <div className={'author'}>
             <StaticImage
@@ -160,39 +81,22 @@ function CommunitySide() {
               alt="newton logo"
               src="../static/images/newton-logo.png"
             />
-          Newtonproject
-        </div>
+            {intl.formatMessage({ id: 'Newtonproject' })}
+          </div>
           <div className={'share'}>
-            <a href="">
+            <a href={'https://twitter.com/intent/tweet?text=' + dataTitle + twitterUrl} target="_blank">
               <span>share</span>
-              {/* <div className={''}> */}
               <StaticImage
                 className={'img'}
                 placeholder="blurred"
                 alt="newton logo"
                 src="../static/images/home/twitter.png"
               />
-              {/* </div> */}
             </a>
           </div>
         </div>
         <div className={'side-list'}>
-          <h3>Technical Progress</h3>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <h3>Community News</h3>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
-          <p>1. Newton official website DevNet launched five secondary pages in markdown format</p>
+          <div dangerouslySetInnerHTML={{ __html: dataContent }}></div>
         </div>
       </div>
     </>

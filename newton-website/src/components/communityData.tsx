@@ -37,15 +37,6 @@ function CommunityData(props: any) {
     getDate(detailUrl)
   }
 
-  const onEntryPage = (id: any) => {
-    const listUrl = newsEnvUrl + 'api/v1/community/entry-detail?id=' + id
-    const fetchData = async (listUrl: any) => {
-      const res = await getRequest(listUrl)
-      props.setEntryBlog(res.data.result)
-    }
-    fetchData(listUrl)
-  }
-
   return (
     <div className={'container community-data'}>
       <ul className={'data-list'}>
@@ -53,7 +44,7 @@ function CommunityData(props: any) {
           ? data.map((item: any, index) => {
               return (
                 <li key={index}>
-                  <Link to={'/communitys?id=' + item.id + '&entryType='+entryType}>
+                  <Link to={'/communitys?path=' + item.url}>
                     <h3>{arrDate(item.created_at)}</h3>
                     <p>{item.title}</p>
                   </Link>
