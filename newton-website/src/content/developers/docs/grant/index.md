@@ -27,3 +27,5 @@ These programs support the broad Newton community ecosystem by offering grants t
 
 Welcome, if you want help, we are so willing to do it. Not ready to start your project? There are hundreds of companies actively looking for passionate individuals to work in and contribute to the Newton community ecosystem.
 Looking for more information? Check out Newton community-related jobs.
+
+
