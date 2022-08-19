@@ -16,6 +16,8 @@ function CommunityTab() {
     hrefTitle = herfName[0].toUpperCase() + herfName.substr(1)
     if (herfName === 'voice') {
       hrefTitle = 'Community Voice'
+    } else if (herfName === 'announcement') {
+      hrefTitle = 'Announcements'
     }
   }
 
@@ -23,7 +25,7 @@ function CommunityTab() {
     <>
       <div className={'community-tab'}>
         <div className={'container'}>
-          <Link getProps={isActive} to="/announcements/">
+          <Link getProps={isActive} to="/announcement/">
             {intl.formatMessage({ id: 'Announcements' })}
           </Link>
           <Link getProps={isActive} to="/activity/">
@@ -55,7 +57,7 @@ function CommunityTab() {
               </Disclosure.Button>
               <Disclosure.Panel>
                 <div className={'container tab-list'}>
-                  <Link getProps={isActive} to="/announcements/">
+                  <Link getProps={isActive} to="/announcement/">
                     {intl.formatMessage({ id: 'Announcements' })}
                   </Link>
                   <Link getProps={isActive} to="/activity/">

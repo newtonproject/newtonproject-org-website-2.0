@@ -5,9 +5,9 @@ import { newsEnvUrl } from '../utils/url'
 import { arrDate } from '../utils/createTime'
 import { Link } from 'gatsby-plugin-intl'
 import { Skeleton } from 'antd'
+
 function CommunityData(props: any) {
   const { entryType } = props
-  console.log('==类型', entryType)
   const [data, setData] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)

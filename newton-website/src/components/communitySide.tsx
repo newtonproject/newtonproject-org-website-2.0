@@ -12,14 +12,12 @@ function CommunitySide() {
   const [dataTitle, setDataTitle]: any = useState()
   const [dataContent, setDataContent]: any = useState()
   let path: any = getQueryVariable('path')
-  let urlPath = ''
   let hrefTitle = ''
   if (path) {
     hrefTitle = path.split('/')[1]
-    urlPath = path.split('/')[1]
   }
 
-  if (hrefTitle == 'announcements') {
+  if (hrefTitle == 'announcement') {
     hrefTitle = 'Announcements'
   } else if (hrefTitle == 'activity') {
     hrefTitle = 'Activity'
@@ -27,7 +25,7 @@ function CommunitySide() {
     hrefTitle = 'Press'
   } else if (hrefTitle == 'blog') {
     hrefTitle = 'Blog'
-  } else if (hrefTitle == 'voice') {
+  } else if (hrefTitle == 'community-voice') {
     hrefTitle = 'Community Voice'
   }
 
@@ -48,7 +46,7 @@ function CommunitySide() {
 
   let headerTitle = [
     {
-      url: 'announcements',
+      url: 'announcement',
       content: 'Announcements'
     },
     {
@@ -68,13 +66,15 @@ function CommunitySide() {
       content: 'Community Voice'
     }
   ]
+  console.log('hrefTitle:3333', hrefTitle)
   return (
     <>
       <div className={'community-tab'}>
         <div className={'container'}>
           {headerTitle.map((item, index) => {
             return (
-              <Link key={index} to={'/' + item.url + '/'} className={urlPath == item.url ? 'active' : ''}>
+              // <Link key={index} to={'/' + item.url + '/'} className={ hrefTitle == item.content ? 'active' : ''}></Link>
+              <Link key={index} to={'/' + item.url + '/'}>
                 {intl.formatMessage({ id: `${item.content}` })}
               </Link>
             )
@@ -87,7 +87,7 @@ function CommunitySide() {
             <>
               <Disclosure.Button>
                 {/* <span>{intl.formatMessage({ id: `${hrefTitle}` })}</span> */}
-                {<span>{hrefTitle}</span>}
+                <span>{hrefTitle}</span>
                 <StaticImage
                   className={open ? 'avtice-bot bot' : ' bot'}
                   placeholder="blurred"
@@ -99,7 +99,7 @@ function CommunitySide() {
                 <div className={'container tab-list'}>
                   {headerTitle.map((item, index) => {
                     return (
-                      <Link key={index} to={'/' + item.url + '/'} className={urlPath == item.url ? 'active' : ''}>
+                      <Link key={index} to={'/' + item.url + '/'}>
                         {intl.formatMessage({ id: `${item.content}` })}
                       </Link>
                     )

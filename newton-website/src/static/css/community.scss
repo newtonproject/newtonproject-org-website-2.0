@@ -57,14 +57,14 @@
   }
 
   h3 {
-    @apply w-full md:w-[115px] md:mr-14 text-gray96 text-sm;
+    @apply w-full md:w-[190px] text-gray96 text-sm;
   }
   p {
-    @apply text-xl md:text-[22px] md:-mt-[3px];
+    @apply text-xl  md:-mt-[3px] md:w-[85%];
   }
   // pagination
   .ant-pagination {
-    @apply text-center md:text-right mt-10 md:mt-3;
+    @apply text-center mt-10 md:mt-3;
   }
   .ant-pagination-options {
     @apply hidden;
@@ -107,7 +107,7 @@
 .community-side {
   @apply pb-[5.5rem];
   h2 {
-    @apply text-2xl md:text-5xl mt-12 md:mt-20 mb-10 md:mb-16;
+    @apply text-2xl md:text-[40px] md:leading-[58px] mt-12 md:mt-20 mb-10 md:mb-16;
   }
   .author-box {
     @apply flex justify-between items-center leading-8;
@@ -145,7 +145,10 @@
       font-family: 'Ubuntu-Medium';
     }
     p {
-      @apply text-base py-[14px];
+      @apply text-base py-[14px] leading-7 md:leading-8;
+    }
+    a {
+      @apply text-gray20 break-all;
     }
   }
 }

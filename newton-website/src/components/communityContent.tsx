@@ -112,7 +112,7 @@ export default function CommunityContent() {
               )}
             </ul>
             <div className={'news-more'}>
-              <Link getProps={isActive} to="/announcements/">
+              <Link getProps={isActive} to="/announcement/">
                 {intl.formatMessage({ id: 'More' })}
               </Link>
             </div>
