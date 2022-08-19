@@ -13,7 +13,7 @@ function CommunityData(props: any) {
   const [totalPage, setTotalPage] = useState(1)
 
   useEffect(() => {
-    const listUrl = newsEnvUrl + 'api/v1/community/entry-list?entry_type=' + entryType
+    const listUrl = newsEnvUrl + '/api/v1/community/entry-list?entry_type=' + entryType
     getDate(listUrl)
   }, [])
 

@@ -35,7 +35,7 @@ function CommunitySide() {
   }
 
   useEffect(() => {
-    const listUrl = newsEnvUrl + 'api/v1/community/entry-detail?path=' + path
+    const listUrl = newsEnvUrl + '/api/v1/community/entry-detail?path=' + path
     const fetchData = async () => {
       const res = await getRequest(listUrl)
       setDataTitle(res.data.result.title)
