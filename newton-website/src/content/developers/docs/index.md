@@ -1,12 +1,10 @@
 ---
-title: Developers
-description: Developers
+title: What is Newton?
+description: What is Newton?
 lang: en
 template: docs
 sidebar: true
 ---
-
-# What is Newton?
 
 ## Introduction
 
