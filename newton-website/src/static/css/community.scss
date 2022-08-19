@@ -40,7 +40,20 @@
   }
 }
 .community-banner {
-  @apply h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[41px] md:text-5xl bg-community-banner-h5 md:bg-community-banner bg-no-repeat bg-cover;
+  @apply bg-grayea h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[41px] md:text-5xl bg-community-banner-h5 md:bg-none bg-no-repeat bg-cover;
+  // @apply bg-grayea h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[41px] md:text-5xl;
+  .banner {
+    @apply relative;
+    span {
+      @apply z-50 md:absolute md:left-0;
+    }
+    .img {
+      @apply w-[993px] absolute top-0 left-[281px] hidden md:block z-20;
+      img {
+        @apply w-full h-full;
+      }
+    }
+  }
 }
 .community-data {
   @apply pb-[5.5rem];

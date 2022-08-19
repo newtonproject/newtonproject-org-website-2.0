@@ -79,7 +79,10 @@ function CommunityTab() {
         </Disclosure>
       </div>
       <div className={'community-banner'}>
-        <h2 className={'container'}>{intl.formatMessage({ id: `${hrefTitle}` })}</h2>
+        <h2 className={'container banner'}>
+          <span>{intl.formatMessage({ id: `${hrefTitle}` })}</span>
+          <StaticImage className="img" placeholder="blurred" alt="img" src="../static/images/community-banner.png" />
+        </h2>
       </div>
     </>
   )

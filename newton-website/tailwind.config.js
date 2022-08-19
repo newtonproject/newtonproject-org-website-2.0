@@ -47,6 +47,7 @@ module.exports = {
         graye3e: '#E3EEF6 ',
         graydd: '#DDF1FD',
         gray96: '#96A9BA',
+        grayea: '#EAF5FE',
         gray11: '#119BFF ',
         gray333: '#333333',
         graydd: '#DDEBF7',
