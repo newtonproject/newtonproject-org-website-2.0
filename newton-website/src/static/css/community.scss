@@ -7,7 +7,7 @@
 .community-tab {
   @apply bg-grayef h-[58px] leading-[58px] hidden md:block;
   a {
-    @apply mr-16 text-base flex md:inline-block py-[14px] md:py-0;
+    @apply mr-16 text-base flex md:inline-block py-[14px] md:py-0 hover:text-gray20;
   }
   .active {
     @apply text-gray20;
@@ -45,10 +45,10 @@
   .banner {
     @apply relative;
     span {
-      @apply z-50 md:absolute md:left-0;
+      @apply z-[7] md:absolute md:left-0;
     }
     .img {
-      @apply w-[993px] absolute top-0 left-[281px] hidden md:block z-20;
+      @apply w-[993px] absolute top-0 left-[281px] hidden md:block z-[6];
       img {
         @apply w-full h-full;
       }
@@ -61,7 +61,12 @@
     li {
       @apply border-b-[1px] border-solid border-graye0;
       a {
-        @apply flex md:items-center flex-wrap md:flex-nowrap py-6 md:py-10 hover:text-gray20;
+        @apply flex md:items-center flex-wrap md:flex-nowrap py-6 md:py-10;
+        &:hover {
+          p {
+            @apply text-gray20;
+          }
+        }
       }
       &:last-child {
         @apply md:border-none;
