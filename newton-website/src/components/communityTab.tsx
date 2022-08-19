@@ -2,6 +2,8 @@ import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 import { StaticImage } from 'gatsby-plugin-image'
+import bannerCommunity from '../static/images/community-banner.png'
+
 function CommunityTab() {
   const intl = useIntl()
 
@@ -81,7 +83,8 @@ function CommunityTab() {
       <div className={'community-banner'}>
         <h2 className={'container banner'}>
           <span>{intl.formatMessage({ id: `${hrefTitle}` })}</span>
-          <StaticImage className="img" placeholder="blurred" alt="img" src="../static/images/community-banner.png" />
+          {/* <StaticImage className="img" placeholder="blurred" alt="img" src="../static/images/community-banner.png" /> */}
+          <img className={'img'} src={bannerCommunity} alt="banner img" />
         </h2>
       </div>
     </>
