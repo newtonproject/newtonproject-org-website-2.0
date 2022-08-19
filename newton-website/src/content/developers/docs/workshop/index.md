@@ -73,6 +73,6 @@ In an innovation, lots of unknowns are hidden behind, and we often have to go di
 ## Kind tips
 •	All invitees to this event are free to participate, and the event is open to the public, regardless of whether you know the science technology design products community. 
 •	For users who participate in the event, if you want to know more about specific details, please enter Telegram or follow the official Twitter to communicate with us by private message. https://t.me/Newtonproject 
-•	When the workshop opens, the announcement will be released on the official [website]( https://www.newtonproject.org/en/ ). 
+•	When the workshop opens, the announcement will be released on the official [website]( https://www.newtonproject.org/en/ ).
 
 
