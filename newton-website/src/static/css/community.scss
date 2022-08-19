@@ -45,7 +45,7 @@
   .banner {
     @apply relative;
     span {
-      @apply z-[7] md:absolute md:left-0;
+      @apply z-[7] md:absolute md:left-0 break-words;
     }
     .img {
       @apply w-[993px] absolute top-0 left-[281px] hidden md:block z-[6];
@@ -82,7 +82,7 @@
   }
   // pagination
   .ant-pagination {
-    @apply text-center mt-10 md:mt-3;
+    @apply text-center mt-10 md:mt-3 w-[103%] md:w-full;
   }
   .ant-pagination-options {
     @apply hidden;
@@ -96,7 +96,7 @@
   }
   .ant-pagination-item-active {
     a {
-      @apply bg-grag2c text-white h-[32px] leading-[32px];
+      @apply bg-grag2c text-white md:h-[32px] md:leading-[32px];
     }
   }
   .ant-pagination-item-link {
@@ -113,8 +113,16 @@
     .anticon-left {
       @apply rotate-180;
     }
+    .ant-pagination-prev,
+    .ant-pagination-next,
+    .ant-pagination-jump-prev,
+    .ant-pagination-jump-next {
+      @apply min-h-[28px] leading-[28px] md:h-[32px] md:leading-[32px];
+    }
+    .ant-pagination-item-ellipsis {
+      @apply text-xs leading-[28px] md:leading-[32px];
+    }
   }
-  // .ant-pagination-item-active a
 }
 
 .community-list {
