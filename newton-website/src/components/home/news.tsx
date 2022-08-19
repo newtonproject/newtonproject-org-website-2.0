@@ -4,6 +4,7 @@ import { NewschildProps } from '../../model/PageModel'
 import { useIntl, Link } from 'gatsby-plugin-intl'
 import { getRequest } from '../../utils/axiosData'
 import { newsEnvUrl } from '../../utils/url'
+import { Skeleton } from 'antd'
 
 const News: React.FC<NewschildProps> = props => {
   const intl = useIntl()
@@ -43,7 +44,11 @@ const News: React.FC<NewschildProps> = props => {
               )
             })
           ) : (
-            <>{intl.formatMessage({ id: 'Loading' })}</>
+            <>
+              <Skeleton.Image active />
+              <Skeleton.Image active />
+              <Skeleton.Image active />
+            </>
           )}
         </ul>
         <div className={'news-more'}>
