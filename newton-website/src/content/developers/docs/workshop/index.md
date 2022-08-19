@@ -6,7 +6,7 @@ template: docs
 sidebar: true
 ---
 
-## ## Introduction
+## Introduction
 
 Welcome to the Newton Community Workshop! Here, we look at Newton’s new technology innovation from different perspectives. By learning to find and exploit various issues, you'll be able to touch more directions of science & technology & design products & community as you'll know what to watch out for.
 
