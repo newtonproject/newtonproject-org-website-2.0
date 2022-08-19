@@ -11,7 +11,7 @@ function PressData() {
   const [totalPage, setTotalPage] = useState(1)
 
   useEffect(() => {
-    const listUrl = newsEnvUrl + 'api/v1/press/list'
+    const listUrl = newsEnvUrl + '/api/v1/press/list'
     getDate(listUrl)
   }, [])
   const getDate = (listUrl: any) => {
@@ -24,7 +24,7 @@ function PressData() {
     fetchData(listUrl)
   }
   const onPageChange = (page: any) => {
-    const detailUrl = newsEnvUrl + 'api/v1/press/list?page_id=' + page + '&page_size=10'
+    const detailUrl = newsEnvUrl + '/api/v1/press/list?page_id=' + page + '&page_size=10'
     getDate(detailUrl)
   }
 
