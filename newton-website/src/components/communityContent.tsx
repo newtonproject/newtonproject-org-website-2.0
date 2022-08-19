@@ -9,9 +9,13 @@ import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.pn
 import { useIntl } from 'gatsby-plugin-intl'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
-
+import { Link } from 'gatsby'
+import { Skeleton } from 'antd'
 export default function CommunityContent() {
   const intl = useIntl()
+  const isActive = ({ isCurrent }: any) => {
+    return isCurrent ? { className: 'active' } : {}
+  }
   const [activities, setactivities] = useState([])
   const [announcements, setAnnouncements] = useState([])
   const [blogsItem, setBlogsItem] = useState([])
@@ -59,13 +63,17 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/announcements/0/'} target="_blank">
+              <Link getProps={isActive} to="/activity/">
                 {intl.formatMessage({ id: 'More' })}
-              </a>
+              </Link>
             </div>
           </div>
           <div className={'news announcements'}>
@@ -96,13 +104,17 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/announcements/1/'} target="_blank">
-                More
-              </a>
+              <Link getProps={isActive} to="/announcement/">
+                {intl.formatMessage({ id: 'More' })}
+              </Link>
             </div>
           </div>
           <News title={'Press'} />
@@ -126,13 +138,17 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/blog/'} target="_blank">
-                More
-              </a>
+              <Link getProps={isActive} to="/blog/">
+                {intl.formatMessage({ id: 'More' })}
+              </Link>
             </div>
           </div>
           <div className={'news'}>
@@ -155,13 +171,17 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/community-voice/'} target="_blank">
+              <Link getProps={isActive} to="/voice/">
                 {intl.formatMessage({ id: 'More' })}
-              </a>
+              </Link>
             </div>
           </div>
           <GlobalCommunity title={intl.formatMessage({ id: 'Social Network' })} />

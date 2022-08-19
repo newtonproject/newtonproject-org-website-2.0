@@ -165,5 +165,6 @@ module.exports = {
         include: /\.md$|\.csv/i, // Only .md & .csv files
       },
     },
+    'gatsby-plugin-antd'
   ],
 }

@@ -22,13 +22,29 @@ body {
   color: #2c465e !important;
   background-color: #f7fbff;
   -webkit-tap-highlight-color: transparent;
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: #2c465e;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    color: #2c465e;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+  }
 }
 * {
   -webkit-tap-highlight-color: transparent;
 }
 a:focus,
 div:focus,
-input:focus {
+input:focus,
+button:focus {
   outline: none;
 }
 .new-index {

@@ -95,6 +95,7 @@ const SiteNavMenu = () => {
   const [activeName, setActiveName] = useState(false)
   const [activeLearn, setActiveLearn] = useState(false)
   const [activedevelopers, setActiveDevelopers] = useState(false)
+
   const [activecommunity, setActiveCommunity] = useState(false)
   useEffect(() => {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
@@ -103,7 +104,15 @@ const SiteNavMenu = () => {
       herfName == 'getnew' ? setActiveName(true) : setActiveName(false)
       herfName == 'newton2' || herfName == 'evt' || herfName == 'roadmap' ? setActiveLearn(true) : setActiveLearn(false)
       herfName == 'developers' ? setActiveDevelopers(true) : setActiveDevelopers(false)
-      herfName == 'community' || herfName == 'get-involved' ? setActiveCommunity(true) : setActiveCommunity(false)
+      herfName == 'announcements' ||
+      herfName == 'activity' ||
+      herfName == 'press' ||
+      herfName == 'blog' ||
+      herfName == 'voice' ||
+      herfName == 'community' ||
+      herfName == 'get-involved'
+        ? setActiveCommunity(true)
+        : setActiveCommunity(false)
     }
   })
   return (
