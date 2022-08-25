@@ -36,8 +36,8 @@ git push
 - https://www.newtonproject.org/
 
 **b.International Translation Technology**
-- gatsby-plugin-intl
-- npm Address: https://www.npmjs.com/package/gatsby-plugin-intl
+- gatsby-plugin-intl-v6
+- npm Address: https://www.npmjs.com/package/gatsby-plugin-intl-v6
 
 **c.Directory of documents placed in the translated language**
 - `src/static/intl`
@@ -53,7 +53,7 @@ git push
 {
   ...
   {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-plugin-intl-v6`,
       options: {
         path: `${__dirname}/src/static/intl`,
         languages: [`en`], // add language code.
@@ -66,7 +66,7 @@ git push
 ```
 
 - Add the appropriate language to the `gatsby-config.js` configuration file.
-- Add the type of languages in the options of the `gatsby-plugin-intl` configuration.
+- Add the type of languages in the options of the `gatsby-plugin-intl-v6` configuration.
 - The default language of the project is en in `defaultLanguage`, which is `en`.
 
 

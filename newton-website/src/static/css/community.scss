@@ -1,0 +1,192 @@
+.community-html {
+  @apply bg-grayf7;
+  overflow: hidden;
+  .ant-skeleton {
+    @apply pt-7;
+  }
+}
+.community-tab {
+  @apply bg-grayef h-[58px] leading-[58px] hidden md:block;
+  a {
+    @apply mr-16 text-base flex md:inline-block py-[14px] md:py-0 hover:text-gray20;
+  }
+  .active {
+    @apply text-gray20;
+  }
+}
+.community-tab-h5 {
+  @apply bg-grayef block md:hidden;
+  button {
+    @apply flex items-center justify-center text-base text-gray20 w-full text-center h-[46px] leading-[46px] border-b-[1px] border-solid border-grayd7;
+    font-family: 'Ubuntu-Medium';
+    .bot {
+      @apply w-3 h-3 ml-1 rotate-90;
+      img {
+        @apply w-full h-full;
+      }
+    }
+    .avtice-bot {
+      @apply rotate-[360deg] mt-[2px];
+    }
+  }
+  .tab-list {
+    @apply py-[14px];
+    a {
+      @apply block py-[14px];
+      font-family: 'Ubuntu-Medium';
+    }
+    .active {
+      @apply text-gray20;
+    }
+  }
+}
+.community-banner {
+  @apply bg-grayea h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[36px] md:text-5xl bg-community-banner-h5 md:bg-none bg-no-repeat bg-cover;
+  .banner {
+    @apply relative;
+    span {
+      @apply z-[7] md:absolute md:left-0 break-words whitespace-nowrap;
+    }
+    .img {
+      @apply w-[993px] absolute top-0 left-[281px] hidden md:block z-[6];
+      img {
+        @apply w-full h-full;
+      }
+    }
+  }
+}
+.community-data {
+  @apply pb-[5.5rem];
+  .data-list {
+    li {
+      @apply border-b-[1px] border-solid border-graye0;
+      a {
+        @apply flex md:items-center flex-wrap md:flex-nowrap py-6 md:py-10;
+        &:hover {
+          p {
+            @apply text-gray20;
+          }
+        }
+      }
+      &:last-child {
+        @apply md:border-none;
+      }
+    }
+  }
+
+  h3 {
+    @apply w-full md:w-[190px] text-gray96 text-sm;
+    font-family: 'Ubuntu';
+  }
+  p {
+    @apply text-xl  md:-mt-[3px] md:w-[85%];
+  }
+  // pagination
+  .ant-pagination {
+    @apply text-center mt-10 md:mt-3 w-[103%] md:w-full;
+  }
+  .ant-pagination-options {
+    @apply hidden;
+  }
+  .ant-pagination-item {
+    @apply md:mr-2 mr-1 border-graye0 h-[34px] leading-[34px] min-w-[24px] md:min-w-[32px];
+    a {
+      @apply text-base text-grag96a h-[34px] leading-[34px];
+      font-family: 'Ubuntu';
+    }
+  }
+  .ant-pagination-item-active {
+    a {
+      @apply bg-grag2c text-white md:h-[32px] md:leading-[32px];
+    }
+  }
+  .ant-pagination-item-link {
+    .anticon-right,
+    .anticon-left {
+      svg {
+        @apply hidden;
+      }
+    }
+    .anticon-right,
+    .anticon-left {
+      @apply bg-page-right bg-no-repeat bg-contain w-5 h-5 mt-[5px];
+    }
+    .anticon-left {
+      @apply rotate-180;
+    }
+    .ant-pagination-prev,
+    .ant-pagination-next,
+    .ant-pagination-jump-prev,
+    .ant-pagination-jump-next {
+      @apply min-h-[28px] leading-[28px] md:h-[32px] md:leading-[32px];
+    }
+    .ant-pagination-item-ellipsis {
+      @apply text-xs leading-[28px] md:leading-[32px];
+    }
+  }
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    text-indent: -3px;
+  }
+}
+
+.community-list {
+  .community-banner {
+    @apply hidden;
+  }
+}
+.community-side {
+  @apply pb-[5.5rem] max-w-[1000px] overflow-hidden;
+  .time {
+    @apply text-base text-gray96 pt-11 md:pt-16 pb-7 md:pb-11;
+  }
+  h2 {
+    @apply text-2xl md:text-[40px] md:leading-[58px] mb-10 md:mb-16;
+  }
+  .author-box {
+    @apply flex justify-between items-center leading-8;
+    img {
+      @apply w-8 h-8 mr-2;
+    }
+  }
+  .share {
+    @apply text-gray96 text-base;
+    a {
+      @apply flex justify-between items-center;
+      span {
+        @apply hidden md:block text-gray96;
+      }
+      .img {
+        @apply w-10 h-10 ml-4;
+        background: linear-gradient(180deg, #f2f7fc 0%, #fcfeff 100%);
+        box-shadow: -5px -5px 20px 5px #ffffff, 3px 3px 20px 0px rgba(0, 64, 145, 0.12);
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0);
+      }
+      img {
+        @apply w-[26px] h-[26px] mx-auto mt-1;
+      }
+      &:hover {
+        .img {
+          @apply border-grage5f border-solid border-2;
+        }
+      }
+    }
+  }
+  .side-list {
+    @apply pt-5 md:pt-8;
+    h2 {
+      @apply text-xl md:text-[26px] mt-10 md:mt-12 mb-9;
+      font-family: 'Ubuntu-Medium';
+    }
+    p {
+      @apply text-base py-[14px] leading-7 md:leading-8;
+    }
+    a {
+      @apply text-gray20 break-all;
+    }
+    img {
+      @apply mx-auto max-w-full h-auto;
+    }
+  }
+}

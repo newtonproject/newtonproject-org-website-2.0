@@ -5,7 +5,7 @@ import News from '../components/home/news'
 import GlobalCommunity from '../components/home/globalCommunity'
 import NormalLayout from '../components/NormalLayout'
 import { PageModelTitle } from '../model/PageModel'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl-v6'
 
 const IndexPage = () => {
   let pageModel = new PageModelTitle('Home', 'new-index')

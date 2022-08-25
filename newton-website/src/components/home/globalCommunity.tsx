@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { childProps } from '../../model/PageModel'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl-v6'
 
 const GlobalCommunity: React.FC<childProps> = props => {
   const intl = useIntl()

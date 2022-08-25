@@ -1,5 +1,5 @@
 import React from 'react'
-import { useIntl, IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl'
+import { useIntl, IntlContextConsumer, changeLocale } from 'gatsby-plugin-intl-v6'
 import { BsArrowRightShort } from 'react-icons/bs'
 import { languageName } from '../utils/language'
 import { intlUrl } from '../utils/url'
