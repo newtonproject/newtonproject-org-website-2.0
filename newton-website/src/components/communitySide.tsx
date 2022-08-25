@@ -45,6 +45,8 @@ function CommunitySide() {
 
     const fetchData = async () => {
       const res = await getRequest(listUrl)
+
+      if (Object.keys(res.data.result).length === 0) return
       setCreatedAt(arrDate(res.data.result.created_at))
       setDataTitle(res.data.result.title)
       setDataContent(res.data.result.content)
