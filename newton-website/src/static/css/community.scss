@@ -170,6 +170,7 @@
     }
   }
   .side-list {
+    @apply pt-5 md:pt-8;
     h2 {
       @apply text-xl md:text-[26px] mt-10 md:mt-12 mb-9;
       font-family: 'Ubuntu-Medium';
