@@ -3,7 +3,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { Dialog, Transition } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
 import Languages from './languages'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { newsEnvUrl } from '../utils/url'
 
 export default function HeaderModal() {

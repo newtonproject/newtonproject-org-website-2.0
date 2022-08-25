@@ -51,7 +51,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     // i18n support
     {
-      resolve: `gatsby-plugin-intl`,
+      resolve: `gatsby-plugin-intl-v6`,
       options: {
         // language JSON resource path
         path: `${__dirname}/src/static/intl`,

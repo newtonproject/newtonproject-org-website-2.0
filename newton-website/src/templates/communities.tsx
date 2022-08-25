@@ -3,9 +3,9 @@ import NormalLayout from '../components/NormalLayout'
 import { PageModelTitle } from '../model/PageModel'
 import CommunitySide from '../components/communitySide'
 
-export default CommunityList
+export default Communities
 
-function CommunityList() {
+function Communities() {
   let pageModel = new PageModelTitle('Community', 'community-list')
   return <div>{NormalLayout(Main(), pageModel)}</div>
 }

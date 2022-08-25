@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { newsEnvUrl } from '../utils/url'
 
 export default function Footer() {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { arrDate } from '../../utils/createTime'
 import { NewschildProps } from '../../model/PageModel'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../../utils/axiosData'
 import { newsEnvUrl } from '../../utils/url'
 import { Skeleton } from 'antd'

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { arrDateBanner } from '../../utils/createTime'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../../utils/axiosData'
 import { newsEnvUrl } from '../../utils/url'
 import BannerImg from './bannerImg'
@@ -53,15 +53,15 @@ export default function Banner() {
                   return (
                     <p className="mb-2" key={index}>
                       {data.length == 1 ? (
-                        <a href={newsEnvUrl + item.url} target="_blank">
+                        <Link to={item.url}>
                           {item.title}
                           {arrDateBanner(item.created_at)}
-                        </a>
+                        </Link>
                       ) : (
-                        <a href={newsEnvUrl + item.url} target="_blank">
+                        <Link to={item.url}>
                           {item.title}
                           {index !== 0 ? arrDateBanner(item.created_at) : null}
-                        </a>
+                        </Link>
                       )}
                     </p>
                   )
@@ -123,15 +123,15 @@ export default function Banner() {
                   return (
                     <p className="mb-2" key={index}>
                       {data.length == 1 ? (
-                        <a href={newsEnvUrl + item.url} target="_blank">
+                        <Link to={item.url}>
                           {item.title}
                           {arrDateBanner(item.created_at)}
-                        </a>
+                        </Link>
                       ) : (
-                        <a href={newsEnvUrl + item.url} target="_blank">
+                        <Link to={item.url}>
                           {item.title}
                           {index !== 0 ? arrDateBanner(item.created_at) : null}
-                        </a>
+                        </Link>
                       )}
                     </p>
                   )

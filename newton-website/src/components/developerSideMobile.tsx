@@ -1,6 +1,6 @@
 import React from 'react'
 import { Disclosure } from '@headlessui/react'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { StaticImage } from 'gatsby-plugin-image'
 
 function DeveloperSideMobile() {

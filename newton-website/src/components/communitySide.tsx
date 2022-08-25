@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { newsEnvUrl } from '../utils/url'
 import { getRequest } from '../utils/axiosData'
-import { getQueryVariable } from '../utils/getQueryVariable'
+import { arrDate } from '../utils/createTime'
 import { Skeleton } from 'antd'
 
 function CommunitySide() {
   const intl = useIntl()
+  const [createdAt, setCreatedAt]: any = useState()
   const [dataTitle, setDataTitle]: any = useState()
   const [dataContent, setDataContent]: any = useState()
-  let path: any = getQueryVariable('path')
+  let path: any
+  if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    path = window.location.pathname
+    path = path.match(/^\/.*?\/(.*)$/ || [])[1]
+  }
+
   let hrefTitle = ''
   if (path) {
-    hrefTitle = path.split('/')[1]
+    hrefTitle = path.split('/')[0]
   }
 
   if (hrefTitle == 'announcement') {
@@ -36,10 +42,13 @@ function CommunitySide() {
 
   useEffect(() => {
     const listUrl = newsEnvUrl + '/api/v1/community/entry-detail?path=' + path
+
     const fetchData = async () => {
       const res = await getRequest(listUrl)
+      setCreatedAt(arrDate(res.data.result.created_at))
       setDataTitle(res.data.result.title)
       setDataContent(res.data.result.content)
+      console.log('res', res)
     }
     fetchData()
   }, [])
@@ -66,7 +75,6 @@ function CommunitySide() {
       content: 'Community Voice'
     }
   ]
-  console.log('hrefTitle:3333', hrefTitle)
   return (
     <>
       <div className={'community-tab'}>
@@ -111,6 +119,7 @@ function CommunitySide() {
         </Disclosure>
       </div>
       <div className={'container community-side'}>
+        <p className={'time'}>{createdAt}</p>
         <h2>{!dataTitle ? <Skeleton paragraph={{ rows: 0 }} active /> : dataTitle}</h2>
         <div className={'author-box'}>
           <div className={'author'}>
