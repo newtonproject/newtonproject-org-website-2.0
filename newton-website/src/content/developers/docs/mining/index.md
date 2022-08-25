@@ -4,10 +4,7 @@ description: Mining Instructions
 lang: en
 template: docs
 sidebar: true
-
 ---
-
-
 
 newtonproject on 2021.04.14
 
@@ -17,11 +14,9 @@ According to Newton’s No. 40 proposal NEP-40, the 60 billion Newton community 
 
 \1. From the launch day 2019/3/15 to 2021/1/31, a total of 1545232707.3505096555 NEW, implemented in accordance with the original consensus mechanism and release plan, namely NewPay NewForce mining, including NewID creation invitation , NewMall shopping, and NewPay node pledge mining . The day’s personal NewForce divided by the total system’s NewForce, multiplied by the NEW released on the day is the NEW available for the individual’s contribution that day.
 
-
 1.1. Invitation: After creating NewID in NewPay, you can generate your own invitation code. Every new user uses your invitation code to register for NewID, you can get 25 NewForce. The corresponding NEW of NF will be transfered to your NewPay wallet address after 14 days.
 
 1.2. Shopping on DApp: Every time you shop on NewMall.com.cn, you can get 5 NewForce. Every time the user who uses your invitation code makes a purchase on NewMall, you can also get NewForce. The corresponding NEW will be automatically transfered to your NewPay wallet address after 30 days.
-
 
 1.3. Community Node staking mining:
 
@@ -35,7 +30,6 @@ Community node reward: 10000 NEW will bring 1 NewForce. NEW for community stakin
 
 Quit: Quit anytime and NEW could be unlocked immediately.
 
-
 \2. From 2021/2/1 to 2022/1/31, the total number of NEW released is 875130267.8946381786 NEW. During the period, on the basis of NewPay NewForce mining, 3 new mining ways were added.
 
 2.1. NewPay NewForce mining, such as pledge mining, etc., the mine volume is not less than 20%, which is 175026053.57892763572 NEW.
@@ -45,7 +39,6 @@ Quit: Quit anytime and NEW could be unlocked immediately.
 2.3. Community Token-NEW trading pair liquidity mining, the mine volume is up to 30%, 262539080.36839145358 NEW.
 
 2.4. NewChain mainnet's accounting node mining, up to 20% of the mine volume is 175026053.57892763572 NEW.
-
 
 \3. The number of NEW released after 2022/1/31, 57579637024.7548521659 NEW, will be determined by community governance through NEP in the future.
 

@@ -53,7 +53,11 @@ function CommunityData(props: any) {
             )
           })
         ) : (
-          <Skeleton paragraph title active />
+          <>
+            <Skeleton paragraph title active />
+            <Skeleton paragraph title active />
+            <Skeleton paragraph title active />
+          </>
         )}
       </ul>
       <Pagination defaultCurrent={1} current={currentPage} total={totalPage * 10} onChange={onPageChange} />

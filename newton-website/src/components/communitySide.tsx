@@ -129,7 +129,7 @@ function CommunitySide() {
               alt="newton logo"
               src="../static/images/newton-logo.png"
             />
-            {intl.formatMessage({ id: 'Newtonproject' })}
+            {intl.formatMessage({ id: 'Newton' })}
           </div>
           <div className={'share'}>
             <a href={'https://twitter.com/intent/tweet?text=' + dataTitle + twitterUrl} target="_blank">

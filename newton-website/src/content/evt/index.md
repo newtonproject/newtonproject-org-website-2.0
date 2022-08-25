@@ -43,7 +43,7 @@ EVT support the development of encrypted and variable decentralized applications
 interface EVTVariable {
     /// @dev This emits when token dynamic property added.
     event DynamicPropertyAdded(bytes32 _propertyId);
-    
+
     /// @dev This emits when token dynamic property updated.
     event DynamicPropertyUpdated(uint256 _tokenId, bytes32 _propertyId, bytes _propertyValue);
 
@@ -130,23 +130,23 @@ interface EVTEncryption {
 ## EVT Extensions
 
 - ### EVTA(Support Of Batch Mint EVT)
-    An improved implementation of the EVT that supports minting multiple tokens for close to the cost of one.
 
-    We’ve measured the gas costs and prices for minting, By using EVTA, you will cost lower gas fee.
+  An improved implementation of the EVT that supports minting multiple tokens for close to the cost of one.
 
-    |  Quantity  |    EVT(new)    |    EVTA(new)   |
-    | ---------- | -------------- | -------------- |
-    | 1          | 29.884         | 28.688         |
-    | 2          | 44.935         | 29.6585        |
-    | 3          | 59.7355        | 30.629         |
-    | 5          | 89.3365        | 32.57          |
-    | 10         | 163.339        | 37.4225        |
-    | 50         | 755.3615       | 76.2425        |
-    | 100        | 1495.3945      | 124.7675       |
-    | 200        | 2975.4745      | 221.8175       |
+  We’ve measured the gas costs and prices for minting, By using EVTA, you will cost lower gas fee.
 
-    See more info at [https://neps.newtonproject.org/neps/nep-61/](https://neps.newtonproject.org/neps/nep-61/)
+  | Quantity | EVT(new)  | EVTA(new) |
+  | -------- | --------- | --------- |
+  | 1        | 29.884    | 28.688    |
+  | 2        | 44.935    | 29.6585   |
+  | 3        | 59.7355   | 30.629    |
+  | 5        | 89.3365   | 32.57     |
+  | 10       | 163.339   | 37.4225   |
+  | 50       | 755.3615  | 76.2425   |
+  | 100      | 1495.3945 | 124.7675  |
+  | 200      | 2975.4745 | 221.8175  |
 
+  See more info at [https://neps.newtonproject.org/neps/nep-61/](https://neps.newtonproject.org/neps/nep-61/)
 
 ## What are EVTs used for
 

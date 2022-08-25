@@ -1,6 +1,6 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { useIntl } from 'gatsby-plugin-intl-v6'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { newsEnvUrl } from '../../utils/url'
 
 export default function Centent() {
@@ -69,9 +69,7 @@ export default function Centent() {
           </li>
         </ul>
         <div className={'news-more'}>
-          <a href={newsEnvUrl + '/whitepaper/'} target="_blank">
-            {intl.formatMessage({ id: 'White Paper' })}
-          </a>
+          <Link to="/developers/docs/white-papers/">{intl.formatMessage({ id: 'White Paper' })}</Link>
         </div>
       </div>
 
@@ -85,12 +83,8 @@ export default function Centent() {
               })}
             </p>
             <div className={'building'}>
-              <a href="https://developer.newtonproject.org/" target="_blank">
-                {intl.formatMessage({ id: 'Start Building' })}
-              </a>
-              <a href="https://github.com/newtonproject/newchain-sdk-example" target="_blank">
-                {intl.formatMessage({ id: 'Listing' })}
-              </a>
+              <Link to="/developers/docs/run-a-node/">{intl.formatMessage({ id: 'Start Building' })}</Link>
+              <Link to="/developers/docs/exchange-integration/">{intl.formatMessage({ id: 'Listing' })}</Link>
             </div>
           </li>
           <li>
@@ -126,12 +120,8 @@ export default function Centent() {
               })}
             </p>
             <div className={'build-become'}>
-              <a href={newsEnvUrl + '/blog/2021/04/14/new-mining-cn/'} target="_blank">
-                {intl.formatMessage({ id: 'Stake' })}
-              </a>
-              <a href="https://github.com/newtonproject/newchain-nodes" target="_blank">
-                {intl.formatMessage({ id: 'Become a validator' })}
-              </a>
+              <Link to="/blog/2021/04/14/new-mining-cn/">{intl.formatMessage({ id: 'Stake' })}</Link>
+              <Link to="/developers/docs/become-a-validator/">{intl.formatMessage({ id: 'Become a validator' })}</Link>
             </div>
           </li>
         </ul>
@@ -162,12 +152,8 @@ const CentenMobile = () => {
             })}
           </p>
           <div className={'build-a'}>
-            <a href="https://developer.newtonproject.org/" target="_blank">
-              {intl.formatMessage({ id: 'Start Building' })}
-            </a>
-            <a href="https://github.com/newtonproject/newchain-sdk-example" target="_blank">
-              {intl.formatMessage({ id: 'Listing' })}
-            </a>
+            <Link to="/developers/docs/run-a-node/">{intl.formatMessage({ id: 'Start Building' })}</Link>
+            <Link to="/developers/docs/exchange-integration/">{intl.formatMessage({ id: 'Listing' })}</Link>
           </div>
         </div>
       </div>
@@ -190,12 +176,8 @@ const CentenMobile = () => {
           })}
         </p>
         <div className={'build-a build-become'}>
-          <a href={newsEnvUrl + '/blog/2021/04/14/new-mining-cn/'} target="_blank">
-            {intl.formatMessage({ id: 'Stake' })}
-          </a>
-          <a href="https://github.com/newtonproject/newchain-nodes" target="_blank">
-            {intl.formatMessage({ id: 'Become a validator' })}
-          </a>
+          <Link to="/blog/2021/04/14/new-mining-cn/">{intl.formatMessage({ id: 'Stake' })}</Link>
+          <Link to="/developers/docs/become-a-validator/">{intl.formatMessage({ id: 'Become a validator' })}</Link>
         </div>
       </div>
     </div>
