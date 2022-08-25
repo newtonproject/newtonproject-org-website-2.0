@@ -26,7 +26,7 @@
   .header-use {
     @apply z-50;
     .use {
-      @apply cursor-pointer hover:text-gray20;
+      @apply cursor-pointer hover:text-gray20 text-base md:mt-[3px];
       font-family: 'Ubuntu-Medium';
     }
     .active {
@@ -67,7 +67,7 @@
     .search {
       @apply relative mr-8;
       a {
-        @apply absolute top-1/2 -mt-3 left-0 w-6 h-6 bg-search inline-block bg-cover ml-2 bg-top cursor-pointer;
+        @apply absolute top-1/2 -mt-[18px] left-0 w-6 h-6 bg-search inline-block bg-cover ml-2 bg-top cursor-pointer;
       }
       input {
         @apply h-10 leading-10 border-grage5 border-[1px] border-solid pl-9 pr-2;
@@ -147,7 +147,7 @@
   overflow-y: auto;
   .header-use .use,
   li a {
-    @apply font-medium;
+    @apply font-medium text-lg;
     font-family: 'Ubuntu-Medium';
   }
   li {
@@ -162,7 +162,7 @@
   .header-down {
     @apply pl-6 mt-6;
     a {
-      @apply text-gray6a block mb-6 font-normal;
+      @apply text-gray6a block mb-6 font-normal text-base;
     }
     .active {
       @apply text-gray20;

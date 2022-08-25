@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import HeaderModal from './headerModal'
 import Language from './languages'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { newsEnvUrl } from '../utils/url'
 
 export default function Header() {
@@ -19,13 +19,21 @@ export default function Header() {
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const herf = window.location.pathname
       const herfName = herf.split('/')[2]
-      // console.log('====', herfName)
+      // console.log('====111', herfName)
       herfName == 'getnew' ? setActiveName(true) : setActiveName(false)
       herfName == 'newton2' || herfName == 'evt' || herfName == 'roadmap' ? setActiveLearn(true) : setActiveLearn(false)
       herfName == 'developers' ? setActiveDevelopers(true) : setActiveDevelopers(false)
-      herfName == 'community' || herfName == 'get-involved' ? setActiveCommunity(true) : setActiveCommunity(false)
+      herfName == 'announcements' ||
+      herfName == 'activity' ||
+      herfName == 'press' ||
+      herfName == 'blog' ||
+      herfName == 'voice' ||
+      herfName == 'community' ||
+      herfName == 'get-involved'
+        ? setActiveCommunity(true)
+        : setActiveCommunity(false)
     }
-  })
+  }, [])
 
   return (
     <>
@@ -88,6 +96,7 @@ export default function Header() {
                 {intl.formatMessage({ id: 'Developers' })}
               </Link>
             </li>
+
             <li className={'header-use header-learn'}>
               <div className={activecommunity ? 'use active' : 'use'}>
                 {intl.formatMessage({ id: 'Community' })}

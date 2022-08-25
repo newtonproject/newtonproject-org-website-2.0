@@ -6,12 +6,16 @@ import News from '../components/home/news'
 import { arrDate } from '../utils/createTime'
 import bannerCommunity from '../static/images/ecosystem/community-banner.png'
 import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.png'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
+import { Skeleton } from 'antd'
 
 export default function CommunityContent() {
   const intl = useIntl()
+  const isActive = ({ isCurrent }: any) => {
+    return isCurrent ? { className: 'active' } : {}
+  }
   const [activities, setactivities] = useState([])
   const [announcements, setAnnouncements] = useState([])
   const [blogsItem, setBlogsItem] = useState([])
@@ -46,7 +50,7 @@ export default function CommunityContent() {
                 activities.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -54,18 +58,22 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/announcements/0/'} target="_blank">
+              <Link getProps={isActive} to="/activity/">
                 {intl.formatMessage({ id: 'More' })}
-              </a>
+              </Link>
             </div>
           </div>
           <div className={'news announcements'}>
@@ -75,7 +83,7 @@ export default function CommunityContent() {
                 announcements.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           {item.image == ' ' ? (
                             <img src={item.image} alt="img" />
@@ -91,18 +99,22 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/announcements/1/'} target="_blank">
-                More
-              </a>
+              <Link getProps={isActive} to="/announcement/">
+                {intl.formatMessage({ id: 'More' })}
+              </Link>
             </div>
           </div>
           <News title={'Press'} />
@@ -113,7 +125,7 @@ export default function CommunityContent() {
                 blogsItem.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -121,18 +133,22 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/blog/'} target="_blank">
-                More
-              </a>
+              <Link getProps={isActive} to="/blog/">
+                {intl.formatMessage({ id: 'More' })}
+              </Link>
             </div>
           </div>
           <div className={'news'}>
@@ -142,7 +158,7 @@ export default function CommunityContent() {
                 voices.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -150,18 +166,22 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
               ) : (
-                <>{intl.formatMessage({ id: 'Loading' })}</>
+                <>
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                  <Skeleton.Image active />
+                </>
               )}
             </ul>
             <div className={'news-more'}>
-              <a href={newsEnvUrl + '/community-voice/'} target="_blank">
+              <Link getProps={isActive} to="/voice/">
                 {intl.formatMessage({ id: 'More' })}
-              </a>
+              </Link>
             </div>
           </div>
           <GlobalCommunity title={intl.formatMessage({ id: 'Social Network' })} />

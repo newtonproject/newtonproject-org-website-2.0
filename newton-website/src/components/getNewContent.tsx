@@ -3,7 +3,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import bannerGetnew from '../static/images/getnew/getnew-banner.png'
 import bannerGetnewH5 from '../static/images/getnew/getnew-banner-h5.png'
 import { numFormat } from '../utils/createTime'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../utils/axiosData'
 import { getNewUrl, newsEnvUrl } from '../utils/url'
 

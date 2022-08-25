@@ -1,6 +1,6 @@
 import React from 'react'
 import { Disclosure } from '@headlessui/react'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { StaticImage } from 'gatsby-plugin-image'
 
 function DeveloperSide() {
@@ -13,7 +13,8 @@ function DeveloperSide() {
     'wallet',
     'transaction',
     'develop-evt',
-    'exchange-integration'
+    'exchange-integration',
+    'become-a-validator'
   ]
   const tagList3 = ['nep']
   const tagList4 = ['workshop', 'hackathon', 'grant']
@@ -107,6 +108,9 @@ function DeveloperSide() {
                 </Link>
                 <Link getProps={isActive} to="/developers/docs/exchange-integration/">
                   {intl.formatMessage({ id: 'Exchange Integration' })}
+                </Link>
+                <Link getProps={isActive} to="/developers/docs/become-a-validator/">
+                  {intl.formatMessage({ id: 'Become a validator' })}
                 </Link>
               </Disclosure.Panel>
             </>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { utils } from 'ethers'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl-v6'
 const base58check = require('base58check')
 const NEW_PREFIX = 'NEW'
 

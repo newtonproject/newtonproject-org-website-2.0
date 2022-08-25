@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { arrDate } from '../../utils/createTime'
 import { NewschildProps } from '../../model/PageModel'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../../utils/axiosData'
 import { newsEnvUrl } from '../../utils/url'
+import { Skeleton } from 'antd'
 
 const News: React.FC<NewschildProps> = props => {
   const intl = useIntl()
   const { title } = props
   const [data, setData] = useState([])
-
+  const isActive = ({ isCurrent }: any) => {
+    return isCurrent ? { className: 'active' } : {}
+  }
   useEffect(() => {
     const newlUrl = newsEnvUrl + '/api/v1/press/latest/'
     const fetchData = async () => {
@@ -41,13 +44,17 @@ const News: React.FC<NewschildProps> = props => {
               )
             })
           ) : (
-            <>{intl.formatMessage({ id: 'Loading' })}</>
+            <>
+              <Skeleton.Image active />
+              <Skeleton.Image active />
+              <Skeleton.Image active />
+            </>
           )}
         </ul>
         <div className={'news-more'}>
-          <a href={newsEnvUrl + '/press/'} target="_blank">
+          <Link getProps={isActive} to="/press/">
             {intl.formatMessage({ id: 'More' })}
-          </a>
+          </Link>
         </div>
       </div>
     </>
