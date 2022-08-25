@@ -3,7 +3,7 @@ import { Pagination } from 'antd'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
 import { arrDate } from '../utils/createTime'
-import { Link } from 'gatsby-plugin-intl'
+import { Link } from 'gatsby-plugin-intl-v6'
 import { Skeleton } from 'antd'
 
 function CommunityData(props: any) {
@@ -45,7 +45,7 @@ function CommunityData(props: any) {
           data.map((item: any, index) => {
             return (
               <li key={index}>
-                <Link to={'/communitys?path=' + item.url}>
+                <Link to={item.url}>
                   <h3>{arrDate(item.created_at)}</h3>
                   <p>{item.title}</p>
                 </Link>

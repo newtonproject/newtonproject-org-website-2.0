@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { arrDateBanner } from '../../utils/createTime'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../../utils/axiosData'
 import { newsEnvUrl } from '../../utils/url'
 import BannerImg from './bannerImg'

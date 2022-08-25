@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import HeaderModal from './headerModal'
 import Language from './languages'
-import { useIntl, Link } from 'gatsby-plugin-intl'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { newsEnvUrl } from '../utils/url'
 
 export default function Header() {

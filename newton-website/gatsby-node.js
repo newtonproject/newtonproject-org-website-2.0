@@ -22,6 +22,23 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
+  createPage({
+    path: "/announcement/*",
+    component: path.resolve("./src/templates/communities.tsx")
+  })
+  createPage({
+    path: "/blog/*",
+    component: path.resolve("./src/templates/communities.tsx")
+  })
+  createPage({
+    path: "/activity/*",
+    component: path.resolve("./src/templates/communities.tsx")
+  })
+  createPage({
+    path: "/community-voice/*",
+    component: path.resolve("./src/templates/communities.tsx")
+  })
+
   const result = await graphql(`
     query {
       allMdx {
@@ -87,7 +104,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     //           slug: langSlug,
     //           isOutdated: false,
     //           isContentEnglish: true,
-    //           // Create `intl` object so `gatsby-plugin-intl` will skip
+    //           // Create `intl` object so `gatsby-plugin-intl-v6` will skip
     //           // generating language variations for this page
     //           intl: {
     //             language: lang,
@@ -104,6 +121,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     // }
   }
   )
+
+ 
 
 }
 

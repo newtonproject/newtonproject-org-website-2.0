@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import bannerEcosystem from '../static/images/ecosystem/ecosystem-banner.png'
 import bannerEcosystemH5 from '../static/images/ecosystem/ecosystem-banner-h5.png'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl-v6'
 import { newsEnvUrl } from '../utils/url'
 
 export default function EcosystemContent() {

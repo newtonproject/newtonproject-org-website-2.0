@@ -131,9 +131,12 @@
   }
 }
 .community-side {
-  @apply pb-[5.5rem];
+  @apply pb-[5.5rem] max-w-[1000px] overflow-hidden;
+  .time {
+    @apply text-base text-gray96 pt-11 md:pt-16 pb-7 md:pb-11;
+  }
   h2 {
-    @apply text-2xl md:text-[40px] md:leading-[58px] mt-12 md:mt-20 mb-10 md:mb-16;
+    @apply text-2xl md:text-[40px] md:leading-[58px] mb-10 md:mb-16;
   }
   .author-box {
     @apply flex justify-between items-center leading-8;
@@ -175,6 +178,9 @@
     }
     a {
       @apply text-gray20 break-all;
+    }
+    img {
+      @apply mx-auto max-w-full h-auto;
     }
   }
 }

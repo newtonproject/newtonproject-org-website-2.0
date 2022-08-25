@@ -1,5 +1,5 @@
 import React from 'react'
-import { useIntl } from 'gatsby-plugin-intl'
+import { useIntl } from 'gatsby-plugin-intl-v6'
 
 export default function SubmitContent() {
   const intl = useIntl()
