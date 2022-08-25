@@ -59,6 +59,7 @@ module.exports = {
         graye0:'#E0ECF6',
         grayeb:'#EBF3FA',
         grayd7:'#D7E5F1',
+        grayf6:'#F6FBFF',
         grayef:'#EFF6FC',
         redd0: '#d00009'
       },

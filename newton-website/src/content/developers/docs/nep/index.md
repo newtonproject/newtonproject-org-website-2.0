@@ -5,6 +5,7 @@ lang: en
 template: docs
 sidebar: true
 ---
+
 ## What is NEP?
 
 For the sake of the open, transparent governance, we propose compiling all suggestions related to the Newton Project using the Newton Evolution Proposal (NEP) template for unified numbering and management. The proposals are then put to the community for broader discussion, getting opinions and suggestions from all parties involved before forming final conclusions.
@@ -29,12 +30,6 @@ We welcome anyone with suggestions related to Newton Project to compile a NEP.
 - <a href="https://neps.newtonproject.org/reviews/"  target="_blank">NEP Reviews：See current NEP reviews and past results</a>
 
 - <a href="https://neps.newtonproject.org/guides/nep-editors/"  target="_blank">NEP Editors：Contact a NEP Editor if you need help</a>
-
-  
-
-
-
-
 
 ## Reference
 
