@@ -37,6 +37,11 @@ body {
     font-family: 'Ubuntu';
     font-size: 16px;
   }
+  dl,
+  ol,
+  ul {
+    margin: 0;
+  }
 }
 * {
   -webkit-tap-highlight-color: transparent;
