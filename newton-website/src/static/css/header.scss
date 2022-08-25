@@ -78,7 +78,7 @@
 .language {
   @apply lg:ml-9 relative w-9;
   .language-img {
-    @apply absolute top-5 lg:top-1 right-1/2 -mr-[0.625rem] lg:mr-0 lg:right-0 w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
+    @apply absolute top-5 lg:top-0 right-1/2 -mr-[0.625rem] lg:mr-0 lg:right-0 w-5 h-5 bg-header-zh inline-block bg-cover cursor-pointer;
   }
   .language-content {
     @apply hidden;
