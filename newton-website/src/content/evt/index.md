@@ -41,34 +41,42 @@ EVT support the development of encrypted and variable decentralized applications
 
 ```solidity
 interface EVTVariable {
+    /// @dev This emits when token dynamic property added.
+    event DynamicPropertyAdded(bytes32 _propertyId);
+    
+    /// @dev This emits when token dynamic property updated.
+    event DynamicPropertyUpdated(uint256 _tokenId, bytes32 _propertyId, bytes _propertyValue);
+
+    /// @notice Add the dynamic property
+    /// @param _propertyId property ID
+    function addDynamicProperty(bytes32 _propertyId) external payable;
+
     /// @notice Set the dynamic property
     /// @param _tokenId token ID
-    /// @param _propertyID property ID
+    /// @param _propertyId property ID
     /// @param _propertyValue property value
-    /// @return Success or fail
-    function setDynamicProperty(uint256 _tokenId, bytes32 _propertyID, bytes _propertyValue) external payable returns(bool);
+    function setDynamicProperty(uint256 _tokenId, bytes32 _propertyId, bytes _propertyValue) external payable;
 
     /// @notice Set multiple dynamic properties once
     /// @param _tokenId token ID
     /// @param _message message
-    /// @return Success or fail
-    function setDynamicProperties(uint256 _tokenId, bytes _message) external payable returns(bool);
+    function setDynamicProperties(uint256 _tokenId, bytes _message) external payable;
 
-    /// @notice Retrieve the vale of dynamic or static property
+    /// @notice Retrieve the vale of dynamic property
     /// @param _tokenId token ID
-    /// @param _propertyID property ID
+    /// @param _propertyId property ID
     /// @return property value
-    function getProperty(uint256 _tokenId, bytes32 _propertyID) external view returns (bytes);
+    function getDynamicProperty(uint256 _tokenId, bytes32 _propertyId) external view returns (bytes);
 
     /// @notice Retrieve the all properties including dynamic and static
     /// @param _tokenId token ID
     /// @return ids, properties
-    function getProperties(uint256 _tokenId) external view returns (bytes32[], bytes[]);
+    function getDynamicProperties(uint256 _tokenId) external view returns (bytes32[], bytes[]);
 
     /// @notice Check whether support the given property
-    /// @param _propertyID property ID
+    /// @param _propertyId property ID
     /// @return support or unsupport
-    function supportsProperty(bytes32 _propertyID) external view returns (bool);
+    function supportsProperty(bytes32 _propertyId) external view returns (bool);
 }
 ```
 
@@ -76,48 +84,69 @@ interface EVTVariable {
 
 ```solidity
 interface EVTEncryption {
-​    /// @notice This emits when register a encrypted key.
+​    /// @notice This emits when registered a encrypted key.
 ​    /// @param _tokenId token ID
-​    /// @param _encryptedKeyID encrypted key ID
-​    event EncryptedKeyRegister(uint256 indexed tokenId, bytes32 encryptedKeyID);
+​    /// @param _encryptedKeyId encrypted key ID
+​    event EncryptedKeyRegistered(uint256 indexed _tokenId, bytes32 _encryptedKeyId);
 
     /// @notice This emits when add a permission.
 ​    /// @param _tokenId token ID
-​    /// @param _encryptedKeyID encrypted key ID
-​    /// @param _owner owner
-​    event PermissionAdd(uint256 indexed tokenId, bytes32 encryptedKeyID, address indexed owner);
+​    /// @param _encryptedKeyId encrypted key ID
+​    /// @param _licensee licensee
+​    event PermissionAdded(uint256 indexed _tokenId, bytes32 _encryptedKeyId, address indexed _licensee);
 
     /// @notice This emits when remove a permission.
 ​    /// @param _tokenId token ID
-​    /// @param _encryptedKeyID encrypted key ID
-​    /// @param _owner owner
-​    event PermissionRemove(uint256 indexed tokenId, bytes32 encryptedKeyID, address indexed owner);
+​    /// @param _encryptedKeyId encrypted key ID
+​    /// @param _licensee licensee
+​    event PermissionRemoved(uint256 indexed _tokenId, bytes32 _encryptedKeyId, address indexed _licensee);
 
-    /// @notice Register the encrypted key
+    /// @notice Register encrypted key
     /// @param _tokenId token ID
-    /// @param _encryptedKeyID encrypted key ID
-    function registerEncryptedKey(uint256 _tokenId, bytes32 _encryptedKeyID) external payable;
+    /// @param _encryptedKeyId encrypted key ID
+    function registerEncryptedKey(uint256 _tokenId, bytes32 _encryptedKeyId) external payable;
 
     /// @notice Add the permission rule of the encrypted key for given address
     /// @param _tokenId token ID
-    /// @param _encryptedKeyID encrypted key ID
-    /// @param _owner owner
-    function addPermission(uint256 _tokenId, bytes32 _encryptedKeyID, address _owner) external payable;
+    /// @param _encryptedKeyId encrypted key ID
+    /// @param _licensee licensee
+    function addPermission(uint256 _tokenId, bytes32 _encryptedKeyId, address _licensee) external payable;
 
     /// @notice Remove the permission rule of the encrypted key for given address
     /// @param _tokenId token ID
-    /// @param _encryptedKeyID encrypted key ID
-    /// @param _owner owner
-    function removePermission(uint256 _tokenId, bytes32 _encryptedKeyID, address _owner) external;
+    /// @param _encryptedKeyId encrypted key ID
+    /// @param _licensee licensee
+    function removePermission(uint256 _tokenId, bytes32 _encryptedKeyId, address _licensee) external;
 
     /// @notice Check permission rule of the encrypted key for given address
     /// @param _tokenId token ID
-    /// @param _encryptedKeyID encrypted key ID
-    /// @param _owner owner
+    /// @param _encryptedKeyId encrypted key ID
+    /// @param _licensee licensee
     /// @return true or false
-    function hasPermission(uint256 _tokenId, bytes32 _encryptedKeyID, address _owner) external view returns (bool);
+    function hasPermission(uint256 _tokenId, bytes32 _encryptedKeyId, address _licensee) external view returns (bool);
 }
 ```
+
+## EVT Extensions
+
+- ### EVTA(Support Of Batch Mint EVT)
+    An improved implementation of the EVT that supports minting multiple tokens for close to the cost of one.
+
+    We’ve measured the gas costs and prices for minting, By using EVTA, you will cost lower gas fee.
+
+    |  Quantity  |    EVT(new)    |    EVTA(new)   |
+    | ---------- | -------------- | -------------- |
+    | 1          | 29.884         | 28.688         |
+    | 2          | 44.935         | 29.6585        |
+    | 3          | 59.7355        | 30.629         |
+    | 5          | 89.3365        | 32.57          |
+    | 10         | 163.339        | 37.4225        |
+    | 50         | 755.3615       | 76.2425        |
+    | 100        | 1495.3945      | 124.7675       |
+    | 200        | 2975.4745      | 221.8175       |
+
+    See more info at [https://neps.newtonproject.org/neps/nep-61/](https://neps.newtonproject.org/neps/nep-61/)
+
 
 ## What are EVTs used for
 
@@ -146,5 +175,7 @@ interface EVTEncryption {
 - https://www.newtonproject.org/
 
 - https://neps.newtonproject.org/neps/nep-53/
+
+- https://neps.newtonproject.org/neps/nep-61/
 
 - https://github.com/newtonproject/evt-lib
