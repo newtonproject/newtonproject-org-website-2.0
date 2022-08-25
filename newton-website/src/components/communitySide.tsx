@@ -12,6 +12,7 @@ function CommunitySide() {
   const [createdAt, setCreatedAt]: any = useState()
   const [dataTitle, setDataTitle]: any = useState()
   const [dataContent, setDataContent]: any = useState()
+  const [dataTitleList, setDataTitleList]: any = useState()
   let path: any
   if (typeof window !== 'undefined' && typeof document !== 'undefined') {
     path = window.location.pathname
@@ -40,8 +41,6 @@ function CommunitySide() {
     twitterUrl = window.location.href
   }
 
-  let dataTitleList: any
-
   useEffect(() => {
     const listUrl = newsEnvUrl + '/api/v1/community/entry-detail?path=' + path
 
@@ -52,8 +51,10 @@ function CommunitySide() {
       setCreatedAt(arrDate(res.data.result.created_at))
       setDataTitle(res.data.result.title)
       setDataContent(res.data.result.content)
-      dataTitleList = res.data.result.title.replace('|', '')
+
+      let dataTitleList = res.data.result.title.replace('|', '')
       dataTitleList = dataTitleList.replace('#', '')
+      setDataTitleList(dataTitleList)
       console.log('res', res)
     }
     fetchData()
