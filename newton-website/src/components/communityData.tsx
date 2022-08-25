@@ -5,15 +5,33 @@ import { newsEnvUrl } from '../utils/url'
 import { arrDate } from '../utils/createTime'
 import { Link } from 'gatsby-plugin-intl-v6'
 import { Skeleton } from 'antd'
-
+import { getQueryVariable, updateQueryStringParameter } from '../utils/getQueryVariable'
 function CommunityData(props: any) {
   const { entryType } = props
   const [data, setData] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
 
+  let defaultCurrent: any = getQueryVariable('page')
+  defaultCurrent = parseInt(defaultCurrent)
+
   useEffect(() => {
-    const listUrl = newsEnvUrl + '/api/v1/community/entry-list?entry_type=' + entryType
+    let listUrl
+    isNaN(defaultCurrent)
+      ? (listUrl =
+          newsEnvUrl +
+          '/api/v1/community/entry-list?entry_type=' +
+          entryType +
+          '&language=en&page_id=' +
+          1 +
+          '&page_size=10')
+      : (listUrl =
+          newsEnvUrl +
+          '/api/v1/community/entry-list?entry_type=' +
+          entryType +
+          '&language=en&page_id=' +
+          defaultCurrent +
+          '&page_size=10')
     getDate(listUrl)
   }, [])
 
@@ -35,6 +53,18 @@ function CommunityData(props: any) {
       '&language=en&page_id=' +
       page +
       '&page_size=10'
+
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      let newurl = updateQueryStringParameter(window.location.href, 'page', page)
+
+      window.history.replaceState(
+        {
+          path: newurl
+        },
+        '',
+        newurl
+      )
+    }
     getDate(detailUrl)
   }
 
@@ -60,7 +90,12 @@ function CommunityData(props: any) {
           </>
         )}
       </ul>
-      <Pagination defaultCurrent={1} current={currentPage} total={totalPage * 10} onChange={onPageChange} />
+      <Pagination
+        defaultCurrent={defaultCurrent}
+        current={currentPage}
+        total={totalPage * 10}
+        onChange={onPageChange}
+      />
     </div>
   )
 }

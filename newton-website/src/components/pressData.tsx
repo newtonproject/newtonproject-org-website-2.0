@@ -4,14 +4,21 @@ import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
 import { arrDate } from '../utils/createTime'
 import { Skeleton } from 'antd'
+import { getQueryVariable, updateQueryStringParameter } from '../utils/getQueryVariable'
 
 function PressData() {
   const [data, setData] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [totalPage, setTotalPage] = useState(1)
 
+  let defaultCurrent: any = getQueryVariable('page')
+  defaultCurrent = parseInt(defaultCurrent)
+
   useEffect(() => {
-    const listUrl = newsEnvUrl + '/api/v1/press/list'
+    let listUrl
+    isNaN(defaultCurrent)
+      ? (listUrl = newsEnvUrl + '/api/v1/press/list?page_id=' + 1 + '&page_size=10')
+      : (listUrl = newsEnvUrl + '/api/v1/press/list?page_id=' + defaultCurrent + '&page_size=10')
     getDate(listUrl)
   }, [])
   const getDate = (listUrl: any) => {
@@ -25,6 +32,16 @@ function PressData() {
   }
   const onPageChange = (page: any) => {
     const detailUrl = newsEnvUrl + '/api/v1/press/list?page_id=' + page + '&page_size=10'
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      let newurl = updateQueryStringParameter(window.location.href, 'page', page)
+      window.history.replaceState(
+        {
+          path: newurl
+        },
+        '',
+        newurl
+      )
+    }
     getDate(detailUrl)
   }
 
@@ -50,7 +67,12 @@ function PressData() {
           </>
         )}
       </ul>
-      <Pagination defaultCurrent={1} current={currentPage} total={totalPage * 10} onChange={onPageChange} />
+      <Pagination
+        defaultCurrent={defaultCurrent}
+        current={currentPage}
+        total={totalPage * 10}
+        onChange={onPageChange}
+      />
     </div>
   )
 }
