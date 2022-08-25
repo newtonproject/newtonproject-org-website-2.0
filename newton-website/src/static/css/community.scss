@@ -76,6 +76,7 @@
 
   h3 {
     @apply w-full md:w-[190px] text-gray96 text-sm;
+    font-family: 'Ubuntu';
   }
   p {
     @apply text-xl  md:-mt-[3px] md:w-[85%];
@@ -91,7 +92,7 @@
     @apply border-graye0 h-[34px] leading-[34px];
     a {
       @apply text-base text-grag96a h-[34px] leading-[34px];
-      font-family: 'Ubuntu-Medium';
+      font-family: 'Ubuntu';
     }
   }
   .ant-pagination-item-active {
@@ -149,7 +150,7 @@
     a {
       @apply flex justify-between items-center;
       span {
-        @apply hidden md:block;
+        @apply hidden md:block text-gray96;
       }
       .img {
         @apply w-10 h-10 ml-4;

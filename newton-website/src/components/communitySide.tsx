@@ -133,7 +133,7 @@ function CommunitySide() {
           </div>
           <div className={'share'}>
             <a href={'https://twitter.com/intent/tweet?text=' + dataTitle + twitterUrl} target="_blank">
-              <span>share</span>
+              <span className={'share-span'}>share</span>
               <StaticImage
                 className={'img'}
                 placeholder="blurred"
