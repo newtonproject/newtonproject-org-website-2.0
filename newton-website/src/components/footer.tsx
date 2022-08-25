@@ -24,14 +24,10 @@ export default function Footer() {
                 </a>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/announcement/'} target="_blank">
-                  {intl.formatMessage({ id: 'Announcements' })}
-                </a>
+                <Link to="/announcement/">{intl.formatMessage({ id: 'Announcements' })}</Link>
               </dd>
               <dd>
-                <a href={newsEnvUrl + '/blog/'} target="_blank">
-                  {intl.formatMessage({ id: 'Blog' })}
-                </a>
+                <Link to="/blog/">{intl.formatMessage({ id: 'Blog' })}</Link>
               </dd>
               <dd>
                 <Link to="/developers/docs/">{intl.formatMessage({ id: 'Developers' })}</Link>
@@ -128,14 +124,10 @@ const FooterMobile = () => {
             </a>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/announcement/'} target="_blank">
-              {intl.formatMessage({ id: 'Announcements' })}
-            </a>
+            <Link to="/announcement/">{intl.formatMessage({ id: 'Announcements' })}</Link>
           </dd>
           <dd>
-            <a href={newsEnvUrl + '/blog/'} target="_blank">
-              {intl.formatMessage({ id: 'Blog' })}
-            </a>
+            <Link to="/blog/">{intl.formatMessage({ id: 'Blog' })}</Link>
           </dd>
           <dd>
             <Link to="/developers/docs/">{intl.formatMessage({ id: 'Developers' })}</Link>

@@ -40,12 +40,11 @@
   }
 }
 .community-banner {
-  @apply bg-grayea h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[41px] md:text-5xl bg-community-banner-h5 md:bg-none bg-no-repeat bg-cover;
-  // @apply bg-grayea h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[41px] md:text-5xl;
+  @apply bg-grayea h-[198px] md:h-[247px] leading-[198px] md:leading-[247px] text-center md:text-left font-bold text-[36px] md:text-5xl bg-community-banner-h5 md:bg-none bg-no-repeat bg-cover;
   .banner {
     @apply relative;
     span {
-      @apply z-[7] md:absolute md:left-0 break-words;
+      @apply z-[7] md:absolute md:left-0 break-words whitespace-nowrap;
     }
     .img {
       @apply w-[993px] absolute top-0 left-[281px] hidden md:block z-[6];
