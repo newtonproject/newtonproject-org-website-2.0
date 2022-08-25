@@ -6,11 +6,11 @@ import News from '../components/home/news'
 import { arrDate } from '../utils/createTime'
 import bannerCommunity from '../static/images/ecosystem/community-banner.png'
 import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.png'
-import { useIntl } from 'gatsby-plugin-intl-v6'
+import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
-import { Link } from 'gatsby'
 import { Skeleton } from 'antd'
+
 export default function CommunityContent() {
   const intl = useIntl()
   const isActive = ({ isCurrent }: any) => {
@@ -50,7 +50,7 @@ export default function CommunityContent() {
                 activities.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -58,7 +58,7 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
@@ -83,7 +83,7 @@ export default function CommunityContent() {
                 announcements.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           {item.image == ' ' ? (
                             <img src={item.image} alt="img" />
@@ -99,7 +99,7 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
@@ -125,7 +125,7 @@ export default function CommunityContent() {
                 blogsItem.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -133,7 +133,7 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
@@ -158,7 +158,7 @@ export default function CommunityContent() {
                 voices.map((item: any, index) => {
                   return (
                     <li key={index}>
-                      <a href={newsEnvUrl + item.url} target="_blank" key={index}>
+                      <Link to={item.url} key={index}>
                         <div className={'news-img'}>
                           <img src={item.image} alt="img" />
                         </div>
@@ -166,7 +166,7 @@ export default function CommunityContent() {
                           <h3>{item.title}</h3>
                           <p>{arrDate(item.created_at)}</p>
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   )
                 })
