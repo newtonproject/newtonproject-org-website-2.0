@@ -104,6 +104,9 @@ function DeveloperSideMobile() {
                         <Link getProps={isActive} to="/developers/docs/exchange-integration/">
                           {intl.formatMessage({ id: 'Exchange Integration' })}
                         </Link>
+                        <Link getProps={isActive} to="/developers/docs/become-a-validator/">
+                          {intl.formatMessage({ id: 'Become a validator' })}
+                        </Link>
                       </Disclosure.Panel>
                     </>
                   )}
