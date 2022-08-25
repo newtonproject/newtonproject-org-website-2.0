@@ -88,7 +88,7 @@
     @apply hidden;
   }
   .ant-pagination-item {
-    @apply border-graye0 h-[34px] leading-[34px];
+    @apply md:mr-2 mr-1 border-graye0 h-[34px] leading-[34px] min-w-[24px] md:min-w-[32px];
     a {
       @apply text-base text-grag96a h-[34px] leading-[34px];
       font-family: 'Ubuntu';
@@ -122,6 +122,10 @@
     .ant-pagination-item-ellipsis {
       @apply text-xs leading-[28px] md:leading-[32px];
     }
+  }
+  .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-ellipsis,
+  .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-ellipsis {
+    text-indent: -3px;
   }
 }
 

@@ -40,6 +40,8 @@ function CommunitySide() {
     twitterUrl = window.location.href
   }
 
+  let dataTitleList: any
+
   useEffect(() => {
     const listUrl = newsEnvUrl + '/api/v1/community/entry-detail?path=' + path
 
@@ -50,6 +52,8 @@ function CommunitySide() {
       setCreatedAt(arrDate(res.data.result.created_at))
       setDataTitle(res.data.result.title)
       setDataContent(res.data.result.content)
+      dataTitleList = res.data.result.title.replace('|', '')
+      dataTitleList = dataTitleList.replace('#', '')
       console.log('res', res)
     }
     fetchData()
@@ -83,7 +87,6 @@ function CommunitySide() {
         <div className={'container'}>
           {headerTitle.map((item, index) => {
             return (
-              // <Link key={index} to={'/' + item.url + '/'} className={ hrefTitle == item.content ? 'active' : ''}></Link>
               <Link key={index} to={'/' + item.url + '/'}>
                 {intl.formatMessage({ id: `${item.content}` })}
               </Link>
@@ -134,7 +137,7 @@ function CommunitySide() {
             {intl.formatMessage({ id: 'Newton' })}
           </div>
           <div className={'share'}>
-            <a href={'https://twitter.com/intent/tweet?text=' + dataTitle + twitterUrl} target="_blank">
+            <a href={'https://twitter.com/intent/tweet?text=' + dataTitleList + twitterUrl} target="_blank">
               <span className={'share-span'}>share</span>
               <StaticImage
                 className={'img'}
