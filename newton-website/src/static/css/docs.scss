@@ -1,7 +1,7 @@
 .docs {
   @apply flex flex-row justify-between mb-32;
   .docs-content {
-    @apply w-full md:w-[60%] md:mr-[16%];
+    @apply w-full md:w-full md:mr-[3.5%];
     .updated {
       @apply pt-10 text-gray6a;
     }
