@@ -133,7 +133,7 @@ exports.onCreateWebpackConfig = ({ actions }) => {
         crypto: require.resolve('crypto-browserify'),
         stream: require.resolve('stream-browserify'),
         buffer: require.resolve("buffer/"),
-        babel:  require.resolve("@babel/core")
+        babel:  require.resolve("@babel/core"),
       },
     },
   })
