@@ -9,7 +9,7 @@ import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.pn
 import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
-import { Skeleton } from 'antd'
+import Loading from '../components/home/loading'
 
 export default function CommunityContent() {
   const intl = useIntl()
@@ -32,6 +32,8 @@ export default function CommunityContent() {
     }
     fetchData()
   }, [])
+
+  let arr: any = [1, 2, 3]
 
   return (
     <div id={'community'}>
@@ -63,11 +65,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                </>
+                <Loading />
               )}
             </ul>
             <div className={'news-more'}>
@@ -104,11 +102,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                </>
+                <Loading />
               )}
             </ul>
             <div className={'news-more'}>
@@ -138,11 +132,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                </>
+                <Loading />
               )}
             </ul>
             <div className={'news-more'}>
@@ -171,11 +161,7 @@ export default function CommunityContent() {
                   )
                 })
               ) : (
-                <>
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                  <Skeleton.Image active />
-                </>
+                <Loading />
               )}
             </ul>
             <div className={'news-more'}>
