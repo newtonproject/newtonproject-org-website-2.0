@@ -160,11 +160,8 @@ export default function GetNewContent() {
             <a href="https://www.biup.com/" target="_blank">
               <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed3.png" />
             </a>
-            <a href="https://www.mxc.com/" target="_blank">
+            <a href="https://www.mexc.com/" target="_blank" className={'mexc'}>
               <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed4.png" />
-            </a>
-            <a href="https://www.binance.org/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed5.png" />
             </a>
             <a href="https://www.biki.com/" target="_blank">
               <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed6.png" />
@@ -179,12 +176,17 @@ export default function GetNewContent() {
         </div>
         <div className={'dex'}>
           <h2>{intl.formatMessage({ id: 'DEX' })}</h2>
-          <a
-            href="https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
-            target="_blank"
-          >
-            <StaticImage placeholder="blurred" alt="img" src="../static/images/ecosystem/new-swap.png" />
-          </a>
+          <div className={'dex-a'}>
+            <a
+              href="https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
+              target="_blank"
+            >
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/ecosystem/new-swap.png" />
+            </a>
+            <a href="https://www.binance.org/" target="_blank">
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed5.png" />
+            </a>
+          </div>
         </div>
         <div className={'dex Wallet'}>
           <h2>{intl.formatMessage({ id: 'Wallet' })}</h2>

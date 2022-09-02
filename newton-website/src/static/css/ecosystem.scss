@@ -59,8 +59,36 @@
     dd {
       @apply mt-8;
     }
+    .econmy {
+      @apply mt-8;
+      img {
+        @apply w-[12.5rem];
+      }
+    }
+    .exchange1,
+    .exchange2,
+    .exchange3 {
+      img {
+        @apply h-auto;
+      }
+    }
+    .exchange1 {
+      img {
+        @apply w-[10.3rem];
+      }
+    }
+    .exchange2 {
+      img {
+        @apply w-[12rem];
+      }
+    }
+    .exchange3 {
+      img {
+        @apply w-[12.5rem];
+      }
+    }
     a {
-      @apply inline-block;
+      @apply block;
     }
     span {
       @apply text-xs text-grag96a block mt-3;
@@ -231,9 +259,14 @@
       }
     }
     a {
-      @apply inline-block mt-10 w-[45%] md:w-2/6 xl:w-1/5;
+      @apply inline-block mt-10 w-[45%] md:w-2/6 xl:w-[22%];
       img {
         @apply w-[9.4rem] h-auto;
+      }
+    }
+    .mexc {
+      img {
+        @apply w-full md:w-[13.1rem];
       }
     }
   }
@@ -242,9 +275,18 @@
     h2 {
       @apply text-3xl mt-20 mb-14;
     }
+    .dex-a {
+      @apply flex justify-center items-center;
+      a {
+        &:nth-child(2) {
+          @apply w-[12rem] ml-5 md:ml-[5.8rem];
+        }
+      }
+    }
     a {
       @apply inline-block w-[9.4rem];
     }
+
     img {
       @apply w-full h-auto;
     }
