@@ -106,15 +106,15 @@ export default function EcosystemContent() {
             <i></i>
             {intl.formatMessage({ id: 'Exchange' })}
           </dt>
-          <dd className={'exchange1'}>
-            <a href="https://www.hb.co.kr/en-us/" target="_blank">
-              <StaticImage placeholder="blurred" alt="new-swap" src="../static/images/getnew/listed2.png" />
+          <dd className={'exchange2'}>
+            <a href="https://www.huobi.com/" target="_blank">
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed1.png" />
               <span>{intl.formatMessage({ id: 'A decentralized multigalactic metaverse.' })}</span>
             </a>
           </dd>
-          <dd className={'exchange2'}>
-            <a href="https://www.hb.co.kr/en-us/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed1.png" />
+          <dd className={'exchange1'}>
+            <a href="https://www.hb.co.kr/" target="_blank">
+              <StaticImage placeholder="blurred" alt="new-swap" src="../static/images/getnew/listed2.png" />
               <span>{intl.formatMessage({ id: 'A decentralized multigalactic metaverse.' })}</span>
             </a>
           </dd>
