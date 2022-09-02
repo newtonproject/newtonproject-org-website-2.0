@@ -60,12 +60,14 @@ export default function EcosystemContent() {
         <dl>
           <dt>
             <i></i>
-            {intl.formatMessage({ id: 'DEX' })}
+            {intl.formatMessage({ id: 'Cross-chain' })}
           </dt>
-          <dd className={'new-swap'}>
-            <a href="https://newswap.org/" target="_blank">
-              <StaticImage placeholder="blurred" alt="new-swap" src="../static/images/ecosystem/new-swap.png" />
-              <span>{intl.formatMessage({ id: 'Decentralized Exchange Protocol on NewChain.' })}</span>
+          <dd className={'new-bridge'}>
+            <a href="https://newbridge.network/" target="_blank">
+              <StaticImage placeholder="blurred" alt="new-bridge" src="../static/images/ecosystem/new-bridge.png" />
+              <span>
+                {intl.formatMessage({ id: 'Supports Inter-Chain token transfer between NewChain and others.' })}
+              </span>
             </a>
           </dd>
         </dl>
@@ -84,14 +86,42 @@ export default function EcosystemContent() {
         <dl>
           <dt>
             <i></i>
-            {intl.formatMessage({ id: 'Cross-chain' })}
+            {intl.formatMessage({ id: 'DEX' })}
           </dt>
-          <dd className={'new-bridge'}>
-            <a href="https://newbridge.network/" target="_blank">
-              <StaticImage placeholder="blurred" alt="new-bridge" src="../static/images/ecosystem/new-bridge.png" />
-              <span>
-                {intl.formatMessage({ id: 'Supports Inter-Chain token transfer between NewChain and others.' })}
-              </span>
+          <dd className={'new-swap'}>
+            <a href="https://newswap.org/" target="_blank">
+              <StaticImage placeholder="blurred" alt="new-swap" src="../static/images/ecosystem/new-swap.png" />
+              <span>{intl.formatMessage({ id: 'Decentralized Exchange Protocol on NewChain.' })}</span>
+            </a>
+          </dd>
+          <dd>
+            <a href="https://www.binance.org/" target="_blank" className={'econmy'}>
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed5.png" />
+              <span>{intl.formatMessage({ id: 'The best-performing decentralized economy.' })}</span>
+            </a>
+          </dd>
+        </dl>
+        <dl>
+          <dt>
+            <i></i>
+            {intl.formatMessage({ id: 'Exchange' })}
+          </dt>
+          <dd className={'exchange2'}>
+            <a href="https://www.huobi.com/" target="_blank">
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed1.png" />
+              <span>{intl.formatMessage({ id: 'A decentralized multigalactic metaverse.' })}</span>
+            </a>
+          </dd>
+          <dd className={'exchange1'}>
+            <a href="https://www.hb.co.kr/" target="_blank">
+              <StaticImage placeholder="blurred" alt="new-swap" src="../static/images/getnew/listed2.png" />
+              <span>{intl.formatMessage({ id: 'A decentralized multigalactic metaverse.' })}</span>
+            </a>
+          </dd>
+          <dd className={'exchange3'}>
+            <a href="https://www.mexc.com/" target="_blank">
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed4.png" />
+              <span>{intl.formatMessage({ id: 'The First User-friendly Cryptocurrency Service Provider.' })}</span>
             </a>
           </dd>
         </dl>

@@ -61,7 +61,8 @@ module.exports = {
         grayd7:'#D7E5F1',
         grayf6:'#F6FBFF',
         grayef:'#EFF6FC',
-        redd0: '#d00009'
+        redd0: '#d00009',
+        grayf2: '#F2F8FD'
       },
       width: {
         'w1/3': '31%',
