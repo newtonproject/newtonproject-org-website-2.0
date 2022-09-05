@@ -6,6 +6,7 @@ import News from '../components/home/news'
 import { arrDate } from '../utils/createTime'
 import bannerCommunity from '../static/images/ecosystem/community-banner.png'
 import bannerCommunityH5 from '../static/images/ecosystem/community-banner-h5.png'
+import announcementImg from '../static/images/ecosystem/announcements.png'
 import { useIntl, Link } from 'gatsby-plugin-intl-v6'
 import { getRequest } from '../utils/axiosData'
 import { newsEnvUrl } from '../utils/url'
@@ -32,8 +33,6 @@ export default function CommunityContent() {
     }
     fetchData()
   }, [])
-
-  let arr: any = [1, 2, 3]
 
   return (
     <div id={'community'}>
@@ -83,15 +82,7 @@ export default function CommunityContent() {
                     <li key={index}>
                       <Link to={item.url} key={index}>
                         <div className={'news-img'}>
-                          {item.image == ' ' ? (
-                            <img src={item.image} alt="img" />
-                          ) : (
-                            <StaticImage
-                              placeholder="blurred"
-                              alt="new-mall"
-                              src="../static/images/ecosystem/announcements.png"
-                            />
-                          )}
+                          <img src={item.image == '' ? announcementImg : item.image} alt="img" />
                         </div>
                         <div className={'news-title'}>
                           <h3>{item.title}</h3>
