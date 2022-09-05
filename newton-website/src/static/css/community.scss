@@ -144,7 +144,7 @@
     @apply text-2xl md:text-[40px] md:leading-[58px] mb-10 md:mb-16;
   }
   .author-box {
-    @apply flex justify-between items-center leading-8;
+    @apply flex justify-between items-center leading-8 pb-6;
     img {
       @apply w-8 h-8 mr-2;
     }
@@ -178,47 +178,51 @@
     h1,
     h2,
     h3,
-    h4.h5,
+    h4,
+    h5,
     h6 {
-      @apply relative;
+      @apply relative pb-4;
       font-family: 'Ubuntu-Bold';
     }
     h1 {
-      @apply text-[40px] mt-10 md:mt-12 mb-9;
+      @apply text-[40px];
     }
     h2 {
-      @apply text-[36px] mt-10 md:mt-12 mb-9;
+      @apply text-[36px];
     }
     h3 {
-      @apply text-[1.63rem] mt-11 py-[1.13rem];
+      @apply text-[1.63rem] pt-12 pl-3;
       font-family: 'Ubuntu-Bold';
       &::after {
         content: '';
-        @apply absolute top-[1.75rem] left-0 w-1 h-5 bg-gray20;
-      }
-      span {
-        @apply ml-3;
+        @apply absolute top-[59px] left-0 w-1 h-5 bg-gray20;
       }
     }
     h4,
     h5,
     h6 {
-      @apply mt-4 mb-2 font-bold;
+      @apply font-bold;
     }
     h4 {
-      @apply text-2xl pt-6;
+      @apply text-2xl pt-5;
     }
     h5 {
-      @apply text-lg;
+      @apply text-lg pt-2;
     }
     h6 {
       @apply text-base;
     }
+    p,
+    img,
+    ul,
+    ol {
+      @apply pb-4;
+    }
     p {
-      @apply text-base pt-3 pb-2 leading-8;
+      @apply text-base  leading-8;
     }
     img {
-      @apply max-w-full;
+      @apply max-w-full my-4;
     }
     .pictures {
       @apply flex justify-between items-center w-full;
@@ -227,13 +231,12 @@
       @apply text-gray20 break-all;
     }
     ul {
-      @apply mt-5 mb-3;
       li {
-        @apply relative pl-3 leading-8 text-base mt-2;
+        @apply relative leading-8 text-base;
         p {
-          @apply p-0 pl-3 relative;
+          @apply relative pl-3 pb-2;
           &::before {
-            @apply absolute top-[15px] left-0 w-1 h-1 bg-grag2c;
+            @apply absolute top-[14px] left-0 w-1 h-1 bg-grag2c;
             content: '';
             border-radius: 50%;
           }
@@ -242,7 +245,7 @@
           li {
             @apply relative pl-3 leading-8 text-base;
             p {
-              @apply p-0 pl-0;
+              @apply p-0 pl-0 pb-2;
               &::before {
                 @apply bg-white w-1 h-1 border-[1px] border-solid border-grag2c;
                 border-radius: 2px;
