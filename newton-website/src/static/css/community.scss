@@ -180,16 +180,17 @@
     h3,
     h4.h5,
     h6 {
-      font-family: 'Ubuntu-Medium';
+      @apply relative;
+      font-family: 'Ubuntu-Bold';
     }
     h1 {
-      @apply text-[36px] md:text-[40px] mt-10 md:mt-12 mb-9;
+      @apply text-[40px] mt-10 md:mt-12 mb-9;
     }
     h2 {
-      @apply text-[30px] md:text-[36px] mt-10 md:mt-12 mb-9;
+      @apply text-[36px] mt-10 md:mt-12 mb-9;
     }
     h3 {
-      @apply text-[1.63rem] py-[1.13rem] relative;
+      @apply text-[1.63rem] mt-11 py-[1.13rem];
       font-family: 'Ubuntu-Bold';
       &::after {
         content: '';
@@ -199,27 +200,36 @@
         @apply ml-3;
       }
     }
+    h4,
+    h5,
+    h6 {
+      @apply mt-4 mb-2 font-bold;
+    }
     h4 {
-      @apply text-xl md:text-[26px] mt-10 mb-6;
+      @apply text-2xl pt-6;
     }
     h5 {
-      @apply text-[16px] md:text-[20px] mb-8 relative;
+      @apply text-lg;
     }
     h6 {
-      @apply text-[12px] md:text-[16px] mb-8 relative;
+      @apply text-base;
     }
     p {
-      @apply text-base py-[18px] leading-7 md:leading-8;
+      @apply text-base pt-3 pb-2 leading-8;
+    }
+    .pictures {
+      @apply flex justify-between items-center w-full;
+      img {
+        @apply max-w-full;
+      }
     }
     a {
       @apply text-gray20 break-all;
     }
-    img {
-      // @apply mx-auto max-w-full h-auto;
-    }
     ul {
+      @apply mt-5 mb-3;
       li {
-        @apply relative pl-3 leading-8 text-base;
+        @apply relative pl-3 leading-8 text-base mt-2;
         p {
           @apply p-0 pl-3 relative;
           &::before {
