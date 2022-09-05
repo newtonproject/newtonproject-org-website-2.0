@@ -55,7 +55,6 @@ function CommunitySide() {
       let dataTitleList = res.data.result.title.replace('|', '')
       dataTitleList = dataTitleList.replace('#', '')
       setDataTitleList(dataTitleList)
-      console.log('res', res)
     }
     fetchData()
   }, [])
