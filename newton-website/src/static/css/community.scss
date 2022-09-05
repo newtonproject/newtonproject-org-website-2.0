@@ -217,11 +217,11 @@
     p {
       @apply text-base pt-3 pb-2 leading-8;
     }
+    img {
+      @apply max-w-full;
+    }
     .pictures {
       @apply flex justify-between items-center w-full;
-      img {
-        @apply max-w-full;
-      }
     }
     a {
       @apply text-gray20 break-all;
