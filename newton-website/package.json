@@ -48,6 +48,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-emoji-render": "^1.2.4",
+    "react-ga": "^3.3.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "stream-browserify": "^3.0.0",
