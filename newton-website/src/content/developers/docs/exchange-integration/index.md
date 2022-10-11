@@ -146,7 +146,7 @@ function signUseTx() {
 ```
 ### Python
 
-We also provide the newchain_web3.py library, which you can use to interact with NewChain.
+We also provide the [newchain_web3.py](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/python) library, which you can use to interact with NewChain.
 
 Below is a simple function we constructed to view the balance of a specified address.
 
