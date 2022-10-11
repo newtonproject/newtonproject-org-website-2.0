@@ -17,13 +17,13 @@ Functions such as querying balances, obtaining transaction records, and parsing 
 # NewChain Network Information
 
 |**Network**|**RPC**|**ChainId**|**Block Explorer**|**Faucet**|
-|:----|:----|:----|:----|:----|
+|:---|:---|:---|:---|:---|
 |**Newton Mainnet**|[https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/)|1012|[https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)|    |
 |**Newton Testnet**|[https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)|1007|[https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/)|[https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Youraddress"|
 
 # Build a full node of the NewChain network
 
-Build a node tutorial here.
+Building a node tutorial is [here]().
 
 After building a full node, the historical transaction records of an account can be obtained by parsing historical blocks, and the transfer-in and transfer-out transactions of an address can be monitored in real time by parsing the latest block. Full nodes also provide an API for broadcasting transactions.
 
@@ -33,6 +33,7 @@ Developers can utilize NewChain Network EndPoints to interact with on-chain data
 
 >Start using RPC calls on NewChain Network
 >Start by accessing the full set of API documentation for standard NewChain JSON-RPC calls. [https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md](https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md)
+
 You can use our provided Java SDK, newchain-web3.js, newchain_web3.py library to interact with your programming language. For the source code and documentation of NewChain SDK, see: [https://github.com/newtonproject/newchain-sdk-example](https://github.com/newtonproject/newchain-sdk-example)
 
 ## Simple tutorial
@@ -70,6 +71,7 @@ BigInteger b = balance.getBalance();
 **Parameters**
 * s(String): The address.
 * defaultBlockParameter(DefaultBlockParameter): Integer block number, or the string "latest", "earliest" or "pending". You should put into DefaultBlockParameterName.LATEST("latest").
+
 **Return Values**
 
 Returns the balance of the account of given address. 
@@ -152,14 +154,10 @@ Below is a simple function we constructed to view the balance of a specified add
 from newchain_web3 import Web3, HTTPProvider, Account
 rpc = "https://rpc1.newchain.newtonproject.org"
 def balance(address, rpc):
-	    """Get the balance of the address"""
-	    web3 = Web3(HTTPProvider(rpc))
-	    a = web3.toChecksumAddress(address)
-	    balance_wei = web3.eth.getBalance(a)
-	    b = web3.fromWei(balance_wei, 'ether')
-	    print("The balance of {} is {} NEW.".format(a, b))
+    """Get the balance of the address"""
+    web3 = Web3(HTTPProvider(rpc))
+    a = web3.toChecksumAddress(address)
+    balance_wei = web3.eth.getBalance(a)
+    b = web3.fromWei(balance_wei, 'ether')
+    print("The balance of {} is {} NEW.".format(a, b))
 ```
-  
-
-
-
