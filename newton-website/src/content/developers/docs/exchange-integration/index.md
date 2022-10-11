@@ -12,20 +12,44 @@ The purpose of this document is to provide a brief overview of how to integrate 
 
 You can find references for the NewChain API [here](https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md).
 
-Functions such as querying balances, obtaining transaction records, and parsing blocks to obtain transaction records required by the exchange can be implemented by accessing the RPC API service provided by Newton or building a full node. The RPC service will set the access frequency due to limited resources. For scenarios with high-frequency requirements, it is recommended to build a full node.
+Functions such as querying balances, obtaining transaction records, and parsing blocks to obtain transaction records required by the exchange can be implemented by accessing the RPC API service provided by Newton or deploying a full node. The RPC service will set the access frequency due to limited resources. For scenarios with high-frequency requirements, it is recommended to deploy a full node.
 
 ## NewChain Network Information
 
-| **Network**        | **RPC**                                                                                       | **ChainId** | **Block Explorer**                                                                                                                                            | **Faucet**                                                                                                                      |
-| :----------------- | :-------------------------------------------------------------------------------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------ |
-| **Newton Mainnet** | [https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/) | 1012        | [https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)                                                                                    |                                                                                                                                 |
-| **Newton Testnet** | [https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)           | 1007        | [https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br/>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/) | [https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Youraddress" |
+### **Newton Mainnet：**
 
-## Build a full node of the NewChain network
+**RPC：**
+https://global.rpc.mainnet.newtonproject.org
 
-Building a node tutorial is [here]().
+**ChainId：**
+1012
 
-After building a full node, the historical transaction records of an account can be obtained by parsing historical blocks, and the transfer-in and transfer-out transactions of an address can be monitored in real time by parsing the latest block. Full nodes also provide an API for broadcasting transactions.
+**Block Explorer：**
+https://explorer.newtonproject.org
+
+### **Newton Testnet：**
+
+**RPC：**
+https://rpc1.newchain.newtonproject.org
+
+**ChainId：**
+1007
+
+**Block Explorer：**
+
+https://explorer.testnet.newtonproject.org
+
+http://e.testnet.diynova.com
+
+**Faucet：**
+
+https://rpc1.newchain.newtonproject.org/faucet?address="address"
+
+## Deploy a full node of the NewChain network
+
+Deploying a node tutorial is [here](https://www.newtonproject.org/en/developers/docs/run-a-node/).
+
+After deploying a full node, the historical transaction records of an account can be obtained by parsing historical blocks, and the transfer-in and transfer-out transactions of an address can be monitored in real time by parsing the latest block. Full nodes also provide an API for broadcasting transactions.
 
 ## Use NewChain RPC API service
 
@@ -40,7 +64,7 @@ You can use our provided Java SDK, newchain-web3.js, newchain_web3.py library to
 
 ### Java SDK
 
-#### **RPC URL**
+#### RPC URL
 
 ```java
 private final static String rpcUrl = "<input RPC server address>";
@@ -54,7 +78,7 @@ Get a Web3j instance with a Web3jService instance, which needs a URL as the para
 Web3j web3 = Web3j.build(new HttpService(rpcUrl));
 ```
 
-#### **Get the chainId (net version)**
+#### Get the chainId (net version)
 
 Get chain ID with the Web3j instance:
 
@@ -63,7 +87,7 @@ NetVersion netVersion = web3.netVersion().send();
 String chainIDStr = netVersion.getNetVersion();
 ```
 
-#### **Get Balance**
+#### Get Balance
 
 Get balance of the address with the Web3j instance:
 
@@ -99,7 +123,7 @@ See the [documentation](https://github.com/newtonproject/newchain-sdk-example/tr
 
 ### Nodejs
 
-We also provide the [newchain-web3.js](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/node) library, which you can use to interact with NewChain.
+We also provide the [newchain-web3.js](https://github.com/newtonproject/newchain-lib-web3-js) library, which you can use to interact with NewChain.
 
 ```javascript
 const newchainWeb3 = require("newchain-web3");
@@ -112,7 +136,7 @@ const web3 = new newchainWeb3(rpcUrl);
 const account = new newchainAccount.Accounts(rpcUrl);
 ```
 
-By constructing a signed transaction, some of the methods provided by [newchain-web3.js](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/node) are shown here.
+By constructing a signed transaction, some of the methods provided by [newchain-web3.js](https://github.com/newtonproject/newchain-lib-web3-js) are shown here.
 
 ```javascript
 function signUseTx() {
@@ -156,7 +180,7 @@ function signUseTx() {
 
 ### Python
 
-We also provide the [newchain_web3.py](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/python) library, which you can use to interact with NewChain.
+We also provide the [newchain_web3.py](https://github.com/newtonproject/newchain-lib-web3-py) library, which you can use to interact with NewChain.
 
 Below is a simple function we constructed to view the balance of a specified address.
 
