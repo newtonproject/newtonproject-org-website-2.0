@@ -6,7 +6,7 @@ template: docs
 sidebar: true
 ---
 
-# Overview
+## Overview
 
 The purpose of this document is to provide a brief overview of how to integrate with EVM-compatible NewChain. For teams that already support ETH, supporting the NewChain chain is very simple, because NewChain has the same API as go-ethereum, you just need to populate NewChain's RPC, ChainID when building a transaction.
 
@@ -14,20 +14,20 @@ You can find references for the NewChain API [here](https://github.com/newtonpro
 
 Functions such as querying balances, obtaining transaction records, and parsing blocks to obtain transaction records required by the exchange can be implemented by accessing the RPC API service provided by Newton or building a full node. The RPC service will set the access frequency due to limited resources. For scenarios with high-frequency requirements, it is recommended to build a full node.
 
-# NewChain Network Information
+## NewChain Network Information
 
 |**Network**|**RPC**|**ChainId**|**Block Explorer**|**Faucet**|
 |:---|:---|:---|:---|:---|
 |**Newton Mainnet**|[https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/)|1012|[https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)|    |
 |**Newton Testnet**|[https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)|1007|[https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/)|[https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Youraddress"|
 
-# Build a full node of the NewChain network
+## Build a full node of the NewChain network
 
 Building a node tutorial is [here]().
 
 After building a full node, the historical transaction records of an account can be obtained by parsing historical blocks, and the transfer-in and transfer-out transactions of an address can be monitored in real time by parsing the latest block. Full nodes also provide an API for broadcasting transactions.
 
-# Use NewChain RPC API service
+## Use NewChain RPC API service
 
 Developers can utilize NewChain Network EndPoints to interact with on-chain data and send different types of transactions to the blockchain network. The API follows the JSON-RPC standard, a stateless, lightweight Remote Procedure Call (RPC) protocol commonly used when interacting with blockchain networks.
 
@@ -43,7 +43,7 @@ You can use our provided Java SDK, newchain-web3.js, newchain_web3.py library to
 #### **RPC URL**
 
 ```java
-private final static String rpcUrl = "https://rpc1.newchain.newtonproject.org/";
+private final static String rpcUrl = "rpcUrl";
 ```
 #### Get a Web3j Instance
 
@@ -99,10 +99,10 @@ We also provide the [newchain-web3.js](https://github.com/newtonproject/newchain
 const newchainWeb3 = require("newchain-web3");
 const newchainAccount = require('newchain-web3-accounts');
 // testRPC is the NewChain testnet address
-const testRpc = "https://rpc1.newchain.newtonproject.org";
-const testChainId = 1007;
-const web3 = new newchainWeb3(testRpc);
-const account = new newchainAccount.Accounts(testRpc);
+const rpcUrl = "rpcUrl";
+const ChainId = 1007;
+const web3 = new newchainWeb3(rpcUrl);
+const account = new newchainAccount.Accounts(rpcUrl);
 ```
 By constructing a signed transaction, some of the methods provided by [newchain-web3.js](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/node) are shown here.
 ```javascript
@@ -152,7 +152,7 @@ Below is a simple function we constructed to view the balance of a specified add
 
 ```python
 from newchain_web3 import Web3, HTTPProvider, Account
-rpc = "https://rpc1.newchain.newtonproject.org"
+rpc = "rpcUrl"
 def balance(address, rpc):
     """Get the balance of the address"""
     web3 = Web3(HTTPProvider(rpc))
