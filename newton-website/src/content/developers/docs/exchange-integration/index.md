@@ -10,16 +10,16 @@ sidebar: true
 
 The purpose of this document is to provide a brief overview of how to integrate with EVM-compatible NewChain. For teams that already support ETH, supporting the NewChain chain is very simple, because NewChain has the same API as go-ethereum, you just need to populate NewChain's RPC, ChainID when building a transaction.
 
-You can find references for the NewChain API [here](https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md). 
+You can find references for the NewChain API [here](https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md).
 
 Functions such as querying balances, obtaining transaction records, and parsing blocks to obtain transaction records required by the exchange can be implemented by accessing the RPC API service provided by Newton or building a full node. The RPC service will set the access frequency due to limited resources. For scenarios with high-frequency requirements, it is recommended to build a full node.
 
 ## NewChain Network Information
 
-|**Network**|**RPC**|**ChainId**|**Block Explorer**|**Faucet**|
-|:----|:----|:----|:----|:----|
-|**Newton Mainnet**|[https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/)|1012|[https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)|    |
-|**Newton Testnet**|[https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)|1007|[https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br/>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/)|[https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Youraddress"|
+| **Network**        | **RPC**                                                                                       | **ChainId** | **Block Explorer**                                                                                                                                            | **Faucet**                                                                                                                      |
+| :----------------- | :-------------------------------------------------------------------------------------------- | :---------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------ |
+| **Newton Mainnet** | [https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/) | 1012        | [https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)                                                                                    |                                                                                                                                 |
+| **Newton Testnet** | [https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)           | 1007        | [https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br/>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/) | [https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Youraddress" |
 
 ## Build a full node of the NewChain network
 
@@ -31,8 +31,8 @@ After building a full node, the historical transaction records of an account can
 
 Developers can utilize NewChain Network EndPoints to interact with on-chain data and send different types of transactions to the blockchain network. The API follows the JSON-RPC standard, a stateless, lightweight Remote Procedure Call (RPC) protocol commonly used when interacting with blockchain networks.
 
->Start using RPC calls on NewChain Network
->Start by accessing the full set of API documentation for standard NewChain JSON-RPC calls. [https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md](https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md)
+> Start using RPC calls on NewChain Network
+> Start by accessing the full set of API documentation for standard NewChain JSON-RPC calls. [https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md](https://github.com/newtonproject/newchain-sdk-example/blob/master/RPC_API_reference.md)
 
 You can use our provided Java SDK, newchain-web3.js, newchain_web3.py library to interact with your programming language. For the source code and documentation of NewChain SDK, see: [https://github.com/newtonproject/newchain-sdk-example](https://github.com/newtonproject/newchain-sdk-example)
 
@@ -45,6 +45,7 @@ You can use our provided Java SDK, newchain-web3.js, newchain_web3.py library to
 ```java
 private final static String rpcUrl = "<input RPC server address>";
 ```
+
 #### Get a Web3j Instance
 
 Get a Web3j instance with a Web3jService instance, which needs a URL as the parameter:
@@ -52,6 +53,7 @@ Get a Web3j instance with a Web3jService instance, which needs a URL as the para
 ```java
 Web3j web3 = Web3j.build(new HttpService(rpcUrl));
 ```
+
 #### **Get the chainId (net version)**
 
 Get chain ID with the Web3j instance:
@@ -60,6 +62,7 @@ Get chain ID with the Web3j instance:
 NetVersion netVersion = web3.netVersion().send();
 String chainIDStr = netVersion.getNetVersion();
 ```
+
 #### **Get Balance**
 
 Get balance of the address with the Web3j instance:
@@ -68,13 +71,15 @@ Get balance of the address with the Web3j instance:
 EthGetBalance balance = web3.ethGetBalance(fromAddress, DefaultBlockParameterName.LATEST).send();
 BigInteger num = balance.getBalance();
 ```
+
 **Parameters**
-* s (String): The address.
-* defaultBlockParameter (DefaultBlockParameter): Integer block number, or the string "latest", "earliest" or "pending". You should put into DefaultBlockParameterName. LATEST("latest").
+
+- s (String): The address.
+- defaultBlockParameter (DefaultBlockParameter): Integer block number, or the string "latest", "earliest" or "pending". You should put into DefaultBlockParameterName. LATEST("latest").
 
 **Return Values**
 
-Returns the balance of the account of given address. 
+Returns the balance of the account of given address.
 
 #### **Get gasPrice**
 
@@ -82,6 +87,7 @@ Returns the balance of the account of given address.
 EthGasPrice ethGasPrice = web3.ethGasPrice().send();
 BigInteger gasPrice = ethGasPrice.getGasPrice();
 ```
+
 **Parameters**
 None
 
@@ -105,7 +111,9 @@ const ChainId = <input newchain chainId>;
 const web3 = new newchainWeb3(rpcUrl);
 const account = new newchainAccount.Accounts(rpcUrl);
 ```
+
 By constructing a signed transaction, some of the methods provided by [newchain-web3.js](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/node) are shown here.
+
 ```javascript
 function signUseTx() {
    var value = <value you want to send>;
@@ -126,12 +134,12 @@ function signUseTx() {
                    console.log("Gas limit: " + gasLimit);
                    const txParams = {
                        nonce: convertHexString(nonce),
-                       gasPrice: convertHexString(gasPrice), 
+                       gasPrice: convertHexString(gasPrice),
                        gasLimit: convertHexString(gasLimit),
-                       to: toAddress, 
-                       value: convertHexString(value), 
+                       to: toAddress,
+                       value: convertHexString(value),
                        data: '',
-                       chainId:testChainId 
+                       chainId:testChainId
                    };
                    const tx = new newTx(txParams);
                    tx.sign(privBuffer);
@@ -145,6 +153,7 @@ function signUseTx() {
    );
 }
 ```
+
 ### Python
 
 We also provide the [newchain_web3.py](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/python) library, which you can use to interact with NewChain.
