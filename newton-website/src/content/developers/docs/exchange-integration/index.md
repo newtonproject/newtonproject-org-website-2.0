@@ -43,7 +43,7 @@ You can use our provided Java SDK, newchain-web3.js, newchain_web3.py library to
 #### **RPC URL**
 
 ```java
-private final static String rpcUrl = "rpcUrl";
+private final static String rpcUrl = "<input RPC server address>";
 ```
 #### Get a Web3j Instance
 
@@ -66,7 +66,7 @@ Get balance of the address with the `Web3j` instance:
 
 ```java
 EthGetBalance balance = web3.ethGetBalance(fromAddress, DefaultBlockParameterName.LATEST).send();
-BigInteger b = balance.getBalance();
+BigInteger num = balance.getBalance();
 ```
 **Parameters**
 * s (String): The address.
@@ -99,15 +99,16 @@ We also provide the [newchain-web3.js](https://github.com/newtonproject/newchain
 const newchainWeb3 = require("newchain-web3");
 const newchainAccount = require('newchain-web3-accounts');
 // testRPC is the NewChain testnet address
-const rpcUrl = "rpcUrl";
-const ChainId = 1007;
+const rpcUrl = "<input RPC server address>";
+// Mainnet ChainId is 1012, Testnet chainId is 1007
+const ChainId = <input newchain chainId>;
 const web3 = new newchainWeb3(rpcUrl);
 const account = new newchainAccount.Accounts(rpcUrl);
 ```
 By constructing a signed transaction, some of the methods provided by [newchain-web3.js](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/node) are shown here.
 ```javascript
 function signUseTx() {
-   var value = 1100200;
+   var value = <value you want to send>;
    // newchain-web3.js function to get the balance of a specific address
    web3.eth.getBalance(address).then(balance => { console.log("Balance is:" + balance); }).catch(new Function());
    web3.eth.getTransactionCount(address).then(
@@ -152,12 +153,12 @@ Below is a simple function we constructed to view the balance of a specified add
 
 ```python
 from newchain_web3 import Web3, HTTPProvider, Account
-rpc = "rpcUrl"
+rpc = "<input RPC server address>"
 def balance(address, rpc):
     """Get the balance of the address"""
     web3 = Web3(HTTPProvider(rpc))
-    a = web3.toChecksumAddress(address)
+    add = web3.toChecksumAddress(address)
     balance_wei = web3.eth.getBalance(a)
-    b = web3.fromWei(balance_wei, 'ether')
+    bal = web3.fromWei(balance_wei, 'ether')
     print("The balance of {} is {} NEW.".format(a, b))
 ```
