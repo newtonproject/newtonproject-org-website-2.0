@@ -17,9 +17,9 @@ Functions such as querying balances, obtaining transaction records, and parsing 
 ## NewChain Network Information
 
 |**Network**|**RPC**|**ChainId**|**Block Explorer**|**Faucet**|
-|---|---|---|---|---|
-**Newton Mainnet**|[https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/)|1012|[https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)|    |
-|**Newton Testnet**|[https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)|1007|[https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/)|[https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Your address"|
+|:----|:----|:----|:----|:----|
+|**Newton Mainnet**|[https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/)|1012|[https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)|    |
+|**Newton Testnet**|[https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)|1007|[https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/)|[https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Youraddress"|
 
 ## Build a full node of the NewChain network
 
