@@ -35,9 +35,9 @@ https://rpc1.newchain.newtonproject.org
 
 **Block Explorer：**
 
-    https://explorer.testnet.newtonproject.org
+https://explorer.testnet.newtonproject.org
 
-    http://e.testnet.diynova.com
+http://e.testnet.diynova.com
 
 **Faucet：**
 https://rpc1.newchain.newtonproject.org/faucet?address="your%20address"
