@@ -40,7 +40,8 @@ https://explorer.testnet.newtonproject.org
 http://e.testnet.diynova.com
 
 **Faucet：**
-https://rpc1.newchain.newtonproject.org/faucet?address="your\%20address"
+[https://rpc1.newchain.newtonproject.org/faucet?address="your address"](
+https://rpc1.newchain.newtonproject.org/faucet?address="your address")
 
 ## Build a full node of the NewChain network
 
