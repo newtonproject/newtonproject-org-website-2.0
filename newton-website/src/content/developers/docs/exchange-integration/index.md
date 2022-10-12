@@ -35,12 +35,12 @@ https://rpc1.newchain.newtonproject.org
 
 **Block Explorer：**
 
-https://explorer.testnet.newtonproject.org
+    https://explorer.testnet.newtonproject.org
 
-http://e.testnet.diynova.com
+    http://e.testnet.diynova.com
 
 **Faucet：**
-https://rpc1.newchain.newtonproject.org/faucet?address="your address"
+https://rpc1.newchain.newtonproject.org/faucet?address="your%20address"
 
 ## Build a full node of the NewChain network
 
@@ -114,7 +114,7 @@ See the [documentation](https://github.com/newtonproject/newchain-sdk-example/tr
 
 ### Nodejs
 
-We also provide the [newchain-web3.js](https://github.com/newtonproject/newchain-sdk-example/tree/master/examples/node) library, which you can use to interact with NewChain.
+We also provide the [newchain-web3.js](https://github.com/newtonproject/newchain-lib-web3-js) library, which you can use to interact with NewChain.
 
 ```javascript
 const newchainWeb3 = require("newchain-web3");
