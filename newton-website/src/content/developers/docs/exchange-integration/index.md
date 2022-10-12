@@ -17,8 +17,8 @@ Functions such as querying balances, obtaining transaction records, and parsing 
 ## NewChain Network Information
 
 |**Network**|**RPC**|**ChainId**|**Block Explorer**|**Faucet**|
-|:---|:---|:---|:---|:---|
-|**Newton Mainnet**|[https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/)|1012|[https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)|    |
+|---|---|---|---|---|
+**Newton Mainnet**|[https://global.rpc.mainnet.newtonproject.org](https://global.rpc.mainnet.newtonproject.org/)|1012|[https://explorer.newtonproject.org/](https://explorer.newtonproject.org/)|    |
 |**Newton Testnet**|[https://rpc1.newchain.newtonproject.org](https://rpc1.newchain.newtonproject.org/)|1007|[https://explorer.testnet.newtonproject.org/](https://explorer.testnet.newtonproject.org/)<br>[http://e.testnet.diynova.com/](http://e.testnet.diynova.com/)|[https://rpc1.newchain.newtonproject.org/faucet?address=](https://rpc1.newchain.newtonproject.org/faucet?address=)"Your address"|
 
 ## Build a full node of the NewChain network
@@ -47,14 +47,14 @@ private final static String rpcUrl = "<input RPC server address>";
 ```
 #### Get a Web3j Instance
 
-Get a `Web3j` instance with a `Web3jService` instance, which needs a URL as the parameter:
+Get a Web3j instance with a Web3jService instance, which needs a URL as the parameter:
 
 ```java
 Web3j web3 = Web3j.build(new HttpService(rpcUrl));
 ```
 #### **Get the chainId (net version)**
 
-Get chain ID with the `Web3j` instance:
+Get chain ID with the Web3j instance:
 
 ```java
 NetVersion netVersion = web3.netVersion().send();
@@ -62,7 +62,7 @@ String chainIDStr = netVersion.getNetVersion();
 ```
 #### **Get Balance**
 
-Get balance of the address with the `Web3j` instance:
+Get balance of the address with the Web3j instance:
 
 ```java
 EthGetBalance balance = web3.ethGetBalance(fromAddress, DefaultBlockParameterName.LATEST).send();
