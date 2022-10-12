@@ -64,13 +64,13 @@ String chainIDStr = netVersion.getNetVersion();
 
 Get balance of the address with the `Web3j` instance:
 
-```plain
+```java
 EthGetBalance balance = web3.ethGetBalance(fromAddress, DefaultBlockParameterName.LATEST).send();
 BigInteger b = balance.getBalance();
 ```
 **Parameters**
-* s(String): The address.
-* defaultBlockParameter(DefaultBlockParameter): Integer block number, or the string "latest", "earliest" or "pending". You should put into DefaultBlockParameterName.LATEST("latest").
+* s (String): The address.
+* defaultBlockParameter (DefaultBlockParameter): Integer block number, or the string "latest", "earliest" or "pending". You should put into DefaultBlockParameterName. LATEST("latest").
 
 **Return Values**
 
