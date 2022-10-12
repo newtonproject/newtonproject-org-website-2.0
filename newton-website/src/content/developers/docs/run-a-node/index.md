@@ -38,7 +38,7 @@ In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) conse
    $ mkdir -p newchain && cd newchain
    ```
 
-#### 2. Fetch the `newchain.sh` script and run it
+#### 2. Fetch the newchain.sh script and run it
 
 For Mainet
 
@@ -64,7 +64,7 @@ $ sudo supervisorctl tail -f newchain stderr
 
 ## Deploying a ledger node
 
-> #### If you only want to run a read-only node, skip these steps.
+#### If you only want to run a read-only node, skip these steps.
 
 #### 1. Execute following command to create miner account
 
@@ -118,17 +118,23 @@ $ cat /data/newchain/testnet/password.txt
 
 You are responsible for storing your keystore and password safely. It’s important to keep your digital assets safe, just like you would your physical assets.
 
-#### 3.Submit a "[Apply for mainnet|testnet ledger node](https://github.com/newtonproject/newchain-nodes/issues/new/choose)" issue, fill the required information and wait for the existing ledger node to be approved. You can also apply to become a testnet node in the following ways.
+#### 3.Click the blow link to submit a issue, fill the required information and wait for the existing ledger node to be approved
 
-##### 3.1 Replace `MinnerAddress` in the following command with `your miner address`
+[Apply for mainnet|testnet ledger node](https://github.com/newtonproject/newchain-nodes/issues/new/choose)
+
+#### You can also apply to become a testnet node in the following ways
+
+##### 3.1 Replace MinnerAddress in the following command with your miner address
 
 ```bash
 /data/newchain/mainnet/bin/geth attach /data/newchain/mainnet/nodedata/geth.ipc --exec 'clique.propose("MinnerAddress", true)'
 ```
 
-##### 3.2 Send `command 3.1` to the [Telegram Group](https://t.me/newtontestnet)
+##### 3.2 Send the command 3.1 to the Telegram Group
 
-##### 3.3 Waiting for existing ledger node to execute `command 3.1`
+ [NewTon Testnet Telegram Group](https://t.me/newtontestnet)
+
+##### 3.3 Waiting for existing ledger node to execute the command 3.1
 
 #### 4. Verify if your own node has become a ledger node
 
