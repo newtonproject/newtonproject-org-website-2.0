@@ -34,6 +34,7 @@ https://rpc1.newchain.newtonproject.org
 1007
 
 **Block Explorer：**
+
 https://explorer.testnet.newtonproject.org
 
 http://e.testnet.diynova.com
