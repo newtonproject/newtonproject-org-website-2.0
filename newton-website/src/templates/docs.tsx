@@ -17,6 +17,7 @@ import H4 from '../customMdx/h4'
 import H5 from '../customMdx/h5'
 import H6 from '../customMdx/h6'
 import Codeblock from '../customMdx/codeblock'
+import Tableblock from '../customMdx/tableblock'
 import { arrDate } from '../utils/createTime'
 import DeveloperSide from '../components/developerSide'
 import DeveloperSideMobile from '../components/developerSideMobile'
@@ -29,7 +30,8 @@ const components = {
   h4: H4,
   h5: H5,
   h6: H6,
-  pre: Codeblock
+  pre: Codeblock,
+  table: Tableblock
 } // Provide common components here
 
 const DocsPage = ({ data: { allMdx, allFile } }: any) => {
