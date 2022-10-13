@@ -5,18 +5,17 @@ lang: en
 template: docs
 sidebar: true
 ---
-
 NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction.
 
-In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) consensus mechanism for producing blocks. There are two prerequisites for running a Mainnet ledger node:
+In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) consensus mechanism for producing blocks. There are two prerequisites for running a Mainnet ledger node:  
 
-1. NewChain Mainnet ledger nodes shall run a NewChain Testnet node first, ensuring the stability of the network.
-2. NewChain Mainnet ledger nodes shall stake 10 million NEW in NewPay, avoiding any harm from the potential dishonest participant.
+**1. NewChain Mainnet ledger nodes shall run a NewChain Testnet node first, ensuring the stability of the network.**
 
-## Requirements
+**2. NewChain Mainnet ledger nodes shall stake 10 million NEW in NewPay, avoiding any harm from the potential dishonest participant.**
+
+### Requirements
 
 #### 1. Recommended specifications
-
    - System OS: Ubuntu 18.04 LTS 64-bit or Ubuntu 16.04 LTS 64-bit
    - Processor: 2-core CPU
    - Memory: 8GB RAM
@@ -24,13 +23,11 @@ In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) conse
    - Internet: Public IP
 
    For server requirements, please refer to AWS m5a.large or Alibaba Cloud ecs.t5
-
 #### 2. System configuration
 
    - System data disk: /data directory is the mount point of the system data disk
    - Firewall: The firewall needs to open port 38311 of UDP and TCP and port 8801(8808 for testnet) of TCP
-
-## Deploying a read-only node
+### Deploying a read-only node
 
 #### 1. Create a working directory and enter it
 
@@ -60,9 +57,9 @@ $ curl -L https://release.cloud.diynova.com/newton/newchain-deploy/testnet/newch
 $ sudo supervisorctl tail -f newchain stderr
 ```
 
-3.2 Make sure the synchronized block height is consistent with the NewExplorer([Mainnet](https://explorer.newtonproject.org/), [testnet](https://explorer.testnet.newtonproject.org/)) latest block height
+3.2 Make sure the synchronized block height is consistent with the NewExplorer latest block height (<a href="https://explorer.newtonproject.org/">MainNet</a>, <a href="https://explorer.testnet.newtonproject.org/">Testnet</a>)
 
-## Deploying a ledger node
+### Deploying a ledger node
 
 #### If you only want to run a read-only node, skip these steps.
 
@@ -118,7 +115,7 @@ $ cat /data/newchain/testnet/password.txt
 
 You are responsible for storing your keystore and password safely. It’s important to keep your digital assets safe, just like you would your physical assets.
 
-#### 3.Click the blow link to submit a issue, fill the required information and wait for the existing ledger node to be approved
+#### 3. Click the blow link to submit a issue, fill the required information and wait for the existing ledger node to be approved
 
 [Apply for mainnet|testnet ledger node](https://github.com/newtonproject/newchain-nodes/issues/new/choose)
 
@@ -150,11 +147,11 @@ For testnet
 $ /data/newchain/testnet/bin/geth attach /data/newchain/testnet/nodedata/geth.ipc --exec 'clique.getSigners()'
 ```
 
-## Use NewChain
+### Use NewChain
 
 NewChain's JSON RPC uses HTTP protocol port 8801(8808 for testnet), which you can use in [NewSDK](https://github.com/newtonproject/newchain-sdk-example)
 
-## Operations and maintenance
+### Operations and maintenance
 
 #### 1. Start NewChain
 
