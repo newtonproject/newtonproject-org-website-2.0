@@ -17,26 +17,26 @@ In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) conse
 
 #### 1. Recommended specifications
 
-   - System OS: Ubuntu 18.04 LTS 64-bit or Ubuntu 16.04 LTS 64-bit
-   - Processor: 2-core CPU
-   - Memory: 8GB RAM
-   - Storage: 150GB available space SSD for mainnet and 150GB for testnet
-   - Internet: Public IP
+- System OS: Ubuntu 18.04 LTS 64-bit or Ubuntu 16.04 LTS 64-bit
+- Processor: 2-core CPU
+- Memory: 8GB RAM
+- Storage: 150GB available space SSD for mainnet and 150GB for testnet
+- Internet: Public IP
 
-   For server requirements, please refer to AWS m5a.large or Alibaba Cloud ecs.t5
+For server requirements, please refer to AWS m5a.large or Alibaba Cloud ecs.t5
 
 #### 2. System configuration
 
-   - System data disk: /data directory is the mount point of the system data disk
-   - Firewall: The firewall needs to open port 38311 of UDP and TCP and port 8801(8808 for testnet) of TCP
+- System data disk: /data directory is the mount point of the system data disk
+- Firewall: The firewall needs to open port 38311 of UDP and TCP and port 8801(8808 for testnet) of TCP
 
 ## Deploying a read-only node
 
 #### 1. Create a working directory and enter it
 
-   ```bash
-   $ mkdir -p newchain && cd newchain
-   ```
+```bash
+$ mkdir -p newchain && cd newchain
+```
 
 #### 2. Fetch the newchain.sh script and run it
 
@@ -132,7 +132,7 @@ You are responsible for storing your keystore and password safely. It’s import
 
 ##### 3.2 Send the command 3.1 to the Telegram Group
 
- [NewTon Testnet Telegram Group](https://t.me/newtontestnet)
+[NewTon Testnet Telegram Group](https://t.me/newtontestnet)
 
 ##### 3.3 Waiting for existing ledger node to execute the command 3.1
 
@@ -167,4 +167,3 @@ $ sudo supervisorctl start newchain
 ```bash
 $ sudo supervisorctl stop newchain
 ```
-
