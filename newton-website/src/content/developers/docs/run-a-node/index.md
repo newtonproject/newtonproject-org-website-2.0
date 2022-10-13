@@ -19,14 +19,14 @@ In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) conse
    - System OS: Ubuntu 18.04 LTS 64-bit or Ubuntu 16.04 LTS 64-bit
    - Processor: 2-core CPU
    - Memory: 8GB RAM
-   - Storage: 150GB available space SSD for mainnet and 150GB for testnet
+   - Storage: 150GB available space SSD for Mainnet and 150GB for Testnet
    - Internet: Public IP
 
    For server requirements, please refer to AWS m5a.large or Alibaba Cloud ecs.t5
 #### 2. System configuration
 
    - System data disk: /data directory is the mount point of the system data disk
-   - Firewall: The firewall needs to open port 38311 of UDP and TCP and port 8801(8808 for testnet) of TCP
+   - Firewall: The firewall needs to open port 38311 of UDP and TCP and port 8801(8808 for Testnet) of TCP
 ### Deploying a read-only node
 
 #### 1. Create a working directory and enter it
@@ -71,7 +71,7 @@ For Mainnet
 $ cd /data/newchain/mainnet/ && curl -L https://release.cloud.diynova.com/newton/newchain-deploy/mainnet/newchain-mine.sh -o newchain-mine.sh && chmod +x newchain-mine.sh && ./newchain-mine.sh
 ```
 
-For testnet
+For Testnet
 
 ```bash
 $ cd /data/newchain/testnet/ && curl -L https://release.cloud.diynova.com/newton/newchain-deploy/testnet/newchain-mine.sh -o newchain-mine.sh && chmod +x newchain-mine.sh && ./newchain-mine.sh
@@ -91,7 +91,7 @@ For Mainet
 $ cat /data/newchain/mainnet/nodedata/keystore/*
 ```
 
-For testnet
+For Testnet
 
 ```bash
 $ cat /data/newchain/testnet/nodedata/keystore/*
@@ -107,7 +107,7 @@ For Mainet
 $ cat /data/newchain/mainnet/password.txt
 ```
 
-For testnet
+For Testnet
 
 ```bash
 $ cat /data/newchain/testnet/password.txt
@@ -119,7 +119,7 @@ You are responsible for storing your keystore and password safely. It’s import
 
 [Apply for mainnet|testnet ledger node](https://github.com/newtonproject/newchain-nodes/issues/new/choose)
 
-#### You can also apply to become a testnet node in the following ways
+#### You can also apply to become a Testnet node in the following ways
 
 ##### 3.1 Replace MinnerAddress in the following command with your miner address
 
@@ -135,13 +135,13 @@ You are responsible for storing your keystore and password safely. It’s import
 
 #### 4. Verify if your own node has become a ledger node
 
-For mainnet
+For Mainnet
 
 ```bash
 $ /data/newchain/mainnet/bin/geth attach /data/newchain/mainnet/nodedata/geth.ipc --exec 'clique.getSigners()'
 ```
 
-For testnet
+For Testnet
 
 ```bash
 $ /data/newchain/testnet/bin/geth attach /data/newchain/testnet/nodedata/geth.ipc --exec 'clique.getSigners()'
@@ -149,7 +149,7 @@ $ /data/newchain/testnet/bin/geth attach /data/newchain/testnet/nodedata/geth.ip
 
 ### Use NewChain
 
-NewChain's JSON RPC uses HTTP protocol port 8801(8808 for testnet), which you can use in [NewSDK](https://github.com/newtonproject/newchain-sdk-example)
+NewChain's JSON RPC uses HTTP protocol port 8801(8808 for Testnet), which you can use in [NewSDK](https://github.com/newtonproject/newchain-sdk-example)
 
 ### Operations and maintenance
 
