@@ -177,10 +177,7 @@ export default function GetNewContent() {
         <div className={'dex'}>
           <h2>{intl.formatMessage({ id: 'DEX' })}</h2>
           <div className={'dex-a'}>
-            <a
-              href="https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
-              target="_blank"
-            >
+            <a href="https://newswap.org/" target="_blank">
               <StaticImage placeholder="blurred" alt="img" src="../static/images/ecosystem/new-swap.png" />
             </a>
             <a href="https://www.binance.org/" target="_blank">
@@ -194,7 +191,11 @@ export default function GetNewContent() {
             <a href={newsEnvUrl + '/newpay/'} target="_blank">
               <StaticImage placeholder="blurred" alt="img" src="../static/images/ecosystem/new-pay.png" />
             </a>
-            <a href="https://newmall.io/" target="_blank" className={'new-mask'}>
+            <a
+              href="https://addons.mozilla.org/zh-CN/firefox/addon/newmask/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search"
+              target="_blank"
+              className={'new-mask'}
+            >
               <StaticImage placeholder="blurred" alt="img" src="../static/images/ecosystem/new-mask.png" />
             </a>
           </div>
