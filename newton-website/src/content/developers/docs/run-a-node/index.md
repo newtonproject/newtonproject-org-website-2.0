@@ -8,7 +8,7 @@ sidebar: true
 
 NewChain nodes are the key co-constructers of Newton infrastructure. Newton NewChain Testnet and Mainnet are opened to the community, individual can deploy Testnet and Mainnet according to the instructions specified in this repo. Afer deploying the NewChai Mainnet, the Mainnet ledger nodes can produce blocks and get NEW as the transaction fees from every transaction.
 
-In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) consensus mechanism for producing blocks. There are two prerequisites for running a Mainnet ledger node:  
+In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) consensus mechanism for producing blocks. There are two prerequisites for running a Mainnet ledger node:
 
 **1. NewChain Mainnet ledger nodes shall run a NewChain Testnet node first, ensuring the stability of the network.**
 
@@ -17,17 +17,20 @@ In current stage, NewChain MainNet still run with PoA (Proof-of-Authority) conse
 ### Requirements
 
 #### 1. Recommended specifications
-   - System OS: Ubuntu 18.04 LTS 64-bit or Ubuntu 16.04 LTS 64-bit
-   - Processor: 2-core CPU
-   - Memory: 8GB RAM
-   - Storage: 150GB available space SSD for Mainnet and 150GB for Testnet
-   - Internet: Public IP
 
-   For server requirements, please refer to AWS m5a.large or Alibaba Cloud ecs.t5
+- System OS: Ubuntu 18.04 LTS 64-bit or Ubuntu 16.04 LTS 64-bit
+- Processor: 2-core CPU
+- Memory: 8GB RAM
+- Storage: 150GB available space SSD for Mainnet and 150GB for Testnet
+- Internet: Public IP
+
+For server requirements, please refer to AWS m5a.large or Alibaba Cloud ecs.t5
+
 #### 2. System configuration
 
-   - System data disk: /data directory is the mount point of the system data disk
-   - Firewall: The firewall needs to open port 38311 of UDP and TCP and port 8801(8808 for Testnet) of TCP
+- System data disk: /data directory is the mount point of the system data disk
+- Firewall: The firewall needs to open port 38311 of UDP and TCP and port 8801(8808 for Testnet) of TCP
+
 ### Deploying a read-only node
 
 #### 1. Create a working directory and enter it
