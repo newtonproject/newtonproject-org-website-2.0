@@ -118,10 +118,6 @@ export default function Header() {
             </li>
           </ul>
           <div className={'header-search'}>
-            <div className={'search'}>
-              <a href={newsEnvUrl + '/search/?q='} target="_blank"></a>
-              {/* <input type="text" placeholder="Search"></input> */}
-            </div>
             <Language />
           </div>
         </div>
