@@ -88,4 +88,4 @@ sidebar: true
 
 ## 2017
 
-- Newton project officially launched.
+- <p>Newton project officially launched.</p>
