@@ -6,35 +6,43 @@ template: learnDocs
 sidebar: true
 ---
 
-## 2023
+## 2024
 
 ### Q1
 
-- Launch NewBridge 2.0.
+- Bridge $NEW to Ethereum, Solana, BSC and more blockchains.
+
+- Enable more wallets to support $NEW on multiple blockchains.
 
 ### Q2
 
-- Launch the multiple virtual machine architecture and NewEVM.
+- List $NEW on more DEX.
+
+- Announce a new community incentive strategy. 
+
+- Develop a new token deflationary mechanism.
 
 ### Q3
 
-- Launch the Web3 Development Kit.
+- Launch the Newton Consensus Chain and Newton Application Chain.
+
+- Bridge more assets to Newton such as $BTC, $LTC and $DOGE.
+
+- Deploy more dApps on Newton such as a UniSwap V3.
 
 ### Q4
 
-- Launch the Metaverse Development Kit.
+- Launch the Newton App.
+
+- The number of token holding addresses reach tens of millions. 
+
+## 2023
+
+- <p>Preparing for a NEW future. </p>
 
 ## 2022
 
-### Q3
-
-- Launch the feature of transaction fee burned that make $NEW deflation.
-
-- Launch EVT SDK 1.0.
-
-### Q4
-
-- Upgrade PoA to NewConsensus.
+- <p>Launch the EVT Protocol.</p>
 
 ## 2021
 
