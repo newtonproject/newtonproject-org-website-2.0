@@ -151,29 +151,15 @@ export default function GetNewContent() {
         <div className={'exchange'}>
           <h2>{intl.formatMessage({ id: 'Listed Exchange' })}</h2>
           <div className={'top-img'}>
-            <a href="https://www.huobi.com" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed1.png" />
-            </a>
-            <a href="https://www.hb.co.kr/en-us/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed2.png" />
-            </a>
-            <a href="https://www.biup.com/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed3.png" />
+            <a href="https://www.htx.com/" target="_blank">
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/htx.png" />
             </a>
             <a href="https://www.mexc.com/" target="_blank" className={'mexc'}>
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed4.png" />
-            </a>
-            <a href="https://www.biki.com/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed6.png" />
-            </a>
-            <a href="https://www.hkex.me/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed7.png" />
-            </a>
-            <a href="https://www.bibull.co/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed8.png" />
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/mexc.png" />
             </a>
           </div>
         </div>
+        
         <div className={'dex'}>
           <h2>{intl.formatMessage({ id: 'DEX' })}</h2>
           <div className={'dex-a'}>
