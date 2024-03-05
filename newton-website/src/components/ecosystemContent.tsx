@@ -106,21 +106,15 @@ export default function EcosystemContent() {
             <i></i>
             {intl.formatMessage({ id: 'Exchange' })}
           </dt>
-          <dd className={'exchange2'}>
-            <a href="https://www.huobi.com/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed1.png" />
-              <span>{intl.formatMessage({ id: 'A decentralized multigalactic metaverse.' })}</span>
+          <dd className={'exchange1'}>
+            <a href="https://www.htx.com/" target="_blank">
+              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/htx.png" />
+              <span>{intl.formatMessage({ id: 'Leading Crypto Exchange for BTC, ETH, XRP, and 600+ Altcoins.' })}</span>
             </a>
           </dd>
           <dd className={'exchange1'}>
-            <a href="https://www.hb.co.kr/" target="_blank">
-              <StaticImage placeholder="blurred" alt="new-swap" src="../static/images/getnew/listed2.png" />
-              <span>{intl.formatMessage({ id: 'A decentralized multigalactic metaverse.' })}</span>
-            </a>
-          </dd>
-          <dd className={'exchange3'}>
             <a href="https://www.mexc.com/" target="_blank">
-              <StaticImage placeholder="blurred" alt="img" src="../static/images/getnew/listed4.png" />
+              <StaticImage placeholder="blurred" alt="new-swap" src="../static/images/getnew/mexc.png" />
               <span>{intl.formatMessage({ id: 'The First User-friendly Cryptocurrency Service Provider.' })}</span>
             </a>
           </dd>
