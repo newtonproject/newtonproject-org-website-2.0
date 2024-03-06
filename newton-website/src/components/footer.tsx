@@ -5,6 +5,7 @@ import { newsEnvUrl } from '../utils/url'
 
 export default function Footer() {
   const intl = useIntl()
+  const year = (new Date()).getFullYear()
 
   return (
     <>
@@ -103,7 +104,10 @@ export default function Footer() {
               })}
             </div>
           </div>
-          <p>{intl.formatMessage({ id: 'Copyright © 2022 Newton Foundation. All Rights Reserved.' })}</p>
+          <p>{intl.formatMessage({ 
+            id: 'Copyright © {year} Newton Foundation. All Rights Reserved.', 
+            defaultMessage: 'Copyright © {year} Newton Foundation. All Rights Reserved.', 
+          }, {year: year})}</p>
         </div>
       </div>
       <FooterMobile />
@@ -113,6 +117,7 @@ export default function Footer() {
 
 const FooterMobile = () => {
   const intl = useIntl()
+  const year = (new Date()).getFullYear()
   return (
     <div className={'footer-mobile'}>
       <div className={'footer-content'}>
@@ -208,7 +213,10 @@ const FooterMobile = () => {
               {intl.formatMessage({ id: 'the great scientist who made a significant impact on our lives!' })}
             </div>
           </div>
-          <p>{intl.formatMessage({ id: 'Copyright © 2022 Newton Foundation. All Rights Reserved.' })}</p>
+          <p>{intl.formatMessage({ 
+            id: 'Copyright © {year} Newton Foundation. All Rights Reserved.', 
+            defaultMessage: 'Copyright © {year} Newton Foundation. All Rights Reserved.', 
+          }, {year: year})}</p>
         </div>
       </div>
     </div>
