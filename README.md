@@ -1,28 +1,28 @@
 
 # newton-website-2.0
 
-## 1.Main technology stack
+## 1. Main technology stack
 
 ```
 Gatsby.js + React + Typescript + Tailwind CSS.
 Other tools included: Autoprefixer, Sass, PostCSS, ESLint, Prettier.
 ```
 
-## 2.Create a Gatsby site
+## 2. Create a Gatsby site
 
 ```
 gatsby new newton-website-2.0
 yarn
 ```
 
-## 3.Start
+## 3. Start
 
 ```
 cd newton-website-2.0/
 yarn start
 ```
 
-## 4.Push
+## 4. Push
 
 ```
 yarn ff
@@ -70,7 +70,7 @@ git push
 - The default language of the project is en in `defaultLanguage`, which is `en`.
 
 
-## 6 Deploy
+## 6. Deploy
 ```
  docker build -t newton-website .
  docker run -dp 8081:80 newton-website
