@@ -144,7 +144,7 @@ export default function GetNewContent() {
             </dt>
             <dd>
               <h3>{intl.formatMessage({ id: 'Released on the Day' })}</h3>
-              <span>{data.incentive_release !== '' ? numFormat(data.incentive_release * 2) : null} NEW</span>
+              <span>{data.incentive_release !== '' ? numFormat(data.incentive_release) : null} NEW</span>
             </dd>
           </dl>
         </div>
